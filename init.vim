@@ -14,10 +14,14 @@ Plug 'kamykn/spelunker.vim'
 Plug 'aserebryakov/vim-todo-lists'
 Plug 'cdelledonne/vim-cmake'
 Plug 'alepez/vim-gtest'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 filetype plugin on
 
+source ~/.config/nvim/config/language_support/cmake-config.vim
+source ~/.config/nvim/config/language_support/coc-config.vim
+source ~/.config/nvim/config/language_support/spelling.vim
 source ~/.config/nvim/config/language_support/spelling.vim
 source ~/.config/nvim/config/themes/theme.vim
 source ~/.config/nvim/config/general.vim
