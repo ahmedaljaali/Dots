@@ -8,26 +8,41 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'antoinemadec/FixCursorHold.nvim'
-Plug 'https://github.com/szw/vim-maximizer.git'
+Plug 'szw/vim-maximizer'
 Plug 'junegunn/vim-emoji'                          " Vim emojis!
 Plug 'kamykn/spelunker.vim'
 Plug 'aserebryakov/vim-todo-lists'
 Plug 'cdelledonne/vim-cmake'
 Plug 'alepez/vim-gtest'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 filetype plugin on
 
-source ~/.config/nvim/config/language_support/cmake-config.vim
-source ~/.config/nvim/config/language_support/coc-config.vim
-source ~/.config/nvim/config/language_support/spelling.vim
-source ~/.config/nvim/config/language_support/spelling.vim
-source ~/.config/nvim/config/themes/theme.vim
 source ~/.config/nvim/config/general.vim
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Language Support
+
+source ~/.config/nvim/config/language_support/cmake-config.vim
+source ~/.config/nvim/config/language_support/spelling.vim
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Theme
+
+source ~/.config/nvim/config/themes/theme.vim
 source ~/.config/nvim/config/themes/rainbowBraket.vim
 source ~/.config/nvim/config/themes/airline.vim
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Fast moving
+
 source ~/.config/nvim/config/FM/fzfz.vim
 source ~/.config/nvim/config/FM/splitControl.vim
 source ~/.config/nvim/config/FM/fileStorm.vim
 source ~/.config/nvim/config/FM/fff.vim
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -10,4 +10,3 @@ let g:gtest#gtest_command = "Debug/app"
 nmap <leader>tr :GTestRun<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""
-
