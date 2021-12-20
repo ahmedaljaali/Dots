@@ -1,14 +1,8 @@
 """"""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
-"toggle between highlight search
-nnoremap <C-]> :set hlsearch!<CR>
-""""""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
 "Auto correction
 
 set spell spelllang=en_us
 """"""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
-
 
 """"""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
 "emojis
@@ -24,25 +18,6 @@ set completefunc=emoji#complete
 "for e in emoji#list()
  " call append(line('$'), printf('%s (%s)', emoji#for(e), e))
 "endfor
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap splits navigation to just CTRL + hjkl
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" working with tabs
-nmap <Leader>cl :close<CR>
-nmap <Leader>m :tabnew<CR>
-nmap <C-Left> :tabprevious<CR>
-nmap <C-Right> :tabnext<CR>
-nmap <Leader>b :Buffers <cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -84,15 +59,11 @@ set smartindent
 set t_Co=256
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mouse Scrolling
 set mouse=nicr
 set mouse=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -125,3 +96,4 @@ set vb t_vb=
 set directory=$HOME/temp//
 set backupdir=$HOME/temp//
 set undodir=$HOME/temp//
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""

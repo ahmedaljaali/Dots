@@ -1,3 +1,5 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"for LSP
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap  <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
@@ -8,3 +10,27 @@ nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <leader>af <cmd>lua vim.lsp.buf.code_action()<CR>
 nnoremap <silent> <leader>rn <cmd>lua vim.lsp.buf.rename()<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remap splits navigation to just CTRL + hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" working with tabs
+nmap <Leader>cl :close<CR>
+nmap <Leader>m :tabnew<CR>
+nmap <C-Left> :tabprevious<CR>
+nmap <C-Right> :tabnext<CR>
+nmap <Leader>b :Buffers <cr>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
+"toggle between highlight search
+nnoremap <C-]> :set hlsearch!<CR>
+""""""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
