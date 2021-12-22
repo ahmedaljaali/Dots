@@ -7,6 +7,8 @@ Plug 'luochen1990/rainbow'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/vim-emoji' 
+Plug 'mhinz/vim-startify'
+Plug 'ryanoasis/vim-devicons'
 
 """""""""""""""""""""""""""""""""""""
 "Moving Fast
@@ -18,7 +20,6 @@ Plug 'szw/vim-maximizer'
 
 """""""""""""""""""""""""""""""""""""
 "Typing
-Plug 'kamykn/spelunker.vim'         
 Plug 'aserebryakov/vim-todo-lists'  
 
 """""""""""""""""""""""""""""""""""""
@@ -70,6 +71,7 @@ source ~/.config/nvim/config/themes/airline.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Fast moving
 
+source ~/.config/nvim/config/FM/start-screan.vim
 source ~/.config/nvim/config/FM/fzfz.vim
 source ~/.config/nvim/config/FM/splitControl.vim
 source ~/.config/nvim/config/FM/fileStorm.vim

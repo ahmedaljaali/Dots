@@ -23,7 +23,7 @@ nnoremap <C-l> <C-w>l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " working with tabs
-nmap <Leader>cl :close<CR>
+nmap <Leader>cw :close<CR>
 nmap <Leader>m :tabnew<CR>
 nmap <C-Left> :tabprevious<CR>
 nmap <C-Right> :tabnext<CR>
@@ -34,3 +34,16 @@ nmap <Leader>b :Buffers <cr>
 "toggle between highlight search
 nnoremap <C-]> :set hlsearch!<CR>
 """"""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
+"Working With sessions
+nmap <Leader>cs :SClose<CR>
+nmap <Leader>ls :SLoad<CR>
+""""""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
+"Close cmake window
+nmap <Leader>cm :CMakeClose<CR>
+""""""""""""""''""""""""""""""""""""""""""""""""""""""""""""""
+
+
