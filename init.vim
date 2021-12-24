@@ -21,6 +21,8 @@ Plug 'szw/vim-maximizer'
 """""""""""""""""""""""""""""""""""""
 "Typing
 Plug 'aserebryakov/vim-todo-lists'  
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 
 """""""""""""""""""""""""""""""""""""
 "Language Support
@@ -78,4 +80,5 @@ source ~/.config/nvim/config/FM/splitControl.vim
 source ~/.config/nvim/config/FM/fileStorm.vim
 source ~/.config/nvim/config/FM/fff.vim
 source ~/.config/nvim/config/FM/keymaps.vim
+source ~/.config/nvim/config/FM/indent.lua
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

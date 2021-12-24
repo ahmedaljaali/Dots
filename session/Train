@@ -51,10 +51,13 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 1
-normal! 04|
+normal! 03|
 tabnext 2
 badd +4 CMakeLists.txt
 badd +1 src/main.cc
+badd +1 /usr/include/a.out.h
+badd +39 ~/.config/nvim/config/language_support/cmp-config.lua
+badd +1 ~/.config/nvim/config/language_support/lsp-config.lua
 badd +1 /usr/include/c++/11.1.0/bits/stl_vector.h
 badd +1 /usr/include/c++/11.1.0/array
 badd +1 inc/print.h
@@ -63,11 +66,8 @@ badd +50 ~/.config/nvim/config/FM/keymaps.vim
 badd +1 inc/p
 badd +16 src/print.c
 badd +15 src/print.cc
-badd +39 ~/.config/nvim/config/language_support/cmp-config.lua
-badd +1 ~/.config/nvim/config/language_support/lsp-config.lua
 badd +3 ~/.config/nvim/config/language_support/cmake-config.vim
 badd +1 src/m
-badd +1 /usr/include/a.out.h
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
