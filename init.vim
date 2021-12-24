@@ -66,6 +66,7 @@ luafile ~/.config/nvim/config/language_support/cmp-config.lua
 source ~/.config/nvim/config/themes/theme.vim
 source ~/.config/nvim/config/themes/rainbowBraket.vim
 source ~/.config/nvim/config/themes/airline.vim
+source ~/.config/nvim/config/themes/icons.vim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
