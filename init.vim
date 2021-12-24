@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim-plugins')
 """""""""""""""""""""""""""""""""""""
 "Theme And Colors
 Plug 'joshdick/onedark.vim'
