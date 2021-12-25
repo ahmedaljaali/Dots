@@ -26,16 +26,16 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 4 - ((3 * winheight(0) + 16) / 32)
+let s:l = 9 - ((8 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 4
+keepjumps 9
 normal! 0
 tabnext
 edit src/main.cc
 argglobal
-balt /usr/include/a.out.h
+balt /usr/include/c++/11.1.0/bits/stl_vector.h
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -46,28 +46,30 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 16) / 32)
+let s:l = 101 - ((21 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 03|
+keepjumps 101
+normal! 048|
+if exists(':tcd') == 2 | tcd ~/Programming/train | endif
 tabnext 2
-badd +4 CMakeLists.txt
-badd +1 src/main.cc
+badd +9 ~/Programming/train/CMakeLists.txt
+badd +101 ~/Programming/train/src/main.cc
+badd +0 ~/Programming/train/src/main
+badd +46 ~/.config/nvim/config/general.vim
+badd +1 ~/.config/nvim/config/FM/keymaps.vim
 badd +1 /usr/include/a.out.h
 badd +39 ~/.config/nvim/config/language_support/cmp-config.lua
 badd +1 ~/.config/nvim/config/language_support/lsp-config.lua
-badd +1 /usr/include/c++/11.1.0/bits/stl_vector.h
+badd +424 /usr/include/c++/11.1.0/bits/stl_vector.h
 badd +1 /usr/include/c++/11.1.0/array
-badd +1 inc/print.h
-badd +46 ~/.config/nvim/config/general.vim
-badd +50 ~/.config/nvim/config/FM/keymaps.vim
-badd +1 inc/p
-badd +16 src/print.c
-badd +15 src/print.cc
+badd +1 ~/Programming/train/inc/print.h
+badd +1 ~/Programming/train/inc/p
+badd +16 ~/Programming/train/src/print.c
+badd +15 ~/Programming/train/src/print.cc
 badd +3 ~/.config/nvim/config/language_support/cmake-config.vim
-badd +1 src/m
+badd +1 ~/Programming/train/src/m
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -78,8 +80,6 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
-set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

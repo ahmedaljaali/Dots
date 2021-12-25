@@ -25,8 +25,8 @@ nnoremap <C-l> <C-w>l
 " working with tabs
 nmap <Leader>cw :close<CR>
 nmap <Leader>m :tabnew<CR>
-nmap <C-Left> :tabprevious<CR>
-nmap <C-Right> :tabnext<CR>
+nmap [t :tabprevious<CR>
+nmap ]t :tabnext<CR>
 nmap <Leader>b :Buffers <cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
