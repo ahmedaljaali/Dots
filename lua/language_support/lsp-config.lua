@@ -14,5 +14,3 @@ lsp_installer.on_server_ready(function(server)
   end
   server:setup(opts)
 end)
-
-

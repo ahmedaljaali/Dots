@@ -10,12 +10,11 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd src/main.cc
+$argadd CMakeLists.txt
 tabnew
 tabrewind
 edit CMakeLists.txt
 argglobal
-balt src/main.cc
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -26,16 +25,16 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 9 - ((8 * winheight(0) + 16) / 32)
+let s:l = 8 - ((7 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 9
-normal! 0
+keepjumps 8
+normal! 044|
+if exists(':tcd') == 2 | tcd ~/Programming/train | endif
 tabnext
-edit src/main.cc
+edit ~/Programming/train/src/main.cc
 argglobal
-balt /usr/include/c++/11.1.0/bits/stl_vector.h
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -46,30 +45,16 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 101 - ((21 * winheight(0) + 16) / 32)
+let s:l = 6 - ((5 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 101
-normal! 048|
+keepjumps 6
+normal! 0
 if exists(':tcd') == 2 | tcd ~/Programming/train | endif
 tabnext 2
-badd +9 ~/Programming/train/CMakeLists.txt
-badd +101 ~/Programming/train/src/main.cc
-badd +0 ~/Programming/train/src/main
-badd +46 ~/.config/nvim/config/general.vim
-badd +1 ~/.config/nvim/config/FM/keymaps.vim
-badd +1 /usr/include/a.out.h
-badd +39 ~/.config/nvim/config/language_support/cmp-config.lua
-badd +1 ~/.config/nvim/config/language_support/lsp-config.lua
-badd +424 /usr/include/c++/11.1.0/bits/stl_vector.h
-badd +1 /usr/include/c++/11.1.0/array
-badd +1 ~/Programming/train/inc/print.h
-badd +1 ~/Programming/train/inc/p
-badd +16 ~/Programming/train/src/print.c
-badd +15 ~/Programming/train/src/print.cc
-badd +3 ~/.config/nvim/config/language_support/cmake-config.vim
-badd +1 ~/Programming/train/src/m
+badd +8 ~/Programming/train/CMakeLists.txt
+badd +6 ~/Programming/train/src/main.cc
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -80,6 +65,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
