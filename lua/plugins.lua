@@ -124,7 +124,7 @@ return packer.startup(function()
 --Typing
   use 'aserebryakov/vim-todo-lists'
   use 'lukas-reineke/indent-blankline.nvim'
-
+  use 'kamykn/spelunker.vim'
 
 ---------------------------------------------------------
 --Language Support

@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/rainbow",
     url = "https://github.com/luochen1990/rainbow"
   },
+  ["spelunker.vim"] = {
+    loaded = true,
+    path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/spelunker.vim",
+    url = "https://github.com/kamykn/spelunker.vim"
+  },
   ["vim-cmake"] = {
     loaded = true,
     path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/vim-cmake",
