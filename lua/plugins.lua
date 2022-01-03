@@ -132,6 +132,12 @@ return packer.startup(function()
 --Language Support
   use 'cdelledonne/vim-cmake'
   use 'alepez/vim-gtest'
+  use 
+  {
+    'lewis6991/gitsigns.nvim',
+    requires = {'nvim-lua/plenary.nvim'},
+  -- tag = 'release' -- To use the latest release
+  }
 
 ---------------------------------------------------------
 --toking with language server

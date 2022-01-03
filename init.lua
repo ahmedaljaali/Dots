@@ -8,6 +8,7 @@ require('language_support/cmake-config')
 require('language_support/treesitter-config')
 require('language_support/lsp-config')
 require('language_support/cmp-config')
+require('language_support/gitsigns')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
