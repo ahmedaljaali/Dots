@@ -60,7 +60,7 @@ packer.init
   },
   log = { level = 'warn' }, -- The default print log level. One of: "trace", "debug", "info", "warn", "error", "fatal".
   profile = {
-    enable = false,
+    enable = true,
     threshold = 1, -- integer in milliseconds, pugins which load faster than this won't be shown in profile output
   }
 }
