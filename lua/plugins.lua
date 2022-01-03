@@ -127,12 +127,22 @@ return packer.startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
   use 'kamykn/spelunker.vim'
   use 'windwp/nvim-autopairs'
+  use 'numToStr/Comment.nvim'
+
+
+---------------------------------------------------------
+--An implementation of the Popup API from vim in Neovim
+  use
+  {
+    'nvim-lua/popup.nvim',
+    requires = {'nvim-lua/plenary.nvim'},
+  }
 
 ---------------------------------------------------------
 --Language Support
   use 'cdelledonne/vim-cmake'
   use 'alepez/vim-gtest'
-  use 
+  use
   {
     'lewis6991/gitsigns.nvim',
     requires = {'nvim-lua/plenary.nvim'},
