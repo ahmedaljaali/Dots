@@ -11,10 +11,32 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd CMakeLists.txt
+set stal=2
 tabnew
 tabrewind
 edit CMakeLists.txt
 argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 16) / 32)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 023|
+if exists(':tcd') == 2 | tcd ~/Programming/train | endif
+tabnext
+edit ~/Programming/train/src/main.cc
+argglobal
+balt ~/Programming/train/compile_commands.json
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -30,32 +52,14 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 8
-normal! 058|
-if exists(':tcd') == 2 | tcd ~/Programming/train | endif
-tabnext
-edit ~/Programming/train/src/main.cc
-argglobal
-balt ~/Programming/train/src/main.cc
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 4 - ((3 * winheight(0) + 16) / 32)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 4
-normal! 031|
+normal! 0
 if exists(':tcd') == 2 | tcd ~/Programming/train | endif
 tabnext 2
-badd +8 ~/Programming/train/CMakeLists.txt
-badd +4 ~/Programming/train/src/main.cc
+set stal=1
+badd +1 ~/Programming/train/src/main.cc
+badd +1 ~/Programming/train/CMakeLists.txt
+badd +1 ~/Programming/train/compile_commands.json
+badd +1 ~/Programming/train/has.js
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -66,6 +70,7 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

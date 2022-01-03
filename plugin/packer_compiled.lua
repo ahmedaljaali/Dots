@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -129,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
   ["onedark.vim"] = {
     loaded = true,
     path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/onedark.vim",
@@ -143,16 +153,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/rainbow",
     url = "https://github.com/luochen1990/rainbow"
-  },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/vim-airline",
-    url = "https://github.com/vim-airline/vim-airline"
-  },
-  ["vim-airline-themes"] = {
-    loaded = true,
-    path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
-    url = "https://github.com/vim-airline/vim-airline-themes"
   },
   ["vim-cmake"] = {
     loaded = true,

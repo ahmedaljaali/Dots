@@ -16,7 +16,7 @@ require('language_support/cmp-config')
 
 require('themes/theme')
 require('themes/rainbowBraket')
-require('themes/airline')
+require('themes/lualine-conf')
 require('themes/icons')
 ----------------------------------------------------------------------
 

@@ -101,14 +101,13 @@ return packer.startup(function()
   use 'luochen1990/rainbow'
   use
   {
-    'vim-airline/vim-airline',
-    requires = {{'vim-airline/vim-airline-themes'}}
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use 'junegunn/vim-emoji'
   use 'mhinz/vim-startify'
   use 'ryanoasis/vim-devicons'
   use 'mtdl9/vim-log-highlighting'
-
 ---------------------------------------------------------
 --Moving Fast
   use
