@@ -11,7 +11,6 @@ set shortmess=aoO
 argglobal
 %argdel
 $argadd CMakeLists.txt
-set stal=2
 tabnew
 tabrewind
 edit CMakeLists.txt
@@ -26,7 +25,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 16) / 32)
+let s:l = 1 - ((0 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -47,7 +46,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 8 - ((7 * winheight(0) + 16) / 32)
+let s:l = 8 - ((7 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -55,11 +54,11 @@ keepjumps 8
 normal! 0
 if exists(':tcd') == 2 | tcd ~/Programming/train | endif
 tabnext 2
-set stal=1
-badd +1 ~/Programming/train/src/main.cc
 badd +1 ~/Programming/train/CMakeLists.txt
+badd +0 ~/Programming/train/src/main.cc
 badd +1 ~/Programming/train/compile_commands.json
 badd +1 ~/Programming/train/has.js
+badd +1 ~/.config/nvim/lua/themes/lualine-conf.lua
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
