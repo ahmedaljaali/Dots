@@ -126,6 +126,7 @@ return packer.startup(function()
   use 'aserebryakov/vim-todo-lists'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'kamykn/spelunker.vim'
+  use 'windwp/nvim-autopairs'
 
 ---------------------------------------------------------
 --Language Support

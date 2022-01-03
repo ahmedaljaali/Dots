@@ -36,4 +36,5 @@ require('FM/keymaps')
 
 require('typing/indent')
 require('typing/spelling')
+require('typing/autopairs')
 ----------------------------------------------------------------------
