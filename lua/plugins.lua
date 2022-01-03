@@ -90,6 +90,7 @@ vim.cmd([[
 
 ----------------------------------------------------------------------------------------------------------------
 --install plugins
+
 return packer.startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -105,7 +106,6 @@ return packer.startup(function()
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use 'junegunn/vim-emoji'
-  use 'mhinz/vim-startify'
   use 'ryanoasis/vim-devicons'
   use 'mtdl9/vim-log-highlighting'
 ---------------------------------------------------------
@@ -119,6 +119,7 @@ return packer.startup(function()
   use 'voldikss/vim-floaterm'
   use 'antoinemadec/FixCursorHold.nvim'
   use 'szw/vim-maximizer'
+  use 'mhinz/vim-startify'
 
 ---------------------------------------------------------
 --Typing
@@ -132,7 +133,7 @@ return packer.startup(function()
   use 'alepez/vim-gtest'
 
 ---------------------------------------------------------
---toking with langauge server
+--toking with language server
   use
   {
     'nvim-treesitter/nvim-treesitter',

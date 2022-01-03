@@ -29,7 +29,7 @@ require('lualine').setup {
 
 ------------------------------------------------------
 --Always don't show tabs
-vim.cmd[[set showtabline=0]]
+vim.opt.showtabline = 0
 
 ------------------------------------------------------
 

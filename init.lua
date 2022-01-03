@@ -5,11 +5,9 @@ require('general')
 --Language Support
 
 require('language_support/cmake-config')
-require('language_support/spelling')
 require('language_support/treesitter-config')
 require('language_support/lsp-config')
 require('language_support/cmp-config')
-require('language_support/spelling')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
@@ -30,5 +28,12 @@ require('FM/splitControl')
 require('FM/fileStorm')
 require('FM/fff')
 require('FM/keymaps')
-require('FM/indent')
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--typing
+
+require('typing/indent')
+require('typing/spelling')
 ----------------------------------------------------------------------
