@@ -207,7 +207,7 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
-if should_profile then save_profiles() end
+if should_profile then save_profiles(1) end
 
 end)
 
