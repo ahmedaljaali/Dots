@@ -9,7 +9,6 @@ require('language_support/treesitter-config')
 require('language_support/lsp-config')
 require('language_support/cmp-config')
 require('language_support/gitsigns')
-require('language_support/trouble')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------

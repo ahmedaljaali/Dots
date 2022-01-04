@@ -34,6 +34,7 @@ normal! 0
 tabnext
 edit src/main.cc
 argglobal
+balt src/main.cc
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -49,11 +50,10 @@ if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 9
-normal! 06|
+normal! 09|
 tabnext 2
 badd +1 CMakeLists.txt
 badd +9 src/main.cc
-badd +1 /usr/include/c++/11.1.0/iostream
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif

@@ -148,11 +148,6 @@ return packer.startup(function()
     requires = {'nvim-lua/plenary.nvim'},
   -- tag = 'release' -- To use the latest release
   }
-  use
-  {
-    "folke/trouble.nvim",
-    requires = "kyazdani42/nvim-web-devicons",
-  }
 
 ---------------------------------------------------------
 --toking with language server

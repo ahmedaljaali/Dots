@@ -184,11 +184,6 @@ _G.packer_plugins = {
     path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/spelunker.vim",
     url = "https://github.com/kamykn/spelunker.vim"
   },
-  ["trouble.nvim"] = {
-    loaded = true,
-    path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/trouble.nvim",
-    url = "https://github.com/folke/trouble.nvim"
-  },
   ["vim-cmake"] = {
     loaded = true,
     path = "/home/aqashir/.local/share/nvim/site/pack/packer/start/vim-cmake",
