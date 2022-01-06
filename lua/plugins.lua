@@ -7,7 +7,7 @@ packer.init
 {
   ensure_dependencies   = true, -- Should packer install plugin dependencies?
   package_root   = util.join_paths(vim.fn.stdpath('data'), 'site', 'pack'),
-  compile_path = util.join_paths(vim.fn.stdpath('config'), 'plugin', 'packer_compiled.lua'),
+  compile_path = '~/.local/share/nvim/plugin/packer_compiled.lua',
   plugin_package = 'packer', -- The default package for plugins
   max_jobs = nil, -- Limit the number of simultaneous jobs. nil means no limit
   auto_clean = true, -- During sync(), remove unused plugins
