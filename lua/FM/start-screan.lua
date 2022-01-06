@@ -1,6 +1,6 @@
 -------------------------------------------------------
 --Where to put my sessions
-vim.g.startify_session_dir = '~/.config/nvim/session'
+vim.g.startify_session_dir = '~/.local/share/nvim'
 -------------------------------------------------------
 
 -------------------------------------------------------
