@@ -27,7 +27,6 @@ require('FM/start-screan')
 require('FM/fzfz')
 require('FM/splitControl')
 require('FM/fileStorm')
-require('FM/fff')
 require('FM/keymaps')
 ----------------------------------------------------------------------
 
