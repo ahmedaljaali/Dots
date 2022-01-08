@@ -147,6 +147,8 @@ return packer.startup(function()
     requires = {'nvim-lua/plenary.nvim'},
   -- tag = 'release' -- To use the latest release
   }
+  use 'L3MON4D3/LuaSnip' --snipts
+  use 'onsails/lspkind-nvim' --pictograms for neovim lsp completion items
 
 ---------------------------------------------------------
 --toking with language server
@@ -169,7 +171,7 @@ return packer.startup(function()
     'hrsh7th/nvim-cmp',
     requires = {{'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
                 'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
-                'hrsh7th/cmp-nvim-lua'}}
+                'hrsh7th/cmp-nvim-lua', 'saadparwaiz1/cmp_luasnip'}}
   }
 ---------------------------------------------------------
 

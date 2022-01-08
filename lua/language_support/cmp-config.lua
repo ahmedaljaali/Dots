@@ -1,6 +1,13 @@
   local cmp = require'cmp'
+  local lspkind = require "lspkind"
+
 
   cmp.setup({
+ snippet = {
+      expand = function(args)
+        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      end,
+    },
     mapping = {
       ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
       ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
@@ -12,8 +19,24 @@
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
       { name = 'nvim_lua' },
+      { name = 'luasnip' },
       { name = 'buffer' },
-    })
+    }),
+
+    formatting = {
+    format = lspkind.cmp_format {
+      with_text = true,
+      menu = {
+        buffer = "[buf]",
+        nvim_lsp = "[LSP]",
+        nvim_lua = "[api]",
+        path = "[path]",
+        luasnip = "[snip]",
+        gh_issues = "[issues]",
+        tn = "[TabNine]",
+      },
+    },
+  },
 
   })
 
