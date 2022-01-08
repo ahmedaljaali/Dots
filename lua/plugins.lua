@@ -105,7 +105,6 @@ return packer.startup(function()
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  use 'junegunn/vim-emoji'
   use 'ryanoasis/vim-devicons'
   use 'mtdl9/vim-log-highlighting'
 ---------------------------------------------------------
