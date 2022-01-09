@@ -97,7 +97,7 @@ return packer.startup(function()
 
 ---------------------------------------------------------
 --Theme And Colors
-  use 'joshdick/onedark.vim'
+  use 'navarasu/onedark.nvim'
   use 'octol/vim-cpp-enhanced-highlight'
   use 'luochen1990/rainbow'
   use
@@ -151,7 +151,7 @@ return packer.startup(function()
   use 'onsails/lspkind-nvim' --pictograms for neovim lsp completion items
 
 ---------------------------------------------------------
---toking with language server
+--talking with language server
   use
   {
     'nvim-treesitter/nvim-treesitter',
