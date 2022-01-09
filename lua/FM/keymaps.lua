@@ -94,3 +94,11 @@ nmap <leader>sad <cmd>lua require('diaglist').open_all_diagnostics()<cr>
 nmap <leader>sd <cmd>lua require('diaglist').open_buffer_diagnostics()<cr>
 ]]
 -----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+--floaterm
+vim.g.floaterm_keymap_new = '<Leader>fn'
+vim.g.floaterm_keymap_prev   = '<leader>fp'
+vim.g.floaterm_keymap_next   = '<leader>fx'
+vim.g.floaterm_keymap_toggle = '<Leader>ft'
+-----------------------------------------------------------------------------------------------
