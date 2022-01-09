@@ -81,3 +81,11 @@ map('n', '<c-t>', ':FloatermNew --autoclose=1  fff<cr>', opts)
 --fzfz
 map('n', '<C-p>', ':Files<Cr>', opts)
 --------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+--diagnostics
+vim.cmd[[
+nmap <leader>sad <cmd>lua require('diaglist').open_all_diagnostics()<cr>
+nmap <leader>sd <cmd>lua require('diaglist').open_buffer_diagnostics()<cr>
+]]
+-----------------------------------------------------------------------------------------------
