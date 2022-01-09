@@ -28,7 +28,6 @@ require('themes/icons')
 
 require('FM/start-screan')
 require('FM/fzfz')
-require('FM/splitControl')
 require('FM/fileStorm')
 require('FM/keymaps')
 ----------------------------------------------------------------------
