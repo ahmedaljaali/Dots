@@ -33,7 +33,7 @@ packer.init
       submodules     = 'submodule update --init --recursive --progress'
     },
     depth = 1, -- Git clone depth
-    clone_timeout = 60, -- Timeout, in seconds, for git clones
+    clone_timeout = 120, -- Timeout, in seconds, for git clones
     default_url_format = 'https://github.com/%s' -- Lua format string used for "aaa/bbb" style plugins
   },
   display = {
