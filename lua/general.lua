@@ -26,11 +26,11 @@ vim.opt.ruler = true
 
 
 --------------------------------------------------------------
--- => Text, tab and indent related
+-- => Text and tab related
 vim.opt.expandtab = true             --Use spaces instead of tabs.
 vim.opt.smarttab = true              --Be smart using tabs ;)
-vim.opt.shiftwidth = 4               --One tab == four spaces
-vim.opt.tabstop = 4
+vim.opt.shiftwidth = 2               --One tab == two spaces
+vim.opt.tabstop = 2
 --------------------------------------------------------------
 
 
