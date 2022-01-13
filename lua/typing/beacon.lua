@@ -17,6 +17,8 @@ vim.g.beacon_show_jumps = 1
 --change what beacon considers significant jump
 vim.g.beacon_minimal_jump = 10
 ----------------------------------------
+
+----------------------------------------
 --disable/enable shrinking animation
 vim.g.beacon_shrink = 1
 ----------------------------------------
@@ -33,5 +35,5 @@ vim.g.beacon_timeout = 500 --it's in milliseconds
 
 ----------------------------------------
 --File type to ignore
-vim.g.beacon_ignore_filetypes = {''}
+--vim.g.beacon_ignore_filetypes = {''}
 ----------------------------------------
