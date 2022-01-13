@@ -48,7 +48,7 @@ vim.opt.hlsearch = false
 
 --------------------------------------------------------------
 --store backup, undo, and swap files in temp directory
-vim.opt.directory = '/home/aqashir/temp'
-vim.g['backupdiri'] ='/home/aqashir/temp'
-vim.opt.undodir = '/home/aqashir/temp'
+vim.opt.directory = os.getenv("HOME") .. '/temp/swap'
+vim.g['backupdiri'] = os.getenv("HOME") .. '/temp/backup'
+vim.opt.undodir = os.getenv("HOME") .. '/temp/undo'
 --------------------------------------------------------------
