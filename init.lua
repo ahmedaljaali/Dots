@@ -39,7 +39,6 @@ require('language_support/cmp-config')
 require('language_support/gitsigns')
 require('language_support/lspkind')
 require('language_support/lsp-config')
-require('language_support/diagnostics')
 require('language_support/code-actions')
 require('language_support/nvim-lua')
 ----------------------------------------------------------------------

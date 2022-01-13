@@ -150,7 +150,6 @@ return packer.startup(function()
   }
   use 'L3MON4D3/LuaSnip' --snipts
   use 'onsails/lspkind-nvim' --pictograms for neovim lsp completion items
-  use 'onsails/diaglist.nvim'
   use
   {
     'weilbith/nvim-code-action-menu',
