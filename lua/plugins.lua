@@ -127,6 +127,7 @@ return packer.startup(function()
   use 'kamykn/spelunker.vim'
   use 'windwp/nvim-autopairs'
   use 'numToStr/Comment.nvim'
+  use 'danilamihailov/beacon.nvim'
 
 
 ---------------------------------------------------------
