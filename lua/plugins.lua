@@ -154,6 +154,11 @@ return packer.startup(function()
   {
     'weilbith/nvim-code-action-menu',
   }
+  use --nvim lua support
+  {
+    'folke/lua-dev.nvim',
+    'hrsh7th/cmp-nvim-lua',
+  }
 
 ---------------------------------------------------------
 --talking with language server
@@ -176,7 +181,7 @@ return packer.startup(function()
     'hrsh7th/nvim-cmp',
     requires = {{'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
                 'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
-                'hrsh7th/cmp-nvim-lua', 'saadparwaiz1/cmp_luasnip'}}
+                'saadparwaiz1/cmp_luasnip'}}
   }
 ---------------------------------------------------------
 
