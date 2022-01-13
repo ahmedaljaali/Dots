@@ -52,3 +52,14 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 ---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+--Customizing how diagnostics are displayed
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = false,
+})
+---------------------------------------------------------------------
