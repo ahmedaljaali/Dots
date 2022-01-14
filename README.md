@@ -1,15 +1,15 @@
 ## My neovim configuration
 
-# Add copy and past to neovim
+### Add copy and past to neovim
 `sudo pacman -S xsel`
 
-# Add python support to neovim
+### Add python support to neovim
 `sudo pip install pynvim`
 
-# Add node support to neovim
+### Add node support to neovim
 `sudo npm i -g neovim`
 
-# Run ssh-agent in the background
+### Run ssh-agent in the background
 ```
 # Set up ssh-agent
 SSH_ENV="$HOME/.ssh/environment"
