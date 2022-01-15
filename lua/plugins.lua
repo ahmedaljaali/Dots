@@ -129,6 +129,7 @@ return packer.startup(function()
   use 'numToStr/Comment.nvim'
   use 'danilamihailov/beacon.nvim'
   use "McAuleyPenney/tidy.nvim" --remove trailing whitespace and empty lines
+  use 'ethanholz/nvim-lastplace' --reopen files at your last edit position
 
 
 ---------------------------------------------------------
