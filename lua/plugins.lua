@@ -128,6 +128,7 @@ return packer.startup(function()
   use 'windwp/nvim-autopairs'
   use 'numToStr/Comment.nvim'
   use 'danilamihailov/beacon.nvim'
+  use "McAuleyPenney/tidy.nvim" --remove trailing whitespace and empty lines
 
 
 ---------------------------------------------------------
