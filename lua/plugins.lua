@@ -99,7 +99,7 @@ return packer.startup(function()
 --Theme And Colors
   use 'navarasu/onedark.nvim'
   use 'octol/vim-cpp-enhanced-highlight'
-  use 'luochen1990/rainbow'
+  use 'p00f/nvim-ts-rainbow'
   use
   {
     'nvim-lualine/lualine.nvim',
