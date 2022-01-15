@@ -5,7 +5,7 @@ vim.opt.spell = false
 
 -------------------------------------------------------------
 --Auto correction
-vim.g['spell spelllang']= 'en_us'
+vim.opt.spelllang = { 'en_us' }
 -------------------------------------------------------------
 
 -- Enable spelunker.vim. (default: 1)
