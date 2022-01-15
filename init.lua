@@ -28,6 +28,7 @@ require('typing/autopairs')
 require('typing/comment-out')
 require('typing/beacon')
 require('typing/lastplace')
+require('typing/auto-save')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------

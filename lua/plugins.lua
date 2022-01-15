@@ -130,6 +130,7 @@ return packer.startup(function()
   use 'danilamihailov/beacon.nvim'
   use "McAuleyPenney/tidy.nvim" --remove trailing whitespace and empty lines
   use 'ethanholz/nvim-lastplace' --reopen files at your last edit position
+  use "Pocco81/AutoSave.nvim" -- :)
 
 
 ---------------------------------------------------------
