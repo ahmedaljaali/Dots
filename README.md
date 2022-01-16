@@ -9,6 +9,9 @@
 ### Add node support to neovim
 `sudo npm i -g neovim`
 
+### install ripgrep
+`pacman -S ripgrep`
+
 ### Run ssh-agent in the background
 ```
 # Set up ssh-agent
