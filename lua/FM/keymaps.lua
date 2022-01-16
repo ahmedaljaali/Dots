@@ -37,7 +37,6 @@ map('n', '<Leader>cw', ':close<CR>', opts)
 map('n', '<Leader>m', ':tabnew<CR>', opts)
 map('n', '[t', ':tabprevious<CR>', opts)
 map('n', ']t', ':tabnext<CR>', opts)
-map('n', '<Leader>b',':Buffers<CR>', opts)
 --------------------------------------------------------------------------------------------------
 
 
@@ -77,8 +76,11 @@ map('n', '<c-t>', ':FloatermNew --autoclose=1  fff<cr>', opts)
 --------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------
---fzfz
-map('n', '<C-p>', ':Files<Cr>', opts)
+--Telescope
+map('n', '<leader>tf', '<cmd>Telescope find_files<cr>', opts)
+map('n', '<leader>tg', '<cmd>Telescope live_grep<cr>', opts)
+map('n', '<leader>tb', '<cmd>Telescope buffers<cr>', opts)
+map('n', '<leader>th', '<cmd>Telescope help_tags<cr>', opts)
 --------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------

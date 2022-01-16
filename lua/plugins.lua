@@ -111,9 +111,8 @@ return packer.startup(function()
 --Moving Fast
   use
   {
-    'junegunn/fzf',
-    run = function() vim.fn['fzf#install'](0) end,
-    requires = {{'junegunn/fzf.vim'}}
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim'}}
   }
   use 'voldikss/vim-floaterm'
   use 'antoinemadec/FixCursorHold.nvim'

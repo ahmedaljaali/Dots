@@ -5,7 +5,7 @@ require('general')
 --Fast moving
 
 require('FM/start-screan')
-require('FM/fzfz')
+require('FM/telescope-conf')
 require('FM/fileStorm')
 require('FM/keymaps')
 ----------------------------------------------------------------------
