@@ -47,6 +47,7 @@ end
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
       { name = 'nvim_lua' },
+      { name = 'rg' },
       { name = 'luasnip' },
       { name = 'spell' },
       { name = 'buffer' },
