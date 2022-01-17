@@ -161,6 +161,11 @@ return packer.startup(function()
     'folke/lua-dev.nvim',
     'hrsh7th/cmp-nvim-lua',
   }
+  use
+  {
+    'mfussenegger/nvim-dap',
+    { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  }
 
 ---------------------------------------------------------
 --talking with language server
