@@ -112,7 +112,7 @@ return packer.startup(function()
   use
   {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/plenary.nvim', 'nvim-lua/popup.nvim'}}
+    requires = {{'nvim-lua/plenary.nvim',--[['nvim-lua/popup.nvim' "packer complain about Repetition"]] }}
   }
   use 'voldikss/vim-floaterm'
   use 'antoinemadec/FixCursorHold.nvim'
