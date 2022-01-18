@@ -12,7 +12,7 @@
 ### install ripgrep
 `sudo pacman -S ripgrep`
 
-## install lldb-vscode debuger
+### install lldb-vscode debuger
 `sudo pacman -S lldb`
 
 ### Run ssh-agent in the background
