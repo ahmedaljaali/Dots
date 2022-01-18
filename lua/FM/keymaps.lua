@@ -113,7 +113,6 @@ vim.cmd([[
     nnoremap <silent> <leader>db :lua require'dap'.toggle_breakpoint()<CR>
     nnoremap <silent> <leader>dB :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
     nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
-    nnoremap <silent> <Leader>ds :lua require("dapui").close()<CR>
     nnoremap <silent> <leader>ro :lua require'dap'.repl.open()<CR>
     nnoremap <silent> <leader>rl :lua require'dap'.run_last()<CR>
 ]])
