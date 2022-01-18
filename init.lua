@@ -43,6 +43,6 @@ require('language_support/lspkind-conf')
 require('language_support/lsp-config')
 require('language_support/code-actions')
 require('language_support/nvim-lua')
-require('language_support/dap-conf') --it doesn't work :(
+require('language_support/dap-conf')
 require('language_support/dap-ui-conf')
 ----------------------------------------------------------------------

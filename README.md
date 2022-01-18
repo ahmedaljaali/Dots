@@ -10,7 +10,7 @@
 `sudo npm i -g neovim`
 
 ### install ripgrep
-`pacman -S ripgrep`
+`sudo pacman -S ripgrep`
 
 ## install lldb-vscode debuger
 `sudo pacman -S lldb`

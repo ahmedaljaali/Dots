@@ -107,13 +107,14 @@ map('n', '<Leader>cd', ':CodeActionMenu<Cr>', opts)
 vim.cmd([[
 
     nnoremap <silent> <Leader>dc :lua require'dap'.continue()<CR>
-    nnoremap <silent> <Leader>dsv :lua require'dap'.step_over()<CR>
-    nnoremap <silent> <Leader>dsi :lua require'dap'.step_into()<CR>
-    nnoremap <silent> <Leader>dsu :lua require'dap'.step_out()<CR>
+    nnoremap <silent> <Leader>sv :lua require'dap'.step_over()<CR>
+    nnoremap <silent> <Leader>sn :lua require'dap'.step_into()<CR>
+    nnoremap <silent> <Leader>su :lua require'dap'.step_out()<CR>
     nnoremap <silent> <leader>db :lua require'dap'.toggle_breakpoint()<CR>
     nnoremap <silent> <leader>dB :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
-    nnoremap <silent> <leader>dlp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
-    nnoremap <silent> <leader>dro :lua require'dap'.repl.open()<CR>
-    nnoremap <silent> <leader>drl :lua require'dap'.run_last()<CR>
+    nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
+    nnoremap <silent> <Leader>ds :lua require("dapui").close()<CR>
+    nnoremap <silent> <leader>ro :lua require'dap'.repl.open()<CR>
+    nnoremap <silent> <leader>rl :lua require'dap'.run_last()<CR>
 ]])
 -----------------------------------------------------------------------------------------------
