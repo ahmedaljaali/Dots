@@ -17,7 +17,6 @@ map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 map('n', '<Leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
 map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-map('n', '<Leader>sd', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 map('n', '<Leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 --------------------------------------------------------------------------------------------------
 
@@ -116,4 +115,11 @@ vim.cmd([[
     nnoremap <silent> <leader>ro :lua require'dap'.repl.open()<CR>
     nnoremap <silent> <leader>rl :lua require'dap'.run_last()<CR>
 ]])
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+--trouble
+map("n", "<leader>sad", "<cmd>Trouble workspace_diagnostics<cr>", opts)
+map("n", "<leader>sd", "<cmd>Trouble document_diagnostics<cr>", opts)
+map("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
 -----------------------------------------------------------------------------------------------

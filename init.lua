@@ -45,4 +45,5 @@ require('language_support/code-actions')
 require('language_support/nvim-lua')
 require('language_support/dap-conf')
 require('language_support/dap-ui-conf')
+require('language_support/trouble-conf')
 ----------------------------------------------------------------------
