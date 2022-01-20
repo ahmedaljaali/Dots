@@ -1,5 +1,3 @@
-vim.g.floaterm_keymap_new = '<Leader>ft'
-vim.g.floaterm_keymap_toggle = '<Leader>t'
 vim.g.floaterm_position = 'bottom'
 vim.g.floaterm_opener = 'tabe'
 vim.g.floaterm_autoclose = 2

@@ -27,18 +27,6 @@ lsp_installer.settings({
             -- The list icon to use for servers that are not installed.
             server_uninstalled = "✗"
         },
-        keymaps = {
-            -- Keymap to expand a server in the UI
-            toggle_server_expand = "<CR>",
-            -- Keymap to install a server
-            install_server = "i",
-            -- Keymap to reinstall/update a server
-            update_server = "u",
-            -- Keymap to update all installed servers
-            update_all_servers = "U",
-            -- Keymap to uninstall a server
-            uninstall_server = "X",
-        },
     },
 
     -- The directory in which to install all servers.
