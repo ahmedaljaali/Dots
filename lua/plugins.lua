@@ -130,6 +130,11 @@ return packer.startup(function()
   use "McAuleyPenney/tidy.nvim" --remove trailing whitespace and empty lines
   use 'ethanholz/nvim-lastplace' --reopen files at your last edit position
   use "Pocco81/AutoSave.nvim" -- :)
+  use --Fix list
+  {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  }
 
 
 ---------------------------------------------------------

@@ -123,3 +123,8 @@ map("n", "<leader>sad", "<cmd>Trouble workspace_diagnostics<cr>", opts)
 map("n", "<leader>sd", "<cmd>Trouble document_diagnostics<cr>", opts)
 map("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
 -----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+--Todo
+map("n", "<Leader>td", "<cmd>TodoTrouble<CR>", opts)
+-----------------------------------------------------------------------------------------------
