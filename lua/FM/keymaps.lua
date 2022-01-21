@@ -139,22 +139,6 @@ map('n', '<Leader>cd', ':CodeActionMenu<Cr>', opts)
 -----------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------
---nvim-dap
-vim.cmd([[
-
-    nnoremap <silent> <Leader>dc :lua require'dap'.continue()<CR>
-    nnoremap <silent> <Leader>sv :lua require'dap'.step_over()<CR>
-    nnoremap <silent> <Leader>sn :lua require'dap'.step_into()<CR>
-    nnoremap <silent> <Leader>su :lua require'dap'.step_out()<CR>
-    nnoremap <silent> <leader>db :lua require'dap'.toggle_breakpoint()<CR>
-    nnoremap <silent> <leader>dB :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
-    nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
-    nnoremap <silent> <leader>ro :lua require'dap'.repl.open()<CR>
-    nnoremap <silent> <leader>rl :lua require'dap'.run_last()<CR>
-]])
------------------------------------------------------------------------------------------------
-
------------------------------------------------------------------------------------------------
 --trouble
 map("n", "<leader>sad", "<cmd>Trouble workspace_diagnostics<cr>", opts)
 map("n", "<leader>sd", "<cmd>Trouble document_diagnostics<cr>", opts)
@@ -275,20 +259,6 @@ cmp.setup({
     },
 
   })
------------------------------------------------------------------------------------------------
-
------------------------------------------------------------------------------------------------
---dap-ui
-require("dapui").setup({
-  mappings = {
-    -- Use a table to apply multiple mappings
-    expand = { "<CR>", "<2-LeftMouse>" },
-    open = "o",
-    remove = "d",
-    edit = "e",
-    repl = "r",
-  }
-})
 -----------------------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------------------
