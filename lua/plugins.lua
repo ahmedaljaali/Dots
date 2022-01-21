@@ -168,11 +168,6 @@ return packer.startup(function()
   }
   use
   {
-    'mfussenegger/nvim-dap',
-    { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-  }
-  use
-  {
   "folke/trouble.nvim",
   requires = "kyazdani42/nvim-web-devicons",
   }
