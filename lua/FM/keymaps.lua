@@ -60,7 +60,6 @@ map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
 map('n', '<Leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 --------------------------------------------------------------------------------------------------
 
-
 --------------------------------------------------------------------------------------------------
 --Remap splits navigation to just CTRL + hjkl
 map('n', '<C-h>', '<C-w>h', opts)
@@ -68,7 +67,6 @@ map('n', '<C-j>', '<C-w>j', opts)
 map('n', '<C-k>', '<C-w>k', opts)
 map('n', '<C-l>', '<C-w>l', opts)
 --------------------------------------------------------------------------------------------------
-
 
 --------------------------------------------------------------------------------------------------
 --working with tabs
@@ -78,19 +76,16 @@ map('n', '[t', ':tabprevious<CR>', opts)
 map('n', ']t', ':tabnext<CR>', opts)
 --------------------------------------------------------------------------------------------------
 
-
 --------------------------------------------------------------------------------------------------
 --toggle between highlight search
 map('n', '<C-]>', ':set hlsearch!<CR>', opts)
 --------------------------------------------------------------------------------------------------
-
 
 --------------------------------------------------------------------------------------------------
 --Working With sessions
 map('n', '<Leader>cs', ':SClose<CR>', opts)
 map('n', '<Leader>ls', ':SLoad<CR>', opts)
 --------------------------------------------------------------------------------------------------
-
 
 --------------------------------------------------------------------------------------------------
 --Close cmake window
@@ -344,4 +339,15 @@ require('onedark').setup  {
      -- toggle theme style ---
      toggle_style_key = '<leader>ts', -- Default keybinding to toggle
  }
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------
+--vimspector
+map('n', '<Leader>dc', ':cal vimspector#Continue()<cr>', opts)
+map('n', '<Leader>sv', ':cal vimspector#StepOver()<cr>', opts)
+map('n', '<Leader>sn', ':cal vimspector#StepInto()<cr>', opts)
+map('n', '<Leader>su', ':cal vimspector#StepOut()<cr>', opts)
+map('n', '<Leader>dr', ':VimspectorReset<cr>', opts)
+map('n', '<Leader>db', ':cal vimspector#SetLineBreakpoint(file_name, line_num)', opts)
+map('n', '<Leader>dbc', ':cal vimspector#ClearLineBreakpoint(file_name, line_num)', opts)
 -----------------------------------------------------------------------------------------------

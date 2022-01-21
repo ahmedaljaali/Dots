@@ -45,4 +45,5 @@ require('language_support/lsp-config')
 require('language_support/code-actions')
 require('language_support/nvim-lua')
 require('language_support/trouble-conf')
+require('language_support/debug')
 ----------------------------------------------------------------------
