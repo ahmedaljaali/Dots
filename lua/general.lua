@@ -22,24 +22,19 @@ vim.opt.number = true
 vim.opt.ruler = true
 --------------------------------------------------------------
 
-
-
-
 --------------------------------------------------------------
--- => Text and tab related
+-- => tab related
 vim.opt.expandtab = true             --Use spaces instead of tabs.
 vim.opt.smarttab = true              --Be smart using tabs ;)
-vim.opt.shiftwidth = 2               --One tab == two spaces
-vim.opt.tabstop = 2
+vim.opt.shiftwidth = 4               --One tab == four spaces
+vim.opt.tabstop = 4
 --------------------------------------------------------------
-
 
 --------------------------------------------------------------
 --No warning sound
 vim.opt.errorbells = false
 vim.opt.vb.t_vb = false
 --------------------------------------------------------------
-
 
 --------------------------------------------------------------
 --no high light by defualt
