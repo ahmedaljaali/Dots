@@ -3,7 +3,7 @@ local autosave = require("autosave")
 autosave.setup(
     {
         enabled = true,
-        execution_message = "AutoSave: saved at " .. os.date("%H:%M:%S"),
+        execution_message = "Saved at " .. os.date("%H:%M:%S"),
         events = {"InsertLeave"},
         conditions = {
             exists = true,
