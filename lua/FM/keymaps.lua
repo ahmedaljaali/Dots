@@ -66,6 +66,15 @@ map('n', '<C-h>', '<C-w>h', opts)
 map('n', '<C-j>', '<C-w>j', opts)
 map('n', '<C-k>', '<C-w>k', opts)
 map('n', '<C-l>', '<C-w>l', opts)
+
+vim.cmd[[
+    tnoremap <C-h> <C-\><C-N><C-w>h
+    tnoremap <C-j> <C-\><C-N><C-w>j
+    tnoremap <C-k> <C-\><C-N><C-w>k
+    tnoremap <C-l> <C-\><C-N><C-w>l
+    tnoremap <Leader>ct <C-\><C-n>
+]]
+map('n', 'ot', ':terminal<CR>', opts) --open terminal
 --------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------
