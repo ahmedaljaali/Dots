@@ -1,41 +1,50 @@
-## My neovim configuration
+# My neovim configuration
 
-### Add copy and past to neovim
+## Add copy and past to neovim
 `sudo pacman -S xsel`
 
-### Add python support to neovim
+## Add python support to neovim
 `sudo pip install pynvim`
 
-### Add node support to neovim
+## Add node support to neovim
 `sudo npm i -g neovim`
 
-### install ripgrep
+## install ripgrep
 `sudo pacman -S ripgrep`
 
-### install lldb-vscode debuger
+## install lldb-vscode debuger
 `sudo pacman -S lldb`
 
-### Run ssh-agent in the background
+## Run ssh-agent in the background
+
+Create a systemd user service, by putting the following to ~/.config/systemd/user/ssh-agent.service:
+
 ```
-# Set up ssh-agent
-SSH_ENV="$HOME/.ssh/environment"
+[Unit]
+Description=SSH key agent
 
-function start_agent {
-    echo "Initializing new SSH agent..."
-    touch $SSH_ENV
-    chmod 600 "${SSH_ENV}"
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' >> "${SSH_ENV}"
-    . "${SSH_ENV}" > /dev/null
-    /usr/bin/ssh-add
-}
+[Service]
+Type=simple
+Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
+ExecStart=/usr/bin/ssh-agent -D -a $SSH_AUTH_SOCK
 
-# Source SSH settings, if applicable
-if [ -f "${SSH_ENV}" ]; then
-    . "${SSH_ENV}" > /dev/null
-    kill -0 $SSH_AGENT_PID 2>/dev/null || {
-        start_agent
-    }
-else
-    start_agent
-fi
+[Install]
+WantedBy=default.target
+```
+Setup shell to have an environment variable for the socket (.bash_profile, .zshrc, config.fish):
+
+```
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+```
+
+Enable the service, so it'll be started automatically on login, and start it:
+
+```
+systemctl --user enable ssh-agent
+systemctl --user start ssh-agent
+```
+Add the following configuration setting to your local ssh config file ~/.ssh/config
+
+```
+AddKeysToAgent  yes
 ```
