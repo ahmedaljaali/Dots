@@ -74,7 +74,7 @@ vim.cmd[[
     tnoremap <C-l> <C-\><C-N><C-w>l
     tnoremap <Leader>ct <C-\><C-n>
 ]]
-map('n', 'ot', ':terminal<CR>', opts) --open terminal
+map('n', '<Leader>db', ':terminal gdb Build/app<CR>', opts) --open terminal
 --------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------
@@ -348,15 +348,4 @@ require('onedark').setup  {
      -- toggle theme style ---
      toggle_style_key = '<leader>ts', -- Default keybinding to toggle
  }
------------------------------------------------------------------------------------------------
-
------------------------------------------------------------------------------------------------
---vimspector
-map('n', '<Leader>dc', ':cal vimspector#Continue()<cr>', opts)
-map('n', '<Leader>sv', ':cal vimspector#StepOver()<cr>', opts)
-map('n', '<Leader>sn', ':cal vimspector#StepInto()<cr>', opts)
-map('n', '<Leader>su', ':cal vimspector#StepOut()<cr>', opts)
-map('n', '<Leader>dr', ':VimspectorReset<cr>', opts)
-map('n', '<Leader>db', ':cal vimspector#SetLineBreakpoint(file_name, line_num)', opts)
-map('n', '<Leader>dbc', ':cal vimspector#ClearLineBreakpoint(file_name, line_num)', opts)
 -----------------------------------------------------------------------------------------------

@@ -171,10 +171,6 @@ return packer.startup(function()
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
   }
-  use
-  {
-    'puremourning/vimspector',
-  }
 
 ---------------------------------------------------------
 --talking with language server
