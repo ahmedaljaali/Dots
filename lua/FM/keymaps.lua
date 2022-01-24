@@ -74,7 +74,8 @@ vim.cmd[[
     tnoremap <C-l> <C-\><C-N><C-w>l
     tnoremap <Leader>ct <C-\><C-n>
 ]]
-map('n', '<Leader>db', ':terminal gdb Build/app<CR>', opts) --open terminal
+map('n', '<Leader>db', ':tabe term://gdb Build app<CR>', opts) --open terminal with gdb
+
 --------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------
