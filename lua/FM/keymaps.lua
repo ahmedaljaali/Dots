@@ -66,15 +66,11 @@ map('n', '<C-h>', '<C-w>h', opts)
 map('n', '<C-j>', '<C-w>j', opts)
 map('n', '<C-k>', '<C-w>k', opts)
 map('n', '<C-l>', '<C-w>l', opts)
-
-vim.cmd[[
-    tnoremap <C-h> <C-\><C-N><C-w>h
-    tnoremap <C-j> <C-\><C-N><C-w>j
-    tnoremap <C-k> <C-\><C-N><C-w>k
-    tnoremap <C-l> <C-\><C-N><C-w>l
-    tnoremap <Leader>ct <C-\><C-n>
-]]
-map('n', '<Leader>db', ':tabe term://bash<CR>', opts) --open terminal with gdb
+map("t", "<C-h>", "<C-\\><C-N><C-w>h",  { silent = true })
+map("t", "<C-j>", "<C-\\><C-N><C-w>j",  { silent = true })
+map("t", "<C-k>", "<C-\\><C-N><C-w>k",  { silent = true })
+map("t", "<C-l>", "<C-\\><C-N><C-w>l",  { silent = true })
+map('n', '<Leader>db', ':terminal gdb Build/app<CR>', opts) --open terminal with gdb
 
 --------------------------------------------------------------------------------------------------
 
