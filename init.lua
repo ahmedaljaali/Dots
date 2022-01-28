@@ -8,6 +8,7 @@ require('FM/start-screan')
 require('FM/telescope-conf')
 require('FM/fileStorm')
 require('FM/keymaps')
+require('FM/status-line')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
@@ -15,7 +16,6 @@ require('FM/keymaps')
 
 require('colors/theme')
 require('colors/rainbowBraket')
-require('colors/lualine-conf')
 require('colors/icons')
 ----------------------------------------------------------------------
 
