@@ -11,12 +11,12 @@ require('FM/keymaps')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
---Theme
+--colors
 
-require('themes/theme')
-require('themes/rainbowBraket')
-require('themes/lualine-conf')
-require('themes/icons')
+require('colors/theme')
+require('colors/rainbowBraket')
+require('colors/lualine-conf')
+require('colors/icons')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
