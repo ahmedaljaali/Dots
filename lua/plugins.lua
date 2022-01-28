@@ -164,7 +164,6 @@ return packer.startup(function()
   use --nvim lua support
   {
     'folke/lua-dev.nvim',
-    'hrsh7th/cmp-nvim-lua',
   }
   use
   {
@@ -194,7 +193,8 @@ return packer.startup(function()
     requires = {{'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
                 'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
                 'saadparwaiz1/cmp_luasnip', 'f3fora/cmp-spell',
-                "lukas-reineke/cmp-under-comparator", "lukas-reineke/cmp-rg"}}
+                "lukas-reineke/cmp-under-comparator", "lukas-reineke/cmp-rg",
+                'hrsh7th/cmp-nvim-lua'}}
   }
 ---------------------------------------------------------
 
