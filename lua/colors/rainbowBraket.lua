@@ -5,9 +5,6 @@ require("nvim-treesitter.configs").setup {
   },
   -- ...
   rainbow = {
-    colors = {
-      -- Colors here
-    },
     enable = true,
     -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
     extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
