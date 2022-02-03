@@ -12,9 +12,6 @@
 ## install ripgrep
 `sudo pacman -S ripgrep`
 
-## install lldb-vscode debuger
-`sudo pacman -S lldb`
-
 ## Run ssh-agent in the background
 
 Create a systemd user service, by putting the following to ~/.config/systemd/user/ssh-agent.service:
