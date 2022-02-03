@@ -171,6 +171,8 @@ return packer.startup(function()
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
   }
+  use 'simrat39/symbols-outline.nvim'
+
 
 ---------------------------------------------------------
 --talking with language server
