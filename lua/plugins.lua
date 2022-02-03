@@ -98,6 +98,7 @@ return packer.startup(function()
 ---------------------------------------------------------
 --Theme And Colors
   use 'navarasu/onedark.nvim'
+  use 'lilydjwg/colorizer'
   use 'octol/vim-cpp-enhanced-highlight'
   use 'p00f/nvim-ts-rainbow'
   use
