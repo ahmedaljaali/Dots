@@ -157,7 +157,11 @@ return packer.startup(function()
   -- tag = 'release' -- To use the latest release
   }
   use 'L3MON4D3/LuaSnip' --snipts
-  use 'onsails/lspkind-nvim' --pictograms for neovim lsp completion items
+  use
+  {
+      'onsails/lspkind-nvim', --pictograms for neovim lsp completion items
+      commit = '44f686c71e4bf515b2878e10445cb8ed7f351488' --The newer commits are broken
+  }
   use
   {
     'weilbith/nvim-code-action-menu',
