@@ -70,8 +70,7 @@ map("t", "<C-h>", "<C-\\><C-N><C-w>h",  { silent = true })
 map("t", "<C-j>", "<C-\\><C-N><C-w>j",  { silent = true })
 map("t", "<C-k>", "<C-\\><C-N><C-w>k",  { silent = true })
 map("t", "<C-l>", "<C-\\><C-N><C-w>l",  { silent = true })
-map('n', '<Leader>db', ':terminal gdb Build/app<CR>', opts) --open terminal with gdb
-
+map('n', '<Leader>db',"<cmd>lua _gdb_toggle()<CR>" , opts) --open terminal with gdb
 --------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------

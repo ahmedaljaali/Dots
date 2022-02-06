@@ -216,6 +216,16 @@ use "milisims/nvim-luaref"
   }
 ---------------------------------------------------------
 
+  use
+  {
+    'akinsho/toggleterm.nvim',
+    config = function()
+    require("toggleterm").setup{
+          shade_terminals = false,
+          direction = 'tab',
+      }
+      end,
+  }
 
 
   --if packer isn't installed install it
