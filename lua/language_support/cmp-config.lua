@@ -14,8 +14,13 @@ cmp.setup({
       { name = 'nvim_lua' },
       { name = 'rg' },
       { name = 'luasnip' },
+      { name = "latex_symbols" },
+      { name = 'calc' },
+      { name = 'emoji' },
       { name = 'spell' },
       { name = 'buffer' },
+      { name = 'path' },
+      { name = 'cmdline' },
     }),
 
     formatting = {
