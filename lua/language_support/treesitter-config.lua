@@ -7,6 +7,7 @@ ensure_installed = {
   "markdown",
   "lua",
 },
+sync_install = true;
 highlight = { -- enable highlighting
   enable = true,
 },

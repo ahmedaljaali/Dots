@@ -122,7 +122,6 @@ return packer.startup(function()
 
 ---------------------------------------------------------
 --Typing
-  use 'aserebryakov/vim-todo-lists'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'kamykn/spelunker.vim'
   use 'windwp/nvim-autopairs'
@@ -191,6 +190,16 @@ return packer.startup(function()
     'williamboman/nvim-lsp-installer',
   }
 ---------------------------------------------------------
+-- create directories if they don't exist
+use {
+  'jghauser/mkdir.nvim',
+  config = function()
+    require('mkdir')
+  end
+}
+
+--help for builtin lua fucntion
+use "milisims/nvim-luaref"
 
 ---------------------------------------------------------
   --for nvim auto complete
@@ -204,6 +213,8 @@ return packer.startup(function()
                 'hrsh7th/cmp-nvim-lua'}}
   }
 ---------------------------------------------------------
+
+
 
   --if packer isn't installed install it
  if packer_bootstrap then
