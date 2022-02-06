@@ -2,7 +2,6 @@
   local lspkind = require "lspkind"
   local luasnip = require "luasnip"
 
-
 cmp.setup({
  snippet = {
       expand = function(args)
@@ -10,18 +9,17 @@ cmp.setup({
       end,
     },
     sources = cmp.config.sources({
-      { name = 'nvim_lsp', priority = 1},
-      { name = 'nvim_lua' },
-      { name = 'rg' },
-      { name = 'luasnip' },
-      { name = "latex_symbols" },
-      { name = 'calc' },
-      { name = 'emoji' },
-      { name = 'spell' },
-      { name = 'buffer' },
-      { name = 'path' },
-      { name = 'cmdline' },
-      { name = "nvim_lsp_signature_help"},
+        { name = 'nvim_lua', priority = 11 },
+        { name = 'rg', priority = 12, keyword_length = 4 },
+        { name = 'spell', priority = 13 },
+        { name = "buffer", priority = 7, keyword_length = 4 },
+        { name = "path", priority = 5 },
+        { name = "emoji", priority = 3 },
+        { name = "calc", priority = 4 },
+        { name = "nvim_lsp", priority = 9 },
+        { name = "luasnip", priority = 8 },
+        { name = "latex_symbols", priority = 1 },
+        { name = "nvim_lsp_signature_help", priority = 10 },
     }),
 
     formatting = {
@@ -53,17 +51,39 @@ cmp.setup({
   })
 
   -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline('/', {
+cmp.setup.cmdline("/", {
     sources = {
-      { name = 'buffer' }
-    }
-  })
+        { name = "buffer", keyword_length = 2 },
+    },
+    enabled = function()
+        return true
+    end,
+    completion = {
+        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+        scrollbar = "║",
+    },
+    documentation = {
+        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+        scrollbar = "║",
+    },
+})
 
   -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline(':', {
+cmp.setup.cmdline(":", {
+    completion = {
+        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+        scrollbar = "║",
+    },
+    documentation = {
+        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+        scrollbar = "║",
+    },
     sources = cmp.config.sources({
-      { name = 'path' }
+        { name = "path", keyword_length = 2 },
     }, {
-      { name = 'cmdline' }
-    })
-  })
+        { name = "cmdline", keyword_length = 2 },
+    }),
+    enabled = function()
+        return true
+    end,
+})
