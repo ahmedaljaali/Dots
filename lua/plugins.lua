@@ -211,7 +211,8 @@ use "milisims/nvim-luaref"
                 'saadparwaiz1/cmp_luasnip', 'f3fora/cmp-spell',
                 "lukas-reineke/cmp-under-comparator", "lukas-reineke/cmp-rg",
                 'hrsh7th/cmp-nvim-lua', "kdheepak/cmp-latex-symbols",
-                "hrsh7th/cmp-calc", "hrsh7th/cmp-emoji"}}
+                "hrsh7th/cmp-calc", "hrsh7th/cmp-emoji",
+                "hrsh7th/cmp-nvim-lsp-signature-help"}}
   }
 ---------------------------------------------------------
 
