@@ -119,6 +119,17 @@ return packer.startup(function()
   use 'antoinemadec/FixCursorHold.nvim'
   use 'szw/vim-maximizer'
   use 'mhinz/vim-startify'
+  use
+  {
+    'akinsho/toggleterm.nvim',
+    config = function()
+    require("toggleterm").setup{
+          shade_terminals = false,
+          direction = 'tab',
+      }
+      end,
+  }
+
 
 ---------------------------------------------------------
 --Typing
@@ -198,8 +209,10 @@ use {
   end
 }
 
+---------------------------------------------------------
 --help for builtin lua fucntion
 use "milisims/nvim-luaref"
+---------------------------------------------------------
 
 ---------------------------------------------------------
   --for nvim auto complete
@@ -216,17 +229,6 @@ use "milisims/nvim-luaref"
                 {'tzachar/cmp-tabnine', run='./install.sh'},}}
   }
 ---------------------------------------------------------
-
-  use
-  {
-    'akinsho/toggleterm.nvim',
-    config = function()
-    require("toggleterm").setup{
-          shade_terminals = false,
-          direction = 'tab',
-      }
-      end,
-  }
 
 
   --if packer isn't installed install it
