@@ -10,16 +10,16 @@ cmp.setup({
     },
 
     sources = cmp.config.sources({
-
-        { name = 'nvim_lua', priority = 11 },
-        { name = 'spell', priority = 13 },
-        { name = "path", priority = 5 },
-        { name = "emoji", priority = 3 },
-        { name = "calc", priority = 4 },
-        { name = "nvim_lsp", priority = 9 },
-        { name = "luasnip", priority = 8 },
-        { name = "latex_symbols", priority = 1 },
-        { name = "nvim_lsp_signature_help", priority = 10 },
+        { name = "latex_symbols"},
+        { name = "emoji"},
+        { name = "calc"},
+        { name = "path"},
+        { name = "luasnip"},
+        { name = "nvim_lsp"},
+        { name = "nvim_lsp_signature_help"},
+        { name = 'nvim_lua'},
+        { name = 'spell'},
+        { name = 'cmp_tabnine' },
     }, {
       { name = 'buffer' },
       { name = 'rg'},
@@ -28,13 +28,13 @@ cmp.setup({
     format = lspkind.cmp_format {
       with_text = true,
       menu = {
-        buffer = "[buf]",
+        buffer = "[Buffer]",
         nvim_lsp = "[LSP]",
-        nvim_lua = "[api]",
+        nvim_lua = "[Lua]",
         path = "[path]",
         luasnip = "[snip]",
         gh_issues = "[issues]",
-        tn = "[TabNine]",
+        cmp_tabnine = "[TN]",
       },
     },
   },
