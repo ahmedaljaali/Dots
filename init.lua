@@ -46,4 +46,5 @@ require('language_support/code-actions')
 require('language_support/nvim-lua')
 require('language_support/trouble-conf')
 require('language_support/symbols-outline-conf')
+require('language_support/tabnine-conf')
 ----------------------------------------------------------------------

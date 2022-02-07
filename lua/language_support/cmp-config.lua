@@ -8,11 +8,11 @@ cmp.setup({
         luasnip.lsp_expand(args.body) -- For `luasnip` users.
       end,
     },
+
     sources = cmp.config.sources({
+
         { name = 'nvim_lua', priority = 11 },
-        { name = 'rg', priority = 12, keyword_length = 4 },
         { name = 'spell', priority = 13 },
-        { name = "buffer", priority = 7, keyword_length = 4 },
         { name = "path", priority = 5 },
         { name = "emoji", priority = 3 },
         { name = "calc", priority = 4 },
@@ -20,8 +20,10 @@ cmp.setup({
         { name = "luasnip", priority = 8 },
         { name = "latex_symbols", priority = 1 },
         { name = "nvim_lsp_signature_help", priority = 10 },
+    }, {
+      { name = 'buffer' },
+      { name = 'rg'},
     }),
-
     formatting = {
     format = lspkind.cmp_format {
       with_text = true,
