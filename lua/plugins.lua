@@ -134,7 +134,6 @@ return packer.startup(function()
 ---------------------------------------------------------
 --Typing
   use 'lukas-reineke/indent-blankline.nvim'
-  use 'kamykn/spelunker.vim'
   use 'windwp/nvim-autopairs'
   use 'numToStr/Comment.nvim'
   use 'danilamihailov/beacon.nvim'
@@ -146,6 +145,12 @@ return packer.startup(function()
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
   }
+  use
+  {
+    'lewis6991/spellsitter.nvim',
+    requires = {'nvim-treesitter/nvim-treesitter'},
+  }
+
 
 
 ---------------------------------------------------------
