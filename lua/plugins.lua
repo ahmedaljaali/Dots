@@ -191,6 +191,7 @@ return packer.startup(function()
     requires = "kyazdani42/nvim-web-devicons",
   }
   use 'simrat39/symbols-outline.nvim'
+  use 'andymass/vim-matchup'
 
 
 ---------------------------------------------------------
