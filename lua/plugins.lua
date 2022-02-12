@@ -192,6 +192,8 @@ return packer.startup(function()
   }
   use 'simrat39/symbols-outline.nvim'
   use 'andymass/vim-matchup'
+  use 'j-hui/fidget.nvim' --check if the server is ready
+
 
 
 ---------------------------------------------------------
