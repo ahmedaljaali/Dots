@@ -150,6 +150,7 @@ return packer.startup(function()
     'lewis6991/spellsitter.nvim',
     requires = {'nvim-treesitter/nvim-treesitter'},
   }
+  use 'mbbill/undotree' --From it's name :)
 
 
 
