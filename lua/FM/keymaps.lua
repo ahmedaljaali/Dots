@@ -99,7 +99,7 @@ map('n', '<Leader>cm', ':CMakeClose<CR>', opts)
 
 --------------------------------------------------------------------------------------------------
 --Run the program
-map('n', '<leader>tr', ':GTestRun<cr>', opts)
+map('n', '<leader>tr', ':FloatermNew --autoclose=0 Build/app<cr>', opts)
 --------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------
@@ -282,7 +282,7 @@ require('gitsigns').setup {
     ['n <leader>hS'] = '<cmd>Gitsigns stage_buffer<CR>',
     ['n <leader>hU'] = '<cmd>Gitsigns reset_buffer_index<CR>',
 
-    -- Text objects
+    -- Text objeuts
     ['o ih'] = ':<C-U>Gitsigns select_hunk<CR>',
     ['x ih'] = ':<C-U>Gitsigns select_hunk<CR>'
   },

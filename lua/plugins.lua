@@ -165,7 +165,6 @@ return packer.startup(function()
 ---------------------------------------------------------
 --Language Support
   use 'cdelledonne/vim-cmake'
-  use 'alepez/vim-gtest'
   use
   {
     'lewis6991/gitsigns.nvim',
