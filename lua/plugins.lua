@@ -129,6 +129,10 @@ return packer.startup(function()
       }
       end,
   }
+  use
+  {
+      'kevinhwang91/rnvimr',
+  }
 
 
 ---------------------------------------------------------

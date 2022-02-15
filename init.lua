@@ -9,6 +9,7 @@ require('FM/telescope-conf')
 require('FM/fileStorm')
 require('FM/keymaps')
 require('FM/status-line')
+require('FM/ranger')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
