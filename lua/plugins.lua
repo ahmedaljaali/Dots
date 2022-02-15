@@ -108,6 +108,11 @@ return packer.startup(function()
   }
   use 'kyazdani42/nvim-web-devicons'
   use 'mtdl9/vim-log-highlighting'
+  use
+  {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
 ---------------------------------------------------------
 --Moving Fast
   use
@@ -133,6 +138,7 @@ return packer.startup(function()
   {
       'kevinhwang91/rnvimr',
   }
+  use 'ygm2/rooter.nvim'
 
 
 ---------------------------------------------------------
@@ -221,7 +227,7 @@ return packer.startup(function()
 -- create directories if they don't exist
 use {
   'jghauser/mkdir.nvim',
-  config = function()
+  configLeader= function()
     require('mkdir')
   end
 }
