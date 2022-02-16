@@ -1,4 +1,4 @@
-local util = require('packer.util')
+jocal util = require('packer.util')
 local packer = require('packer')
 
 ----------------------------------------------------------------------------------------------------------------
@@ -134,11 +134,7 @@ return packer.startup(function()
       }
       end,
   }
-  use
-  {
-      'kevinhwang91/rnvimr',
-  }
-  use 'ygm2/rooter.nvim'
+  use 'kevinhwang91/rnvimr'
 
 
 ---------------------------------------------------------
