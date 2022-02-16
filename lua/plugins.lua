@@ -1,4 +1,4 @@
-jocal util = require('packer.util')
+local util = require('packer.util')
 local packer = require('packer')
 
 ----------------------------------------------------------------------------------------------------------------
