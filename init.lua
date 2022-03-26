@@ -51,4 +51,5 @@ require('language_support/symbols-outline-conf')
 require('language_support/tabnine-conf')
 require('language_support/fidget-conf')
 require('language_support/hlargs-conf')
+require('language_support/lsp-signature-conf')
 ----------------------------------------------------------------------

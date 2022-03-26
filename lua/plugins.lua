@@ -204,6 +204,8 @@ return packer.startup(function()
     'm-demare/hlargs.nvim',
     requires = { 'nvim-treesitter/nvim-treesitter' }
   }
+  use "ray-x/lsp_signature.nvim"
+
 
 
 
@@ -244,7 +246,6 @@ use "milisims/nvim-luaref"
                 "lukas-reineke/cmp-under-comparator", "lukas-reineke/cmp-rg",
                 'hrsh7th/cmp-nvim-lua', "kdheepak/cmp-latex-symbols",
                 "hrsh7th/cmp-calc", "hrsh7th/cmp-emoji",
-                "hrsh7th/cmp-nvim-lsp-signature-help",
                 {'tzachar/cmp-tabnine', run='./install.sh'},}}
   }
 ---------------------------------------------------------
