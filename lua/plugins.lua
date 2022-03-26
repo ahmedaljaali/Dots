@@ -205,6 +205,7 @@ return packer.startup(function()
     requires = { 'nvim-treesitter/nvim-treesitter' }
   }
   use "ray-x/lsp_signature.nvim"
+  use "haringsrob/nvim_context_vt"
 
 
 
