@@ -4,7 +4,7 @@ vim.g.bufferline = {
   animation = true,
 
   -- Enable/disable auto-hiding the tab bar when there is a single buffer
-  auto_hide = false,
+  auto_hide = true,
 
   -- Enable/disable current/total tabpages indicator (top right corner)
   tabpages = true,
@@ -65,3 +65,8 @@ vim.g.bufferline = {
   -- where X is the buffer number. But only a static string is accepted here.
   no_name_title = nil,
 }
+
+------------------------------------------------------
+--Always don't show tabs
+-- vim.opt.showtabline = 1
+------------------------------------------------------
