@@ -61,6 +61,12 @@ map('n', '<Leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 --------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------
+-- resizing splits
+map('n', '<A-h>', '<cmd>SmartResizeLeft 3<CR>', opts)
+map('n', '<A-j>', '<cmd>SmartResizeDown 3<CR>', opts)
+map('n', '<A-k>', '<cmd>SmartResizeUp 3<CR>', opts)
+map('n', '<A-l>', '<cmd>SmartResizeRight 3<CR>', opts)
+
 --Remap splits navigation to just CTRL + hjkl
 map('n', '<C-h>', '<C-w>h', opts)
 map('n', '<C-j>', '<C-w>j', opts)

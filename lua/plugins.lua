@@ -135,6 +135,7 @@ return packer.startup(function()
       end,
   }
   use 'kevinhwang91/rnvimr'
+  use 'mrjones2014/smart-splits.nvim'
 
 
 ---------------------------------------------------------

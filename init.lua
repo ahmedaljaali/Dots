@@ -11,6 +11,7 @@ require('FM/keymaps')
 require('FM/status-line')
 require('FM/ranger')
 require('FM/barbar')
+require('FM/smart-splits-conf')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
