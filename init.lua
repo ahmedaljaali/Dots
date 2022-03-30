@@ -20,6 +20,7 @@ require('FM/smart-splits-conf')
 require('colors/theme')
 require('colors/rainbowBraket')
 require('colors/icons')
+require('colors/modes-conf')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
