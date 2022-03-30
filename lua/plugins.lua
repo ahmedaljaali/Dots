@@ -253,6 +253,8 @@ use "milisims/nvim-luaref"
   }
 ---------------------------------------------------------
 
+  use 'dstein64/vim-startuptime' --measur the startup time
+
 
   --if packer isn't installed install it
  if packer_bootstrap then
