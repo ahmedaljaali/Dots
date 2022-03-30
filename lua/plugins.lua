@@ -207,6 +207,7 @@ return packer.startup(function()
   }
   use "ray-x/lsp_signature.nvim"
   use "haringsrob/nvim_context_vt"
+  use 'romgrk/nvim-treesitter-context'
 
 
 
