@@ -87,3 +87,8 @@ cmp.setup.cmdline(":", {
         return true
     end,
 })
+
+---------------------------------------------------------
+--snippets dir
+vim.g.vsnip_snippet_dir = "~/.config/nvim/lua/snips"
+---------------------------------------------------------
