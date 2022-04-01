@@ -179,7 +179,7 @@ return packer.startup(function()
     requires = {'nvim-lua/plenary.nvim'},
   -- tag = 'release' -- To use the latest release
   }
-  use 'L3MON4D3/LuaSnip' --snipts
+  use 'hrsh7th/vim-vsnip' --snipts
   use
   {
       'onsails/lspkind-nvim', --pictograms for neovim lsp completion items
@@ -245,7 +245,7 @@ use "milisims/nvim-luaref"
     'hrsh7th/nvim-cmp',
     requires = {{'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
                 'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
-                'saadparwaiz1/cmp_luasnip', 'f3fora/cmp-spell',
+                'hrsh7th/cmp-vsnip', 'f3fora/cmp-spell',
                 "lukas-reineke/cmp-under-comparator", "lukas-reineke/cmp-rg",
                 'hrsh7th/cmp-nvim-lua', "kdheepak/cmp-latex-symbols",
                 "hrsh7th/cmp-calc", "hrsh7th/cmp-emoji",

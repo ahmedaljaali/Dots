@@ -1,22 +1,21 @@
   local cmp = require'cmp'
   local lspkind = require "lspkind"
-  local luasnip = require "luasnip"
 
 cmp.setup({
  snippet = {
-      expand = function(args)
-        luasnip.lsp_expand(args.body) -- For `luasnip` users.
+     expand = function(args)
+        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
       end,
     },
 
     sources = cmp.config.sources({
+        { name = 'nvim_lsp' },
+        { name = 'vsnip' },
+        { name = 'nvim_lua'},
         { name = "latex_symbols"},
         { name = "emoji"},
         { name = "calc"},
         { name = "path"},
-        { name = "luasnip"},
-        { name = "nvim_lsp"},
-        { name = 'nvim_lua'},
         { name = 'spell'},
         { name = 'cmp_tabnine' },
     }, {
@@ -31,7 +30,7 @@ cmp.setup({
         nvim_lsp = "[LSP]",
         nvim_lua = "[Lua]",
         path = "[path]",
-        luasnip = "[snip]",
+        vsnip = "[snip]",
         gh_issues = "[issues]",
         cmp_tabnine = "[TN]",
       },
