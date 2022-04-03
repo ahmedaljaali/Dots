@@ -137,7 +137,7 @@ return packer.startup(function()
   use 'kevinhwang91/rnvimr'
   use 'mrjones2014/smart-splits.nvim'
   use 'mvllow/modes.nvim'
-
+  use 'machakann/vim-sandwich'
 
 ---------------------------------------------------------
 --Typing
