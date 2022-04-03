@@ -2,9 +2,9 @@
   "user": {
     "prefix": "default",
     "body":[
-    "cmake_minimum_required(VERSION 3.20)",
-    "project(Train VERSION 1.0)",
-    "set(CMAKE_CXX_STANDARD 20)",
+    "cmake_minimum_required(VERSION $1)",
+    "project($2 VERSION 1.0)",
+    "set(CMAKE_CXX_STANDARD $3)",
     "set(CMAKE_CXX_STANDARD_REQUIRED ON)",
     "file(GLOB_RECURSE SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cc)",
     "add_executable(app ${SOURCE_FILES})",
