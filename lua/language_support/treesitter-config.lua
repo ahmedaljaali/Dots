@@ -7,7 +7,7 @@ configs.setup {
     },
     ensure_installed = {
         "cpp",
-        "vim",
+        "json",
         "cmake",
         "markdown",
         "lua",

@@ -9,18 +9,18 @@ cmp.setup({
     },
 
     sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        { name = 'vsnip' },
-        { name = 'nvim_lua'},
-        { name = "latex_symbols"},
-        { name = "emoji"},
-        { name = "calc"},
-        { name = "path"},
-        { name = 'spell'},
-        { name = 'cmp_tabnine' },
+        { name = 'nvim_lsp', priority = 1},
+        { name = 'vsnip', priority = 2},
+        { name = 'nvim_lua', priority = 3},
+        { name = 'cmp_tabnine', priority = 4},
+        { name = "latex_symbols", priority = 5},
+        { name = "emoji", priority = 6},
+        { name = "calc", priority = 7},
+        { name = "path", priority = 8},
+        { name = 'spell', priority = 9},
     }, {
-      { name = 'buffer' },
-      { name = 'rg'},
+      { name = 'buffer', priority = 10},
+      { name = 'rg', priority = 11},
     }),
     formatting = {
     format = lspkind.cmp_format {
@@ -38,8 +38,7 @@ cmp.setup({
   },
       sorting = {
         comparators = {
-            cmp.config.compare.offset,
-            cmp.config.compare.exact,
+            cmp.config.compare.offset, cmp.config.compare.exact,
             cmp.config.compare.score,
             require "cmp-under-comparator".under,
             cmp.config.compare.kind,
