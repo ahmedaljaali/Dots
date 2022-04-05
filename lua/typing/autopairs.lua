@@ -29,6 +29,17 @@ local map_c_w = false -- map <c-w> to delete a pair if possible
 npairs.setup({
   check_ts = true, --use treesitter
   enable_check_bracket_line = true, --Don't add pairs if it already has a close pair
+  fast_wrap = {
+    map = "<Leader>fw",
+    chars = { "{", "[", "(", '"', "'" },
+    pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
+    offset = 0, -- Offset from pattern match
+    end_key = "$",
+    keys = "qwertyuiopzxcvbnmasdfghjkl",
+    check_comma = true,
+    highlight = "PmenuSel",
+    highlight_grey = "LineNr",
+  },
 })
 -----------------------------------------------------------------------------
 

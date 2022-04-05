@@ -9,20 +9,21 @@ cmp.setup({
     },
 
     sources = cmp.config.sources({
-        { name = 'nvim_lsp', priority = 1},
-        { name = 'vsnip', priority = 2},
-        { name = 'nvim_lua', priority = 3},
-        { name = 'cmp_tabnine', priority = 4},
-        { name = "latex_symbols", priority = 5},
-        { name = "emoji", priority = 6},
-        { name = "calc", priority = 7},
-        { name = "path", priority = 8},
-        { name = 'spell', priority = 9},
+        { name = 'nvim_lsp', priority = 1, group_index = 1},
+        { name = 'vsnip', priority = 2, group_index = 1},
+        { name = 'nvim_lua', priority = 3, group_index = 1},
+        { name = "latex_symbols", priority = 5, group_index = 2},
+        { name = "emoji", priority = 6, group_index = 2},
+        { name = "calc", priority = 7, group_index = 2},
+        { name = "path", priority = 8, group_index = 2},
+        { name = 'spell', priority = 9, group_index = 2},
     }, {
-      { name = 'buffer', priority = 10},
-      { name = 'rg', priority = 11},
+      { name = 'cmp_tabnine', priority = 4, group_index = 2},
+      { name = 'buffer', priority = 10, group_index = 4},
+      { name = 'rg', priority = 11, group_index = 4},
     }),
     formatting = {
+    fields = { "kind", "abbr", "menu" },
     format = lspkind.cmp_format {
       with_text = true,
       menu = {
@@ -30,7 +31,7 @@ cmp.setup({
         nvim_lsp = "[LSP]",
         nvim_lua = "[Lua]",
         path = "[path]",
-        vsnip = "[snip]",
+        vsnip = "[Vsnip]",
         gh_issues = "[issues]",
         cmp_tabnine = "[TN]",
       },
