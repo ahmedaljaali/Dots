@@ -17,6 +17,6 @@ configs.setup {
         enable = true,
     },
     indent = {
-        enable = false, -- default is disabled anyways
+        enable = true, -- default is disabled anyways
     }
 }
