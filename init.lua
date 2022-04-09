@@ -12,6 +12,7 @@ require('FM/status-line')
 require('FM/ranger')
 require('FM/barbar')
 require('FM/smart-splits-conf')
+require('FM/nvim-tree-conf')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------

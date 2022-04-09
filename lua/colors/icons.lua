@@ -76,7 +76,7 @@ default = {
       },
       ts = {
          icon = "ﯤ",
-         teal,
+         -- teal,
          name = "ts",
       },
       ttf = {

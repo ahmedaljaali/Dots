@@ -138,6 +138,13 @@ return packer.startup(function()
   use 'mrjones2014/smart-splits.nvim'
   use 'mvllow/modes.nvim'
   use 'machakann/vim-sandwich'
+  use
+  {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    }
+  }
 
 ---------------------------------------------------------
 --Typing
