@@ -5,6 +5,7 @@ local packer = require('packer')
 --initialize packer
 packer.init
 {
+  status = true,
   ensure_dependencies   = true, -- Should packer install plugin dependencies?
   package_root   = util.join_paths(vim.fn.stdpath('data'), 'site', 'pack'),
   compile_path = os.getenv("HOME") .. '/.local/share/nvim/plugin/packer_compiled.lua',
