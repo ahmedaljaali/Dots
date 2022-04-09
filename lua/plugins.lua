@@ -110,7 +110,7 @@ return packer.startup(function()
   use 'mtdl9/vim-log-highlighting'
   use
   {
-    'romgrk/barbar.nvim',
+      'akinsho/bufferline.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
 ---------------------------------------------------------

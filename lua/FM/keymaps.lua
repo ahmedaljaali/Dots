@@ -85,36 +85,25 @@ map('n', '<Leader>db',"<cmd>lua _gdb_toggle()<CR>" , opts) --open terminal with 
 map('n', '<Leader>cw', ':close<CR>', opts)
 map('n', '<Leader>m', ':tabnew<CR>', opts)
 -- Move to previous/next
-map('n', '[t', ':BufferPrevious<CR>', opts)
-map('n', ']t',  ':BufferNext<CR>', opts)
--- Re-order to previous/next
-map('n', '<A-,>', ':BufferMovePrevious<CR>', opts)
-map('n',  '<A-.>',' :BufferMoveNext<CR>', opts)
+map('n', '[t', ':BufferLineCyclePrev<CR>', opts)
+map('n', ']t',  ':BufferLineCycleNext<CR>', opts)
 -- Goto buffer in position...
-map('n', '<A-1>', ':BufferGoto 1<CR>', opts)
-map('n', '<A-2>', ':BufferGoto 2<CR>', opts)
-map('n', '<A-3>', ':BufferGoto 3<CR>', opts)
-map('n', '<A-4>', ':BufferGoto 4<CR>', opts)
-map('n', '<A-5>', ':BufferGoto 5<CR>', opts)
-map('n', '<A-6>', ':BufferGoto 6<CR>', opts)
-map('n', '<A-7>', ':BufferGoto 7<CR>', opts)
-map('n', '<A-8>', ':BufferGoto 8<CR>', opts)
-map('n', '<A-9>', ':BufferGoto 9<CR>', opts)
-map('n', '<A-0>', ':BufferLast<CR>', opts)
+map('n', '<A-1>', ':BufferLineGoToBuffer 1<CR>', opts)
+map('n', '<A-2>', ':BufferLineGoToBuffer 2<CR>', opts)
+map('n', '<A-3>', ':BufferLineGoToBuffer 3<CR>', opts)
+map('n', '<A-4>', ':BufferLineGoToBuffer 4<CR>', opts)
+map('n', '<A-5>', ':BufferLineGoToBuffer 5<CR>', opts)
+map('n', '<A-6>', ':BufferLineGoToBuffer 6<CR>', opts)
+map('n', '<A-7>', ':BufferLineGoToBuffer 7<CR>', opts)
+map('n', '<A-8>', ':BufferLineGoToBuffer 8<CR>', opts)
+map('n', '<A-9>', ':BufferLineGoToBuffer 9<CR>', opts)
 -- Close buffer
-map('n', '<Leader>ct', ':BufferClose<CR>', opts)
--- Wipeout buffer
---                 :BufferWipeout<CR>
--- Close commands
---                 :BufferCloseAllButCurrent<CR>
---                 :BufferCloseBuffersLeft<CR>
---                 :BufferCloseBuffersRight<CR>
--- Magic buffer-picking mode
-map('n', '<C-p>', ':BufferPick<CR>', opts)
+map('n', '<Leader>ct', ':bdelete<CR>', opts)
+
+map('n', '<C-p>', ':BufferLinePick<CR>', opts)
 -- Sort automatically by...
-map('n', '<Leader>bb', ':BufferOrderByBufferNumber<CR>', opts)
-map('n', '<Leader>bd', ':BufferOrderByDirectory<CR>', opts)
-map('n', '<Leader>bl', ':BufferOrderByLanguage<CR>', opts)
+map('n', '<Leader>bb', ':BufferLineSortByExtension<CR>', opts)
+map('n', '<Leader>bd', ':BufferLineSortByDirectory<CR>', opts)
 --------------------------------------------------------------
 
 --------------------------------------------------------------
@@ -396,5 +385,5 @@ map('n', '<Leader>ut', '<cmd>UndotreeToggle<cr>', opts)
 
 --------------------------------------------------------------
 --nvim tree
-map('n', '<Leader>tt', '<cmd>NvimTreeToggle<cr>')
+map('n', '<Leader>tt', '<cmd>NvimTreeToggle<cr>', opts)
 --------------------------------------------------------------

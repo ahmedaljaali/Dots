@@ -10,7 +10,7 @@ require('FM/fileStorm')
 require('FM/keymaps')
 require('FM/status-line')
 require('FM/ranger')
-require('FM/barbar')
+require('FM/bufferline-conf')
 require('FM/smart-splits-conf')
 require('FM/nvim-tree-conf')
 ----------------------------------------------------------------------
