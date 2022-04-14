@@ -146,6 +146,10 @@ return packer.startup(function()
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     }
   }
+  use
+  {
+      "beauwilliams/focus.nvim",
+  }
 
 ---------------------------------------------------------
 --Typing
@@ -236,9 +240,6 @@ return packer.startup(function()
 -- create directories if they don't exist
 use {
   'jghauser/mkdir.nvim',
-  configLeader= function()
-    require('mkdir')
-  end
 }
 
 ---------------------------------------------------------

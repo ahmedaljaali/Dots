@@ -58,3 +58,8 @@ require('language_support/lsp-signature-conf')
 require('language_support/treesitter-context-conf')
 require('language_support/debug')
 ----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--Short config
+require("short")
+----------------------------------------------------------------------
