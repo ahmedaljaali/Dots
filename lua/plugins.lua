@@ -150,6 +150,7 @@ return packer.startup(function()
   {
       "beauwilliams/focus.nvim",
   }
+  use 'luukvbaal/stabilize.nvim'
 
 ---------------------------------------------------------
 --Typing

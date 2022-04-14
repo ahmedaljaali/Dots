@@ -19,3 +19,8 @@ require("toggleterm").setup
       direction = 'tab',
 }
 -----------------------------
+
+-----------------------------
+--stabilize
+require("stabilize").setup()
+-----------------------------
