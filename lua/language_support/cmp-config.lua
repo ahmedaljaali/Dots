@@ -56,32 +56,20 @@ cmp.setup({
 
   -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline("/", {
+    mapping = cmp.mapping.preset.cmdline({
+  }),
     sources = {
         { name = "buffer", keyword_length = 2 },
     },
     enabled = function()
         return true
     end,
-    completion = {
-        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-        scrollbar = "║",
-    },
-    documentation = {
-        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-        scrollbar = "║",
-    },
 })
 
   -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(":", {
-    completion = {
-        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-        scrollbar = "║",
-    },
-    documentation = {
-        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-        scrollbar = "║",
-    },
+    mapping = cmp.mapping.preset.cmdline({
+  }),
     sources = cmp.config.sources({
         { name = "path", keyword_length = 2 },
     }, {
