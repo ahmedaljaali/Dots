@@ -4,13 +4,17 @@
 cmp.setup({
  snippet = {
      expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-      end,
+    local luasnip = require("luasnip")
+    if not luasnip then
+        return
+    end
+    luasnip.lsp_expand(args.body)
+    end,
     },
 
     sources = cmp.config.sources({
         { name = 'nvim_lsp', priority = 1, group_index = 1},
-        { name = 'vsnip', priority = 2, group_index = 1},
+        { name = 'luasnip', priority = 2, group_index = 1},
         { name = 'nvim_lua', priority = 3, group_index = 1},
         { name = "latex_symbols", priority = 5, group_index = 2},
         { name = "emoji", priority = 6, group_index = 2},
@@ -31,7 +35,7 @@ cmp.setup({
         nvim_lsp = "[LSP]",
         nvim_lua = "[Lua]",
         path = "[path]",
-        vsnip = "[Vsnip]",
+        luasnip= "[luasnip]",
         gh_issues = "[issues]",
         cmp_tabnine = "[TN]",
       },
@@ -87,8 +91,3 @@ cmp.setup.cmdline(":", {
         return true
     end,
 })
-
----------------------------------------------------------
---snippets dir
-vim.g.vsnip_snippet_dir = "~/.config/nvim/lua/snips"
----------------------------------------------------------
