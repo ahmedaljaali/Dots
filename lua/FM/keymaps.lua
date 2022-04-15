@@ -295,18 +295,19 @@ cmp.setup({
 --------------------------------------------------------------
 
 --------------------------------------------------------------
+--FIX: I tryed to fix it but i cannot't :{
 --cmdline
-cmp.setup.cmdline("/", {
-    mapping = cmp.mapping.preset.cmdline({
-        --Dont try to put anything here, it won't work ;}
-  }),
-})
-
-cmp.setup.cmdline(":", {
-    mapping = cmp.mapping.preset.cmdline({
-        --same goes here
-  }),
-})
+-- cmp.setup.cmdline("/", {
+--     mapping = cmp.mapping.preset.cmdline({
+--         --Dont try to put anything here, it won't work ;}
+--   }),
+-- })
+--
+-- cmp.setup.cmdline(":", {
+--     mapping = cmp.mapping.preset.cmdline({
+--         --same goes here
+--   }),
+-- })
 --------------------------------------------------------------
 
 --------------------------------------------------------------
