@@ -254,8 +254,6 @@ use "milisims/nvim-luaref"
   use
   {
     'hrsh7th/nvim-cmp',
-    --NOTE: Don't commit this out
-    commit = "4f1358e659d51c69055ac935e618b684cf4f1429",
     requires = {{'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
                 'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
                 'saadparwaiz1/cmp_luasnip', 'f3fora/cmp-spell',

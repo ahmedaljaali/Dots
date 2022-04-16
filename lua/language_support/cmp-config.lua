@@ -54,24 +54,21 @@ cmp.setup({
     },
 })
 
+
   -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline("/", {
+  cmp.setup.cmdline('/', {
+    mapping = cmp.mapping.preset.cmdline(),
     sources = {
-        { name = "buffer", keyword_length = 2 },
-    },
-    enabled = function()
-        return true
-    end,
-})
+      { name = 'buffer' }
+    }
+  })
 
   -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline(":", {
+  cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
-        { name = "path", keyword_length = 2 },
+      { name = 'path' }
     }, {
-        { name = "cmdline", keyword_length = 2 },
-    }),
-    enabled = function()
-        return true
-    end,
-})
+      { name = 'cmdline' }
+    })
+  })
