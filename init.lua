@@ -57,6 +57,7 @@ require('language_support.hlargs-conf')
 require('language_support.lsp-signature-conf')
 require('language_support.treesitter-context-conf')
 require('language_support.debug')
+require('language_support.renamer-conf')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
