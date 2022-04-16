@@ -151,6 +151,7 @@ return packer.startup(function()
       "beauwilliams/focus.nvim",
   }
   use 'luukvbaal/stabilize.nvim'
+  use 'lambdalisue/suda.vim'
 
 ---------------------------------------------------------
 --Typing
