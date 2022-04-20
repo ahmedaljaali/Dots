@@ -1,5 +1,10 @@
-require('plugins') --Put it in the top of the file, trust me you don't want to change it :}
-require('general')
+----------------------------------------------------------------------
+--Random stuff
+require('rand.plugins') --Put it in the top of the file, Don't change it!!!
+require('rand.general') -- general configurations
+require("rand.autocmd") --Auto commands
+require("rand.short") --Short config
+----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
 --moving Fast
@@ -61,17 +66,7 @@ require('language_support.renamer-conf')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
---Short config
-require("short")
-----------------------------------------------------------------------
-
-----------------------------------------------------------------------
 --snippets
 require("snippets.cpp")
 require("snippets.cmake")
-----------------------------------------------------------------------
-
-----------------------------------------------------------------------
---Auto commands
-require("autocmd")
 ----------------------------------------------------------------------
