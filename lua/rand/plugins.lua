@@ -230,7 +230,6 @@ return packer.startup(function()
   branch = 'master',
   requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use 'JASONews/glow-hover'
 
 ---------------------------------------------------------
 --talking with language server

@@ -12,9 +12,6 @@
 ## install ripgrep
 `sudo pacman -S ripgrep`
 
-## install glow
-`sudo pacman -S glow`
-
 ##
 install ranger with
 `sudo pacman -S ranger`
