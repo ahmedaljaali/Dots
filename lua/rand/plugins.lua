@@ -270,6 +270,8 @@ use "milisims/nvim-luaref"
 ---------------------------------------------------------
 
   use 'dstein64/vim-startuptime' --measur the startup time
+  use 'lewis6991/impatient.nvim'
+
 
 
   --if packer isn't installed install it

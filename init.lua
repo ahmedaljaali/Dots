@@ -1,6 +1,7 @@
 ----------------------------------------------------------------------
 --Random stuff
 require('rand.plugins') --Put it in the top of the file, Don't change it!!!
+require('rand.faster') --Put it near the top
 require('rand.general') -- general configurations
 require("rand.autocmd") --Auto commands
 require("rand.short") --Short config
