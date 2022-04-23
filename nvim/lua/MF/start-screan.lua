@@ -27,7 +27,7 @@ let g:startify_lists = [
 vim.cmd(
 [[
 let g:startify_bookmarks = [
-            \ { 'a': '~/.config/nvim/init.lua' },
+            \ { 'a': '~/Dots/nvim/init.lua' },
             \ ]
 ]])
 -------------------------------------------------------
