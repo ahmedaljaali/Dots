@@ -16,26 +16,9 @@
 install ranger with
 `sudo pacman -S ranger`
 
-then install Install Ranger devicons
-`git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons`
-
 then install Install Ueberzug
-`yay -S python-ueberzug-git`
+`paru -S python-ueberzug-git`
 
-make sure you create a ranger config file and at least add the following lines
-```
-mkdir ~/.config/ranger
-touch ~/.config/ranger/rc.conf
-```
-
-Add this configuration to rc.conf
-```
-set preview_images_method ueberzug
-
-default_linemode devicons
-
-set show_hidden true
-```
 
 ## Run ssh-agent in the background
 

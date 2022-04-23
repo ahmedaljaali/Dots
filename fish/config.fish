@@ -7,12 +7,12 @@ set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 ### EXPORT ###
 set fish_greeting                                 # Supresses fish's intro message
 set TERM "xterm-256color"                         # Sets the terminal type
-set EDITOR "nvim"                 # $EDITOR use Emacs in terminal
-set VISUAL "nvim"              # $VISUAL use Emacs in GUI mode
+set -Ux EDITOR nvim
+set -Ux VISUAL nvim              # $VISUAL use Emacs in GUI mode
 
 
 ### "nvim" as manpager
-# set -x MANPAGER "nvim -c 'set ft=man' -"
+set -x MANPAGER "nvim -c 'set ft=man' -"
 
 
 ### AUTOCOMPLETE AND HIGHLIGHT COLORS ###
@@ -124,7 +124,7 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
-# vim
+# nvim
 alias v='nvim'
 
 # Changing "ls" to "exa"
