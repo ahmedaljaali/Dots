@@ -114,8 +114,6 @@ end
 # \x1b[2J   <- clears tty
 # \x1b[1;1H <- goes to (1, 1) (start)
 
-# root privileges
-alias doas="doas --"
 
 # navigation
 alias ..='cd ..'
@@ -123,6 +121,7 @@ alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
+alias c=clear
 
 # nvim
 alias v='nvim'
@@ -134,11 +133,11 @@ alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
-# pacman and yay
+# pacman and paru
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
 alias pacsyyu='sudo pacman -Syyu'                # Refresh pkglist & update standard pkgs
-alias yaysua='yay -Sua --noconfirm'              # update only AUR pkgs (yay)
-alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
+alias yaysua='paru -Sua --noconfirm'              # update only AUR pkgs (yay)
+alias yaysyu='paru-Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
 alias parsua='paru -Sua --noconfirm'             # update only AUR pkgs (paru)
 alias parsyu='paru -Syu --noconfirm'             # update standard pkgs and AUR pkgs (paru)
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
@@ -160,22 +159,7 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
-# adding flags
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias lynx='lynx -cfg=~/.lynx/lynx.cfg -lss=~/.lynx/lynx.lss -vikeys'
-alias vifm='./.config/vifm/scripts/vifmrun'
-alias ncmpcpp='ncmpcpp ncmpcpp_directory=$HOME/.config/ncmpcpp/'
-alias mocp='mocp -M "$XDG_CONFIG_HOME"/moc -O MOCDir="$XDG_CONFIG_HOME"/moc'
 
-# ps
-alias psa="ps auxf"
-alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
-alias psmem='ps auxf | sort -nr -k 4'
-alias pscpu='ps auxf | sort -nr -k 3'
-
-# Merge Xresources
-alias merge='xrdb -merge ~/.Xresources'
 
 # git
 alias addup='git add -u'
@@ -190,8 +174,6 @@ alias push='git push origin'
 alias tag='git tag'
 alias newtag='git tag -a'
 
-# get error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
 
 
 # Play audio files in current dir by type
@@ -216,15 +198,10 @@ alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
 
-# termbin
-alias tb="nc termbin.com 9999"
-
-# the terminal rickroll
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-
-# Unlock LBRY tips
-alias tips="lbrynet txo spend --type=support --is_not_my_input --blocking"
 
 
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
+
+### SETTING UP zoxide ###
+zoxide init fish | source
