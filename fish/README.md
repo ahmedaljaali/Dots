@@ -8,3 +8,6 @@
 
 # lastly, install zoxide it's self
 `sudo pacman -S zoxide`
+
+## install ncpamixer
+`paru -S ncpamixer`

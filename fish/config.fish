@@ -198,6 +198,8 @@ alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
 
+# Audio
+alias audio=ncpamixer
 
 
 ### SETTING THE STARSHIP PROMPT ###
