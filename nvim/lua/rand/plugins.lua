@@ -230,6 +230,7 @@ return packer.startup(function()
   branch = 'master',
   requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use 'fidian/hexmode' --add hex editing
 
 ---------------------------------------------------------
 --talking with language server
