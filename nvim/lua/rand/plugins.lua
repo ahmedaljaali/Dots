@@ -174,8 +174,11 @@ return packer.startup(function()
     requires = {'nvim-treesitter/nvim-treesitter'},
   }
   use 'mbbill/undotree' --From it's name :)
-
-
+    use
+    {
+        's1n7ax/nvim-comment-frame',
+        requires  = {'nvim-treesitter'}
+    }
 
 ---------------------------------------------------------
 --An implementation of the Popup API from vim in Neovim

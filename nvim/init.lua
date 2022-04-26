@@ -41,6 +41,7 @@ require('typing.beacon')
 require('typing.lastplace')
 require('typing.auto-save')
 require('typing.todo-conf')
+require('typing.comment-frame')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
