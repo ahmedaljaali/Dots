@@ -1,4 +1,3 @@
---For debugging
 local Terminal = require("toggleterm.terminal").Terminal
 local debug= Terminal:new({
   cmd = "gdb Build/app",

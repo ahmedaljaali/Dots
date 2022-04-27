@@ -1,8 +1,10 @@
 local trouble = require("trouble")
 
 
-------------------------------------------------------------------------------
---setup
+----------------------------------------------------------------------
+--                              Setup                               --
+
+
 trouble.setup
 {
     position = "bottom", -- position of the list can be: bottom, top, left, right
@@ -30,4 +32,4 @@ trouble.setup
     },
     use_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
 }
-------------------------------------------------------------------------------
+----------------------------------------------------------------------

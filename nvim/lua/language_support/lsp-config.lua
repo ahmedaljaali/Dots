@@ -1,14 +1,20 @@
----------------------------------------------------------------------
--- Change prefix/character preceding the diagnostics' virtual text
+----------------------------------------------------------------------
+--             Change prefix/charactter precediing the              --
+--                     diagnostics virtual text                     --
+
+
 vim.diagnostic.config({
   virtual_text = {
     prefix = '▎', -- Could be '●', '▎', 'x'
   }
 })
----------------------------------------------------------------------
+----------------------------------------------------------------------
 
----------------------------------------------------------------------
---Go-to definition in a virtual split window
+
+----------------------------------------------------------------------
+--               Go-to definition in a virtual split                --
+
+
 local function goto_definition(split_cmd)
   local util = vim.lsp.util
   local log = require("vim.lsp.log")
@@ -41,20 +47,26 @@ local function goto_definition(split_cmd)
   return handler
 end
 
-vim.lsp.handlers["textDocument/definition"] = goto_definition('tab')
----------------------------------------------------------------------
+vim.lsp.handlers["textDocument/definition"] = goto_definition('vs')
+----------------------------------------------------------------------
 
----------------------------------------------------------------------
---Change diagnostic icons
+
+----------------------------------------------------------------------
+--                     Change diagnostic icons                      --
+
+
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
----------------------------------------------------------------------
+----------------------------------------------------------------------
 
----------------------------------------------------------------------
---Customizing how diagnostics are displayed
+
+----------------------------------------------------------------------
+--            Customizing how diagnostics are displayed             --
+
+
 vim.diagnostic.config({
   virtual_text = true,
   signs = true,
@@ -62,4 +74,4 @@ vim.diagnostic.config({
   update_in_insert = false,
   severity_sort = false,
 })
----------------------------------------------------------------------
+----------------------------------------------------------------------

@@ -1,7 +1,9 @@
 local todo = require("todo-comments")
 
------------------------------------------------------------
---Setup
+----------------------------------------------------------------------
+--                              Setup                               --
+
+
 todo.setup
 {
   signs = true, -- show icons in the signs column
@@ -58,4 +60,4 @@ todo.setup
     -- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
   },
 }
------------------------------------------------------------
+----------------------------------------------------------------------
