@@ -1,7 +1,3 @@
-
-
-
-
 vim.cmd
 [[
 " Change the border's color
