@@ -70,6 +70,5 @@ require("snippets.cmake")
 
 ----------------------------------------------------------------------
 --Random stuff
-require('rand.faster') --Put it near the top
 require("rand.short") --Short config
 ----------------------------------------------------------------------
