@@ -84,5 +84,5 @@ require("snippets.cmake")
 --                           Random stuff                           --
 
 
-require("rand.short") --Short config
+require("rand.short")  --Short config
 ----------------------------------------------------------------------
