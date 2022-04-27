@@ -1,8 +1,9 @@
 local util = require('packer.util')
 local packer = require('packer')
 
-----------------------------------------------------------------------------------------------------------------
---initialize packer
+----------------------------------------------------------------------
+--                           init packer                            --
+----------------------------------------------------------------------
 packer.init
 {
   status = true,
@@ -65,39 +66,32 @@ packer.init
     threshold = 1, -- integer in milliseconds, pugins which load faster than this won't be shown in profile output
   }
 }
-----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 
-----------------------------------------------------------------------------------------------------------------
---if packer isn't installed install it
+----------------------------------------------------------------------
+--              if packer isn't installed, install it               --
+----------------------------------------------------------------------
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
-----------------------------------------------------------------------------------------------------------------
-
-----------------------------------------------------------------------------------------------------------------
---automatically run :PackerCompile whenever plugins.lua is updated
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
-----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 
-
-----------------------------------------------------------------------------------------------------------------
---install plugins
-
+----------------------------------------------------------------------
+--                         install plugins                          --
+----------------------------------------------------------------------
 return packer.startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
----------------------------------------------------------
---Theme And Colors
+
+----------------------------------------------------------------------
+--                         Theme and colors                         --
+----------------------------------------------------------------------
+
   use 'navarasu/onedark.nvim'
   use 'lilydjwg/colorizer'
   use 'octol/vim-cpp-enhanced-highlight'
@@ -114,8 +108,13 @@ return packer.startup(function()
       'akinsho/bufferline.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
----------------------------------------------------------
---Moving Fast
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                           Moving fast                            --
+----------------------------------------------------------------------
+
   use
   {
     'nvim-telescope/telescope.nvim',
@@ -153,9 +152,13 @@ return packer.startup(function()
   use 'luukvbaal/stabilize.nvim'
   use 'lambdalisue/suda.vim'
   use "tversteeg/registers.nvim"
+----------------------------------------------------------------------
 
----------------------------------------------------------
---Typing
+
+----------------------------------------------------------------------
+--                              Typing                              --
+----------------------------------------------------------------------
+
   use 'lukas-reineke/indent-blankline.nvim'
   use 'windwp/nvim-autopairs'
   use 'numToStr/Comment.nvim'
@@ -174,22 +177,23 @@ return packer.startup(function()
     requires = {'nvim-treesitter/nvim-treesitter'},
   }
   use 'mbbill/undotree' --From it's name :)
-    use
-    {
-        's1n7ax/nvim-comment-frame',
-        requires  = {'nvim-treesitter'}
-    }
+  use
+  {
+    's1n7ax/nvim-comment-frame',
+    requires  = {'nvim-treesitter'}
+  }
 
----------------------------------------------------------
---An implementation of the Popup API from vim in Neovim
+
+----------------------------------------------------------------------
+--                         Language support                         --
+----------------------------------------------------------------------
+
   use
   {
     'nvim-lua/popup.nvim',
     requires = {'nvim-lua/plenary.nvim'},
   }
 
----------------------------------------------------------
---Language Support
   use 'cdelledonne/vim-cmake'
   use
   {
@@ -235,8 +239,6 @@ return packer.startup(function()
   }
   use 'fidian/hexmode' --add hex editing
 
----------------------------------------------------------
---talking with language server
   use
   {
     'nvim-treesitter/nvim-treesitter',
@@ -247,19 +249,9 @@ return packer.startup(function()
     'neovim/nvim-lspconfig',
     'williamboman/nvim-lsp-installer',
   }
----------------------------------------------------------
--- create directories if they don't exist
-use {
-  'jghauser/mkdir.nvim',
-}
 
----------------------------------------------------------
---help for builtin lua fucntion
-use "milisims/nvim-luaref"
----------------------------------------------------------
+  use "milisims/nvim-luaref" --help for builtin lua fucntion
 
----------------------------------------------------------
-  --for nvim auto complete
   use
   {
     'hrsh7th/nvim-cmp',
@@ -271,8 +263,17 @@ use "milisims/nvim-luaref"
                 "hrsh7th/cmp-calc", "hrsh7th/cmp-emoji",
                 {'tzachar/cmp-tabnine', run='./install.sh'},}}
   }
----------------------------------------------------------
+----------------------------------------------------------------------
 
+
+----------------------------------------------------------------------
+--                              Random                              --
+----------------------------------------------------------------------
+
+  use
+  {
+    'jghauser/mkdir.nvim',
+  }
   use 'dstein64/vim-startuptime' --measur the startup time
 
 
