@@ -2,7 +2,7 @@
 --focus
 require("focus").setup({
     enable = true,
-    width = 80, --dont make it higher than this
+    width = 95, --dont make it higher than 100
 })
 -----------------------------
 
