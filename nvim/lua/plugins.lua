@@ -152,6 +152,11 @@ return packer.startup(function()
   use 'luukvbaal/stabilize.nvim'
   use 'lambdalisue/suda.vim'
   use "tversteeg/registers.nvim"
+  use
+  {
+      'francoiscabrol/ranger.vim',
+      requires = {'rbgrouleff/bclose.vim'}
+  }
 ----------------------------------------------------------------------
 
 
