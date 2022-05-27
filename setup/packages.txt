@@ -1,0 +1,5 @@
+scrot
+xscreensaver
+trayer
+nitrogen
+ttf-font-awesome

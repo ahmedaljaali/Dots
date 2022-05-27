@@ -4,6 +4,9 @@ link:
 	stow fish -t  ~/.config
 	stow ranger -t ~/.config
 	stow starship -t ~/.config
+	stow xmonad -t ~/.config
+	stow xmobar -t ~/.config
+	stow .xinitrc -t ~/
 
 
 unlink:
@@ -12,3 +15,6 @@ unlink:
 	unlink ~/.config/fish 
 	unlink ~/.config/ranger
 	unlink ~/.config/starship.toml
+	unlink ~/.config/xmonad
+	unlink ~/.xinitrc
+	unlink ~/.config/xmobar
