@@ -1,7 +1,5 @@
 # My neovim configuration
 
-## Add copy and past to neovim
-`sudo pacman -S xsel`
 
 ## Add python support to neovim
 `sudo pip install pynvim`
@@ -9,15 +7,6 @@
 ## Add node support to neovim
 `sudo npm i -g neovim`
 
-## install ripgrep
-`sudo pacman -S ripgrep`
-
-##
-install ranger with
-`sudo pacman -S ranger`
-
-then install Install Ueberzug
-`paru -S python-ueberzug-git`
 
 
 ## Run ssh-agent in the background
