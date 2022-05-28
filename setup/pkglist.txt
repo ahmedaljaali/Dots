@@ -22,3 +22,17 @@ libxft
 libxinerama 
 libxrandr 
 libxss
+fish
+starship
+stow
+alacritty
+nvim-packer-git
+ttf-apple-emoji
+exa
+google-chrome
+apple-fonts
+github-desktop
+openrgb
+libreoffice-fresh
+gimp
+vlc

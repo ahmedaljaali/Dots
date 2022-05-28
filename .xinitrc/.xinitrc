@@ -15,5 +15,8 @@ nitrogen &
 # Fire up screensaver
 xscreensaver -no-splash &
 
+# Nitrogen
+nitrogen --restore &
+
 
 exec xmonad

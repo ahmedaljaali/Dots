@@ -13,6 +13,7 @@ paru --needed --ask 4 -Sy - < pkglist.txt || error "Failed to install required p
 #chsh -s /usr/local/bin/fish
 
 cd ..
+mkdir ~/.config
 make
 
 xmonad --recompile
