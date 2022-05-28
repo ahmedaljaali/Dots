@@ -19,7 +19,7 @@ main = xmonad
      $ myConfig
 
 myConfig = def
-    { modMask    = mod4Mask      -- Rebind Mod to the Super key
+    { modMask    = mod4Mask,      -- Rebind Mod to the Super key
      terminal   = "alacritty"
     }
       `additionalKeysP`

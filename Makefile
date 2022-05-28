@@ -7,6 +7,7 @@ link:
 	stow xmonad -t ~/
 	stow xmobar -t ~/.config
 	stow .xinitrc -t ~/
+	unlink ~/.xmonad.bak
 
 
 unlink:
