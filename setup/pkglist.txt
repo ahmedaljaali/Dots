@@ -14,13 +14,13 @@ python-ueberzug-git
 xmonad-contrib
 xmonad
 xorg-server
-xorg-apps 
-xorg-xinit 
+xorg-apps
+xorg-xinit
 xorg-xmessage
-libx11 
-libxft 
-libxinerama 
-libxrandr 
+libx11
+libxft
+libxinerama
+libxrandr
 libxss
 fish
 starship
@@ -31,7 +31,6 @@ ttf-apple-emoji
 exa
 google-chrome
 apple-fonts
-github-desktop
 openrgb
 libreoffice-fresh
 gimp

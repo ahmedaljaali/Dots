@@ -6,14 +6,14 @@ link:
 	stow starship -t ~/.config
 	stow xmonad -t ~/
 	stow xmobar -t ~/.config
-	stow .xinitrc -t ~/
+	stow xinitrc -t ~/
 	unlink ~/.xmonad.bak
 
 
 unlink:
 	unlink ~/.config/nvim
 	unlink ~/.config/alacritty
-	unlink ~/.config/fish 
+	unlink ~/.config/fish
 	unlink ~/.config/ranger
 	unlink ~/.config/starship.toml
 	unlink ~/.xmonad
