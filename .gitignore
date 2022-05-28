@@ -3,3 +3,7 @@ xmonad/.xmonad/xmonad-x86_64-linux
 xmonad/.xmonad/xmonad.errors
 xmonad/.xmonad/xmonad.hi
 xmonad/.xmonad/xmonad.o
+ranger/ranger/plugins/__init__.py
+ranger/ranger/plugins/__pycache__/
+ranger/ranger/plugins/ranger_devicons/__pycache__/
+xmonad/.xmonad/build-x86_64-linux/

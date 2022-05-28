@@ -5,9 +5,8 @@ link:
 	stow ranger -t ~/.config
 	stow starship -t ~/.config
 	stow xmonad -t ~/
-	stow xmobar -t ~/.config
+	stow xmobar -t ~/
 	stow xinitrc -t ~/
-	unlink ~/.xmonad.bak
 
 
 unlink:
@@ -18,4 +17,4 @@ unlink:
 	unlink ~/.config/starship.toml
 	unlink ~/.xmonad
 	unlink ~/.xinitrc
-	unlink ~/.config/xmobar
+	unlink ~/.xmobar

@@ -11,8 +11,9 @@ xsel
 ripgrep
 ranger
 python-ueberzug-git
-xmonad-contrib
-xmonad
+xmonad-contrib-git
+xmonad-git
+xmobar-git
 xorg-server
 xorg-apps
 xorg-xinit
@@ -35,3 +36,11 @@ openrgb
 libreoffice-fresh
 gimp
 vlc
+alsa-utils
+pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
+pulseaudio-equalizer
+pulseaudio-jack
+pulseaudio-lirc
+pulseaudio-zeroconf

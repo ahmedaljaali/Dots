@@ -18,5 +18,7 @@ xscreensaver -no-splash &
 # Nitrogen
 nitrogen --restore &
 
+# Xmobar
+xmobar &
 
 exec xmonad

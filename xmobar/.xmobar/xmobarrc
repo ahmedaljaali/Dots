@@ -1,18 +1,9 @@
 Config { overrideRedirect = False
-       , font             = "xft:iosevka-9"
-       , additionalFonts  = ["xft:FontAwesome-9"]
+       , font     = "xft:iosevka-9"
        , bgColor  = "#5f5f5f"
        , fgColor  = "#f8f8f2"
        , position = TopW L 90
-       , commands = [ Run Weather "EGPF"
-                        [ "--template", "<weather> <tempC>°C"
-                        , "-L", "0"
-                        , "-H", "25"
-                        , "--low"   , "lightblue"
-                        , "--normal", "#f8f8f2"
-                        , "--high"  , "red"
-                        ] 36000
-                    , Run Cpu
+       , commands = [   Run Cpu
                         [ "-L", "3"
                         , "-H", "50"
                         , "--high"  , "red"
@@ -31,12 +22,5 @@ Config { overrideRedirect = False
                     ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "%XMonadLog% }{ %alsa:default:Master% | %cpu% | %memory% * %swap% | %EGPF% | %date% "
-              , Run Battery
-           [ ...
-           , "--lows"   , "<fn=1>\62020</fn>  "
-           , "--mediums", "<fn=1>\62018</fn>  "
-           , "--highs"  , "<fn=1>\62016</fn>  "
-             ...
-           ]
+       , template = "%XMonadLog% }{ %alsa:default:Master% | %cpu% | %memory% * %swap% | %date% "
        }
