@@ -26,4 +26,10 @@ ssh-keygen -o
 echo "UserKnownHostsFile ~/.ssh/known_hosts" >> ~/.ssh/config
 echo "Dont Forget to add the public key to your github account"
 
+## For tlp
+systemctl enable tlp.service
+systemctl mask systemd-rfkill.service
+systemctl mask systemd-rfkill.socket
+systemctl enable NetworkManager-dispatcher.service
+
 xmonad --recompile

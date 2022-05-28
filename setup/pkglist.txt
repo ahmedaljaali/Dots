@@ -37,6 +37,9 @@ libreoffice-fresh
 gimp
 vlc
 alsa-utils
+tlp
+tlp-rdw
+tlpui
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
@@ -44,3 +47,7 @@ pulseaudio-equalizer
 pulseaudio-jack
 pulseaudio-lirc
 pulseaudio-zeroconf
+pavucontrol
+youtube-dl
+deadbeef
+reflector

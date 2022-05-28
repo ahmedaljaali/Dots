@@ -198,7 +198,7 @@ alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
 
 # Audio
-alias audio=ncpamixer
+alias audio=pavucontrol
 
 
 ### SETTING THE STARSHIP PROMPT ###
