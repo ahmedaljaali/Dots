@@ -7,13 +7,13 @@ sudo pacman -Syu
 paru --needed --ask 4 -Sy - < pkglist.txt || error "Failed to install required packages"
 
 # Add the fish shell /usr/local/bin/fish to /etc/shells with
-#echo /usr/local/bin/fish | sudo tee -a /etc/shells
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
 
 #Change your default shell to fish with:
-#chsh -s /usr/local/bin/fish
+chsh -s /usr/local/bin/fish
 
-cd ..
 mkdir ~/.config
+cd ~/Dots
 make
 
 xmonad --recompile
