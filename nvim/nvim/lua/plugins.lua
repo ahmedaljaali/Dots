@@ -188,7 +188,7 @@ return packer.startup(function()
     's1n7ax/nvim-comment-frame',
     requires  = {'nvim-treesitter'}
   }
-
+  use   "AckslD/nvim-neoclip.lua"
 
 ----------------------------------------------------------------------
 --                         Language support                         --
