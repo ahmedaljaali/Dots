@@ -287,6 +287,7 @@ return packer.startup(function()
     'jghauser/mkdir.nvim',
   }
   use 'dstein64/vim-startuptime' --measur the startup time
+  use 'alec-gibson/nvim-tetris' --tetis 🎮
 ----------------------------------------------------------------------
 
 
