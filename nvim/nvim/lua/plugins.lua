@@ -189,6 +189,7 @@ return packer.startup(function()
     requires  = {'nvim-treesitter'}
   }
   use   "AckslD/nvim-neoclip.lua"
+  use 'monaqa/dial.nvim'
 
 ----------------------------------------------------------------------
 --                         Language support                         --

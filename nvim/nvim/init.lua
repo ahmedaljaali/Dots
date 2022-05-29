@@ -44,6 +44,7 @@ require('typing.auto-save')
 require('typing.todo-conf')
 require('typing.comment-frame')
 require('typing.neoclip-conf')
+require('typing.dial-conf')
 ----------------------------------------------------------------------
 
 
