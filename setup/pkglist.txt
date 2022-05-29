@@ -57,3 +57,4 @@ cmake
 glm
 shaderc
 ghcup-hs-bin
+vulkan-intel
