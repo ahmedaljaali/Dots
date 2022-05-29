@@ -518,9 +518,18 @@ map("n", "<leader>tsp", "<cmd>Telescope luasnip<cr>", opts)
 map("n", "<Leader>yh", "<cmd>Telescope neoclip<cr>", opts)
 ----------------------------------------------------------------------
 
+
 ----------------------------------------------------------------------
 --                               dial                               --
 
 map("n", "<C-a>", require("dial.map").inc_normal(),opts)
 map("n", "<C-x>", require("dial.map").dec_normal(), opts)
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                      Make j and k faster!!                       --
+
+vim.api.nvim_set_keymap('n', 'j', '<Plug>(faster_move_j)', {noremap=false, silent=true})
+vim.api.nvim_set_keymap('n', 'k', '<Plug>(faster_move_k)', {noremap=false, silent=true})
 ----------------------------------------------------------------------

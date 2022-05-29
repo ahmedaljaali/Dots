@@ -190,6 +190,7 @@ return packer.startup(function()
   }
   use   "AckslD/nvim-neoclip.lua"
   use 'monaqa/dial.nvim'
+  use "PHSix/faster.nvim"
 
 ----------------------------------------------------------------------
 --                         Language support                         --
