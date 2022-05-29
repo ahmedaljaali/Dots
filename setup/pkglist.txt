@@ -51,3 +51,9 @@ pavucontrol
 youtube-dl
 deadbeef
 reflector
+glfw-x11
+vulkan-devel
+cmake
+glm
+shaderc
+ghcup-hs-bin
