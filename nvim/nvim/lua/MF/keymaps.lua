@@ -534,4 +534,17 @@ map('n', 'j', '<Plug>(faster_move_j)', opts)
 map('n', 'k', '<Plug>(faster_move_k)', opts)
 ----------------------------------------------------------------------
 
+----------------------------------------------------------------------
+--                              Tetris                              --
+
 map('n', '<Leader>pt', "<cmd>Tetris<cr>", opts)
+
+--[[
+Conftrol
+Left Arrow: move left
+Right Arrow: move right
+Up Arrow: rotate piece
+Down Arrow: soft drop
+Space Bar: hard drop
+]]
+----------------------------------------------------------------------
