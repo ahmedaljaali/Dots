@@ -63,3 +63,10 @@ vim.opt.directory = os.getenv("HOME") .. '/temp/swap'
 vim.g['backupdiri'] = os.getenv("HOME") .. '/temp/backup'
 vim.opt.undodir = os.getenv("HOME") .. '/temp/undo'
 ----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                      Set modifailbe to true                      --
+
+vim.g.modifiable = true
+----------------------------------------------------------------------

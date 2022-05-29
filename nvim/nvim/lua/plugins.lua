@@ -269,6 +269,10 @@ return packer.startup(function()
                 "hrsh7th/cmp-calc", "hrsh7th/cmp-emoji",
                 {'tzachar/cmp-tabnine', run='./install.sh'},}}
   }
+  use
+  {
+    "benfowler/telescope-luasnip.nvim",
+  }
 ----------------------------------------------------------------------
 
 
