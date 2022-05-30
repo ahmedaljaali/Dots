@@ -58,3 +58,9 @@ glm
 shaderc
 ghcup-hs-bin
 vulkan-intel
+discord
+spotify
+bat
+ueberzug
+speedtest
+fd

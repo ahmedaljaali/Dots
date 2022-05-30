@@ -9,8 +9,6 @@ trayer --edge top --align right --SetDockType true --SetPartialStrut true \
 # Set the default X cursor to the usual pointer
 xsetroot -cursor_name left_ptr
 
-# Set a nice background
-nitrogen &
 
 # Fire up screensaver
 xscreensaver -no-splash &

@@ -7,6 +7,7 @@ link:
 	stow xmonad -t ~/
 	stow xmobar -t ~/
 	stow xinitrc -t ~/
+	stow wallpapers -t ~/
 
 
 unlink:
@@ -18,3 +19,4 @@ unlink:
 	unlink ~/.xmonad
 	unlink ~/.xinitrc
 	unlink ~/.xmobar
+	unlink ~/wallpapers

@@ -32,7 +32,9 @@ myConfig = def
   `additionalKeysP`
     [ ("M-S-z", spawn "xscreensaver-command -lock")
     , ("M-C-s", unGrab *> spawn "scrot -s"        )
-    , ("M-f"  , spawn "google-chrome-stable"                   )
+    , ("M-f"  , spawn "google-chrome-stable"      )
+    , ("M-d"  , spawn "discord"                   )
+    , ("M-m"  , spawn "spotify"                   )
     ]
 
 myManageHook :: ManageHook
