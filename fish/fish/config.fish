@@ -200,6 +200,8 @@ alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 # Audio
 alias audio=pavucontrol
 
+# libreoffice
+alias office=libreoffice
 
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
