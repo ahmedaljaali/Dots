@@ -8,6 +8,8 @@ link:
 	stow xmobar -t ~/
 	stow xinitrc -t ~/
 	stow wallpapers -t ~/
+	ln -s ~/Dots/git/xmonad/stack.yaml ~/Dots/xmonad/.xmonad
+	ln -s ~/Dots/git/xmonad/stack.yaml ~/Dots/xmobar/.xmobar
 
 
 unlink:
@@ -20,3 +22,5 @@ unlink:
 	unlink ~/.xinitrc
 	unlink ~/.xmobar
 	unlink ~/wallpapers
+	unlink ~/Dots/xmobar/.xmobar/stack.yaml
+	unlink ~/Dots/xmonad/.xmonad/stack.yaml
