@@ -7,3 +7,4 @@ ranger/ranger/plugins/__init__.py
 ranger/ranger/plugins/__pycache__/
 ranger/ranger/plugins/ranger_devicons/__pycache__/
 xmonad/.xmonad/build-x86_64-linux/
+fish-conf/fish/fish_variables
