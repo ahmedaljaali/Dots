@@ -13,3 +13,6 @@ xmonad-conf/.xmonad/stack.yaml
 git/xmonad-bin/stack.yaml
 git/xmonad-bin/stack.yaml.lock
 git/xmonad-bin/.stack-work/
+xmonad-conf/.xmonad/xmonad-x86_64-linux
+xmonad-conf/.xmonad/xmonad-x86_64-linux
+xmonad-conf/.xmonad/xmonad.errors
