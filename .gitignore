@@ -12,3 +12,4 @@ xmobar-conf/.xmobar/stack.yaml
 xmonad-conf/.xmonad/stack.yaml
 git/xmonad-bin/stack.yaml
 git/xmonad-bin/stack.yaml.lock
+git/xmonad-bin/.stack-work/
