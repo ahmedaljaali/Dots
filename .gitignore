@@ -10,3 +10,5 @@ xmonad/.xmonad/build-x86_64-linux/
 fish-conf/fish/fish_variables
 xmobar-conf/.xmobar/stack.yaml 
 xmonad-conf/.xmonad/stack.yaml
+git/xmonad-bin/stack.yaml
+git/xmonad-bin/stack.yaml.lock
