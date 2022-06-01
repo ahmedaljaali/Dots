@@ -1,10 +1,11 @@
 link:
-	stow nvim-conf  -t ~/.config
-	stow alacritty-conf -t ~/.config
-	stow fish-conf -t  ~/.config
-	stow ranger-conf -t ~/.config
-	stow starship-conf -t ~/.config
-	stow xinitrc-conf -t ~/
+	stow nvim  -t ~/.config
+	stow alacritty -t ~/.config
+	stow fish -t  ~/.config
+	stow ranger -t ~/.config
+	stow starship -t ~/.config
+	stow i3 -t ~/.config
+	stow xinitrc -t ~/
 	stow wallpapers -t ~/
 
 
@@ -16,3 +17,4 @@ unlink:
 	unlink ~/.config/starship.toml
 	unlink ~/.xinitrc
 	unlink ~/wallpapers
+	unlink ~/.config/i3
