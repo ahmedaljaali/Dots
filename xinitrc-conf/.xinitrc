@@ -17,6 +17,5 @@ xscreensaver -no-splash &
 nitrogen --restore &
 
 # Xmobar
-xmobar &
 
-exec xmonad
+exec i3

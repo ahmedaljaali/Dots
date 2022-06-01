@@ -1,6 +1,3 @@
-scrot
-xscreensaver
-trayer
 nitrogen
 ttf-font-awesome
 fzf
@@ -11,9 +8,6 @@ xsel
 ripgrep
 ranger
 python-ueberzug-git
-xmonad-contrib-git
-xmonad-git
-xmobar-git
 xorg-server
 xorg-apps
 xorg-xinit
@@ -64,3 +58,7 @@ bat
 ueberzug
 speedtest
 fd
+i3status
+i3-wm
+i3blocks
+dmenu
