@@ -47,7 +47,7 @@ deadbeef
 reflector
 glfw-x11
 vulkan-devel
-cmake
+cmakttf-material-icons-gite
 glm
 shaderc
 ghcup-hs-bin
@@ -58,7 +58,9 @@ bat
 ueberzug
 speedtest
 fd
-i3status
 i3-wm
-i3blocks
-dmenu
+btop
+polybar-git
+ttf-material-icons-git
+terminus-font
+noto-fonts

@@ -7,6 +7,8 @@ link:
 	stow i3 -t ~/.config
 	stow xinitrc -t ~/
 	stow wallpapers -t ~/
+	stow nitrogen -t ~/.config/
+	stow polybar -t ~/.config/
 
 
 unlink:
@@ -15,6 +17,8 @@ unlink:
 	unlink ~/.config/fish
 	unlink ~/.config/ranger
 	unlink ~/.config/starship.toml
+	unlink ~/.config/nitrogen
 	unlink ~/.xinitrc
 	unlink ~/wallpapers
 	unlink ~/.config/i3
+	unlink ~/.config/polybar
