@@ -107,6 +107,9 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# change brightness
+bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -199,3 +202,6 @@ exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
 
 # Nitrogen
 exec nitrogen --restore &
+
+# to let light without sudo
+exec sudo chmod +s /usr/bin/light
