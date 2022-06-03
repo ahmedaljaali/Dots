@@ -1,3 +1,3 @@
 all:
-	chmod +x power.sh
-	chmod +x launch.sh
+	chmod +x ./scripts/power.sh
+	chmod +x ./scripts/launch.sh

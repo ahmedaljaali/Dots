@@ -64,3 +64,5 @@ polybar-git
 ttf-material-icons-git
 terminus-font
 noto-fonts
+playerctl
+zscroll

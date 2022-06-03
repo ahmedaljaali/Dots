@@ -195,7 +195,7 @@ hide_edge_borders both
 ## After startx
 
 # run polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/scripts/launch.sh
 
 # Nitrogen
 exec nitrogen --restore &
