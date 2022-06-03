@@ -9,6 +9,7 @@ link:
 	stow wallpapers -t ~/
 	stow nitrogen -t ~/.config/
 	stow polybar -t ~/.config/
+	stow rofi -t ~/.config/
 
 
 unlink:
@@ -22,3 +23,4 @@ unlink:
 	unlink ~/wallpapers
 	unlink ~/.config/i3
 	unlink ~/.config/polybar
+	unlink ~/.config/rofi
