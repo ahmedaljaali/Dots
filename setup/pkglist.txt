@@ -66,3 +66,5 @@ terminus-font
 noto-fonts
 playerctl
 zscroll
+scrot
+xf86-video-intel

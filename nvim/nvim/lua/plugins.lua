@@ -201,7 +201,11 @@ return packer.startup(function()
     requires = {'nvim-lua/plenary.nvim'},
   }
 
-  use 'cdelledonne/vim-cmake'
+  use
+  {
+      'cdelledonne/vim-cmake',
+      -- commit = "844b85677d52d932432eb115236d9173ebe3664d",
+  }
   use
   {
     'lewis6991/gitsigns.nvim',
