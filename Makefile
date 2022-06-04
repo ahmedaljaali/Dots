@@ -11,6 +11,7 @@ link:
 	stow polybar -t ~/.config/
 	stow rofi -t ~/.config/
 	stow btop -t ~/.config/
+	stow fontconfig -t ~/.config/
 
 
 unlink:
@@ -26,3 +27,4 @@ unlink:
 	unlink ~/.config/polybar
 	unlink ~/.config/rofi
 	unlink ~/.config/btop
+	unlink ~/.config/fontconfig

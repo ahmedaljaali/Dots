@@ -1,23 +1,33 @@
 #!/bin/bash
 
 #Update
-sudo pacman -Syu
+sudo pacman -Syu 
 
-#Haskell dev tools
-Add it there
+#Install paru
+mkdir ~/Downloads
+cd ~/Downloads
+sudo pacman -S git rust
+git clone https://aur.archlinux.org/paru.git
+cd ~/Downloads/paru
+makepkg -i
+cd ~/Dots
 
 #Install the packages in the list
-paru --needed --ask 4 -Sy - < pkglist.txt || error "Failed to install required packages"
+paru --needed --ask 4 -Sy - < ~/Dots/setup/pkglist.txt || error "Failed to install required packages"
 
 #Python packages
 
 pip install python-bidi #Ranger
 
-# Add the fish shell /usr/local/bin/fish to /etc/shells with
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
+# Add the fish shell /usr/bin/fish to /etc/shells with
+echo /usr/bin/fish | sudo tee -a /etc/shells
 
 #Change your default shell to fish with:
-chsh -s /usr/local/bin/fish
+chsh -s /usr/bin/fish
+
+#Make polybar scripts executable
+cd ~/Dots/polybar
+make
 
 #Copy config files
 mkdir ~/.config
@@ -31,7 +41,6 @@ systemctl mask systemd-rfkill.service
 systemctl mask systemd-rfkill.socket
 systemctl enable NetworkManager-dispatcher.service
 
-xmonad --recompile
 
 ##Setup git
 

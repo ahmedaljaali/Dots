@@ -1,5 +1,5 @@
 nitrogen
-ttf-font-awesome
+noto-fonts
 fzf
 rust
 zoxide
@@ -25,7 +25,6 @@ nvim-packer-git
 ttf-apple-emoji
 exa
 google-chrome
-apple-fonts
 openrgb
 libreoffice-fresh
 gimp
@@ -47,10 +46,8 @@ deadbeef
 reflector
 glfw-x11
 vulkan-devel
-cmakttf-material-icons-gite
 glm
 shaderc
-ghcup-hs-bin
 vulkan-intel
 discord
 spotify
@@ -61,10 +58,7 @@ fd
 i3-wm
 btop
 polybar-git
-ttf-material-icons-git
-terminus-font
-noto-fonts
 playerctl
-zscroll
 scrot
 xf86-video-intel
+light
