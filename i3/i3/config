@@ -58,7 +58,7 @@ bindsym $mod+b exec google-chrome-stable
 # kill focused window
 bindsym $mod+q kill
 
-# start dmenu (a program launcher)
+# start rofi (a program launcher)
 bindsym $mod+shift+d exec --no-startup-id rofi -show run
 
 # screen shot
