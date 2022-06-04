@@ -62,3 +62,4 @@ playerctl
 scrot
 xf86-video-intel
 light
+obs-studio
