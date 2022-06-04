@@ -10,6 +10,7 @@ link:
 	stow nitrogen -t ~/.config/
 	stow polybar -t ~/.config/
 	stow rofi -t ~/.config/
+	stow btop -t ~/.config/
 
 
 unlink:
@@ -24,3 +25,4 @@ unlink:
 	unlink ~/.config/i3
 	unlink ~/.config/polybar
 	unlink ~/.config/rofi
+	unlink ~/.config/btop

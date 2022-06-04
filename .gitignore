@@ -3,3 +3,5 @@ ranger/ranger/plugins/__init__.py
 ranger/ranger/plugins/__pycache__/
 ranger/ranger/plugins/ranger_devicons/__pycache__/
 fish-conf/fish/fish_variables
+btop/btop/btop.log
+btop/btop/themes
