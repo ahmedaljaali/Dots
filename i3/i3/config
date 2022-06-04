@@ -62,7 +62,7 @@ bindsym $mod+q kill
 bindsym $mod+shift+d exec --no-startup-id rofi -show run
 
 # screen shot
-bindsym $mod+shift+p exec scrot -s
+bindsym $mod+shift+p exec scrot -s ~/screenshots/%Y-%m-%d-%T-screenshot.png
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
