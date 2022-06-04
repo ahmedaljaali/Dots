@@ -61,8 +61,8 @@ bindsym $mod+q kill
 # start dmenu (a program launcher)
 bindsym $mod+shift+d exec --no-startup-id rofi -show run
 
-# sceenshot
-bindsym $mod+shift+p
+# screen shot
+bindsym $mod+shift+p exec scrot -s
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
