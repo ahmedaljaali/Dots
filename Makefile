@@ -1,6 +1,6 @@
 link:
 	stow nvim  -t ~/.config
-	stow alacritty -t ~/.config
+	stow kitty -t ~/.config
 	stow fish -t  ~/.config
 	stow ranger -t ~/.config
 	stow starship -t ~/.config
@@ -16,7 +16,7 @@ link:
 
 unlink:
 	unlink ~/.config/nvim
-	unlink ~/.config/alacritty
+	unlink ~/.config/kitty
 	unlink ~/.config/fish
 	unlink ~/.config/ranger
 	unlink ~/.config/starship.toml
