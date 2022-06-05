@@ -41,6 +41,8 @@ systemctl mask systemd-rfkill.service
 systemctl mask systemd-rfkill.socket
 systemctl enable NetworkManager-dispatcher.service
 
+#Let light without sudo
+sudo chmod +s /usr/bin/light # Not that you have to run it in every update
 
 ##Setup git
 
