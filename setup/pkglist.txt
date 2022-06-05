@@ -65,3 +65,4 @@ light
 obs-studio
 i3lock 
 network-manager-applet
+ttf-iosevka-nerd

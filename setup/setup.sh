@@ -46,6 +46,10 @@ sudo chmod +s /usr/bin/light # Not that you have to run it in every update
 
 ##Setup git
 
+echo "[user]
+	email = ahmedmohammed2429@gmail.com
+	name  = IZenithy
+" >> ~/.gitconfig
 #Genirate kys
 ssh-keygen -o
 
