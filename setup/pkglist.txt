@@ -63,7 +63,12 @@ scrot
 xf86-video-intel
 light
 obs-studio
-i3lock 
 network-manager-applet
 ttf-iosevka-nerd
 unzip
+i3lock-color
+imagemagick
+Dunst
+feh
+betterlockscreen
+libnotify

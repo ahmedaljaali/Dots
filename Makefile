@@ -12,6 +12,7 @@ link:
 	stow rofi -t ~/.config/
 	stow btop -t ~/.config/
 	stow fontconfig -t ~/.config/
+	stow betterlockscreenrc -t ~/.config/
 
 
 unlink:
@@ -28,3 +29,4 @@ unlink:
 	unlink ~/.config/rofi
 	unlink ~/.config/btop
 	unlink ~/.config/fontconfig
+	unlink ~/.config/betterlockscreenrc
