@@ -13,6 +13,7 @@ link:
 	stow btop -t ~/.config/
 	stow fontconfig -t ~/.config/
 	stow betterlockscreenrc -t ~/.config/
+	stow dunst -t ~/.config/
 
 
 unlink:
@@ -30,3 +31,4 @@ unlink:
 	unlink ~/.config/btop
 	unlink ~/.config/fontconfig
 	unlink ~/.config/betterlockscreenrc
+	unlink ~/.config/dunst
