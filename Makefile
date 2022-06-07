@@ -14,6 +14,7 @@ link:
 	stow fontconfig -t ~/.config/
 	stow betterlockscreenrc -t ~/.config/
 	stow dunst -t ~/.config/
+	stow picom -t ~/.config/
 
 
 unlink:
@@ -32,3 +33,5 @@ unlink:
 	unlink ~/.config/fontconfig
 	unlink ~/.config/betterlockscreenrc
 	unlink ~/.config/dunst
+	unlink ~/.config/picom
+

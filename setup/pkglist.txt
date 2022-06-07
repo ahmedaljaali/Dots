@@ -72,3 +72,5 @@ Dunst
 feh
 betterlockscreen
 libnotify
+picom-git
+locate
