@@ -1,4 +1,4 @@
-Edit kitty.conf
+Edit kitty.conf --working at it
 Edit picom.conf
 Edit btop.conf
 Edit ranger.conf
