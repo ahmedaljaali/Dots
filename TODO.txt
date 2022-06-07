@@ -1,0 +1,6 @@
+Edit kitty.conf
+Edit picom.conf
+Edit btop.conf
+Edit ranger.conf
+Remove or edit font settings
+Edit fish.conf
