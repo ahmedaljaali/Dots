@@ -1,130 +1,78 @@
 configuration {
-  display-drun:   "Activate";
-  display-run:    "Execute";
-  display-window: "Window";
-  show-icons:     false;
-  sidebar-mode:   true;
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "JetBrainsMono Nerd Font Medium 10";
+  modi: "window,run,drun";
 }
 
+@theme "/dev/null"
+
 * {
-  background-color: #24283b;
-  text-color:       #c0caf5;
-  selbg:            #565f89;
-  actbg:            #7aa2f7;
-  urgbg:            #ff5555;
-  winbg:            @text-color;
+  bg: #11121D;
+  bg-alt: #444b6a;
 
-  selected-normal-foreground: @winbg;
-  normal-foreground:          @text-color;
-  selected-normal-background: @actbg;
-  normal-background:          @background-color;
+  fg: #FFFFFF;
+  fg-alt: #787c99;
 
-  selected-urgent-foreground: @background-color;
-  urgent-foreground:          @text-color;
-  selected-urgent-background: @urgbg;
-  urgent-background:          @background-color;
-
-  selected-active-foreground: @winbg;
-  active-foreground:          @text-color;
-  selected-active-background: @actbg;
-  active-background:          @selbg;
-
-  line-margin:     0;
-  line-padding:    0;
-  separator-style: "none";
-  hide-scrollbar:  "true";
-  margin:          0;
-  padding:         0;
+  background-color: @bg;
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
 }
 
 window {
-  location:    west;
-  anchor:      west;
-  height:      100%;
-  width:       15%;
-  orientation: horizontal;
-  children:    [mainbox];
-}
-
-mainbox {
-  spacing:  0.5em;
-  children: [entry,listview,mode-switcher];
-}
-
-button {
-  padding: 5px 2px;
-}
-
-button selected {
-  background-color: @active-background;
-  text-color:       @text-color;
-}
-
-inputbar {
-  padding: 5px;
-  spacing: 5px;
-}
-
-listview {
-  spacing: 0.5em;
-  dynamic: false;
-  cycle:   false;
+  width: 30%;
 }
 
 element {
-  padding: 5px;
+  padding: 8 0;
+  text-color: @fg-alt;
+}
+
+element selected {
+  text-color: @fg;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 30;
 }
 
 entry {
-  expand:         false;
-  text-color:     @normal-foreground;
-  vertical-align: 1;
-  padding:        5px;
+  background-color: @bg-alt;
+  padding: 12;
+  text-color: @fg;
 }
 
-element normal.normal {
-  background-color: @normal-background;
-  text-color:       @normal-foreground;
+inputbar {
+  children: [prompt, entry];
 }
 
-element normal.urgent {
-  background-color: @urgent-background;
-  text-color:       @urgent-foreground;
+listview {
+  padding: 8 12;
+  background-color: @bg;
+  columns: 1;
+  lines: 8;
 }
 
-element normal.active {
-  background-color: @active-background;
-  text-color:       @active-foreground;
+mainbox {
+  background-color: @bg;
+  children: [inputbar, listview];
 }
 
-element selected.normal {
-  background-color: @selected-normal-background;
-  text-color:       @selected-normal-foreground;
-  border:           0 5px solid 0 0;
-  border-color:     @active-background;
+prompt {
+  background-color: @bg-alt;
+  enabled: true;
+  padding: 12 0 0 12;
+  text-color: @fg;
 }
 
-element selected.urgent {
-  background-color: @selected-urgent-background;
-  text-color:       @selected-urgent-foreground;
-}
-
-element selected.active {
-  background-color: @selected-active-background;
-  text-color:       @selected-active-foreground;
-}
-
-element alternate.normal {
-  background-color: @normal-background;
-  text-color:       @normal-foreground;
-}
-
-element alternate.urgent {
-  background-color: @urgent-background;
-  text-color:       @urgent-foreground;
-}
-
-element alternate.active {
-  background-color: @active-background;
-  text-color:       @active-foreground;
-}
+/* vim: ft=sass
