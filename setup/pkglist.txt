@@ -74,4 +74,8 @@ libnotify
 picom-git
 locate
 nerd-fonts-meslo
-xidlehook
+xautolock
+#Test
+ ttf-icomoon-feather
+iosevka-nerd-font
+ttf-jetbrains-mono 
