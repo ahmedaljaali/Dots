@@ -20,7 +20,7 @@ libxss
 fish
 starship
 stow
-kitty
+alacritty
 nvim-packer-git
 ttf-apple-emoji
 exa
