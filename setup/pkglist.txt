@@ -74,3 +74,4 @@ libnotify
 picom-git
 locate
 nerd-fonts-meslo
+xidlehook

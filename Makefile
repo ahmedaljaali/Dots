@@ -34,4 +34,3 @@ unlink:
 	unlink ~/.config/betterlockscreenrc
 	unlink ~/.config/dunst
 	unlink ~/.config/picom
-
