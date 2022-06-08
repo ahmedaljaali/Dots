@@ -110,14 +110,14 @@ scrolling:
 font:
   # Normal (roman) font face
   normal:
-    family: Hack Nerd Font
+    family: MesloLGS Nerd Font
 
     style: Regular
 
 
   bold:
 
-    family: Hack Nerd Font
+    family: MesloLGS Nerd Font
 
 
     style: Bold
@@ -125,7 +125,7 @@ font:
 
   italic:
 
-    family: Hack Nerd Font
+    family: MesloLGS Nerd Font
 
 
     style: Italic
@@ -133,7 +133,7 @@ font:
 
   bold_italic:
 
-    family: Hack Nerd Font
+    family: MesloLGS Nerd Font
 
 
     style: Bold Italic
