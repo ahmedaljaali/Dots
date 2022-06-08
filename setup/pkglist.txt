@@ -74,3 +74,4 @@ betterlockscreen
 libnotify
 picom-git
 locate
+ttf-jetbrains-mono
