@@ -2,7 +2,7 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  font: "Hack Nerd Font 10";
+  font: "MesloLGS Nerd Font 10";
   modi: "window,run,drun";
 }
 

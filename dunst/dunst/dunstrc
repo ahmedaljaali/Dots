@@ -19,7 +19,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font =Hack Nerd Font 13
+    font =MesloLGS Nerd Font 13
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"
