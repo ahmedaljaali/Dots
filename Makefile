@@ -15,7 +15,6 @@ link:
 	stow betterlockscreenrc -t ~/.config/
 	stow dunst -t ~/.config/
 	stow picom -t ~/.config/
-	stow eww -t ~/.config/
 
 
 unlink:
@@ -35,4 +34,3 @@ unlink:
 	unlink ~/.config/betterlockscreenrc
 	unlink ~/.config/dunst
 	unlink ~/.config/picom
-	unlink ~/.config/eww

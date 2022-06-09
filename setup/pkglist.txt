@@ -75,5 +75,3 @@ picom-git
 locate
 nerd-fonts-meslo
 xautolock
-# Test
-eww-git
