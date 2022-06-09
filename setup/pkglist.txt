@@ -75,3 +75,5 @@ picom-git
 locate
 nerd-fonts-meslo
 xautolock
+geoclue2
+redshift
