@@ -75,7 +75,5 @@ picom-git
 locate
 nerd-fonts-meslo
 xautolock
-#Test
- ttf-icomoon-feather
-iosevka-nerd-font
-ttf-jetbrains-mono 
+# Test
+eww-git
