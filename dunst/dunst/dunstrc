@@ -222,7 +222,7 @@
     dmenu =  rofi
 
     # Browser for opening urls in context menu.
-    browser = google-chrome-stable
+    browser = /usr/bin/google-chrome-stable -new-tab
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true
