@@ -208,3 +208,5 @@ starship init fish | source
 
 ### SETTING UP zoxide ###
 zoxide init fish | source
+
+export TMPDIR=/home/ahmed/tmp
