@@ -24,7 +24,6 @@ alacritty
 nvim-packer-git
 ttf-apple-emoji
 exa
-google-chrome
 openrgb
 libreoffice-fresh
 gimp
@@ -67,7 +66,7 @@ network-manager-applet
 unzip
 i3lock-color
 imagemagick
-Dunst
+dunst
 feh
 betterlockscreen
 libnotify
@@ -78,3 +77,7 @@ xautolock
 geoclue2
 redshift
 gdb
+vieb-git
+stack
+xidlehook-git
+haskell-language-server
