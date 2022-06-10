@@ -202,9 +202,7 @@
     max_icon_size = 128
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-		icon_theme = "Papirus-Dark, Adwaita"
-		enable_recursive_icon_lookup = true
+    icon_path = /usr/share/fonts/TTF/AppleColorEmoji.ttf
 
     always_run_scripts = true
     ### History ###
