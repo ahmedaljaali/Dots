@@ -4,3 +4,4 @@ Edit btop.conf
 Edit ranger.conf
 Remove or edit font settings
 Edit fish.conf
+change the defalut browser to vieb
