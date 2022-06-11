@@ -203,6 +203,9 @@ alias audio=pavucontrol
 # libreoffice
 alias office=libreoffice
 
+# Gtk theme
+alias gtk-theme=lxappearance
+
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
 

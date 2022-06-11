@@ -81,3 +81,6 @@ vieb-git
 stack
 xidlehook-git
 haskell-language-server
+gruvbox-dark-gtk
+lxappearance
+qt5ct
