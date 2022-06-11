@@ -206,13 +206,8 @@ alias office=libreoffice
 # Gtk theme
 alias gtk-theme=lxappearance
 
-# QT theme
-alias qt-theme=qt5ct
-
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
 
 ### SETTING UP zoxide ###
 zoxide init fish | source
-
-export TMPDIR=/home/ahmed/tmp

@@ -83,4 +83,6 @@ xidlehook-git
 haskell-language-server
 gruvbox-dark-gtk
 lxappearance
-qt5ct
+la-capitaine-icon-theme
+cursor-theme-macos-big-sur
+pcmanfm-gtk3
