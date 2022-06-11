@@ -55,7 +55,7 @@ bat
 ueberzug
 speedtest
 fd
-i3-wm
+i3-gaps
 btop
 polybar-git
 playerctl
