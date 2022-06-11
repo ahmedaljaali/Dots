@@ -4,3 +4,6 @@ Edit btop.conf
 Edit ranger.conf
 Remove or edit font settings
 Edit fish.conf
+install apple gtk icon theme\
+install cursor-theme-macos-big-sur
+intsll krusader file manager
