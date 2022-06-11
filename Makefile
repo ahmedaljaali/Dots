@@ -16,6 +16,7 @@ link:
 	stow dunst -t ~/.config/
 	stow picom -t ~/.config/
 	stow redshift -t ~/.config/
+	stow Vieb -t ~/.config/
 
 
 unlink:
@@ -36,3 +37,4 @@ unlink:
 	unlink ~/.config/dunst
 	unlink ~/.config/picom
 	unlink ~/.config/redshift
+	unlink ~/.config/Vieb

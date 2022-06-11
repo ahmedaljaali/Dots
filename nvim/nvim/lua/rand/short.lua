@@ -39,3 +39,9 @@ vim.g.registers_show_empty_registers = 0
 --Choose the border
 vim.g.registers_window_border = "rounded"
 -----------------------------
+
+----------------------------------------------------------------------
+--                               Tidy                               --
+
+require("tidy").setup()
+----------------------------------------------------------------------
