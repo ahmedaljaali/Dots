@@ -110,6 +110,7 @@ return packer.startup(function()
     requires = {'kyazdani42/nvim-web-devicons'}
   }
   use 'elkowar/yuck.vim'
+  use "ellisonleao/gruvbox.nvim"
 ----------------------------------------------------------------------
 
 

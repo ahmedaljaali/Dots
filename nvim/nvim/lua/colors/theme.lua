@@ -49,6 +49,8 @@ require('onedark').setup  {
 --                            Set theme                             --
 
 
-require('onedark').load() --enable one dark
-vim.opt.termguicolors = true
+-- require('onedark').load() --enable one dark
+-- vim.opt.termguicolors = true
+vim.opt.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
 ----------------------------------------------------------------------

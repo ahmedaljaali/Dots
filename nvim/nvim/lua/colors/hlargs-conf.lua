@@ -1,5 +1,5 @@
 require('hlargs').setup {
-  color = "#FF6D6D",
+  color =  "#83a598",
   excluded_filetypes = {},
   paint_arg_declarations = true,
   paint_arg_usages = true,
