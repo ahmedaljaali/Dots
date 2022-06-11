@@ -7,3 +7,4 @@ Edit fish.conf
 install apple gtk icon theme\
 install cursor-theme-macos-big-sur
 intsll krusader file manager
+get wallpapers from this repo https://gitlab.com/thelinuxcast/wallpapers.git : git clone https://gitlab.com/thelinuxcast/wallpapers.git
