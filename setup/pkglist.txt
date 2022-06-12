@@ -77,7 +77,7 @@ xautolock
 geoclue2
 redshift
 gdb
-vieb-git
+google-chrome
 stack
 xidlehook-git
 haskell-language-server
@@ -86,3 +86,4 @@ lxappearance
 la-capitaine-icon-theme
 cursor-theme-macos-big-sur
 pcmanfm-gtk3
+ttf-ms-fonts
