@@ -11,13 +11,10 @@ link:
 	stow polybar -t ~/.config/
 	stow rofi -t ~/.config/
 	stow btop -t ~/.config/
-	stow fontconfig -t ~/.config/
 	stow betterlockscreenrc -t ~/.config/
 	stow dunst -t ~/.config/
 	stow picom -t ~/.config/
 	stow redshift -t ~/.config/
-	stow xmonad -t ~/.config/
-	stow xmobar -t ~/.config/
 
 unlink:
 	unlink ~/.config/nvim
@@ -32,10 +29,7 @@ unlink:
 	unlink ~/.config/polybar
 	unlink ~/.config/rofi
 	unlink ~/.config/btop
-	unlink ~/.config/fontconfig
 	unlink ~/.config/betterlockscreenrc
 	unlink ~/.config/dunst
 	unlink ~/.config/picom
 	unlink ~/.config/redshift
-	unlink ~/.config/xmonad
-	unlink ~/.config/xmobar

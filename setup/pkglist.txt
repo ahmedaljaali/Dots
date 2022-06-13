@@ -78,15 +78,10 @@ geoclue2
 redshift
 gdb
 google-chrome
-stack
 xidlehook-git
-haskell-language-server
 gruvbox-dark-gtk
 lxappearance
 la-capitaine-icon-theme
 cursor-theme-macos-big-sur
 pcmanfm-gtk3
 ttf-ms-fonts
-xmonad-git
-xmonad-contrib-git
-xmobar-git
