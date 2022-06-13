@@ -16,7 +16,8 @@ link:
 	stow dunst -t ~/.config/
 	stow picom -t ~/.config/
 	stow redshift -t ~/.config/
-
+	stow xmonad -t ~/.config/
+	stow xmobar -t ~/.config/
 
 unlink:
 	unlink ~/.config/nvim
@@ -36,3 +37,5 @@ unlink:
 	unlink ~/.config/dunst
 	unlink ~/.config/picom
 	unlink ~/.config/redshift
+	unlink ~/.config/xmonad
+	unlink ~/.config/xmobar
