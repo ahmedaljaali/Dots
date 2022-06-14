@@ -15,6 +15,7 @@ link:
 	stow dunst -t ~/.config/
 	stow picom -t ~/.config/
 	stow redshift -t ~/.config/
+	stow neofetch -t ~/.config/
 
 unlink:
 	unlink ~/.config/nvim
@@ -33,3 +34,4 @@ unlink:
 	unlink ~/.config/dunst
 	unlink ~/.config/picom
 	unlink ~/.config/redshift
+	unlink ~/.config/neofetch
