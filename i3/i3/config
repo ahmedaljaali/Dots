@@ -1,6 +1,6 @@
-include ~/.config/i3/confs/keymap.conf
-include ~/.config/i3/confs/autocmd.conf
-include ~/.config/i3/confs/mode.conf
+include ~/.config/i3/settings/keymap.conf
+include ~/.config/i3/settings/autocmd.conf
+include ~/.config/i3/settings/mode.conf
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -22,7 +22,8 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-
+set $ws9 "9"
+set $ws10 "10"
 
 
 ## every bar that come with i3
