@@ -6,7 +6,7 @@ zoxide
 ncpamixer
 xsel
 ripgrep
-ranger
+ranger-git
 python-ueberzug-git
 xorg-server
 xorg-apps
