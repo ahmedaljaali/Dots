@@ -85,3 +85,5 @@ la-capitaine-icon-theme
 cursor-theme-macos-big-sur
 pcmanfm-gtk3
 ttf-ms-fonts
+xdman
+usbimager
