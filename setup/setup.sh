@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Update
-sudo pacman -Syu 
+sudo pacman -Syu
 
 #Install paru
 mkdir ~/Downloads
@@ -41,8 +41,10 @@ systemctl mask systemd-rfkill.service
 systemctl mask systemd-rfkill.socket
 systemctl enable NetworkManager-dispatcher.service
 
-#Let light without sudo
-sudo chmod +s /usr/bin/light # Not that you have to run it in every update
+#MAke them usable without sudo, Note that you have to run it in every update
+sudo chmod +s /usr/bin/light
+sudo chmod +s /usr/bin/powertop
+sudo chmod +s /usr/bin/intel_gpu_frequency
 
 ##Setup git
 

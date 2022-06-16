@@ -87,3 +87,5 @@ pcmanfm-gtk3
 ttf-ms-fonts
 xdman
 usbimager
+intel-gpu-tools
+ttf-weather-icons
