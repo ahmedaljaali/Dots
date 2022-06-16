@@ -1,7 +1,5 @@
-Edit alacritty.yml
 Edit picom.conf
 Edit btop.conf
 Edit ranger.conf
 Remove or edit font settings
 Edit fish.conf
-get wallpapers from this repo https://gitlab.com/thelinuxcast/wallpapers.git : git clone https://gitlab.com/thelinuxcast/wallpapers.git

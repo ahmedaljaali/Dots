@@ -52,6 +52,8 @@ window:
   # Values for `decorations`:
   #     - full: Borders and title bar
   #     - none: Neither borders nor title bar
+  decorations:
+   none
   #
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
@@ -64,7 +66,9 @@ window:
   #   - Windowed
   #   - Maximized
   #   - Fullscreen
-  #
+  startup_mode:
+    maximized
+
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
   #startup_mode: Windowed
@@ -572,21 +576,21 @@ colors: *GruvboxDark
 # Allow terminal applications to change Alacritty's window title.
 #dynamic_title: true
 
-#cursor:
+cursor:
   # Cursor style
   #
   # Values for `style`:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  #style: Block
+  style: Block
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
-  #unfocused_hollow: true
+  unfocused_hollow: true
 
 # Live config reload (changes require restart)
-#live_config_reload: true
+live_config_reload: true
 
 # Shell
 #
@@ -645,7 +649,7 @@ colors: *GruvboxDark
   # Record all characters and escape sequences as test data.
   #ref_test: false
 
-#mouse:
+mouse:
   # Click settings
   #
   # The `double_click` and `triple_click` settings control the time
@@ -655,9 +659,9 @@ colors: *GruvboxDark
   #triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  #hide_when_typing: false
+  hide_when_typing: true
 
-  #url:
+url:
     # URL launcher
     #
     # This program is executed when clicking on a text which is recognized as a URL.
@@ -669,8 +673,8 @@ colors: *GruvboxDark
     #   - (macOS) open
     #   - (Linux/BSD) xdg-open
     #   - (Windows) explorer
-    #launcher:
-    #  program: xdg-open
+    launcher:
+     program: google-chrome-stable
     #  args: []
 
     # URL modifiers
