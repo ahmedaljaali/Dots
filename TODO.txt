@@ -1,4 +1,3 @@
 Edit btop.conf
 Edit ranger.conf
-Remove or edit font settings
 Edit fish.conf
