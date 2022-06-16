@@ -30,6 +30,7 @@ ls.add_snippets(nil, {
     insert(4, "output name"), text({")",
 
     "target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/inc)",
+    "",
     "#Debug",
     "target_compile_options(${PROJECT_NAME} PUBLIC   -Werror -ggdb -O0 -Wall -Wextra  -Wextra -Weffc++  -Wsign-conversion -pedantic-errors)",
     "",
