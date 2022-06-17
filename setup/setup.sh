@@ -34,6 +34,8 @@ mkdir ~/.config
 cd ~/Dots
 make
 
+# Create screenshots dir for scrot
+mkdir ~/screenshots
 
 ## For tlp
 systemctl enable tlp.service
