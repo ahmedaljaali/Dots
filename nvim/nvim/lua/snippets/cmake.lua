@@ -46,7 +46,7 @@ ls.add_snippets(nil, {
             dscr = "Build SHADERS"
         },
         {
-        text({"find_program(GLSL_VALIDATOR glslangValidator HINTS",
+        text({"#Compile Shaders Code","find_program(GLSL_VALIDATOR glslangValidator HINTS",
         "  ${Vulkan_GLSLANG_VALIDATOR_EXECUTABLE}",
         "  /usr/bin",
         "  /usr/local/bin",
