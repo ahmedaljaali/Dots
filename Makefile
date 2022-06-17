@@ -28,6 +28,7 @@ unlink:
 	unlink ~/wallpapers
 	unlink ~/.config/i3
 	unlink ~/.config/polybar
+	unlink ~/.config/polybar-forecast
 	unlink ~/.config/rofi
 	unlink ~/.config/btop
 	unlink ~/.config/betterlockscreenrc
