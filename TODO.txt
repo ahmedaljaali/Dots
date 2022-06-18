@@ -1,3 +1,2 @@
 Edit btop.conf
-Edit ranger.conf
 Edit fish.conf

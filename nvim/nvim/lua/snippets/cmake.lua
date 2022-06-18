@@ -77,5 +77,28 @@ ls.add_snippets(nil, {
         ")",
         "add_dependencies(${PROJECT_NAME} Shaders)"
         })
+    }),
+
+        snip({
+
+            trig = "opengl",
+            namr = "opengl",
+            dscr = "Libraries required by opengl"
+        },
+        {
+        text({
+        "target_link_libraries(${PROJECT_NAME} PUBLIC -lglfw  -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi)"
+        })
+    }),
+        snip({
+
+            trig = "vulkan",
+            namr = "vulkan",
+            dscr = "Libraries required by vulkan"
+        },
+        {
+        text({
+        "target_link_libraries(${PROJECT_NAME} PUBLIC -lglfw  -ldl -lvulkan -lpthread -lX11 -lXxf86vm -lXrandr -lXi)"
+        })
     })
 }})

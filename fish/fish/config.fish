@@ -206,6 +206,9 @@ alias office=libreoffice
 # Gtk theme
 alias gtk-theme=lxappearance
 
+# Glad
+alias glad="glad  --profile=core --api=gl=4.6 --generator=c --spec=gl --extensions= --out-path=lib"
+
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
 
