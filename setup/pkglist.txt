@@ -89,5 +89,5 @@ xdman
 usbimager
 intel-gpu-tools
 ttf-weather-icons
-ttf-material-icons-git
 python-glad
+ttf-material-design-icons
