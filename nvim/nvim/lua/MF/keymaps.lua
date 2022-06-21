@@ -489,7 +489,7 @@ map("s", "<Leader>sp", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
 --                             Hexmode                              --
 
 
-map('n', '<Leader>hm', "<cmd>Hexmode<cr>", opts);
+map('n', '<Leader>he', "<cmd>Hexmode<cr>", opts);
 ----------------------------------------------------------------------
 
 
