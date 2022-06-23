@@ -21,12 +21,13 @@ ls.add_snippets(nil, {
 text({
     "#include <random>",
     "// Generate a random number between min and max (inclusive)",
-    "// Assumes srand() has already been called",
     "int getRandomNumber(int min, int max)",
     "{",
-        "static constexpr double fraction{ 1.0 / (static_cast<double>(RAND_MAX) + 1.0) };  // static used for efficiency, so we only calculate this value once",
-        "// evenly distribute the random number across our range",
-        "return static_cast<int>(std::rand() * fraction * (max - min + 1) + min);",
+    "    static std::mt19937 mt{ std::random_device{}() };",
+    "",
+    "    std::uniform_int_distribution die{ min, max }; // we can create a distribution in any function that needs it",
+    "",
+"    return die(mt); // and then generate a random number from our global generator",
     "}"
 })
     }),
