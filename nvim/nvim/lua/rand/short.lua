@@ -6,10 +6,12 @@ require("focus").setup({
 })
 -----------------------------
 
+
 -----------------------------
 --make directory
 require('mkdir')
 -----------------------------
+
 
 -----------------------------
 --toggleterm
@@ -20,15 +22,18 @@ require("toggleterm").setup
 }
 -----------------------------
 
+
 -----------------------------
 --stabilize
 require("stabilize").setup()
 -----------------------------
 
+
 -----------------------------
 --friendly-snippets
 require("luasnip/loaders/from_vscode").load({ paths = { "~/.local/share/nvim/site/pack/packer/start/friendly-snippets" }})
 -----------------------------
+
 
 -----------------------------
 --registers
@@ -40,8 +45,16 @@ vim.g.registers_show_empty_registers = 0
 vim.g.registers_window_border = "rounded"
 -----------------------------
 
+
 ----------------------------------------------------------------------
 --                               Tidy                               --
 
 require("tidy").setup()
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                          Stay centered                           --
+
+require("stay-centered")
 ----------------------------------------------------------------------

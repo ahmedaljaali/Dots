@@ -192,6 +192,7 @@ return packer.startup(function()
   }
   use   "AckslD/nvim-neoclip.lua"
   use 'monaqa/dial.nvim'
+  use "arnamak/stay-centered.nvim"
 
 ----------------------------------------------------------------------
 --                         Language support                         --
