@@ -127,16 +127,6 @@ return packer.startup(function()
   use 'antoinemadec/FixCursorHold.nvim'
   use 'szw/vim-maximizer'
   use 'mhinz/vim-startify'
-  use
-  {
-    'akinsho/toggleterm.nvim',
-    config = function()
-    require("toggleterm").setup{
-          shade_terminals = false,
-          direction = 'tab',
-      }
-      end,
-  }
   use 'kevinhwang91/rnvimr'
   use 'mrjones2014/smart-splits.nvim'
   use 'mvllow/modes.nvim'
@@ -155,11 +145,6 @@ return packer.startup(function()
   use 'luukvbaal/stabilize.nvim'
   use 'lambdalisue/suda.vim'
   use "tversteeg/registers.nvim"
-  use
-  {
-      'francoiscabrol/ranger.vim',
-      requires = {'rbgrouleff/bclose.vim'}
-  }
 ----------------------------------------------------------------------
 
 

@@ -14,16 +14,6 @@ require('mkdir')
 
 
 -----------------------------
---toggleterm
-require("toggleterm").setup
-{
-      shade_terminals = false,
-      direction = 'tab',
-}
------------------------------
-
-
------------------------------
 --stabilize
 require("stabilize").setup()
 -----------------------------

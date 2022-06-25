@@ -3,7 +3,7 @@
 
 ---------------------------------------------
 --For maping
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 local map = vim.api.nvim_set_keymap
 ---------------------------------------------
 
@@ -11,7 +11,7 @@ local map = vim.api.nvim_set_keymap
 --For Telescope
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
-  return
+    return
 end
 
 local actions = require "telescope.actions"
@@ -20,8 +20,8 @@ local actions = require "telescope.actions"
 ---------------------------------------------
 --For cmp
 local has_words_before = function()
-  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
 local luasnip = require("luasnip")
@@ -78,10 +78,10 @@ map('n', '<C-h>', '<C-w>h', opts)
 map('n', '<C-j>', '<C-w>j', opts)
 map('n', '<C-k>', '<C-w>k', opts)
 map('n', '<C-l>', '<C-w>l', opts)
-map("t", "<C-h>", "<C-\\><C-N><C-w>h",  { silent = true })
-map("t", "<C-j>", "<C-\\><C-N><C-w>j",  { silent = true })
-map("t", "<C-k>", "<C-\\><C-N><C-w>k",  { silent = true })
-map("t", "<C-l>", "<C-\\><C-N><C-w>l",  { silent = true })
+map("t", "<C-h>", "<C-\\><C-N><C-w>h", { silent = true })
+map("t", "<C-j>", "<C-\\><C-N><C-w>j", { silent = true })
+map("t", "<C-k>", "<C-\\><C-N><C-w>k", { silent = true })
+map("t", "<C-l>", "<C-\\><C-N><C-w>l", { silent = true })
 ----------------------------------------------------------------------
 
 
@@ -89,7 +89,7 @@ map("t", "<C-l>", "<C-\\><C-N><C-w>l",  { silent = true })
 --                              debug                               --
 
 
-map('n', '<Leader>db',"<cmd>lua _start_debug()<CR>" , opts) --open terminal with gdb
+map('n', '<Leader>db', "<cmd>FloatermNew gdb Build/app<CR>", opts) --open terminal with gdb
 ----------------------------------------------------------------------
 
 
@@ -101,7 +101,7 @@ map('n', '<Leader>cw', ':close<CR>', opts)
 map('n', '<Leader>m', ':tabnew<CR>', opts)
 -- Move to previous/next
 map('n', '[t', ':BufferLineCyclePrev<CR>', opts)
-map('n', ']t',  ':BufferLineCycleNext<CR>', opts)
+map('n', ']t', ':BufferLineCycleNext<CR>', opts)
 -- Goto buffer in position...
 map('n', '<A-1>', ':BufferLineGoToBuffer 1<CR>', opts)
 map('n', '<A-2>', ':BufferLineGoToBuffer 2<CR>', opts)
@@ -161,7 +161,7 @@ map('n', '<Leader>cm', ':CMakeClose<CR>', opts)
 --                              Ranger                              --
 
 
-map('n', '<c-t>', ':RangerNewTab<cr>', opts)
+map('n', '<c-t>', ':FloatermNew --autoclose=2 ranger<cr>', opts)
 ----------------------------------------------------------------------
 
 
@@ -189,6 +189,8 @@ vim.g.maximizer_default_mapping_key = '<Leader>sm'
 
 
 vim.g.floaterm_keymap_toggle = '<Leader>ft'
+vim.g.floaterm_keymap_next = '<Leader>fn'
+vim.g.floaterm_keymap_prev = '<Leader>fp'
 ----------------------------------------------------------------------
 
 
@@ -223,73 +225,73 @@ map("n", "<Leader>td", "<cmd>TodoTrouble<CR>", opts)
 
 
 telescope.setup {
-  defaults = {
+    defaults = {
 
-    mappings = {
-      i = {
-        ["<C-j>"] = actions.cycle_history_next,
-        ["<C-k>"] = actions.cycle_history_prev,
+        mappings = {
+            i = {
+                ["<C-j>"] = actions.cycle_history_next,
+                ["<C-k>"] = actions.cycle_history_prev,
 
-        ["<C-n>"] = actions.move_selection_next,
-        ["<C-p>"] = actions.move_selection_previous,
+                ["<C-n>"] = actions.move_selection_next,
+                ["<C-p>"] = actions.move_selection_previous,
 
-        ["<C-c>"] = actions.close,
+                ["<C-c>"] = actions.close,
 
-        ["<Down>"] = actions.move_selection_next,
-        ["<Up>"] = actions.move_selection_previous,
+                ["<Down>"] = actions.move_selection_next,
+                ["<Up>"] = actions.move_selection_previous,
 
-        ["<CR>"] = actions.select_default,
-        ["<C-x>"] = actions.select_horizontal,
-        ["<C-v>"] = actions.select_vertical,
-        ["<C-t>"] = actions.select_tab,
+                ["<CR>"] = actions.select_default,
+                ["<C-x>"] = actions.select_horizontal,
+                ["<C-v>"] = actions.select_vertical,
+                ["<C-t>"] = actions.select_tab,
 
-        ["<C-u>"] = actions.preview_scrolling_up,
-        ["<C-d>"] = actions.preview_scrolling_down,
+                ["<C-u>"] = actions.preview_scrolling_up,
+                ["<C-d>"] = actions.preview_scrolling_down,
 
-        ["<PageUp>"] = actions.results_scrolling_up,
-        ["<PageDown>"] = actions.results_scrolling_down,
+                ["<PageUp>"] = actions.results_scrolling_up,
+                ["<PageDown>"] = actions.results_scrolling_down,
 
-        ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
-        ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-        ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-        ["<C-l>"] = actions.complete_tag,
-        ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
-      },
+                ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+                ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+                ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+                ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+                ["<C-l>"] = actions.complete_tag,
+                ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+            },
 
-      n = {
-        ["<esc>"] = actions.close,
-        ["<CR>"] = actions.select_default,
-        ["<C-x>"] = actions.select_horizontal,
-        ["<C-v>"] = actions.select_vertical,
-        ["<C-t>"] = actions.select_tab,
+            n = {
+                ["<esc>"] = actions.close,
+                ["<CR>"] = actions.select_default,
+                ["<C-x>"] = actions.select_horizontal,
+                ["<C-v>"] = actions.select_vertical,
+                ["<C-t>"] = actions.select_tab,
 
-        ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
-        ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-        ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+                ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+                ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+                ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+                ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 
-        ["j"] = actions.move_selection_next,
-        ["k"] = actions.move_selection_previous,
-        ["H"] = actions.move_to_top,
-        ["M"] = actions.move_to_middle,
-        ["L"] = actions.move_to_bottom,
+                ["j"] = actions.move_selection_next,
+                ["k"] = actions.move_selection_previous,
+                ["H"] = actions.move_to_top,
+                ["M"] = actions.move_to_middle,
+                ["L"] = actions.move_to_bottom,
 
-        ["<Down>"] = actions.move_selection_next,
-        ["<Up>"] = actions.move_selection_previous,
-        --["gg"] = actions.moveto_top,
-        ["G"] = actions.move_to_bottom,
+                ["<Down>"] = actions.move_selection_next,
+                ["<Up>"] = actions.move_selection_previous,
+                --["gg"] = actions.moveto_top,
+                ["G"] = actions.move_to_bottom,
 
-        ["<C-u>"] = actions.preview_scrolling_up,
-        ["<C-d>"] = actions.preview_scrolling_down,
+                ["<C-u>"] = actions.preview_scrolling_up,
+                ["<C-d>"] = actions.preview_scrolling_down,
 
-        ["<PageUp>"] = actions.results_scrolling_up,
-        ["<PageDown>"] = actions.results_scrolling_down,
+                ["<PageUp>"] = actions.results_scrolling_up,
+                ["<PageDown>"] = actions.results_scrolling_down,
 
-        ["?"] = actions.which_key,
-      },
-    },
-  }
+                ["?"] = actions.which_key,
+            },
+        },
+    }
 }
 ----------------------------------------------------------------------
 
@@ -300,37 +302,37 @@ telescope.setup {
 
 cmp.setup({
     mapping = {
-    ["<C-p>"] = cmp.mapping.select_prev_item(),
-    ["<C-n>"] = cmp.mapping.select_next_item(),
-    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-    ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-    ["<C-e>"] = cmp.mapping {
-      i = cmp.mapping.abort(),
-      c = cmp.mapping.close(),
-    },
-          ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-            ["<Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_next_item()
-          elseif luasnip.expand_or_jumpable() then
-            luasnip.expand_or_jump()
-          elseif has_words_before() then
-            cmp.complete()
-          else
-            fallback()
-          end
+        ["<C-p>"] = cmp.mapping.select_prev_item(),
+        ["<C-n>"] = cmp.mapping.select_next_item(),
+        ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
+        ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+        ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+        ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+        ["<C-e>"] = cmp.mapping {
+            i = cmp.mapping.abort(),
+            c = cmp.mapping.close(),
+        },
+        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ["<Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+            elseif has_words_before() then
+                cmp.complete()
+            else
+                fallback()
+            end
         end, { "i", "s" }),
 
         ["<S-Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_prev_item()
-          elseif luasnip.jumpable(-1) then
-            luasnip.jump(-1)
-          else
-            fallback()
-          end
+            if cmp.visible() then
+                cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            else
+                fallback()
+            end
         end, { "i", "s" }),
 
 
@@ -358,28 +360,28 @@ cmp.setup.cmdline(":", {
 
 
 require('gitsigns').setup {
-  keymaps = {
-    -- Default keymap options
-    noremap = true,
+    keymaps = {
+        -- Default keymap options
+        noremap = true,
 
-    ['n ]c'] = { expr = true, "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'"},
-    ['n [c'] = { expr = true, "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'"},
+        ['n ]c'] = { expr = true, "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'" },
+        ['n [c'] = { expr = true, "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'" },
 
-    ['n <leader>hs'] = '<cmd>Gitsigns stage_hunk<CR>',
-    ['v <leader>hs'] = ':Gitsigns stage_hunk<CR>',
-    ['n <leader>hu'] = '<cmd>Gitsigns undo_stage_hunk<CR>',
-    ['n <leader>hr'] = '<cmd>Gitsigns reset_hunk<CR>',
-    ['v <leader>hr'] = ':Gitsigns reset_hunk<CR>',
-    ['n <leader>hR'] = '<cmd>Gitsigns reset_buffer<CR>',
-    ['n <leader>hp'] = '<cmd>Gitsigns preview_hunk<CR>',
-    ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line{full=true}<CR>',
-    ['n <leader>hS'] = '<cmd>Gitsigns stage_buffer<CR>',
-    ['n <leader>hU'] = '<cmd>Gitsigns reset_buffer_index<CR>',
+        ['n <leader>hs'] = '<cmd>Gitsigns stage_hunk<CR>',
+        ['v <leader>hs'] = ':Gitsigns stage_hunk<CR>',
+        ['n <leader>hu'] = '<cmd>Gitsigns undo_stage_hunk<CR>',
+        ['n <leader>hr'] = '<cmd>Gitsigns reset_hunk<CR>',
+        ['v <leader>hr'] = ':Gitsigns reset_hunk<CR>',
+        ['n <leader>hR'] = '<cmd>Gitsigns reset_buffer<CR>',
+        ['n <leader>hp'] = '<cmd>Gitsigns preview_hunk<CR>',
+        ['n <leader>hb'] = '<cmd>lua require"gitsigns".blame_line{full=true}<CR>',
+        ['n <leader>hS'] = '<cmd>Gitsigns stage_buffer<CR>',
+        ['n <leader>hU'] = '<cmd>Gitsigns reset_buffer_index<CR>',
 
-    -- Text objeuts
-    ['o ih'] = ':<C-U>Gitsigns select_hunk<CR>',
-    ['x ih'] = ':<C-U>Gitsigns select_hunk<CR>'
-  },
+        -- Text objeuts
+        ['o ih'] = ':<C-U>Gitsigns select_hunk<CR>',
+        ['x ih'] = ':<C-U>Gitsigns select_hunk<CR>'
+    },
 }
 ----------------------------------------------------------------------
 
@@ -420,18 +422,18 @@ trouble.setup
         close = "q", -- close the list
         cancel = "<esc>", -- cancel the preview and get back to your last window / buffer / cursor
         refresh = "r", -- manually refresh
-        jump = {"<cr>", "<tab>"}, -- jump to the diagnostic or open / close folds
+        jump = { "<cr>", "<tab>" }, -- jump to the diagnostic or open / close folds
         open_split = { "<c-x>" }, -- open buffer in new split
         open_vsplit = { "<c-v>" }, -- open buffer in new vsplit
         open_tab = { "<c-t>" }, -- open buffer in new tab
-        jump_close = {"o"}, -- jump to the diagnostic and close the list
+        jump_close = { "o" }, -- jump to the diagnostic and close the list
         toggle_mode = "m", -- toggle between "workspace" and "document" diagnostics mode
         toggle_preview = "P", -- toggle auto_preview
         hover = "K", -- opens a small popup with the full multiline message
         preview = "p", -- preview the diagnostic location
-        close_folds = {"zM", "zm"}, -- close all folds
-        open_folds = {"zR", "zr"}, -- open all folds
-        toggle_fold = {"zA", "za"}, -- toggle fold of current file
+        close_folds = { "zM", "zm" }, -- close all folds
+        open_folds = { "zR", "zr" }, -- open all folds
+        toggle_fold = { "zA", "za" }, -- toggle fold of current file
         previous = "k", -- preview item
         next = "j" -- next item
     },
@@ -443,9 +445,9 @@ trouble.setup
 --                             onedark                              --
 
 
-require('onedark').setup  {
-     -- toggle theme style ---
-     toggle_style_key = '<leader>ts', -- Default keybinding to toggle
+require('onedark').setup {
+    -- toggle theme style ---
+    toggle_style_key = '<leader>ts', -- Default keybinding to toggle
 }
 ----------------------------------------------------------------------
 
@@ -522,7 +524,7 @@ map("n", "<Leader>yh", "<cmd>Telescope neoclip<cr>", opts)
 ----------------------------------------------------------------------
 --                               dial                               --
 
-map("n", "<C-a>", require("dial.map").inc_normal(),opts)
+map("n", "<C-a>", require("dial.map").inc_normal(), opts)
 map("n", "<C-x>", require("dial.map").dec_normal(), opts)
 ----------------------------------------------------------------------
 

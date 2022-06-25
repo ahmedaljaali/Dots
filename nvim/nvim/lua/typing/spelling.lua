@@ -7,6 +7,5 @@ require('spellsitter').setup {
   code_spellcheck = false, -- enable additional code spellchecks
   naming_styles = {'camel_case', 'snake_case'}  -- how to parse names to separate words
 }
-vim.cmd[[set nospell filetype=toggleterm]] --disable it while using toggleterm
 
 vim.cmd[[set nospell filetype=terminal]] --disable it while using terminal
