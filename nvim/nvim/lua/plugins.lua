@@ -137,10 +137,6 @@ return packer.startup(function()
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     }
   }
-  use
-  {
-      "beauwilliams/focus.nvim",
-  }
   use 'luukvbaal/stabilize.nvim'
   use 'lambdalisue/suda.vim'
   use "tversteeg/registers.nvim"

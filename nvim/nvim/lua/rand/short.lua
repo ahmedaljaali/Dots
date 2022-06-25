@@ -1,12 +1,3 @@
-----------------------------
---focus
-require("focus").setup({
-    enable = true,
-    width = 95, --dont make it higher than 100
-})
------------------------------
-
-
 -----------------------------
 --make directory
 require('mkdir')
