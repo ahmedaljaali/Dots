@@ -145,10 +145,10 @@ map('n', '<Leader>ls', ':SLoad<CR>', opts)
 
 
 ----------------------------------------------------------------------
---                         Run the program                          --
+--                         Run C++ programs                         --
 
 
-map('n', '<leader>tr', ':FloatermNew --autoclose=0 Build/app<cr>', opts)
+map('n', '<leader>tr', ':FloatermNew  --height=20 --autoclose=0 Build/app<cr>', opts)
 ----------------------------------------------------------------------
 
 
