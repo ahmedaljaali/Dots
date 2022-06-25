@@ -127,7 +127,6 @@ return packer.startup(function()
   use 'szw/vim-maximizer'
   use 'mhinz/vim-startify'
   use 'kevinhwang91/rnvimr'
-  use 'mrjones2014/smart-splits.nvim'
   use 'mvllow/modes.nvim'
   use 'machakann/vim-sandwich'
   use
