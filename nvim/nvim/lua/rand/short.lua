@@ -11,12 +11,6 @@ require("stabilize").setup()
 
 
 -----------------------------
---friendly-snippets
-require("luasnip/loaders/from_vscode").load({ paths = { "~/.local/share/nvim/site/pack/packer/start/friendly-snippets" }})
------------------------------
-
-
------------------------------
 --registers
 
 --An additional line with the registers without content.

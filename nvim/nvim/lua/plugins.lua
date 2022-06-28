@@ -194,7 +194,6 @@ return packer.startup(function()
   -- tag = 'release' -- To use the latest release
   }
   use 'L3MON4D3/LuaSnip' --snipts
-  use "rafamadriz/friendly-snippets" --useful snippets
   use
   {
       'onsails/lspkind-nvim', --pictograms for neovim lsp completion items
