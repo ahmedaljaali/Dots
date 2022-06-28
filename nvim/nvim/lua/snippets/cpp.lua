@@ -66,7 +66,7 @@ text({
 
         snip({
 
-            trig = "cla",
+            trig = "clas",
             namr = "class",
             dscr = "Basic class"
         },
