@@ -63,4 +63,37 @@ text({
     "};"
 })
     }),
+
+        snip({
+
+            trig = "cla",
+            namr = "class",
+            dscr = "Basic class"
+        },
+        {
+    text({"class "}), insert(1, "Name"),
+    text({
+    "",
+    "{",
+    "private: // Private virables",
+    ""}),
+    insert(2),
+    text({
+    "",
+    "",
+    "public: // Public virables",
+    "",
+    "",
+    "",
+    "private: // Private methods",
+    "",
+    "",
+    "",
+    "public: // Public methods",
+    "",
+    "",
+    "",
+    "};"
+})
+    }),
 }})
