@@ -161,17 +161,16 @@ alias rm='rm -i'
 
 
 # git
-alias addup='git add -u'
-alias addall='git add .'
-alias branch='git branch'
-alias checkout='git checkout'
-alias clone='git clone'
-alias commit='git commit -m'
-alias fetch='git fetch'
-alias pull='git pull origin'
-alias push='git push origin'
-alias tag='git tag'
-alias newtag='git tag -a'
+alias gd='git add .'
+alias gb='git branch'
+alias gch='git checkout'
+alias gcol='git clone'
+alias gcom='git commit '
+alias gfet='git fetch'
+alias gpul='git pull origin'
+alias gpus='git push origin'
+alias gta='git tag'
+alias gnta='git tag -a'
 
 
 

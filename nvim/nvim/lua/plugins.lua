@@ -110,6 +110,7 @@ return packer.startup(function()
   }
   use 'elkowar/yuck.vim'
   use "ellisonleao/gruvbox.nvim"
+  use "Stautob/vim-fish"
 ----------------------------------------------------------------------
 
 
