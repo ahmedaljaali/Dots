@@ -163,6 +163,7 @@ alias rm='rm -i'
 # git
 alias gd='git add .'
 alias gb='git branch'
+alias gst='git status'
 alias gch='git checkout'
 alias gcol='git clone'
 alias gcom='git commit '
