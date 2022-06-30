@@ -26,6 +26,7 @@ require('colors.rainbowBraket')
 require('colors.icons')
 require('colors.modes-conf')
 require('colors.hlargs-conf')
+require('colors.dressing-conf')
 ----------------------------------------------------------------------
 
 
