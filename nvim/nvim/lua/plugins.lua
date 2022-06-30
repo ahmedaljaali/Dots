@@ -103,11 +103,6 @@ return packer.startup(function()
   }
   use 'kyazdani42/nvim-web-devicons'
   use 'mtdl9/vim-log-highlighting'
-  use
-  {
-      'akinsho/bufferline.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
-  }
   use 'elkowar/yuck.vim'
   use "ellisonleao/gruvbox.nvim"
   use "Stautob/vim-fish"

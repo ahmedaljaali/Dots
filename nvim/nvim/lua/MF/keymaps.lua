@@ -81,23 +81,20 @@ Hydra({
 	},
 	heads = {
 		-- move between windows
-		{"H", "<C-w>h" },
-		{"J", "<C-w>j" },
-		{"K", "<C-w>k" },
-		{"L", "<C-w>l" },
+		{"<C-h>", "<C-w>h" },
+		{"<C-j>", "<C-w>j" },
+		{"<C-k>", "<C-w>k" },
+		{"<C-l>", "<C-w>l" },
 
 		-- resizing window
-		{"<C-h>", "<C-w>3<" },
-		{"<C-l>", "<C-w>3>" },
-		{"<C-k>", "<C-w>2+" },
-		{"<C-j>", "<C-w>2-" },
+		{"H", "<C-w>3<" },
+		{"L", "<C-w>3>" },
+		{"K", "<C-w>2+" },
+		{"J", "<C-w>2-" },
 
 		-- equalize window sizes
 		{ "e", "<C-w>=" },
 
-		-- close active window
-		{ "Q", ":q<cr>" },
-		{ "<C-q>", ":q<cr>" },
 
 		-- exit this Hydra
 		{ "<c-}>", nil, { exit = true, nowait = true } },
@@ -120,25 +117,10 @@ map('n', '<Leader>db', "<cmd>FloatermNew gdb Build/app<CR>", opts) --open termin
 
 map('n', '<Leader>m', ':tabnew<CR>', opts)
 -- Move to previous/next
-map('n', '[t', ':BufferLineCyclePrev<CR>', opts)
-map('n', ']t', ':BufferLineCycleNext<CR>', opts)
--- Goto buffer in position...
-map('n', '<A-1>', ':BufferLineGoToBuffer 1<CR>', opts)
-map('n', '<A-2>', ':BufferLineGoToBuffer 2<CR>', opts)
-map('n', '<A-3>', ':BufferLineGoToBuffer 3<CR>', opts)
-map('n', '<A-4>', ':BufferLineGoToBuffer 4<CR>', opts)
-map('n', '<A-5>', ':BufferLineGoToBuffer 5<CR>', opts)
-map('n', '<A-6>', ':BufferLineGoToBuffer 6<CR>', opts)
-map('n', '<A-7>', ':BufferLineGoToBuffer 7<CR>', opts)
-map('n', '<A-8>', ':BufferLineGoToBuffer 8<CR>', opts)
-map('n', '<A-9>', ':BufferLineGoToBuffer 9<CR>', opts)
--- Close buffer
-map('n', '<Leader>ct', ':bdelete<CR>', opts)
+map('n', '[t', ':tabprev<CR>', opts)
+map('n', ']t', ':tabnext<CR>', opts)
 
-map('n', '<C-p>', ':BufferLinePick<CR>', opts)
--- Sort automatically by...
-map('n', '<Leader>bb', ':BufferLineSortByExtension<CR>', opts)
-map('n', '<Leader>bd', ':BufferLineSortByDirectory<CR>', opts)
+map('n', '<Leader>cw', ':close<CR>', opts)
 ----------------------------------------------------------------------
 
 
