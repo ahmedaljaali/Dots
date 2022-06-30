@@ -116,11 +116,18 @@ map('n', '<Leader>db', "<cmd>FloatermNew gdb Build/app<CR>", opts) --open termin
 
 
 map('n', '<Leader>m', ':tabnew<CR>', opts)
--- Move to previous/next
-map('n', '[t', ':tabprev<CR>', opts)
-map('n', ']t', ':tabnext<CR>', opts)
 
-map('n', '<Leader>cw', ':close<CR>', opts)
+map('n', ']t',     '<Plug>(cokeline-focus-next)',  { silent = true })
+map('n', '[t',   '<Plug>(cokeline-focus-prev)',  { silent = true })
+
+for i = 1,9 do
+  map('n', ('<F%s>'):format(i),      ('<Plug>(cokeline-focus-%s)'):format(i),  { silent = true })
+  map('n', ('<Leader>%s'):format(i), ('<Plug>(cokeline-switch-%s)'):format(i), { silent = true })
+end
+
+map('n', '<Leader>cw', ('<Plug>(cokeline-pick-close)'), opts)
+
+map('n', '<Leader>tp', ('<Plug>(cokeline-pick-focus)'), opts)
 ----------------------------------------------------------------------
 
 
