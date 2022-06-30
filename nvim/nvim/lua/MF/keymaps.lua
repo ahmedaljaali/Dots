@@ -39,6 +39,11 @@ local lsp_installer = require("nvim-lsp-installer")
 local trouble = require("trouble")
 ---------------------------------------------
 
+---------------------------------------------
+-- For hydra
+local Hydra = require("hydra")
+---------------------------------------------
+
 ----------------------------------------------------------------------
 
 
@@ -68,25 +73,36 @@ map('n', '<Leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 --                         resizing splits                          --
 
 
-map('n', '<A-l>', '<cmd>vertical resize -3<CR>', opts)
-map('n', '<A-h>', '<cmd>vertical resize +3<CR>', opts)
-map('n', '<A-k>', '<cmd>resize -3<CR>', opts)
-map('n', '<A-j>', '<cmd>resize +3<CR>', opts)
+Hydra({
+	name = "Change / Resize Window",
+	mode = { "n" },
+	body = "<C-w>",
+	config = {
+	},
+	heads = {
+		-- move between windows
+		{"H", "<C-w>h" },
+		{"J", "<C-w>j" },
+		{"K", "<C-w>k" },
+		{"L", "<C-w>l" },
 
-map('t', '<A-h>', '<cmd>SmartResizeLeft 5<CR>', opts)
-map('t', '<A-j>', '<cmd>SmartResizeDown 5<CR>', opts)
-map('t', '<A-k>', '<cmd>SmartResizeUp 5<CR>', opts)
-map('t', '<A-l>', '<cmd>SmartResizeRight 5<CR>', opts)
+		-- resizing window
+		{"<C-h>", "<C-w>3<" },
+		{"<C-l>", "<C-w>3>" },
+		{"<C-k>", "<C-w>2+" },
+		{"<C-j>", "<C-w>2-" },
 
---Remap splits navigation to just CTRL + hjkl
-map('n', '<C-h>', '<C-w>h', opts)
-map('n', '<C-j>', '<C-w>j', opts)
-map('n', '<C-k>', '<C-w>k', opts)
-map('n', '<C-l>', '<C-w>l', opts)
-map("t", "<C-h>", "<C-\\><C-N><C-w>h", { silent = true })
-map("t", "<C-j>", "<C-\\><C-N><C-w>j", { silent = true })
-map("t", "<C-k>", "<C-\\><C-N><C-w>k", { silent = true })
-map("t", "<C-l>", "<C-\\><C-N><C-w>l", { silent = true })
+		-- equalize window sizes
+		{ "e", "<C-w>=" },
+
+		-- close active window
+		{ "Q", ":q<cr>" },
+		{ "<C-q>", ":q<cr>" },
+
+		-- exit this Hydra
+		{ "<c-}>", nil, { exit = true, nowait = true } },
+	},
+})
 ----------------------------------------------------------------------
 
 
@@ -102,7 +118,6 @@ map('n', '<Leader>db', "<cmd>FloatermNew gdb Build/app<CR>", opts) --open termin
 --                        working with tabs                         --
 
 
-map('n', '<Leader>cw', ':close<CR>', opts)
 map('n', '<Leader>m', ':tabnew<CR>', opts)
 -- Move to previous/next
 map('n', '[t', ':BufferLineCyclePrev<CR>', opts)
