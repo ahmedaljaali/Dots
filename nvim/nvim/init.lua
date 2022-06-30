@@ -14,6 +14,7 @@ require('MF.keymaps')
 require('MF.status-line')
 require('MF.bufferline-conf')
 require('MF.nvim-tree-conf')
+require('MF.hop-conf')
 ----------------------------------------------------------------------
 
 
