@@ -107,6 +107,7 @@ return packer.startup(function()
   use "ellisonleao/gruvbox.nvim"
   use "Stautob/vim-fish"
   use 'stevearc/dressing.nvim'
+  use "ziontee113/color-picker.nvim"
 ----------------------------------------------------------------------
 
 

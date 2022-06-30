@@ -557,3 +557,11 @@ map("", "fp", "<cmd>HopPattern<CR>", opts)
 map("", "fc", "<cmd>HopChar2<CR>", opts)
 map("", "fl", "<cmd>HopLine<CR>", opts)
 ----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                            RGB picker                            --
+
+map("n", "<Leader>rgb", "<cmd>PickColor<cr>", opts)
+map("i", "<Leader>rgb", "<cmd>PickColorInsert<cr>", opts)
+----------------------------------------------------------------------
