@@ -264,6 +264,7 @@ return packer.startup(function()
   {
     "benfowler/telescope-luasnip.nvim",
   }
+  use 'tamago324/nlsp-settings.nvim'
 ----------------------------------------------------------------------
 
 
