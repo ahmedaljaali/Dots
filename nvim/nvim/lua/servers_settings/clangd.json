@@ -1,3 +1,5 @@
 {
-    "clangd.checkUpdates": true
+    "clangd.checkUpdates": true,
+    "clangd.arguments": [],
+    "clangd.restartAfterCrash": true
 }
