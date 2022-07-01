@@ -92,3 +92,5 @@ ttf-weather-icons
 python-glad
 ttf-material-design-icons
 xorg-server-xephyr
+nodejs
+downgrade
