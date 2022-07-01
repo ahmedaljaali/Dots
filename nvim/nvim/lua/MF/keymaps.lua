@@ -95,6 +95,9 @@ Hydra({
 		-- equalize window sizes
 		{ "e", "<C-w>=" },
 
+        -- close window
+        { "<C-q>", ":q<cr>" },
+
 
 		-- exit this Hydra
 		{ "<c-}>", nil, { exit = true, nowait = true } },
@@ -125,7 +128,7 @@ for i = 1,9 do
   map('n', ('<Leader>%s'):format(i), ('<Plug>(cokeline-switch-%s)'):format(i), { silent = true })
 end
 
-map('n', '<Leader>cw', ('<Plug>(cokeline-pick-close)'), opts)
+map('n', '<Leader>ct', ('<Plug>(cokeline-pick-close)'), opts)
 
 map('n', '<Leader>tp', ('<Plug>(cokeline-pick-focus)'), opts)
 ----------------------------------------------------------------------
