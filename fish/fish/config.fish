@@ -172,7 +172,7 @@ alias gpul='git pull origin'
 alias gpus='git push origin'
 alias gta='git tag'
 alias gnta='git tag -a'
-
+alias gr='git restore'
 
 
 # Play audio files in current dir by type
