@@ -217,8 +217,8 @@ map('n', '<Leader>cd', ':CodeActionMenu<Cr>', opts)
 --                             trouble                              --
 
 
-map("n", "<leader>sad", "<cmd>Trouble workspace_diagnostics<cr>", opts)
-map("n", "<leader>sd", "<cmd>Trouble document_diagnostics<cr>", opts)
+map("n", "<leader>tad", "<cmd>Trouble workspace_diagnostics<cr>", opts)
+map("n", "<leader>td", "<cmd>Trouble document_diagnostics<cr>", opts)
 map("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
 ----------------------------------------------------------------------
 
