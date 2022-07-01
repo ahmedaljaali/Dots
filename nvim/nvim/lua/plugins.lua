@@ -228,12 +228,6 @@ return packer.startup(function()
   }
   use "ray-x/lsp_signature.nvim"
   use 'romgrk/nvim-treesitter-context'
-  use
-  {
-  'filipdutescu/renamer.nvim',
-  branch = 'master',
-  requires = { {'nvim-lua/plenary.nvim'} }
-  }
   use 'fidian/hexmode' --add hex editing
 
   use
@@ -265,6 +259,7 @@ return packer.startup(function()
     "benfowler/telescope-luasnip.nvim",
   }
   use 'tamago324/nlsp-settings.nvim'
+  use "github/copilot.vim"
 ----------------------------------------------------------------------
 
 
