@@ -120,17 +120,13 @@ map('n', '<Leader>db', "<cmd>FloatermNew gdb Build/app<CR>", opts) --open termin
 
 map('n', '<Leader>m', ':tabnew<CR>', opts)
 
-map('n', ']t',     '<Plug>(cokeline-focus-next)',  { silent = true })
-map('n', '[t',   '<Plug>(cokeline-focus-prev)',  { silent = true })
+map('n', ']t', '<cmd>BufferLineCycleNext<CR>',  { silent = true })
+map('n', '[t', '<cmd>BufferLineCyclePrev<CR>',  { silent = true })
 
-for i = 1,9 do
-  map('n', ('<F%s>'):format(i),      ('<Plug>(cokeline-focus-%s)'):format(i),  { silent = true })
-  map('n', ('<Leader>%s'):format(i), ('<Plug>(cokeline-switch-%s)'):format(i), { silent = true })
-end
 
-map('n', '<Leader>ct', ('<Plug>(cokeline-pick-close)'), opts)
+map('n', '<Leader>ct', '<cmd>bdelete!<CR>', opts)
 
-map('n', '<Leader>tp', ('<Plug>(cokeline-pick-focus)'), opts)
+map('n', '<Leader>tp', "<cmd>BufferLinePick<CR>", opts)
 ----------------------------------------------------------------------
 
 
