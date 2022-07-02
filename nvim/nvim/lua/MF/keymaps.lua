@@ -110,7 +110,7 @@ Hydra({
 --                              debug                               --
 
 
-map('n', '<Leader>db', "<cmd>FloatermNew gdb Build/app<CR>", opts) --open terminal with gdb
+map('n', '<Leader>db', "<cmd>FloatermNew gdb bin/app<CR>", opts) --open terminal with gdb
 ----------------------------------------------------------------------
 
 
@@ -151,7 +151,7 @@ map('n', '<Leader>ls', ':SLoad<CR>', opts)
 --                         Run C++ programs                         --
 
 
-map('n', '<leader>tr', ':FloatermNew  --height=20 --autoclose=0 Build/app<cr>', opts)
+map('n', '<leader>tr', ':FloatermNew  --height=20 --autoclose=0 bin/app<cr>', opts)
 ----------------------------------------------------------------------
 
 
