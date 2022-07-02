@@ -27,7 +27,6 @@ exa
 openrgb
 libreoffice-fresh
 gimp
-vlc
 alsa-utils
 tlp
 tlp-rdw
@@ -94,3 +93,7 @@ ttf-material-design-icons
 xorg-server-xephyr
 nodejs
 downgrade
+mpv
+ani-cli-git
+aria2
+manga-cli-git

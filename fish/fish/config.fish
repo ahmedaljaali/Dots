@@ -181,9 +181,9 @@ alias playogg='deadbeef *.ogg'
 alias playmp3='deadbeef *.mp3'
 
 # Play video files in current dir by type
-alias playavi='vlc *.avi'
-alias playmov='vlc *.mov'
-alias playmp4='vlc *.mp4'
+alias playavi='mpv *.avi'
+alias playmov='mpv *.mov'
+alias playmp4='mpv *.mp4'
 
 # youtube-dl
 alias yta-aac="youtube-dl --extract-audio --audio-format aac "
@@ -208,6 +208,13 @@ alias gtk-theme=lxappearance
 
 # Glad
 alias glad="glad  --profile=core --api=gl=4.6 --generator=c --spec=gl --extensions= --out-path=lib"
+
+# Anime
+alias downanime="ani-cli -p ~/video/anime/ -q best"
+alias anime="ani-cli -q best"
+
+# Manga
+alias manga="manga-cli"
 
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
