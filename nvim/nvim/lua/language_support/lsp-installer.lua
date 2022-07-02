@@ -31,6 +31,9 @@ lsp_installer.settings({
         install_args = {},
     },
 
+    -- make sure that they are installed
+    ensure_installed = { "clangd", "sumneko_lua", "jsonls", "cmake", "vimls" },
+
     -- Controls to which degree logs are written to the log file. It's useful to set this to vim.log.levels.DEBUG when
     -- debugging issues with server installations.
     log_level = vim.log.levels.INFO,
