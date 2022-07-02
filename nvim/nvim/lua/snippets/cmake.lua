@@ -31,6 +31,13 @@ ls.add_snippets(nil, {
 
     "target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/inc)",
     "",
+    "set_target_properties( ${PROJECT_NAME}",
+    "    PROPERTIES",
+    "    ARCHIVE_OUTPUT_DIRECTORY \"${CMAKE_CURRENT_SOURCE_DIR}/lib\" ",
+    "    LIBRARY_OUTPUT_DIRECTORY \"${CMAKE_CURRENT_SOURCE_DIR}/lib\" ",
+    "    RUNTIME_OUTPUT_DIRECTORY \"${CMAKE_CURRENT_SOURCE_DIR}/bin\" ",
+    ")",
+    "",
     "#Debug",
     "target_compile_options(${PROJECT_NAME} PUBLIC   -Werror -ggdb -O0 -Wall -Wextra  -Wextra -Weffc++  -Wsign-conversion -pedantic-errors)",
     "",
