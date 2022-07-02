@@ -1,2 +1,2 @@
 # Start dwm
-exec ./dwm
+exec ./bin/dwm
