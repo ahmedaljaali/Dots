@@ -62,7 +62,7 @@ require('language_support.gitsigns-conf')
 require('language_support.lspkind-conf')
 require('language_support.lsp-config')
 require('language_support.code-actions')
-require('language_support.nvim-lua')
+--require('language_support.nvim-lua') Doesn't work
 require('language_support.trouble-conf')
 require('language_support.symbols-outline-conf')
 require('language_support.tabnine-conf')
