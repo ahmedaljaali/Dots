@@ -247,13 +247,12 @@ return packer.startup(function()
   use
   {
     'hrsh7th/nvim-cmp',
-    requires = {{'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
+    requires = {{'hrsh7th/cmp-path',  'f3fora/cmp-spell',
                 'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
                 'saadparwaiz1/cmp_luasnip', {'tzachar/cmp-tabnine', run='./install.sh'},
-                "lukas-reineke/cmp-under-comparator", "lukas-reineke/cmp-rg",
+                "lukas-reineke/cmp-under-comparator", "hrsh7th/cmp-emoji",
                 'hrsh7th/cmp-nvim-lua', "kdheepak/cmp-latex-symbols",
-                "hrsh7th/cmp-calc", "hrsh7th/cmp-emoji",
-                }}
+                "hrsh7th/cmp-calc",}}
   }
   use
   {
