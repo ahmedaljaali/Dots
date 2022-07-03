@@ -251,8 +251,7 @@ return packer.startup(function()
                 'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
                 'saadparwaiz1/cmp_luasnip', {'tzachar/cmp-tabnine', run='./install.sh'},
                 "lukas-reineke/cmp-under-comparator", "hrsh7th/cmp-emoji",
-                'hrsh7th/cmp-nvim-lua', "kdheepak/cmp-latex-symbols",
-                "hrsh7th/cmp-calc",}}
+                "kdheepak/cmp-latex-symbols", "hrsh7th/cmp-calc",}}
   }
   use
   {

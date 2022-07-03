@@ -24,7 +24,6 @@ cmp.setup({
     sources = cmp.config.sources({
         { name = 'nvim_lsp', priority = 1, group_index = 1},
         { name = 'luasnip', priority = 2, group_index = 1},
-        { name = 'nvim_lua', priority = 3, group_index = 1},
         { name = "emoji", priority = 4, group_index = 2},
         { name = "latex_symbols", priority = 5, group_index = 2},
         { name = "calc", priority = 6, group_index = 2},
@@ -39,7 +38,6 @@ cmp.setup({
       with_text = true,
       menu = {
         nvim_lsp = "[LSP]",
-        nvim_lua = "[Lua]",
         path = "[path]",
         luasnip= "[luasnip]",
         gh_issues = "[issues]",
