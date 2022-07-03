@@ -20,7 +20,6 @@ cmp.setup({
         { name = "emoji", priority = 6, group_index = 2},
         { name = "calc", priority = 7, group_index = 2},
         { name = "path", priority = 8, group_index = 2},
-        { name = 'spell', priority = 9, group_index = 2},
     }, {
       { name = 'cmp_tabnine', priority = 4, group_index = 2},
       { name = 'buffer', priority = 10, group_index = 4},

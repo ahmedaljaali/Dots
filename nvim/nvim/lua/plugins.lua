@@ -249,11 +249,11 @@ return packer.startup(function()
     'hrsh7th/nvim-cmp',
     requires = {{'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
                 'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
-                'saadparwaiz1/cmp_luasnip', 'f3fora/cmp-spell',
+                'saadparwaiz1/cmp_luasnip', {'tzachar/cmp-tabnine', run='./install.sh'},
                 "lukas-reineke/cmp-under-comparator", "lukas-reineke/cmp-rg",
                 'hrsh7th/cmp-nvim-lua', "kdheepak/cmp-latex-symbols",
                 "hrsh7th/cmp-calc", "hrsh7th/cmp-emoji",
-                {'tzachar/cmp-tabnine', run='./install.sh'},}}
+                }}
   }
   use
   {
