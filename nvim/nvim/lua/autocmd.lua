@@ -12,17 +12,18 @@ vim.api.nvim_create_autocmd(
 --            Automatically run :PackerCompile whenever             --
 --                      plugins.lua is updated                      --
 
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
+vim.api.nvim_create_autocmd(
+    {"BufWritePost"},
+    { pattern = "plugins.lua", command = "source <afile> | PackerCompile" }
+)
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
---        Disable spellchecking when floaterm window is open        --
+--        Disable spellchecking when terminal window is open        --
 
-vim.cmd[[autocmd FileType floaterm setlocal nospell]]
+vim.api.nvim_create_autocmd(
+    {"TermOpen"},
+    { pattern = "term://*", command = "setlocal nospell" }
+)
 ----------------------------------------------------------------------
