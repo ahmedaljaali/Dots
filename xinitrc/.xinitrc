@@ -1,4 +1,4 @@
 #!/bin/sh
 
-# Start i3
-exec i3
+# Start dwm
+exec dwm
