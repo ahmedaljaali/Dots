@@ -9,14 +9,14 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #11121D;
-  bg-alt: #444b6a;
+  bg: #3c3836;
+  bg-alt: #665c54;
 
-  fg: #FFFFFF;
-  fg-alt: #787c99;
+  fg: #f2e5bc;
+  fg-alt: #f2e5bc;
 
   background-color: @bg;
-  
+
   border: 0;
   margin: 0;
   padding: 0;
