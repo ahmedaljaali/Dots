@@ -1,5 +1,6 @@
 local ls = require("luasnip")
--- some shorthands...
+
+-- some shortcuts
 local snip = ls.snippet
 local node = ls.snippet_node
 local text = ls.text_node
@@ -75,13 +76,13 @@ text({
     text({
     "",
     "{",
-    "private: // Private virables",
+    "private: // Private variables",
     ""}),
     insert(2),
     text({
     "",
     "",
-    "public: // Public virables",
+    "public: // Public variables",
     "",
     "",
     "",
