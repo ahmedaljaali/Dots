@@ -22,15 +22,15 @@ cmp.setup({
     },
 
     sources = cmp.config.sources({
-        { name = 'nvim_lsp', priority = 1, group_index = 1},
-        { name = 'luasnip', priority = 2, group_index = 1},
-        { name = "emoji", priority = 4, group_index = 2},
-        { name = "latex_symbols", priority = 5, group_index = 2},
-        { name = "calc", priority = 6, group_index = 2},
-        { name = "path", priority = 7, group_index = 2},
+        { name = 'nvim_lsp',      priority = 1, group_index = 1},
+        { name = 'luasnip',       priority = 2, group_index = 1},
+        { name = "emoji",         priority = 3, group_index = 2},
+        { name = "latex_symbols", priority = 4, group_index = 2},
+        { name = "calc",          priority = 5, group_index = 2},
+        { name = "path",          priority = 6, group_index = 2},
     }, {
-      { name = 'spell', priority = 8, group_index = 2},
-      { name = 'cmp_tabnine', priority = 8, group_index = 2},
+      { name = 'cmp_tabnine',     priority = 7, group_index = 3},
+      { name = 'spell',           priority = 8, group_index = 3},
     }),
     formatting = {
     fields = { "kind", "abbr", "menu" },
