@@ -30,7 +30,7 @@ cmp.setup({
         { name = "path",          priority = 6, group_index = 2},
     }, {
       { name = 'cmp_tabnine',     priority = 7, group_index = 3},
-      { name = 'spell',           priority = 8, group_index = 3},
+      { name = 'spell',           priority = 8, group_index = 4, max_item_count = 2},
     }),
     formatting = {
     fields = { "kind", "abbr", "menu" },
