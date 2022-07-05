@@ -72,14 +72,26 @@ static const char *dmenucmd[] = {"rofi -show drun -show-icons", NULL };
 static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *webBrowser[]  = { "google-chrome-stable", NULL };
+static const char *spotify[]  = { "spotify", NULL };
+static const char *discord[]  = { "discord", NULL };
+void lockScreen(const Arg * arg) { system("betterlockscreen -l dimblur");}
+void screenshot(const Arg * arg) { system(" scrot  ~/screenshots/$(date +\"%F_%T\").jpg && dunstify -t 1000 \"Screenshot saved to: ~/screenshots\""); }
+
+void selectedscreenshot(const Arg * arg) { system(" scrot -s ~/screenshots/$(date +\"%F_%T\").jpg && dunstify -t 1000 \"Screenshot saved to: ~/screenshots\"");}
+
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd} },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_b, spawn,          {.v = webBrowser} },
+	{ MODKEY|ShiftMask,             XK_s, spawn,          {.v = spotify} },
+	{ MODKEY|ShiftMask,             XK_d, spawn,          {.v = discord} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
+	{ ControlMask|MODKEY,           XK_l,      lockScreen,      {0} },
+	{ ControlMask|MODKEY,           XK_p,      screenshot,      {0} },
+	{ ControlMask|ShiftMask|MODKEY, XK_p,       selectedscreenshot, {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
