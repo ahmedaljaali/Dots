@@ -1,3 +1,4 @@
+#include <X11/XF86keysym.h>
 #include "movestack.c"
 
 /* See LICENSE file for copyright and license details. */
@@ -74,15 +75,48 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *webBrowser[]  = { "google-chrome-stable", NULL };
 static const char *spotify[]  = { "spotify", NULL };
 static const char *discord[]  = { "discord", NULL };
-void lockScreen(const Arg * arg) { system("betterlockscreen -l dimblur");}
-void screenshot(const Arg * arg) { system(" scrot  ~/screenshots/$(date +\"%F_%T\").jpg && dunstify -t 1000 \"Screenshot saved to: ~/screenshots\""); }
 
+// Brightness
+void brightnessUp(const Arg * arg) {system("light -A 5");}
+void brightnessDown(const Arg * arg) {system("light -U 5");}
+
+// Lock screen
+void lockScreen(const Arg * arg) { system("betterlockscreen -l dimblur");}
+
+// Screenshot
+void screenshot(const Arg * arg) { system(" scrot  ~/screenshots/$(date +\"%F_%T\").jpg && dunstify -t 1000 \"Screenshot saved to: ~/screenshots\""); }
 void selectedscreenshot(const Arg * arg) { system(" scrot -s ~/screenshots/$(date +\"%F_%T\").jpg && dunstify -t 1000 \"Screenshot saved to: ~/screenshots\"");}
+
+// Audio
+void lowerVolume(const Arg * arg) { system("pactl set-sink-volume @DEFAULT_SINK@ -10%");}
+void raiseVolume(const Arg * arg) { system("pactl set-sink-volume @DEFAULT_SINK@ +10%");}
+void audioMute(const Arg * arg) { system("pactl set-sink-mute @DEFAULT_SINK@ toggle");}
+void audioMicMute(const Arg * arg) { system("pactl set-source-mute @DEFAULT_SOURCE@ toggle");}
+
+
+// Multimedia
+void multiPlay(const Arg * arg) { system("playerctl play-pause");}
+void multiPause(const Arg * arg) { system("playerctl play-pause");}
+void multiNext(const Arg * arg) { system("playerctl next");}
+void multiPrevious(const Arg * arg) { system("playerctl previous");}
 
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd} },
+    {0,         XF86XK_MonBrightnessUp, brightnessUp,            {0}},
+    {0,         XF86XK_MonBrightnessDown, brightnessDown,        {0}},
+      {0,       XF86XK_AudioRaiseVolume, raiseVolume,              {0}},
+      {0,       XF86XK_AudioLowerVolume, lowerVolume ,              {0}},
+      {0,       XF86XK_AudioMute,       audioMute,                 {0}},
+      {0,       XF86XK_AudioMicMute,        audioMicMute,                 {0}},
+
+
+      {0,       XF86XK_AudioPlay,        multiPlay,                 {0}},
+      {0,       XF86XK_AudioPause,       multiPause,                 {0}},
+      {0,       XF86XK_AudioNext ,       multiNext,                 {0}},
+      {0,       XF86XK_AudioPrev ,       multiPrevious,                 {0}},
+
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_b, spawn,          {.v = webBrowser} },
 	{ MODKEY|ShiftMask,             XK_s, spawn,          {.v = spotify} },
