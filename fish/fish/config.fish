@@ -216,6 +216,9 @@ alias anime="ani-cli -q best"
 # Manga
 alias manga="manga-cli"
 
+# Find your font name
+alias font="fc-match -s "
+
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
 
