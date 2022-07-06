@@ -10,7 +10,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 0;        /* vertical padding for statusbar */
-static const char *fonts[]          = { "MesloLGS Nerd Font:size=10" };
+static const char *fonts[]          = { "Weather Icons:size=11", "MesloLGS Nerd Font:size=11"};
 static const char dmenufont[]       = "MesloLGS Nerd Font:size=10";
 static const char col_gray1[]       = "#3c3836";
 static const char col_gray2[]       = "#d3869b";
