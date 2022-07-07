@@ -57,6 +57,10 @@ echo "[user]
 #Genirate kys
 ssh-keygen -o
 
+cd ~/Dots/programs/dwm
+
+sudo make install
+
 # To make git work
 echo "UserKnownHostsFile ~/.ssh/known_hosts" >> ~/.ssh/config
 echo "Dont Forget to add the public key to your github account"

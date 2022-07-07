@@ -97,3 +97,4 @@ mpv
 ani-cli-git
 aria2
 manga-cli-git
+libxft-bgra
