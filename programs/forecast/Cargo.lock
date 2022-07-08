@@ -376,6 +376,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2fad85553e09a6f881f739c29f0b00b0f01357c743266d478b68951ce23285f3"
 
 [[package]]
+name = "forecast"
+version = "1.1.1"
+dependencies = [
+ "dirs",
+ "handlebars",
+ "openssl",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "serde_qs",
+ "thiserror",
+ "toml",
+]
+
+[[package]]
 name = "foreign-types"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -915,21 +930,6 @@ name = "pkg-config"
 version = "0.3.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "05da548ad6865900e60eaba7f589cc0783590a92e940c26953ff81ddbab2d677"
-
-[[package]]
-name = "polybar-forecast"
-version = "1.1.1"
-dependencies = [
- "dirs",
- "handlebars",
- "openssl",
- "reqwest",
- "serde",
- "serde_json",
- "serde_qs",
- "thiserror",
- "toml",
-]
 
 [[package]]
 name = "ppv-lite86"
