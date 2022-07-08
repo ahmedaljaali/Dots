@@ -5,7 +5,8 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int snap      = 15;       /* snap pixel */
+static const unsigned int gappx     = 15;        /* gap pixel between windows */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int horizpadbar        = 2;        /* horizontal padding for statusbar */
@@ -13,8 +14,8 @@ static const int vertpadbar         = 0;        /* vertical padding for statusba
 static const char *fonts[]          = { "Weather Icons:size=11", "Apple Color Emoji:size=11" ,"MesloLGS Nerd Font:size=11"};
 static const char dmenufont[]       = "MesloLGS Nerd Font:size=10";
 static const char col_gray1[]       = "#3c3836";
-static const char col_gray2[]       = "#d3869b";
-static const char col_gray3[]       = "#f2e5bc";
+static const char col_gray2[]       = "#689d6a";
+static const char col_gray3[]       = "#ebdbb2";
 static const char col_gray4[]       = "#98971a";
 static const char col_cyan[]        = "#3c3836";
 static const unsigned int baralpha = 0xd0;
