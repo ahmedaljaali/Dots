@@ -67,7 +67,7 @@ dunst
 feh
 betterlockscreen
 libnotify
-picom-git
+picom-jonaburg-git
 locate
 nerd-fonts-meslo
 xautolock
