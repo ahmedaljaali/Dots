@@ -96,3 +96,5 @@ aria2
 manga-cli-git
 libxft-bgra
 rofi
+gtk-engine-murrine
+gtk-engines
