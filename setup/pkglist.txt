@@ -1,5 +1,4 @@
 nitrogen
-noto-fonts
 fzf
 rust
 zoxide
@@ -55,7 +54,6 @@ speedtest
 fd
 i3-gaps
 btop
-polybar-git
 playerctl
 scrot
 xf86-video-intel
@@ -83,7 +81,6 @@ lxappearance
 la-capitaine-icon-theme
 cursor-theme-macos-big-sur
 pcmanfm-gtk3
-ttf-ms-fonts
 xdman
 usbimager
 intel-gpu-tools
@@ -98,3 +95,4 @@ ani-cli-git
 aria2
 manga-cli-git
 libxft-bgra
+rofi

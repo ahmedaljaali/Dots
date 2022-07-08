@@ -63,4 +63,18 @@ sudo make install
 
 # To make git work
 echo "UserKnownHostsFile ~/.ssh/known_hosts" >> ~/.ssh/config
+echo ;
+echo ;
+echo ;
+echo ;
 echo "Dont Forget to add the public key to your github account"
+echo ;
+cat ~/.ssh/id_rsa.pub
+echo ;
+echo ;
+echo "And add this to /etc/geoclue/geoclue.conf"
+echo ;
+echo "[redshift]
+allowed=true
+system=false
+users="
