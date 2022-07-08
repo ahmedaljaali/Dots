@@ -1453,7 +1453,6 @@ run(void)
  void
 runAutostart(void) {
     // NOTE: change it if you move dwm to another dir
-	system("cd ~/Dots/programs/dwm/scripts; ./autostart_once.sh");
 	system("cd ~/Dots/programs/dwm/scripts; ./autostart.sh ");
 }
 
