@@ -100,3 +100,4 @@ gtk-engine-murrine
 gtk-engines
 powertop
 noto-fonts
+neofetch
