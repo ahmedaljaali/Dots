@@ -184,6 +184,7 @@ alias playmp3='deadbeef *.mp3'
 alias playavi='mpv *.avi'
 alias playmov='mpv *.mov'
 alias playmp4='mpv *.mp4'
+alias playts='mpv *.ts'
 
 # youtube-dl
 alias yta-aac="youtube-dl --extract-audio --audio-format aac "

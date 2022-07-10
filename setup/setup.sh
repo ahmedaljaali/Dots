@@ -12,6 +12,9 @@ cd ~/Downloads/paru
 makepkg -i
 cd ~/Dots
 
+# Make ~/video/anime dir
+mkdir -p ~/video/anime
+
 #Install the packages in the list
 paru --needed --ask 4 -Sy - < ~/Dots/setup/pkglist.txt || error "Failed to install required packages"
 
