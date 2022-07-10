@@ -17,7 +17,12 @@ paru --needed --ask 4 -Sy - < ~/Dots/setup/pkglist.txt || error "Failed to insta
 
 #Python packages
 
-pip install python-bidi #Ranger
+#Ranger
+pip install python-bidi
+
+#anime
+pip install animdl
+
 
 # Add the fish shell /usr/bin/fish to /etc/shells with
 echo /usr/bin/fish | sudo tee -a /etc/shells

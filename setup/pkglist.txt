@@ -91,8 +91,6 @@ xorg-server-xephyr
 nodejs
 downgrade
 mpv
-ani-cli-git
-aria2
 manga-cli-git
 libxft-bgra
 rofi
@@ -101,3 +99,4 @@ gtk-engines
 powertop
 noto-fonts
 neofetch
+python-pip

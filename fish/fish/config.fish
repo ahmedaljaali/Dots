@@ -210,8 +210,8 @@ alias gtk-theme=lxappearance
 alias glad="glad  --profile=core --api=gl=4.6 --generator=c --spec=gl --extensions= --out-path=lib"
 
 # Anime
-alias downanime="ani-cli -p ~/video/anime/ -q best"
-alias anime="ani-cli -q best"
+alias downanime="animdl download --quality best -d ~/video/anime/"
+alias anime="animdl stream --quality best"
 
 # Manga
 alias manga="manga-cli"
