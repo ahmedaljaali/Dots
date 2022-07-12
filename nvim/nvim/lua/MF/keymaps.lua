@@ -151,7 +151,7 @@ map('n', '<Leader>ls', ':SLoad<CR>', opts)
 --                         Run C++ programs                         --
 
 
-map('n', '<leader>tr', ':FloatermNew  --height=20 --autoclose=0 bin/app<cr>', opts)
+map('n', '<leader>tr', ':FloatermNew  --height=20 --autoclose=0 bin/*.out<cr>', opts)
 ----------------------------------------------------------------------
 
 
