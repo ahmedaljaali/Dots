@@ -571,3 +571,11 @@ map("", "fl", "<cmd>HopLine<CR>", opts)
 map("n", "<Leader>rgb", "<cmd>PickColor<cr>", opts)
 map("i", "<Leader>rgb", "<cmd>PickColorInsert<cr>", opts)
 ----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                      Run my window manger                        --
+
+
+map('n', '<leader>rw', ':FloatermNew  --height=20 --autoclose=0 ./run.sh<cr>', opts)
+----------------------------------------------------------------------
