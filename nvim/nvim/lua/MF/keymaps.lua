@@ -59,9 +59,8 @@ map('n', '<Leader>sh', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 map('n', '<Leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
 map('n', '<Leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
 map('n', '<Leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-map('n', '<Leader>td', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 map('n', '<Leader>rn', "<cmd>lua vim.lsp.buf.rename()<CR>" , opts)
-map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+map('n', 'gr', '<cmd>Telescope lsp_references<CR>', opts)
 map('n', '<Leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
 map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
@@ -217,8 +216,7 @@ map('n', '<Leader>cd', ':CodeActionMenu<Cr>', opts)
 
 
 map("n", "<leader>tad", "<cmd>Trouble workspace_diagnostics<cr>", opts)
-map("n", "<leader>td", "<cmd>Trouble document_diagnostics<cr>", opts)
-map("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
+map("n", "<leader>tcd", "<cmd>Trouble document_diagnostics<cr>", opts)
 ----------------------------------------------------------------------
 
 
