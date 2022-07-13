@@ -119,13 +119,13 @@ map('n', '<Leader>db', "<cmd>FloatermNew gdb bin/app<CR>", opts) --open terminal
 
 map('n', '<Leader>m', ':tabnew<CR>', opts)
 
-map('n', ']t', '<cmd>BufferLineCycleNext<CR>',  { silent = true })
-map('n', '[t', '<cmd>BufferLineCyclePrev<CR>',  { silent = true })
+map('n', ']t', '<Plug>(cokeline-focus-next)',  { silent = true })
+map('n', '[t', '<Plug>(cokeline-focus-prev)',  { silent = true })
 
 
 map('n', '<Leader>ct', '<cmd>bdelete!<CR>', opts)
 
-map('n', '<Leader>tp', "<cmd>BufferLinePick<CR>", opts)
+map('n', 'tp', "<Plug>(cokeline-pick-focus)", opts)
 ----------------------------------------------------------------------
 
 

@@ -110,8 +110,7 @@ return packer.startup(function()
   use "ziontee113/color-picker.nvim"
   use
   {
-    'akinsho/bufferline.nvim',
-    tag = "v2.*",
+    'noib3/nvim-cokeline',
     requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
   }
 
