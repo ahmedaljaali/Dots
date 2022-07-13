@@ -436,3 +436,9 @@ vim.g.startify_enable_special = true
 
 vim.g.startify_custom_header = ASCII.saturn
 ----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                      Use wired characters                       --
+
+vim.g.startify_fortune_use_unicode = true
+----------------------------------------------------------------------
