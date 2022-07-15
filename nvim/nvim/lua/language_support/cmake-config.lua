@@ -17,7 +17,7 @@ vim.g.cmake_default_config = 'Build'
 ----------------------------------------------------------------------
 --                    How we detect the root dir                    --
 
-vim.g.cmake_root_markers = {'CMakeLists.txt'}
+vim.g.cmake_root_markers = {'CMakeLists.txt', "src"}
 ----------------------------------------------------------------------
 
 
