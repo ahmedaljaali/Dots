@@ -161,7 +161,8 @@ alias rm='rm -i'
 
 
 # git
-alias gd='git add .'
+alias gd='git add'
+alias gd.='git add.'
 alias gb='git branch'
 alias gst='git status'
 alias gch='git checkout'
@@ -173,6 +174,7 @@ alias gpus='git push origin'
 alias gta='git tag'
 alias gnta='git tag -a'
 alias gr='git restore'
+alias gr.='git restore .'
 
 
 # Play audio files in current dir by type
