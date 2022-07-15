@@ -162,7 +162,7 @@ alias rm='rm -i'
 
 # git
 alias gd='git add'
-alias gd.='git add.'
+alias gd.='git add .'
 alias gb='git branch'
 alias gst='git status'
 alias gch='git checkout'
