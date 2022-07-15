@@ -100,3 +100,4 @@ powertop
 noto-fonts
 neofetch
 python-pip
+wget
