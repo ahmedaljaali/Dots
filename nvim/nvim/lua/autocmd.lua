@@ -40,7 +40,7 @@ vim.api.nvim_create_autocmd(
 -- WARN: temporary fix
 vim.api.nvim_create_autocmd(
      { "FileType"},
-    { pattern = "lua", command = "set showtabline=2" }
+    { pattern = {"lua", "cpp"}, command = "set showtabline=2" }
 )
 ----------------------------------------------------------------------
 
@@ -56,7 +56,7 @@ vim.api.nvim_create_autocmd(
 -- WARN: temporary fix
 vim.api.nvim_create_autocmd(
      { "FileType"},
-    { pattern = "lua", command = "set laststatus=2" }
+    { pattern = {"lua", "cpp"}, command = "set laststatus=2" }
 )
 ----------------------------------------------------------------------
 
