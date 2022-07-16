@@ -44,6 +44,22 @@ vim.api.nvim_create_autocmd(
 )
 ----------------------------------------------------------------------
 
+----------------------------------------------------------------------
+--           Disable status line when alacritty is opened           --
+
+-- WARN: status line wont work after this autocmd
+vim.api.nvim_create_autocmd(
+     { "FileType"},
+    { pattern = "startify", command = "setlocal laststatus=0" }
+)
+
+-- WARN: temporary fix
+vim.api.nvim_create_autocmd(
+     { "FileType"},
+    { pattern = "lua", command = "set laststatus=2" }
+)
+----------------------------------------------------------------------
+
 
 ----------------------------------------------------------------------
 --            Disable spellchecking for cmake window                --
