@@ -20,7 +20,7 @@ vim.api.nvim_create_autocmd(
 
 
 ----------------------------------------------------------------------
---        Disable spellchecking when terminal window is open        --
+--            Disable spellchecking for terminal window             --
 
 vim.api.nvim_create_autocmd(
     {"TermOpen"},
@@ -31,9 +31,18 @@ vim.api.nvim_create_autocmd(
 ----------------------------------------------------------------------
 --             Disable tab line when startify is opened             --
 
---FIX: It's note working
 vim.api.nvim_create_autocmd(
-     { "BufNewFile", "BufRead" },
+     { "FileType"},
     { pattern = "startify", command = "setlocal showtabline=0" }
+)
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--            Disable spellchecking for cmake window                --
+
+vim.api.nvim_create_autocmd(
+     { "FileType"},
+    { pattern = "vimcmake", command = "setlocal nospell" }
 )
 ----------------------------------------------------------------------
