@@ -71,6 +71,7 @@ map('', '<A-l>', '<cmd>vertical resize -3<CR>', opts)
 map('', '<A-h>', '<cmd>vertical resize +3<CR>', opts)
 map('', '<A-k>', '<cmd>resize -3<CR>', opts)
 map('', '<A-j>', '<cmd>resize +3<CR>', opts)
+map('', '<A-=>', '<C-w>=', opts)
 
 
 --Remap splits navigation to just CTRL + hjkl
