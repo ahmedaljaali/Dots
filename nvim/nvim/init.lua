@@ -86,4 +86,5 @@ require("snippets.cmake")
 
 
 require("rand.short")  --Short config
+require("rand.neovide")
 ----------------------------------------------------------------------
