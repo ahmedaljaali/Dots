@@ -143,7 +143,6 @@ return packer.startup(function()
   use 'luukvbaal/stabilize.nvim'
   use 'lambdalisue/suda.vim'
   use "tversteeg/registers.nvim"
-  use "anuvyklack/hydra.nvim"
   use 'phaazon/hop.nvim'
 ----------------------------------------------------------------------
 

@@ -39,10 +39,6 @@ local lsp_installer = require("nvim-lsp-installer")
 local trouble = require("trouble")
 ---------------------------------------------
 
----------------------------------------------
--- For hydra
-local Hydra = require("hydra")
----------------------------------------------
 
 ----------------------------------------------------------------------
 
@@ -71,37 +67,17 @@ map('n', '<Leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 ----------------------------------------------------------------------
 --                         resizing splits                          --
 
-
-Hydra({
-	name = "Change / Resize Window",
-	mode = { "n" },
-	body = "<C-w>",
-	config = {
-	},
-	heads = {
-		-- move between windows
-		{"<C-h>", "<C-w>h" },
-		{"<C-j>", "<C-w>j" },
-		{"<C-k>", "<C-w>k" },
-		{"<C-l>", "<C-w>l" },
-
-		-- resizing window
-		{"H", "<C-w>3<" },
-		{"L", "<C-w>3>" },
-		{"K", "<C-w>2+" },
-		{"J", "<C-w>2-" },
-
-		-- equalize window sizes
-		{ "e", "<C-w>=" },
-
-        -- close window
-        { "<C-q>", ":q<cr>" },
+map('', '<A-l>', '<cmd>vertical resize -3<CR>', opts)
+map('', '<A-h>', '<cmd>vertical resize +3<CR>', opts)
+map('', '<A-k>', '<cmd>resize -3<CR>', opts)
+map('', '<A-j>', '<cmd>resize +3<CR>', opts)
 
 
-		-- exit this Hydra
-		{ "<c-}>", nil, { exit = true, nowait = true } },
-	},
-})
+--Remap splits navigation to just CTRL + hjkl
+map("", "<C-h>", "<C-\\><C-N><C-w>h", { silent = true })
+map("", "<C-j>", "<C-\\><C-N><C-w>j", { silent = true })
+map("", "<C-k>", "<C-\\><C-N><C-w>k", { silent = true })
+map("", "<C-l>", "<C-\\><C-N><C-w>l", { silent = true })
 ----------------------------------------------------------------------
 
 
