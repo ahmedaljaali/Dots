@@ -110,7 +110,7 @@ return packer.startup(function()
   use "ziontee113/color-picker.nvim"
   use
   {
-    'noib3/nvim-cokeline',
+    'rafcamlet/tabline-framework.nvim',
     requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
   }
 

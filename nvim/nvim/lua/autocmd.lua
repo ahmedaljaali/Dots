@@ -27,3 +27,13 @@ vim.api.nvim_create_autocmd(
     { pattern = "term://*", command = "setlocal nospell" }
 )
 ----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--             Disable tab line when startify is opened             --
+
+--FIX: It's note working
+vim.api.nvim_create_autocmd(
+     { "BufNewFile", "BufRead" },
+    { pattern = "startify", command = "setlocal showtabline=0" }
+)
+----------------------------------------------------------------------
