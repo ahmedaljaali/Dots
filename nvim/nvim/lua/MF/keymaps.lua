@@ -149,17 +149,6 @@ map('n', '<c-t>', ':FloatermNew --autoclose=2 ranger<cr>', opts)
 
 
 ----------------------------------------------------------------------
---                            Telescope                             --
-
-
-map('n', '<leader>tf', '<cmd>Telescope find_files<cr>', opts)
-map('n', '<leader>tg', '<cmd>Telescope live_grep<cr>', opts)
-map('n', '<leader>tb', '<cmd>Telescope buffers<cr>', opts)
-map('n', '<leader>th', '<cmd>Telescope help_tags<cr>', opts)
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
 --                            maximizer                             --
 
 
@@ -188,15 +177,22 @@ map('n', '<Leader>cd', ':CodeActionMenu<Cr>', opts)
 
 
 ----------------------------------------------------------------------
---                               Todo                               --
-
-
-map("n", "<Leader>td", "<cmd>TodoTrouble<CR>", opts)
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
 --                            Telescope                             --
+
+
+map('n', '<leader>tf', '<cmd>Telescope find_files<cr>', opts)
+map('n', '<leader>tg', '<cmd>Telescope live_grep<cr>', opts)
+map('n', '<leader>tb', '<cmd>Telescope buffers<cr>', opts)
+map('n', '<leader>th', '<cmd>Telescope help_tags<cr>', opts)
+
+-- Telescope Luasnip
+map("n", "<leader>tsp", "<cmd>Telescope luasnip<cr>", opts)
+
+-- Neoclip
+map("n", "<Leader>yh", "<cmd>Telescope neoclip<cr>", opts)
+
+--Todo
+map("n", "<Leader>td", "<cmd>TodoTelescope<CR>", opts)
 
 
 telescope.setup {
@@ -454,18 +450,6 @@ require('nvim-comment-frame').setup({
     multiline_keymap = '<leader>C',
     --                 ^^^^^^^^^^^ change this to what ever you want
 })
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
---                      telescope-luasnip                       --
-map("n", "<leader>tsp", "<cmd>Telescope luasnip<cr>", opts)
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
---                             neoclip                              --
-map("n", "<Leader>yh", "<cmd>Telescope neoclip<cr>", opts)
 ----------------------------------------------------------------------
 
 
