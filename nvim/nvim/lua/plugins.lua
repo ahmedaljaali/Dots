@@ -202,10 +202,6 @@ return packer.startup(function()
   {
     'weilbith/nvim-code-action-menu',
   }
-  use --nvim lua support
-  {
-    'folke/lua-dev.nvim',
-  }
   use
   {
     "folke/trouble.nvim",
