@@ -29,12 +29,12 @@ vim.api.nvim_create_autocmd(
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
---             Disable tab line when startify is opened             --
+--   Disable tab line and go to the top  when startify is opened    --
 
 -- WARN: tab line wont work after this autocmd
 vim.api.nvim_create_autocmd(
      { "FileType"},
-    { pattern = "startify", command = "setlocal showtabline=0" }
+    { pattern = "startify", command = "setlocal showtabline=0 | 3" }
 )
 
 -- WARN: temporary fix
