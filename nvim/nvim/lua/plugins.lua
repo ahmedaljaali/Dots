@@ -192,12 +192,6 @@ return packer.startup(function()
   {
       'cdelledonne/vim-cmake',
   }
-  use
-  {
-    'lewis6991/gitsigns.nvim',
-    requires = {'nvim-lua/plenary.nvim'},
-  -- tag = 'release' -- To use the latest release
-  }
   use 'L3MON4D3/LuaSnip' --snipts
   use
   {
