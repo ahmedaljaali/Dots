@@ -144,7 +144,7 @@ map('n', '<Leader>cm', ':CMakeClose<CR>', opts)
 --                              Ranger                              --
 
 
-map('n', '<c-t>', ':FloatermNew --autoclose=2 ranger<cr>', opts)
+map('n', '<c-t>', ':FloatermNew --height=28 --width=124 --wintype=float --name=ranger --position=center --autoclose=2 ranger <cr>', opts)
 ----------------------------------------------------------------------
 
 
