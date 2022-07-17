@@ -188,15 +188,6 @@ map('n', '<Leader>cd', ':CodeActionMenu<Cr>', opts)
 
 
 ----------------------------------------------------------------------
---                             trouble                              --
-
-
-map("n", "<leader>tad", "<cmd>Trouble workspace_diagnostics<cr>", opts)
-map("n", "<leader>tcd", "<cmd>Trouble document_diagnostics<cr>", opts)
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
 --                               Todo                               --
 
 
@@ -365,6 +356,10 @@ lsp_installer.settings({
 
 ----------------------------------------------------------------------
 --                             trouble                              --
+
+
+map("n", "<leader>tad", "<cmd>Trouble workspace_diagnostics<cr>", opts)
+map("n", "<leader>tcd", "<cmd>Trouble document_diagnostics<cr>", opts)
 
 
 trouble.setup
