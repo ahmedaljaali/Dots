@@ -28,14 +28,12 @@ local render = function(f)
 
     f.add ' '
     if info.filename then
-      f.add(info.modified and '+')
       f.add(info.filename)
       f.add {
         ' ' .. f.icon(info.filename),
         fg = info.current and f.icon_color(info.filename) or nil
       }
-    else
-      f.add(info.modified and '[+]' or '[-]')
+      f.add(info.modified and ' +')
     end
     f.add ' '
     f.add { ' ', bg = colors.black }
