@@ -23,9 +23,9 @@ vim.opt.wrap = true
 
 
 ----------------------------------------------------------------------
---                        Postition in code                         --
+--                        Position in code                         --
 
-vim.opt.number = true
+vim.opt.number = false
 vim.opt.ruler = true
 ----------------------------------------------------------------------
 
@@ -97,5 +97,5 @@ vim.opt.showtabline = 2
 ----------------------------------------------------------------------
 --                           Number Width                           --
 
-vim.opt.numberwidth = 1
+-- vim.opt.numberwidth = 1
 ----------------------------------------------------------------------
