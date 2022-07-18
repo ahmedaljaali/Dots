@@ -7,13 +7,23 @@ if exists("g:neovide")
 
     set guifont=MesloLGS\ Nerd\ Font:h13
 
-    let g:neovide_cursor_animation_length=0.2
+    let g:neovide_cursor_animation_length=0.35
 
     let g:neovide_cursor_vfx_mode = "pixiedust"
 
     let g:neovide_cursor_vfx_particle_lifetime=5
 
-    let g:neovide_cursor_vfx_particle_density=14.0
+    let g:neovide_cursor_vfx_particle_density=28.0
+
+    let g:neovide_refresh_rate=60
+
+    let g:neovide_profiler = v:false
+
+    let g:neovide_cursor_trail_length=5.0
+
+    let g:neovide_cursor_vfx_particle_lifetime=5.0
+
+
 endif
 ]])
 ----------------------------------------------------------------------
