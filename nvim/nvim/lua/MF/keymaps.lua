@@ -501,7 +501,7 @@ map('n', '<leader>rw', ':FloatermNew  --height=20 --autoclose=0 ./run.sh<cr>', o
 ----------------------------------------------------------------------
 --                          Comment Frame                           --
 
-vim.api.nvim_set_keymap('n', '<leader>cb', ":lua require('nvim-comment-frame').add_comment()<CR>", {})
+vim.api.nvim_set_keymap('n', '<leader>cc', ":lua require('nvim-comment-frame').add_comment()<CR>", {})
 
 vim.api.nvim_set_keymap('n', '<leader>C', ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", {})
 ----------------------------------------------------------------------
