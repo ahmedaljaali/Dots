@@ -1,5 +1,5 @@
 require('plugins') --Put it in the top of the file, Don't change it!!!
-require('general') -- general configurations TODO: Next
+require('general') -- general configurations
 require("autocmd") --Auto commands
 
 
@@ -13,7 +13,6 @@ require('MF.fileStorm')
 require('MF.keymaps')
 require('MF.status-line')
 require('MF.nvim-tree-conf')
-require('MF.hop-conf')
 ----------------------------------------------------------------------
 
 
@@ -22,7 +21,6 @@ require('MF.hop-conf')
 
 
 require('colors.theme')
-require('colors.rainbowBraket')
 require('colors.icons')
 require('colors.modes-conf')
 require('colors.hlargs-conf')
@@ -36,7 +34,7 @@ require('colors.tabline')
 
 
 require('typing.indent')
-require('typing.spelling')
+require('typing.spelling') -- TODO: here
 require('typing.autopairs')
 require('typing.comment-out')
 require('typing.lastplace')

@@ -1,7 +1,10 @@
+local autocmd = vim.api.nvim_create_autocmd
+
+
 ----------------------------------------------------------------------
 --            Open .vert and .frag files as .glsl                   --
 
-vim.api.nvim_create_autocmd(
+autocmd(
     { "BufNewFile", "BufRead" },
     { pattern = { "*.vert", "*.frag"}, command = ":set filetype=glsl" }
 )
@@ -12,7 +15,7 @@ vim.api.nvim_create_autocmd(
 --            Automatically run :PackerCompile whenever             --
 --                      plugins.lua is updated                      --
 
-vim.api.nvim_create_autocmd(
+autocmd(
     {"BufWritePost"},
     { pattern = "plugins.lua", command = "source <afile> | PackerCompile" }
 )
@@ -22,7 +25,7 @@ vim.api.nvim_create_autocmd(
 ----------------------------------------------------------------------
 --            Disable spellchecking for terminal window             --
 
-vim.api.nvim_create_autocmd(
+autocmd(
     {"TermOpen"},
     { pattern = "term://*", command = "setlocal nospell" }
 )
@@ -32,13 +35,13 @@ vim.api.nvim_create_autocmd(
 --   Disable tab line and go to the top  when startify is opened    --
 
 -- WARN: tab line wont work after this autocmd
-vim.api.nvim_create_autocmd(
+autocmd(
      { "FileType"},
     { pattern = "startify", command = "setlocal showtabline=0 | 3" }
 )
 
 -- WARN: temporary fix
-vim.api.nvim_create_autocmd(
+autocmd(
      { "FileType"},
     { pattern = {"lua", "cpp"}, command = "set showtabline=2" }
 )
@@ -48,13 +51,13 @@ vim.api.nvim_create_autocmd(
 --           Disable status line when alacritty is opened           --
 
 -- WARN: status line wont work after this autocmd
-vim.api.nvim_create_autocmd(
+autocmd(
      { "FileType"},
     { pattern = "startify", command = "setlocal laststatus=0" }
 )
 
 -- WARN: temporary fix
-vim.api.nvim_create_autocmd(
+autocmd(
      { "FileType"},
     { pattern = {"lua", "cpp"}, command = "set laststatus=3" }
 )
@@ -64,7 +67,7 @@ vim.api.nvim_create_autocmd(
 ----------------------------------------------------------------------
 --            Disable spellchecking for cmake window                --
 
-vim.api.nvim_create_autocmd(
+autocmd(
      { "FileType"},
     { pattern = "vimcmake", command = "setlocal nospell" }
 )

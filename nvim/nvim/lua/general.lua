@@ -49,7 +49,7 @@ vim.opt.vb.t_vb = false
 
 
 ----------------------------------------------------------------------
---            Dont highlight search results by defuualt             --
+--            Don't highlight search results by default             --
 
 
 vim.opt.hlsearch = false
@@ -98,4 +98,20 @@ vim.opt.showtabline = 2
 --                           Number Width                           --
 
 -- vim.opt.numberwidth = 1
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--          We don't need to see things like -- INSERT --           --
+--                             anymore                              --
+
+vim.opt.showmode = false
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--            Highlight the text line of the cursor with            --
+--                            Cursorline                            --
+
+vim.opt.cursorline = true
 ----------------------------------------------------------------------

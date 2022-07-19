@@ -1,19 +1,23 @@
-require('modes').setup({
-  colors = {
-    copy = "#f5c359",
-    delete = "#c75c6a",
-    insert = "#78ccc5",
-    visual = "#9745be",
-  },
+local modes = require('modes')
 
-  -- Cursorline highlight opacity
-  line_opacity = 0.1,
+----------------------------------------------------------------------
+--                           Modes config                           --
 
-  -- Highlight cursor
-  set_cursor = true,
+modes.setup({
+    colors = {
+        copy = "#f5c359",
+        delete = "#c75c6a",
+        insert = "#78ccc5",
+        visual = "#9745be",
+    },
 
-  -- Highlight in active window only
-  focus_only = false
+    -- Cursorline highlight opacity
+    line_opacity = 0.3,
+
+    -- Highlight cursor
+    set_cursor = true,
+
+    -- Highlight in active window only
+    focus_only = false
 })
-
-vim.opt.cursorline = true
+----------------------------------------------------------------------

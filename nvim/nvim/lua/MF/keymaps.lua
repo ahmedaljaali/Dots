@@ -2,7 +2,7 @@
 --                         local variables                          --
 
 ---------------------------------------------
---For maping
+--For keymaps
 local opts = { noremap = true, silent = true }
 local map = vim.api.nvim_set_keymap
 ---------------------------------------------
@@ -19,12 +19,6 @@ local actions = require "telescope.actions"
 
 ---------------------------------------------
 --For cmp
-local has_words_before = function()
-    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-end
-
-local luasnip = require("luasnip")
 local cmp = require("cmp")
 
 ---------------------------------------------
@@ -52,9 +46,6 @@ map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 map('n', '<Leader>sh', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-map('n', '<Leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-map('n', '<Leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-map('n', '<Leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
 map('n', '<Leader>rn', "<cmd>lua vim.lsp.buf.rename()<CR>" , opts)
 map('n', 'gr', '<cmd>Telescope lsp_references<CR>', opts)
 map('n', '<Leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
@@ -65,7 +56,7 @@ map('n', '<Leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
 
 ----------------------------------------------------------------------
---                         resizing splits                          --
+--                         Resizing splits                          --
 
 map('', '<A-l>', '<cmd>vertical resize -3<CR>', opts)
 map('', '<A-h>', '<cmd>vertical resize +3<CR>', opts)
@@ -86,7 +77,7 @@ map("", "<C-l>", "<C-\\><C-N><C-w>l", { silent = true })
 --                              debug                               --
 
 
-map('n', '<Leader>db', "<cmd>FloatermNew gdb bin/app<CR>", opts) --open terminal with gdb
+map('n', '<Leader>db', "<cmd>FloatermNew gdb bin/app<CR>", opts)
 ----------------------------------------------------------------------
 
 
