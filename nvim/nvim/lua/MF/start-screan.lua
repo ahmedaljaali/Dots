@@ -2,7 +2,7 @@
 --                     Where to put my sessions                     --
 
 
-vim.g.startify_session_dir = os.getenv("HOME") .. '/.local/share/nvim/sessions'
+vim.g.startify_session_dir = vim.fn.stdpath('data') .. '/sessions'
 ----------------------------------------------------------------------
 
 
