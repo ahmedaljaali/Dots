@@ -3,7 +3,7 @@ local lspconfig = require("lspconfig")
 
 
 nlspsettings.setup({
-  config_home = vim.fn.stdpath('config') .. '/lua/servers_settings',
+  config_home = vim.fn.stdpath('config') .. '/lua/SS',
   local_settings_dir = ".nlsp-settings",
   local_settings_root_markers = { '.git' },
   append_default_schemas = true,
