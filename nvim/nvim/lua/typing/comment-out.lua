@@ -3,6 +3,9 @@ if not status_ok then
   return
 end
 
+----------------------------------------------------------------------
+--                          Setup comment                           --
+
 comment.setup
 {
     ---Add a space b/w comment and the line
@@ -72,3 +75,4 @@ comment.setup
     ---@type fun(ctx: Ctx)
     post_hook = nil,
 }
+----------------------------------------------------------------------

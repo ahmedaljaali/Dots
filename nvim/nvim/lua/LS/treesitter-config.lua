@@ -4,10 +4,15 @@ local configs = require'nvim-treesitter.configs'
 --                            Tree sitter                            --
 
 configs.setup {
-    matchup = { --for the matchup plugin
-        enable = true,              -- mandatory, false will disable the whole extension
-        disable = { "c", "ruby" },  -- optional, list of language that will be disabled
-        -- [options]
+
+    --for the matchup plugin
+    matchup = {
+        -- mandatory, false will disable the whole extension
+        enable = true,
+
+        -- optional, list of language that will be disabled
+        disable = { "c", "ruby" },
+
     },
     ensure_installed = {
         "cpp",
@@ -17,7 +22,9 @@ configs.setup {
         "lua",
     },
     sync_install = true;
-    highlight = { -- enable highlighting
+
+    -- enable highlighting
+    highlight = {
         enable = true,
     },
 
@@ -27,16 +34,21 @@ configs.setup {
 
         -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
 
-        extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+        -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+        extended_mode = true,
 
-        max_file_lines = nil, -- Do not enable for files with more than n lines, int
+        -- Do not enable for files with more than n lines, int
+        max_file_lines = nil,
 
-        -- colors = {}, -- table of hex strings
+        -- table of hex strings
+        -- colors = {},
 
-        -- termcolors = {} -- table of colour name strings
+        -- table of colour name strings
+        -- termcolors = {}
     },
     indent = {
-        enable = false, -- default is disabled anyways
+    -- default is disabled anyways
+    enable = false,
     }
 }
 ----------------------------------------------------------------------

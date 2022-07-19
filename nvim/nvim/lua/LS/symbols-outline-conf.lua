@@ -1,3 +1,6 @@
+----------------------------------------------------------------------
+--                              Setup                               --
+
 vim.g.symbols_outline = {
     highlight_hovered_item = true,
     show_guides = true,
@@ -10,7 +13,9 @@ vim.g.symbols_outline = {
     show_relative_numbers = false,
     show_symbol_details = true,
     preview_bg_highlight = 'Pmenu',
-    keymaps = { -- These keymaps can be a string or a table for multiple keys
+
+     -- These keymaps can be a string or a table for multiple keys
+    keymaps = {
         close = {"<Esc>", "q"},
         goto_location = "<Cr>",
         focus_location = "o",
@@ -50,3 +55,4 @@ vim.g.symbols_outline = {
         TypeParameter = {icon = "", hl = "TSParameter"}
     }
 }
+----------------------------------------------------------------------

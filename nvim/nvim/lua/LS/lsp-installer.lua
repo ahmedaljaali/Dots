@@ -6,6 +6,8 @@ lsp_installer.on_server_ready(function(server)
   })
 end)
 
+----------------------------------------------------------------------
+--                        setup lsp installer                        --
 
 lsp_installer.settings({
 
@@ -43,3 +45,4 @@ lsp_installer.settings({
     max_concurrent_installers = 4,
 
 })
+----------------------------------------------------------------------

@@ -1,11 +1,12 @@
-require('nvim-comment-frame').setup({
+local commentFrame = require('nvim-comment-frame')
+
+----------------------------------------------------------------------
+--                       Setup comment frame                        --
+
+commentFrame.setup({
 
     -- if true, <leader>cf keymap will be disabled
-    disable_default_keymap = false,
-
-    -- adds custom keymap
-    keymap = '<leader>cc',
-    multiline_keymap = '<leader>C',
+    disable_default_keymap = true,
 
     -- start the comment with this string
     start_str = '//',
@@ -32,3 +33,4 @@ require('nvim-comment-frame').setup({
     languages = {
     }
 })
+----------------------------------------------------------------------

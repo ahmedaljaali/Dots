@@ -33,6 +33,10 @@ local lsp_installer = require("nvim-lsp-installer")
 local trouble = require("trouble")
 ---------------------------------------------
 
+---------------------------------------------
+-- Comment frame
+local commentFrame = require('nvim-comment-frame')
+---------------------------------------------
 
 ----------------------------------------------------------------------
 
@@ -491,4 +495,13 @@ map("i", "<Leader>rgb", "<cmd>PickColorInsert<cr>", opts)
 
 
 map('n', '<leader>rw', ':FloatermNew  --height=20 --autoclose=0 ./run.sh<cr>', opts)
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                          Comment Frame                           --
+
+vim.api.nvim_set_keymap('n', '<leader>cb', ":lua require('nvim-comment-frame').add_comment()<CR>", {})
+
+vim.api.nvim_set_keymap('n', '<leader>C', ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", {})
 ----------------------------------------------------------------------

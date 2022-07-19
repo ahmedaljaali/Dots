@@ -1,14 +1,9 @@
   local cmp = require'cmp'
   local lspkind = require "lspkind"
 
-local function enableSpelling()
-  if require"cmp.config.context".in_treesitter_capture("comment")==true
-      or require"cmp.config.context".in_syntax_group("Comment") then
-    return  { name = 'spell', priority = 1, group_index = 1}
-  else
-      return {}
-  end
-end
+
+----------------------------------------------------------------------
+--                            Setup cmp                             --
 
 cmp.setup({
  snippet = {
@@ -28,25 +23,26 @@ cmp.setup({
         { name = "latex_symbols", priority = 4, group_index = 2},
         { name = "calc",          priority = 5, group_index = 2},
         { name = "path",          priority = 6, group_index = 2},
-    }, {
-      { name = 'cmp_tabnine',     priority = 7, group_index = 3},
-      { name = 'spell',           priority = 8, group_index = 4, max_item_count = 2},
+    },
+    {
+        { name = 'cmp_tabnine',     priority = 7, group_index = 3},
+        { name = 'spell',           priority = 8, group_index = 4, max_item_count = 2},
     }),
     formatting = {
     fields = { "kind", "abbr", "menu" },
-    format = lspkind.cmp_format {
-      with_text = true,
-      menu = {
-        nvim_lsp = "[LSP]",
-        path = "[path]",
-        luasnip= "[luasnip]",
-        gh_issues = "[issues]",
-        cmp_tabnine = "[TN]",
-        spell = '[spell]'
-      },
+        format = lspkind.cmp_format {
+            with_text = true,
+            menu = {
+                nvim_lsp = "[LSP]",
+                path = "[path]",
+                luasnip= "[luasnip]",
+                gh_issues = "[issues]",
+                cmp_tabnine = "[TN]",
+                spell = '[spell]'
+            },
+        },
     },
-  },
-      sorting = {
+    sorting = {
         comparators = {
             cmp.config.compare.offset, cmp.config.compare.exact,
             cmp.config.compare.score,
@@ -58,6 +54,11 @@ cmp.setup({
         },
     },
 })
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                          Setup cmdline                           --
 
 
   -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
@@ -77,3 +78,4 @@ cmp.setup({
       { name = 'cmdline' }
     })
   })
+----------------------------------------------------------------------

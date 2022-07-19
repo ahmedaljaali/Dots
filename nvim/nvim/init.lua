@@ -34,7 +34,7 @@ require('colors.tabline')
 
 
 require('typing.indent')
-require('typing.spelling') -- TODO: here
+require('typing.spelling')
 require('typing.autopairs')
 require('typing.comment-out')
 require('typing.lastplace')
@@ -70,7 +70,7 @@ require('LS.treesitter-context-conf')
 ----------------------------------------------------------------------
 --                             snippets                             --
 
-
+ -- TODO: Learn more about snippets
 require("snippets.cpp")
 require("snippets.cmake")
 ----------------------------------------------------------------------
@@ -80,6 +80,8 @@ require("snippets.cmake")
 --                           Random stuff                           --
 
 
-require("rand.short")  --Short config
+
+-- Short config
+require("rand.short")
 require("rand.neovide")
 ----------------------------------------------------------------------

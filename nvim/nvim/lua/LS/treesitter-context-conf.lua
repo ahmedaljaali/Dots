@@ -1,8 +1,22 @@
-require'treesitter-context'.setup{
-    enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
-    throttle = true, -- Throttles plugin updates (may improve performance)
-    max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
-    patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+local context = require'treesitter-context'
+
+
+----------------------------------------------------------------------
+--                          Setup context                           --
+
+context.setup{
+
+    -- Enable this plugin (Can be enabled/disabled later via commands)
+    enable = true,
+
+    -- Throttles plugin updates (may improve performance)
+    throttle = true,
+
+    -- How many lines the window should span. Values <= 0 mean no limit.
+    max_lines = 0,
+
+    -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+    patterns = {
         -- For all filetypes
         -- Note that setting an entry here replaces all other patterns for this entry.
         -- By setting the 'default' entry below, you can control which nodes you want to
@@ -11,7 +25,9 @@ require'treesitter-context'.setup{
             'class',
             'function',
             'method',
-            'for', -- These will appear in the context
+
+            -- These will appear in the context
+            'for',
             'while',
             'if',
             'switch',
@@ -30,3 +46,4 @@ require'treesitter-context'.setup{
         -- rust = true,
     }
 }
+----------------------------------------------------------------------

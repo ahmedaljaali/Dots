@@ -1,5 +1,9 @@
 local autosave = require("autosave")
 
+----------------------------------------------------------------------
+--                          setup autoSave                          --
+
+
 autosave.setup(
     {
         enabled = true,
@@ -17,3 +21,4 @@ autosave.setup(
         debounce_delay = 135
     }
 )
+----------------------------------------------------------------------

@@ -32,19 +32,24 @@ local map_c_w = false -- map <c-w> to delete a pair if possible
 
 
 npairs.setup({
-  check_ts = true, --use treesitter
-  enable_check_bracket_line = true, --Don't add pairs if it already has a close pair
-  fast_wrap = {
-    map = "<Leader>fw",
-    chars = { "{", "[", "(", '"', "'" },
-    pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
-    offset = 0, -- Offset from pattern match
-    end_key = "$",
-    keys = "qwertyuiopzxcvbnmasdfghjkl",
-    check_comma = true,
-    highlight = "PmenuSel",
-    highlight_grey = "LineNr",
-  },
+     -- Use treesitter
+    check_ts = true,
+
+     -- Don't add pairs if it already has a close pair
+    enable_check_bracket_line = true,
+    fast_wrap = {
+        map = "<Leader>fw",
+        chars = { "{", "[", "(", '"', "'" },
+        pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
+
+     -- Offset from pattern match
+        offset = 0,
+        end_key = "$",
+        keys = "qwertyuiopzxcvbnmasdfghjkl",
+        check_comma = true,
+        highlight = "PmenuSel",
+        highlight_grey = "LineNr",
+    },
 })
 ----------------------------------------------------------------------
 
@@ -55,9 +60,10 @@ npairs.setup({
 -- If you want insert `(` after select function or method item
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require('cmp')
+
 cmp.event:on(
-  'confirm_done',
-  cmp_autopairs.on_confirm_done()
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
 )
 ----------------------------------------------------------------------
 
