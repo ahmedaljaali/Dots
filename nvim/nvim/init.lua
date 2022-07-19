@@ -1,5 +1,5 @@
 require('plugins') --Put it in the top of the file, Don't change it!!!
-require('general') -- general configurations
+require('general') -- general configurations TODO: Next
 require("autocmd") --Auto commands
 
 
@@ -39,7 +39,6 @@ require('typing.indent')
 require('typing.spelling')
 require('typing.autopairs')
 require('typing.comment-out')
-require('typing.beacon')
 require('typing.lastplace')
 require('typing.auto-save')
 require('typing.todo-conf')
