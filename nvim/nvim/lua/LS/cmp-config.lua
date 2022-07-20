@@ -25,7 +25,7 @@ cmp.setup({
         { name = "path",          priority = 6, group_index = 2},
     },
     {
-        { name = 'cmp_tabnine',     priority = 7, group_index = 3},
+        -- { name = 'cmp_tabnine',     priority = 7, group_index = 3},--NOTE: Eats a lot of memory!
         { name = 'spell',           priority = 8, group_index = 4, max_item_count = 2},
     }),
     formatting = {
@@ -37,7 +37,7 @@ cmp.setup({
                 path = "[path]",
                 luasnip= "[luasnip]",
                 gh_issues = "[issues]",
-                cmp_tabnine = "[TN]",
+                -- cmp_tabnine = "[TN]", --NOTE: Eats a lot of memory!
                 spell = '[spell]'
             },
         },

@@ -392,7 +392,7 @@ return packer.startup(function()
         'hrsh7th/nvim-cmp',
         requires = {{'hrsh7th/cmp-path',  'f3fora/cmp-spell',
                     'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
-                    {'tzachar/cmp-tabnine', run='./install.sh'},
+                    -- {'tzachar/cmp-tabnine', run='./install.sh'}, --NOTE: Eats a lot of memory!
                     "lukas-reineke/cmp-under-comparator", "hrsh7th/cmp-emoji",
                     "kdheepak/cmp-latex-symbols", "hrsh7th/cmp-calc",}}
     }
