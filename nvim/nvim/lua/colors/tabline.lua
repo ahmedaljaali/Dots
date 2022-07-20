@@ -24,7 +24,6 @@ index = '#83a598',
 --                          The main thing                          --
 
 local render = function(f)
-    f.add '  '
     f.make_tabs(function(info)
         local colors = info.current and active or inactive
 
