@@ -103,3 +103,4 @@ python-pip
 wget
 neovim-git
 neovide-git
+sqlite
