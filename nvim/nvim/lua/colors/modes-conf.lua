@@ -1,4 +1,4 @@
-local modes = require('modes')
+local modes = require("usr.utils").import('modes')
 
 ----------------------------------------------------------------------
 --                           Modes config                           --

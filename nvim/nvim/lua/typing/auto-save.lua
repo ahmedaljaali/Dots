@@ -1,4 +1,4 @@
-local autosave = require("autosave")
+local autosave = require("usr.utils").import("autosave")
 
 ----------------------------------------------------------------------
 --                          setup autoSave                          --

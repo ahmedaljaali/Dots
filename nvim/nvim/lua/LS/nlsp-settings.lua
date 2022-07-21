@@ -1,5 +1,5 @@
-local nlspsettings = require("nlspsettings")
-local lspconfig = require("lspconfig")
+local nlspsettings = require("usr.utils").import("nlspsettings")
+local lspconfig = require("usr.utils").import("lspconfig")
 
 ----------------------------------------------------------------------
 --                            Setup nlsp                            --

@@ -1,4 +1,4 @@
-local context = require'treesitter-context'
+local context = require("usr.utils").import('treesitter-context')
 
 
 ----------------------------------------------------------------------

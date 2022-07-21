@@ -1,4 +1,10 @@
-require('neoclip').setup({
+local neoclip = require("usr.utils").import('neoclip')
+
+
+----------------------------------------------------------------------
+--                          Setup neoclip                           --
+
+neoclip.setup({
     history = 1000,
     enable_persistent_history = true,
     length_limit = 1048576,
@@ -37,3 +43,4 @@ require('neoclip').setup({
         },
     },
 })
+----------------------------------------------------------------------

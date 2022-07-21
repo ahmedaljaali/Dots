@@ -1,4 +1,4 @@
-local signature = require'lsp_signature'
+local signature = require("usr.utils").import('lsp_signature')
 
 
 ----------------------------------------------------------------------

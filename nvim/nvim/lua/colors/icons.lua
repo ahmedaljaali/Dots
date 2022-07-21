@@ -1,4 +1,4 @@
-local webdev = require'nvim-web-devicons'
+local webdev = require("usr.utils").import('nvim-web-devicons')
 
 
 ----------------------------------------------------------------------

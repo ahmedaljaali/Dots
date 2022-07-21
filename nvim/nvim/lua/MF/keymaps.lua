@@ -9,33 +9,35 @@ local map = vim.api.nvim_set_keymap
 
 ---------------------------------------------
 --For Telescope
-local status_ok, telescope = pcall(require, "telescope")
-if not status_ok then
-    return
-end
+local telescope = require("usr.utils").import("telescope")
 
-local actions = require "telescope.actions"
+local actions = require("usr.utils").import("telescope.actions")
 ---------------------------------------------
 
 ---------------------------------------------
 --For cmp
-local cmp = require("cmp")
+local cmp = require("usr.utils").import("cmp")
 
 ---------------------------------------------
 
 ---------------------------------------------
 --For lsp-installer
-local lsp_installer = require("nvim-lsp-installer")
+local lsp_installer = require("usr.utils").import("nvim-lsp-installer")
 ---------------------------------------------
 
 ---------------------------------------------
 --For trouble
-local trouble = require("trouble")
+local trouble = require("usr.utils").import("trouble")
 ---------------------------------------------
 
 ---------------------------------------------
 -- Comment frame
-local commentFrame = require('nvim-comment-frame')
+local commentFrame = require("usr.utils").import('nvim-comment-frame')
+---------------------------------------------
+
+---------------------------------------------
+-- One dark
+local oneDark = require("usr.utils").import('onedark')
 ---------------------------------------------
 
 ----------------------------------------------------------------------
@@ -384,7 +386,7 @@ trouble.setup
 --                             onedark                              --
 
 
-require('onedark').setup {
+oneDark.setup {
     -- toggle theme style ---
     toggle_style_key = '<leader>ts', -- Default keybinding to toggle
 }
@@ -438,7 +440,7 @@ map('n', '<Leader>he', "<cmd>Hexmode<cr>", opts);
 --                          comment frame                           --
 
 
-require('nvim-comment-frame').setup({
+commentFrame.setup({
     keymap = '<leader>cc',
     --       ^^^^^^^^^^^ change this to what ever you want
 

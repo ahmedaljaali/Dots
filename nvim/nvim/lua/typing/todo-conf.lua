@@ -1,4 +1,4 @@
-local todo = require("todo-comments")
+local todo = require("usr.utils").import("todo-comments")
 
 
 

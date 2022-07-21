@@ -1,4 +1,4 @@
-local lspKined = require('lspkind')
+local lspKined = require("usr.utils").import('lspkind')
 
 
 lspKined.init({

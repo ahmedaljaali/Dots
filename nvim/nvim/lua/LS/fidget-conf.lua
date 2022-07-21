@@ -1,4 +1,4 @@
-local fidget = require"fidget"
+local fidget = require("usr.utils").import("fidget")
 
 
 ----------------------------------------------------------------------

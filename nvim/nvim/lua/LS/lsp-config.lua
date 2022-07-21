@@ -17,7 +17,7 @@ vim.diagnostic.config({
 
 local function goto_definition(split_cmd)
     local util = vim.lsp.util
-    local log = require("vim.lsp.log")
+    local log = require("usr.utils").import("vim.lsp.log")
     local api = vim.api
 
     -- note, this handler style is for neovim 0.5.1/0.6, if on 0.5, call with function(_, method, result)

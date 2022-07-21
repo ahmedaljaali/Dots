@@ -1,7 +1,4 @@
-local status_ok, telescope = pcall(require, "telescope")
-if not status_ok then
-  return
-end
+local telescope = require("usr.utils").import("telescope")
 
 ----------------------------------------------------------------------
 --                         Setup telescope                          --

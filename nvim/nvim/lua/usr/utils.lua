@@ -28,13 +28,14 @@ local function log(message, level, title)
 end
 
 
-function M.load(modname)
+function M.import(modname)
 
     local status_ok, mod= pcall(require, modname)
 
     if not status_ok then
         log("Can't load " .. modname.. "!!!", ERROR, modname)
-        return
+
+        return function ()  end
     else
         return mod
     end

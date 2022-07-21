@@ -1,3 +1,5 @@
+local oneDark = require("usr.utils").import('onedark')
+
 ----------------------------------------------------------------------
 --                              Syntac                              --
 
@@ -10,7 +12,7 @@ vim.g['syntax'] = true
 --                        configure onedark                         --
 
 
-require('onedark').setup  {
+oneDark.setup  {
     -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
     style = 'dark',
 

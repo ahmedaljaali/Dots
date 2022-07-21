@@ -1,12 +1,12 @@
 -----------------------------
 --make directory
-require('mkdir')
+require("usr.utils").import('mkdir')
 -----------------------------
 
 
 -----------------------------
 --stabilize
-require("stabilize").setup()
+require("usr.utils").import("stabilize").setup()
 -----------------------------
 
 
@@ -24,21 +24,21 @@ vim.g.registers_window_border = "rounded"
 ----------------------------------------------------------------------
 --                               Tidy                               --
 
-require("tidy").setup()
+require("usr.utils").import("tidy").setup()
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                          Stay centered                           --
 
-require("stay-centered")
+require("usr.utils").import("stay-centered")
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                           Color picker                           --
 
-require("color-picker").setup({ -- for changing icons & mappings
+require("usr.utils").import("color-picker").setup({ -- for changing icons & mappings
 	-- ["icons"] = { "ﱢ", "" },
 	-- ["icons"] = { "ﮊ", "" },
 	-- ["icons"] = { "", "ﰕ" },
@@ -56,5 +56,5 @@ require("color-picker").setup({ -- for changing icons & mappings
 ----------------------------------------------------------------------
 --                      Use hop default config                      --
 
-require('hop').setup()
+require("usr.utils").import('hop').setup()
 ----------------------------------------------------------------------

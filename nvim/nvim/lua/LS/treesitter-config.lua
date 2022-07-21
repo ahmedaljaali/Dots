@@ -1,4 +1,4 @@
-local configs = require'nvim-treesitter.configs'
+local configs = require("usr.utils").import('nvim-treesitter.configs')
 
 ----------------------------------------------------------------------
 --                            Tree sitter                            --

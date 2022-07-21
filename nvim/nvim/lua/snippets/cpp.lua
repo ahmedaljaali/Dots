@@ -1,4 +1,4 @@
-local ls = require("luasnip")
+local ls = require("usr.utils").import("luasnip")
 
 -- some shortcuts
 local snip = ls.snippet

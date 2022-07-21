@@ -1,4 +1,4 @@
-local dressing = require('dressing')
+local dressing = require("usr.utils").import('dressing')
 
 ----------------------------------------------------------------------
 --                          Setup Dressing                          --

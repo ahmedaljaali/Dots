@@ -1,4 +1,4 @@
-local lastplace = require'nvim-lastplace'
+local lastplace = require("usr.utils").import('nvim-lastplace')
 
 
 ----------------------------------------------------------------------

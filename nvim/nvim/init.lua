@@ -7,7 +7,7 @@ require("usr.autocmd") --Auto commands
 --                        Make neovim faster                        --
 
 
-require('impatient')
+require("usr.utils").import('impatient')
 ----------------------------------------------------------------------
 
 

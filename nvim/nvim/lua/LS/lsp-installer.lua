@@ -1,4 +1,4 @@
-local lsp_installer = require("nvim-lsp-installer")
+local lsp_installer = require("usr.utils").import("nvim-lsp-installer")
 
 lsp_installer.on_server_ready(function(server)
   server:setup({

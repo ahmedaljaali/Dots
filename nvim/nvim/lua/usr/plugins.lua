@@ -1,5 +1,5 @@
-local util = require('packer.util')
-local packer = require('packer')
+local util = require("usr.utils").import('packer.util')
+local packer = require("usr.utils").import('packer')
 
 ----------------------------------------------------------------------
 --              if packer isn't installed, install it               --
@@ -428,7 +428,7 @@ return packer.startup(function()
 
   --if packer isn't installed install it
  if packer_bootstrap then
-    require('packer').sync()
+    require("usr.utils").import('packer').sync()
   end
 end)
 ----------------------------------------------------------------------

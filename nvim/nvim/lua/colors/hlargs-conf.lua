@@ -1,4 +1,4 @@
-local hlargs = require('hlargs')
+local hlargs = require("usr.utils").import('hlargs')
 
 ----------------------------------------------------------------------
 --                           Setup Hlags                            --

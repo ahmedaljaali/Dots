@@ -2,10 +2,10 @@
 --                         Local variables                          --
 
 
-local npairs = require('nvim-autopairs')
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-local cmp = require('cmp')
-local ts_conds = require('nvim-autopairs.ts-conds')
+local npairs = require("usr.utils").import('nvim-autopairs')
+local cmp_autopairs = require("usr.utils").import('nvim-autopairs.completion.cmp')
+local cmp = require("usr.utils").import('cmp')
+local ts_conds = require("usr.utils").import('nvim-autopairs.ts-conds')
 ----------------------------------------------------------------------
 
 
@@ -58,8 +58,6 @@ npairs.setup({
 --                     Auto pairs with nvim-cmp                     --
 
 -- If you want insert `(` after select function or method item
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-local cmp = require('cmp')
 
 cmp.event:on(
     'confirm_done',

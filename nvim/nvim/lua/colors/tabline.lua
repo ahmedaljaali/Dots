@@ -1,4 +1,4 @@
-local tabline = require('tabline_framework')
+local tabline = require("usr.utils").import('tabline_framework')
 
 ----------------------------------------------------------------------
 --                              Colors                              --
