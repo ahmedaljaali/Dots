@@ -5,10 +5,10 @@ local modes = require("usr.utils").import('modes')
 
 modes.setup({
     colors = {
-        copy = "#f5c359",
-        delete = "#c75c6a",
-        insert = "#78ccc5",
-        visual = "#9745be",
+        copy = "#d79921",
+        delete = "#9d0006",
+        insert = "#458588",
+        visual = "#b16286",
     },
 
     -- Cursorline highlight opacity
