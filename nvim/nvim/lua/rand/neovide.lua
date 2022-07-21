@@ -1,27 +1,34 @@
 ----------------------------------------------------------------------
 --        Everything here will be executed only with neovide        --
 
-vim.cmd([[
-    if exists("g:neovide")
-        let g:neovide_fullscreen=v:true
+if vim.fn.exists("g:neovide") == 1 then
 
-        set guifont=MesloLGS\ Nerd\ Font:h13
+    -- Start in fullscreen
+    vim.g.neovide_fullscreen= true
 
-        let g:neovide_cursor_animation_length=0.35
+    -- Set font
+    vim.opt.guifont = "MesloLGS Nerd Font:h13"
 
-        let g:neovide_cursor_vfx_mode = "pixiedust"
+    -- Determines the time it takes for the cursor to complete it's animation in seconds
+    vim.g.neovide_cursor_animation_length=0.35
 
-        let g:neovide_cursor_vfx_particle_lifetime=5
+    -- Cursor mode
+    vim.g.neovide_cursor_vfx_mode = "pixiedust"
 
-        let g:neovide_cursor_vfx_particle_density=28.0
+    -- Sets the amount of time the generated particles should survive
+    vim.g.neovide_cursor_vfx_particle_lifetime=5
 
-        let g:neovide_refresh_rate=60
+    -- Sets the number of generated particles
+    vim.g.neovide_cursor_vfx_particle_density=28.0
 
-        let g:neovide_profiler = v:false
+    -- Frame per second
+    vim.g.neovide_refresh_rate=60
 
-        let g:neovide_cursor_trail_length=5.0
+    -- Shows a frame time graph in the upper left corner
+    vim.g.neovide_profiler = false
 
-        let g:neovide_cursor_vfx_particle_lifetime=5.0
-    endif
-]])
+    -- Determines how much the trail of the cursor lags behind the front edge
+    vim.g.neovide_cursor_trail_length=5.0
+
+end
 ----------------------------------------------------------------------
