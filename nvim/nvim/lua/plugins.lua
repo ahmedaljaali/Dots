@@ -192,6 +192,9 @@ return packer.startup(function()
         requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
     }
 
+    -- Notification manager
+    use "rcarriga/nvim-notify"
+
 ----------------------------------------------------------------------
 
 
