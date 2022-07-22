@@ -423,6 +423,12 @@ return packer.startup(function()
 
     -- SQLite/LuaJIT binding for lua and neovim
     use "kkharji/sqlite.lua"
+
+    use
+    {
+        "nvim-treesitter/playground",
+        requires = {"nvim-treesitter/nvim-treesitter"}
+    }
 ----------------------------------------------------------------------
 
 
