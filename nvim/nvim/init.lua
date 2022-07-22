@@ -1,6 +1,11 @@
-require('usr.plugins') --Put it in the top of the file, Don't change it!!!
-require('usr.general') -- general configurations
-require("usr.autocmd") --Auto commands
+ --Put it in the top of the file, Don't change it!!!
+require('usr.plugins')
+
+ --general configurations
+require('usr.general')
+
+ --Auto commands
+require("usr.autocmd")
 
 
 ----------------------------------------------------------------------
