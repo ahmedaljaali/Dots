@@ -21,14 +21,30 @@ local function filename()
 end
 
 
+-- Logging
 local function log(message, level, title)
     async.run(function()
         notify(message, level, {title = title})
     end)
 end
 
+-- Check if it's already loaded
+local function checkIfLoaded(modname)
+    for key in pairs(package.loaded) do
+        if key == modname then
+            return true
+        else
+            return false
+        end
+    end
+end
+
 
 function M.import(modname)
+
+    if checkIfLoaded(modname) then
+        return
+    end
 
     local status_ok, mod= pcall(require, modname)
 
