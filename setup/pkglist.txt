@@ -104,3 +104,4 @@ wget
 neovim-git
 neovide-git
 sqlite
+freetype2
