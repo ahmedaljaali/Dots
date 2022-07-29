@@ -31,10 +31,6 @@ local default = s('default',
 cmake_minimum_required(VERSION {})
 project({} VERSION 1.0)
 
-# Set C++ slandered
-set(CMAKE_CXX_STANDARD {})
-set(CMAKE_CXX_STANDARD_REQUIRED {})
-
 # Get source files
 file(GLOB_RECURSE SOURCE_FILES ${{CMAKE_CURRENT_SOURCE_DIR}}/src/*.cc)
 
@@ -44,21 +40,28 @@ add_executable(${{PROJECT_NAME}} ${{SOURCE_FILES}})
 target_include_directories(${{PROJECT_NAME}} PUBLIC ${{CMAKE_CURRENT_SOURCE_DIR}}/inc)
 
 # Change properties
-set_target_properties( ${{PROJECT_NAME}}
-    PROPERTIES
+set_target_properties(${{PROJECT_NAME}} PROPERTIES
+
+    # Specify directories
     ARCHIVE_OUTPUT_DIRECTORY "${{CMAKE_CURRENT_SOURCE_DIR}}/lib"
     LIBRARY_OUTPUT_DIRECTORY "${{CMAKE_CURRENT_SOURCE_DIR}}/lib"
     RUNTIME_OUTPUT_DIRECTORY "${{CMAKE_CURRENT_SOURCE_DIR}}/bin"
-    OUTPUT_NAME {}
+
+    # Set C++ slandered
+    CXX_STANDARD {}
+    CXX_STANDARD_REQUIRED {}
+
+    OUTPUT_NAME "{}"
 )
 
 #Debug
-target_compile_options(${{PROJECT_NAME}} PUBLIC   -Werror -ggdb -O0 -Wall -Wextra  -Wextra -Weffc++  -Wsign-conversion -pedantic-errors)
+SET(CMAKE_BUILD_TYPE debug)
+SET(CMAKE_CXX_FLAGS_DEBUG " -Werror -ggdb -O0 -Wall -Wextra  -Wextra -Weffc++  -Wsign-conversion -pedantic-errors")
+#-Werror Treat warnings as errors
 
 #Release
-# target_compile_options(${{PROJECT_NAME}} PUBLIC   -Werror  -O3 -Wall -Wextra  -Wextra -Weffc++  -Wsign-conversion -pedantic-errors)
-#-Werror add this option if you want to treat warnings as errors
-
+# SET(CMAKE_BUILD_TYPE release)
+# SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
 ]],
     {
         i(1, "Cmake Version"),
