@@ -125,7 +125,7 @@ int main({})
 }}
 ]],
     {
-        c(1, {t("int argc, char **argv"), t("void")}),
+        c(1, {t("void"), t("int argc, char **argv")}),
         i(2, "")
 
     }
