@@ -4,7 +4,7 @@
 ---------------------------------------------
 --For keymaps
 local opts = { noremap = true, silent = true }
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 ---------------------------------------------
 
 ---------------------------------------------
@@ -38,6 +38,11 @@ local commentFrame = require("usr.utils").import('nvim-comment-frame')
 ---------------------------------------------
 -- One dark
 local oneDark = require("usr.utils").import('onedark')
+---------------------------------------------
+
+---------------------------------------------
+-- Luasnip
+local ls = require("usr.utils").import("luasnip")
 ---------------------------------------------
 
 ----------------------------------------------------------------------
@@ -410,7 +415,7 @@ map('n', '<Leader>ut', '<cmd>UndotreeToggle<cr>', opts)
 
 
 ----------------------------------------------------------------------
---                            nvim tree                             --
+--                            nvimtree                             --
 
 
 map('n', '<Leader>tt', '<cmd>NvimTreeToggle<cr>', opts)
@@ -418,13 +423,34 @@ map('n', '<Leader>tt', '<cmd>NvimTreeToggle<cr>', opts)
 
 
 ----------------------------------------------------------------------
---                             lua snip                             --
+--                             luasnip                             --
 
 
-map("i", "<Leader>sn", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
-map("s", "<Leader>sn", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
-map("i", "<Leader>sp", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
-map("s", "<Leader>sp", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
+map({ "i", "s" }, "<Leader>sn", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
+map({ "i", "s" }, "<Leader>sp", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
+map({ "i", "s" }, "<c-s>", "<Esc>:w<cr>")
+map({ "i", "s" }, "<c-u>", '<cmd>lua require("luasnip.extras.select_choice")()<cr><C-c><C-c>')
+map({ "i", "s" }, "<a-p>", function()
+	if ls.expand_or_jumpable() then
+		ls.expand()
+	end
+end, { silent = true })
+map({ "i", "s" }, "<Leader>sc", function()
+	if ls.choice_active() then
+		ls.change_choice(1)
+	else
+		-- print current time
+		local t = os.date("*t")
+		local time = string.format("%02d:%02d:%02d", t.hour, t.min, t.sec)
+		print(time)
+	end
+end)
+map({ "i", "s" }, "<Leader>sv", function()
+	if ls.choice_active() then
+		ls.change_choice(-1)
+	end
+end)
+map('n', '<Leader>ls', '<cmd>source' .. vim.fn.stdpath('config') .. '/lua/LS/luasnip-conf.lua<CR>')
 ----------------------------------------------------------------------
 
 

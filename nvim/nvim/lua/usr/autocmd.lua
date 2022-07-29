@@ -72,3 +72,11 @@ autocmd(
     { pattern = "vimcmake", command = "setlocal nospell" }
 )
 ----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                             Luasnip                              --
+
+vim.cmd([[command! LuaSnipEdit :lua require("luasnip.loaders.from_lua").edit_snippet_files()]]) --}}}
+vim.cmd([[autocmd BufEnter */snippets/*.lua nnoremap <silent> <buffer> <CR> /-- End Refactoring --<CR>O<Esc>O]])
+----------------------------------------------------------------------

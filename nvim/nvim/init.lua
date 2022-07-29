@@ -77,22 +77,12 @@ require('LS.tabnine-conf')
 require('LS.fidget-conf')
 require('LS.lsp-signature-conf')
 require('LS.treesitter-context-conf')
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
---                             snippets                             --
-
- -- TODO: Learn more about snippets
-require("snippets.cpp")
-require("snippets.cmake")
+require('LS.luasnip-conf')
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                           Random stuff                           --
-
-
 
 -- Short config
 require("rand.short")
