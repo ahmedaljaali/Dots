@@ -17,7 +17,7 @@ local rep = require('usr.utils').import("luasnip.extras").rep
 local snippets, autosnippets = {}, {}
 
 local group = vim.api.nvim_create_augroup("Lua Snippets", { clear = true })
-local file_pattern = "*.lua"
+local file_pattern = "CMakeLists.txt"
 ----------------------------------------------------------------------
 
 
