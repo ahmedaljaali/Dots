@@ -31,15 +31,29 @@ local default = s('default',
 cmake_minimum_required(VERSION {})
 project({} VERSION 1.0)
 
-# Get source files
+#--------------------------------------------------------------------#
+#                          Get source files                          #
+
+
 file(GLOB_RECURSE SOURCE_FILES ${{CMAKE_CURRENT_SOURCE_DIR}}/src/*.cc)
+#--------------------------------------------------------------------#
+
 
 add_executable(${{PROJECT_NAME}} ${{SOURCE_FILES}})
 
-# Include directory
-target_include_directories(${{PROJECT_NAME}} PUBLIC ${{CMAKE_CURRENT_SOURCE_DIR}}/inc)
 
-# Change properties
+#--------------------------------------------------------------------#
+#                        Include directories                         #
+
+
+target_include_directories(${{PROJECT_NAME}} PUBLIC ${{CMAKE_CURRENT_SOURCE_DIR}}/inc)
+#--------------------------------------------------------------------#
+
+
+#--------------------------------------------------------------------#
+#                           Set properties                           #
+
+
 set_target_properties(${{PROJECT_NAME}} PROPERTIES
 
     # Specify directories
@@ -53,15 +67,26 @@ set_target_properties(${{PROJECT_NAME}} PROPERTIES
 
     OUTPUT_NAME "{}"
 )
+#--------------------------------------------------------------------#
 
-#Debug
+
+#--------------------------------------------------------------------#
+#                               Debug                                #
+
+
 SET(CMAKE_BUILD_TYPE debug)
 SET(CMAKE_CXX_FLAGS_DEBUG " -Werror -ggdb -O0 -Wall -Wextra  -Wextra -Weffc++  -Wsign-conversion -pedantic-errors")
 #-Werror Treat warnings as errors
+#--------------------------------------------------------------------#
 
-#Release
+
+#--------------------------------------------------------------------#
+#                              Release                               #
+
+
 # SET(CMAKE_BUILD_TYPE release)
 # SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
+#--------------------------------------------------------------------#
 ]],
     {
         i(1, "Cmake Version"),
@@ -79,7 +104,11 @@ table.insert(snippets, default)
 local shaders = s("shaders",
     fmt(
 [[
-#Compile Shaders Code
+
+#--------------------------------------------------------------------#
+#                        Compile shader code                         #
+
+
 find_program(GLSL_VALIDATOR glslangValidator HINTS
   ${{Vulkan_GLSLANG_VALIDATOR_EXECUTABLE}}
   /usr/bin
@@ -90,6 +119,7 @@ find_program(GLSL_VALIDATOR glslangValidator HINTS
   $ENV{{VULKAN_SDK}}/Bin32/
 
 )
+
 # get all .vert and .frag files in shaders directory
 file(GLOB_RECURSE GLSL_SOURCE_FILES
 "${{PROJECT_SOURCE_DIR}}/shaders/*.frag"
@@ -109,7 +139,9 @@ add_custom_target(
     Shaders
     DEPENDS ${{SPIRV_BINARY_FILES}}
 )
+
 add_dependencies(${{PROJECT_NAME}} Shaders)
+#--------------------------------------------------------------------#
 ]]
     ,
     {
@@ -118,6 +150,38 @@ add_dependencies(${{PROJECT_NAME}} Shaders)
     )
 )
 table.insert(snippets, shaders)
+
+local updateSubmodule = s("updateSubmodule",
+    fmt(
+[[
+#--------------------------------------------------------------------#
+#                        Update git submodule                        #
+
+
+find_package(Git QUIET)
+if(GIT_FOUND AND EXISTS "${{CMAKE_CURRENT_SOURCE_DIR}}/.git")
+    # Update if needed
+    option(GIT_SUBMODULE "Check submodules during build" ON)
+    if(GIT_SUBMODULE)
+        message(STATUS "Submodule Update")
+        execute_process(COMMAND ${{GIT_EXECUTABLE}} submodule update --init --recursive
+            WORKING_DIRECTORY ${{CMAKE_CURRENT_SOURCE_DIR}}
+            RESULT_VARIABLE GIT_SUBMOD_RESULT)
+
+        if(NOT GIT_SUBMOD_RESULT EQUAL "0")
+            message(FETAL_ERROR submodule update field ${{GIT_SUBMOD_RESULT}})
+        endif()
+    endif()
+endif()
+#--------------------------------------------------------------------#
+]],
+
+    {
+
+    }
+    )
+)
+table.insert(snippets, updateSubmodule)
 ----------------------------------------------------------------------
 
 

@@ -9,10 +9,10 @@ commentFrame.setup({
     disable_default_keymap = true,
 
     -- start the comment with this string
-    start_str = '//',
+    start_str = '/*',
 
     -- end the comment line with this string
-    end_str = '//',
+    end_str = '*/',
 
     -- fill the comment frame border with this character
     fill_char = '-',
@@ -31,6 +31,20 @@ commentFrame.setup({
 
     -- configurations for individual language goes here
     languages = {
+        cpp = {
+            -- start the comment with this string
+            start_str = '/*',
+
+            -- end the comment line with this string
+            end_str = '*/',
+
+            -- fill the comment frame border with this character
+            fill_char = '-',
+
+            -- automatically indent the comment frame based on the line
+            auto_indent = true,
+
+        },
     }
 })
 ----------------------------------------------------------------------
