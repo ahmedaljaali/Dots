@@ -175,6 +175,7 @@ alias gta='git tag'
 alias gnta='git tag -a'
 alias gr='git restore'
 alias gr.='git restore .'
+alias gm='git submodule'
 
 
 # Play audio files in current dir by type
