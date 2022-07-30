@@ -41,9 +41,7 @@ pavucontrol
 youtube-dl
 deadbeef
 reflector
-glfw-x11
 vulkan-devel
-glm
 shaderc
 vulkan-intel
 discord
