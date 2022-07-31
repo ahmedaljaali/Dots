@@ -30,11 +30,11 @@ require("usr.utils").import("tidy").setup()
 
 ----------------------------------------------------------------------
 --                          Stay centered                           --
-
-require("usr.utils").import("stay-centered")
-
+--
 -- Exclude
 vim.api.nvim_set_var('stay-centered#skip_filetypes', {"vimcmake", "floaterm"})
+
+require("usr.utils").import("stay-centered")
 ----------------------------------------------------------------------
 
 
