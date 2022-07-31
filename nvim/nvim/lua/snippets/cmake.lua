@@ -125,6 +125,7 @@ file(GLOB_RECURSE GLSL_SOURCE_FILES
 "${{PROJECT_SOURCE_DIR}}/shaders/*.frag"
 "${{PROJECT_SOURCE_DIR}}/shaders/*.vert"
 )
+
 foreach(GLSL ${{GLSL_SOURCE_FILES}})
   get_filename_component(FILE_NAME ${{GLSL}} NAME)
   set(SPIRV "${{PROJECT_SOURCE_DIR}}/shaders/${{FILE_NAME}}.spv")
@@ -161,7 +162,7 @@ local updateSubmodule = s("updateSubmodule",
 find_package(Git QUIET)
 if(GIT_FOUND AND EXISTS "${{CMAKE_CURRENT_SOURCE_DIR}}/.git")
     # Update if needed
-    option(GIT_SUBMODULE "Check submodules during build" ON)
+    option(GIT_SUBMODULE "Check submodules during build" OFF)
     if(GIT_SUBMODULE)
         message(STATUS "Submodule Update")
         execute_process(COMMAND ${{GIT_EXECUTABLE}} submodule update --init --recursive --remote
