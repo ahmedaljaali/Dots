@@ -103,3 +103,4 @@ neovim-git
 neovide-git
 sqlite
 freetype2
+doxygen
