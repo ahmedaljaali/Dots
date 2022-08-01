@@ -20,7 +20,8 @@ configs.setup {
         "cmake",
         "markdown",
         "lua",
-        "query"
+        "query",
+        "glsl"
     },
     sync_install = true;
 
