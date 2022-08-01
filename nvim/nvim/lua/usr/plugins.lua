@@ -338,7 +338,6 @@ return packer.startup(function()
     use
     {
         'onsails/lspkind-nvim',
-        commit = '44f686c71e4bf515b2878e10445cb8ed7f351488' -- WARN: The newer commits are broken
     }
 
     -- Code actions
