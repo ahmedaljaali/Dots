@@ -104,3 +104,4 @@ neovide-git
 sqlite
 freetype2
 doxygen
+zathura

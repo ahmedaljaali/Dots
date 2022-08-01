@@ -77,6 +77,7 @@ static const char *neovide[]  = { "neovide", NULL };
 static const char *webBrowser[]  = { "google-chrome-stable", NULL };
 static const char *spotify[]  = { "spotify", NULL };
 static const char *discord[]  = { "discord", NULL };
+static const char *zathura[]  = { "zathura", NULL };
 
 // Brightness
 void brightnessUp(const Arg * arg) {system("light -A 5");}
@@ -106,6 +107,7 @@ void multiPrevious(const Arg * arg) { system("playerctl previous");}
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd} },
+	{ MODKEY|ShiftMask,     XK_z,      spawn,          {.v = zathura} },
     {0,         XF86XK_MonBrightnessUp, brightnessUp,            {0}},
     {0,         XF86XK_MonBrightnessDown, brightnessDown,        {0}},
     {0,       XF86XK_AudioRaiseVolume, raiseVolume,              {0}},

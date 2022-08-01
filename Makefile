@@ -16,6 +16,7 @@ link:
 	stow picom -t ~/.config/
 	stow redshift -t ~/.config/
 	stow neofetch -t ~/.config/
+	stow zathura -t ~/.config/
 
 unlink:
 	unlink ~/.config/nvim
@@ -36,3 +37,4 @@ unlink:
 	unlink ~/.config/picom
 	unlink ~/.config/redshift
 	unlink ~/.config/neofetch
+	unlink ~/.config/zathura
