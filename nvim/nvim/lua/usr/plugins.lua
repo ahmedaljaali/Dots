@@ -304,7 +304,7 @@ return packer.startup(function()
     -- Yank history
     use  "AckslD/nvim-neoclip.lua"
 
-    -- Increment/decrement
+    -- Increment/decrements
     use 'monaqa/dial.nvim'
 
     -- Keep your cursor at the center of the screen
