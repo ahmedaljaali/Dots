@@ -127,8 +127,14 @@ map('n', '<Leader>ls', ':SLoad<CR>', opts)
 ----------------------------------------------------------------------
 --                         Run C++ programs                         --
 
+--NOTE: close cmake then run
+map('n', '<leader>tr', function ()
+    vim.cmd[[:CMakeClose]]
+    vim.cmd[[:FloatermNew  --height=20 --autoclose=0  eval "$(find ./bin -type f -executable -print)"]]
+end, opts)
+----------------------------------------------------------------------
 
-map('n', '<leader>tr', ':FloatermNew  --height=20 --autoclose=0  eval "$(find ./bin -type f -executable -print)"<cr>', opts)
+
 ----------------------------------------------------------------------
 
 
@@ -515,14 +521,6 @@ map("", "fl", "<cmd>HopLine<CR>", opts)
 
 map("n", "<Leader>rgb", "<cmd>PickColor<cr>", opts)
 map("i", "<Leader>rgb", "<cmd>PickColorInsert<cr>", opts)
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
---                      Run my window manger                        --
-
-
-map('n', '<leader>rw', ':FloatermNew  --height=20 --autoclose=0 ./run.sh<cr>', opts)
 ----------------------------------------------------------------------
 
 
