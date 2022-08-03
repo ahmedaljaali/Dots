@@ -90,7 +90,7 @@ SET(CMAKE_CXX_FLAGS_DEBUG " -Werror -ggdb -O0 -Wall -Wextra  -Wextra -Weffc++  -
 
 
 # SET(CMAKE_BUILD_TYPE release)
-# SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
+SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
 #--------------------------------------------------------------------#
 ]],
     {
@@ -167,7 +167,7 @@ local updateSubmodule = s("updateSubmodule",
 find_package(Git QUIET)
 if(GIT_FOUND AND EXISTS "${{CMAKE_CURRENT_SOURCE_DIR}}/.git")
     # Update if needed
-    option(GIT_SUBMODULE "Check submodules during build" OFF)
+    option(GIT_SUBMODULE "Check submodules during generation" ON)
     if(GIT_SUBMODULE)
         message(STATUS "Submodule Update")
         execute_process(COMMAND ${{GIT_EXECUTABLE}} submodule update --init --recursive --remote
