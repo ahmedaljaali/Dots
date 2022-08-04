@@ -1,5 +1,7 @@
 {
     "clangd.checkUpdates": true,
     "clangd.arguments": [],
-    "clangd.restartAfterCrash": true
+    "clangd.restartAfterCrash": true,
+    "clangd.serverCompletionRanking": true,
+    "clangd.detectExtensionConflicts": true
 }

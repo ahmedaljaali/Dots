@@ -15,7 +15,7 @@ autosave.setup(
     {
         enabled = true,
         execution_message = "Saved at " .. os.date("%H:%M:%S"),
-        events = {"InsertLeave", "TextChanged"},
+        events = {"InsertLeave", "WinLeave", "TabLeave"},
         conditions = {
             exists = true,
             filename_is_not = {},
