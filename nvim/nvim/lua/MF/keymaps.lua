@@ -88,7 +88,8 @@ map("", "<C-l>", "<C-\\><C-N><C-w>l", { silent = true })
 --                              debug                               --
 
 
-map('n', '<Leader>db', "<cmd>FloatermNew gdb bin/app<CR>", opts)
+map('n', '<Leader>db', "<cmd>FloatermNew gdb  eval \"$(find ./bin -type f -executable -print)\" <CR>", opts)
+
 ----------------------------------------------------------------------
 
 
