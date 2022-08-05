@@ -105,3 +105,4 @@ sqlite
 freetype2
 doxygen
 zathura
+llvm
