@@ -106,3 +106,4 @@ freetype2
 doxygen
 zathura
 llvm
+blender
