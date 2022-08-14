@@ -39,6 +39,12 @@ local function checkIfLoaded(modname)
     end
 end
 
+function M.osExecute(cmd)
+    local fileHandle     = assert(io.popen(cmd, 'r'))
+    local commandOutput  = assert(fileHandle:read('*a'))
+    local returnTable    = {fileHandle:close()}
+    return commandOutput ,returnTable[3]
+end
 
 function M.import(modname)
 

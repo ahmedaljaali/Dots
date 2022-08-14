@@ -17,7 +17,7 @@ require("usr.utils").import('impatient')
 
 
 ----------------------------------------------------------------------
---                           Moving fast                            --
+--                           Moving Fast                            --
 
 
 require('MF.start-screan')
@@ -60,7 +60,7 @@ require('typing.dial-conf')
 
 
 ----------------------------------------------------------------------
---                         Language support                         --
+--                         Language Support                         --
 
 
 require('LS.cmake-config')
@@ -78,6 +78,7 @@ require('LS.fidget-conf')
 require('LS.lsp-signature-conf')
 require('LS.treesitter-context-conf')
 require('LS.luasnip-conf')
+require('LS.dap-conf')
 ----------------------------------------------------------------------
 
 

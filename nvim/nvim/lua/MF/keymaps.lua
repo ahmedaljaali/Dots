@@ -55,7 +55,11 @@ map("", "<C-l>", "<C-\\><C-N><C-w>l", { silent = true })
 --                              debug                               --
 
 
-map('n', '<Leader>db', "<cmd>FloatermNew gdb  eval \"$(find ./bin -type f -executable -print)\" <CR>", opts)
+map('n', '<Leader>db', function() require'dap'.toggle_breakpoint() end , opts)
+map('n', '<Leader>dc', function() require'dap'.continue() end, opts)
+map('n', '<Leader>do', function() require'dap'.step_over() end, opts)
+map('n', '<Leader>di', function() require'dap'.step_into() end, opts)
+map('n', '<Leader>dr', function() require'dap'.repl.open() end, opts)
 
 ----------------------------------------------------------------------
 

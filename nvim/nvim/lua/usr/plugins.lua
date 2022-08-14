@@ -311,7 +311,7 @@ return packer.startup(function()
     use "arnamak/stay-centered.nvim"
 
 ----------------------------------------------------------------------
---                         Language support                         --
+--                         Language Support                         --
 
     -- An implementation of the Popup API from vim in Neovim
     use
@@ -406,6 +406,13 @@ return packer.startup(function()
 
     -- Config language servers with json
     use 'tamago324/nlsp-settings.nvim'
+
+    -- Debugging
+    use
+    {
+        'mfussenegger/nvim-dap',
+        requires = {'theHamsta/nvim-dap-virtual-text', 'rcarriga/nvim-dap-ui'}
+    }
 ----------------------------------------------------------------------
 
 
