@@ -79,6 +79,7 @@ require('LS.lsp-signature-conf')
 require('LS.treesitter-context-conf')
 require('LS.luasnip-conf')
 require('LS.dap-conf')
+require('LS.lint-conf')
 ----------------------------------------------------------------------
 
 

@@ -413,6 +413,9 @@ return packer.startup(function()
         'mfussenegger/nvim-dap',
         requires = {'theHamsta/nvim-dap-virtual-text', 'rcarriga/nvim-dap-ui'}
     }
+
+    -- Fill the gaps for languages where there is no language server exists
+    use 'mfussenegger/nvim-lint'
 ----------------------------------------------------------------------
 
 
