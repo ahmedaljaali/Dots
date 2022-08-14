@@ -13,6 +13,10 @@ vim.g['syntax'] = true
 
 
 oneDark.setup  {
+
+    -- toggle theme style ---
+    toggle_style_key = '<leader>ts', -- Default keybinding to toggle
+
     -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
     style = 'dark',
 

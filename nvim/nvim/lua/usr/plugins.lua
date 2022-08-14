@@ -199,7 +199,7 @@ return packer.startup(function()
 
 
 ----------------------------------------------------------------------
---                           Moving fast                            --
+--                           Moving Fast                            --
 
 
 
@@ -382,11 +382,13 @@ return packer.startup(function()
         run = function() vim.fn[':TSUpdate'](0) end
     }
 
-    -- Quick start configs for Nvim LSP
-    use 'neovim/nvim-lspconfig'
-
-    -- Install language servers
-    use 'williamboman/nvim-lsp-installer'
+    -- Language Servers
+    use
+    {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+    }
 
     -- Help for builtin lua functions
     use "milisims/nvim-luaref"

@@ -50,3 +50,14 @@ vim.g.floaterm_wintype = 'split'
 
 vim.g.floaterm_autoinsert = true
 ----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                             Keymaps                              --
+
+
+vim.g.floaterm_keymap_new = '<Leader>fy'
+vim.g.floaterm_keymap_toggle = '<Leader>ft'
+vim.g.floaterm_keymap_next = '<Leader>fn'
+vim.g.floaterm_keymap_prev = '<Leader>fp'
+vim.g.floaterm_keymap_kill = '<Leader>fc'
+----------------------------------------------------------------------

@@ -5,6 +5,12 @@ local commentFrame = require("usr.utils").import('nvim-comment-frame')
 
 commentFrame.setup({
 
+    keymap = '<leader>cc',
+    --       ^^^^^^^^^^^ change this to what ever you want
+
+    multiline_keymap = '<leader>C',
+    --                 ^^^^^^^^^^^ change this to what ever you want
+
     -- if true, <leader>cf keymap will be disabled
     disable_default_keymap = true,
 
