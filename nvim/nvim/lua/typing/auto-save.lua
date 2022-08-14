@@ -26,7 +26,7 @@ autosave.setup(
         on_off_commands = true,
         clean_command_line_interval = 0,
         debounce_delay = 135,
-        filetype_is_not = {"gitcommint"}
+        filetype_is_not = {"gitcommit"}
     }
 )
 ----------------------------------------------------------------------
