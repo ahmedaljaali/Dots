@@ -1,6 +1,6 @@
 {
     "clangd.checkUpdates": true,
-    "clangd.arguments": [],
+    "clangd.arguments": ["--background-index", "--clang-tidy"],
     "clangd.restartAfterCrash": true,
     "clangd.serverCompletionRanking": true,
     "clangd.detectExtensionConflicts": true
