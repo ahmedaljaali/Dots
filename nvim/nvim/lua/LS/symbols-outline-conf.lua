@@ -1,7 +1,9 @@
+local outline = require('usr.utils').import(("symbols-outline"))
+
 ----------------------------------------------------------------------
 --                              Setup                               --
 
-vim.g.symbols_outline = {
+outline.setup({
     highlight_hovered_item = true,
     show_guides = true,
     auto_preview = true,
@@ -54,5 +56,5 @@ vim.g.symbols_outline = {
         Operator = {icon = "", hl = "TSOperator"},
         TypeParameter = {icon = "", hl = "TSParameter"}
     }
-}
+})
 ----------------------------------------------------------------------
