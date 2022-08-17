@@ -97,6 +97,18 @@ private: // Private methods
 
 public: // Public methods
 
+    // Constructor
+    {}(void)
+    {{
+
+    }}
+
+    // Destructor
+    ~{}(void)
+    {{
+
+    }}
+
     // Copy constructor
     {}(const {}& copy)
     {{
@@ -104,7 +116,7 @@ public: // Public methods
     }}
 
     // Copy assignment operator
-    const {}& operator=(const {}& copy)
+    {}& operator=(const {}& copy)
     {{
 
        return *this;
@@ -117,7 +129,7 @@ public: // Public methods
     }}
 
     // Move assignment operator
-    const {}& operator=({}&& move)
+    {}& operator=({}&& move)
     {{
 
        return *this;
@@ -129,6 +141,8 @@ public: // Public methods
         i(1, "Name"),
         c(2, {t("final"), t("")}),
         i(3, ""),
+        rep(1),
+        rep(1),
         rep(1),
         rep(1),
         rep(1),
