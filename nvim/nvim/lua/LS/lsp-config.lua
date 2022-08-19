@@ -15,7 +15,7 @@ vim.diagnostic.config({
 --               Go-to definition in a virtual split                --
 
 
-local function goto_definition(split_cmd)
+--[[ local function goto_definition(split_cmd)
     local util = vim.lsp.util
     local log = require("usr.utils").import("vim.lsp.log")
     local api = vim.api
@@ -47,7 +47,7 @@ local function goto_definition(split_cmd)
     return handler
 end
 
-vim.lsp.handlers["textDocument/definition"] = goto_definition('vs')
+vim.lsp.handlers["textDocument/definition"] = goto_definition('vs') ]]
 ----------------------------------------------------------------------
 
 
