@@ -1,6 +1,6 @@
 local mason = require("usr.utils").import("mason")
 local lspconfig = require("usr.utils").import("lspconfig")
-
+local mason_lspconfig = require('usr.utils').import("mason-lspconfig")
 
 ----------------------------------------------------------------------
 --                        setup mason                             --
@@ -77,7 +77,7 @@ mason.setup({
 ----------------------------------------------------------------------
 --                  configure lspconfig with mason                  --
 
-require("mason-lspconfig").setup({
+mason_lspconfig.setup({
     ensure_installed = { "clangd", "lua-language-server", "jsonls", "cmake", "vimls" },
 })
 ----------------------------------------------------------------------
@@ -86,7 +86,7 @@ require("mason-lspconfig").setup({
 ----------------------------------------------------------------------
 --                          Servers setup                           --
 
-require("mason-lspconfig").setup_handlers({
+mason_lspconfig.setup_handlers({
 
     ["sumneko_lua"] = function ()
         lspconfig.sumneko_lua.setup{}
