@@ -72,7 +72,9 @@ set_target_properties(${{PROJECT_NAME}} PROPERTIES
 #--------------------------------------------------------------------#
 #                            Use clang++                             #
 
-set(CMAKE_CXX_COMPILER "clang++")
+
+set(CMAKE_CXX_COMPILER clang++)
+set(CMAKE_C_COMPILER clang)
 #--------------------------------------------------------------------#
 
 #--------------------------------------------------------------------#
@@ -80,7 +82,7 @@ set(CMAKE_CXX_COMPILER "clang++")
 
 
 SET(CMAKE_BUILD_TYPE debug)
-SET(CMAKE_CXX_FLAGS_DEBUG " -Werror -ggdb -O0 -Wall -Wextra  -Wextra -Weffc++  -Wsign-conversion -pedantic-errors")
+SET(CMAKE_CXX_FLAGS_DEBUG "-O0 -Werror -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded")
 #-Werror Treat warnings as errors
 #--------------------------------------------------------------------#
 
