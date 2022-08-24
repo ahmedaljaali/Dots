@@ -103,7 +103,7 @@ map('n', '<Leader>ls', ':SLoad<CR>', opts)
 -- close cmake then run
 map('n', '<leader>tr', function ()
     vim.cmd[[:CMakeClose]]
-    vim.cmd[[:FloatermNew  --height=20 --autoclose=0  eval '$(find ./bin -type f -executable -print)']]
+    vim.cmd[[:FloatermNew  --height=20 --autoclose=0  eval "$(find ./bin -type f -executable -print)"]]
 end, opts)
 ----------------------------------------------------------------------
 

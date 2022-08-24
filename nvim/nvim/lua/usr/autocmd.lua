@@ -86,7 +86,7 @@ vim.cmd([[autocmd BufEnter */snippets/*.lua nnoremap <silent> <buffer> <CR> /-- 
 --                          For nvim lint                           --
 
 
-vim.api.nvim_create_autocmd(
+autocmd(
     { 'BufWritePost' },
     {
         callback = function()

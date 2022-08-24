@@ -103,23 +103,23 @@ mason_tool_installer.setup{
 
 mason_lspconfig.setup_handlers({
 
-    ['sumneko_lua'] = function ()
+    ['sumneko_lua'] = function()
         lspconfig.sumneko_lua.setup{}
     end,
 
-    ['clangd'] = function ()
+    ['clangd'] = function()
         lspconfig.clangd.setup{}
     end,
 
-    ['cmake'] = function ()
+    ['cmake'] = function()
         lspconfig.cmake.setup{}
     end,
 
-    ['jsonls'] = function ()
+    ['jsonls'] = function()
         lspconfig.jsonls.setup{}
     end,
 
-    ['vimls'] = function ()
+    ['vimls'] = function()
         lspconfig.vimls.setup{}
     end,
 })
