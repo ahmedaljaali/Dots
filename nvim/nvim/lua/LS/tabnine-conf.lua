@@ -1,7 +1,9 @@
 
 
     --NOTE: Eats a lot of memory!
---[[ local tabnine = require("usr.utils").import('cmp_tabnine.config')
+--[[ 
+local utils = require('usr.utils')
+local tabnine = utils.include('cmp_tabnine.config')
 
 ----------------------------------------------------------------------
 --                          Setup tabnine                           --

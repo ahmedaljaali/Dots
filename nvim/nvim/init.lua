@@ -5,14 +5,14 @@ require('usr.plugins')
 require('usr.general')
 
  --Auto commands
-require("usr.autocmd")
+require('usr.autocmd')
 
 
 ----------------------------------------------------------------------
 --                        Make neovim faster                        --
 
 
-require("usr.utils").import('impatient')
+require('usr.utils').include('impatient')
 ----------------------------------------------------------------------
 
 
@@ -87,6 +87,6 @@ require('LS.lint-conf')
 --                           Random stuff                           --
 
 -- Short config
-require("rand.short")
-require("rand.neovide")
+require('rand.short')
+require('rand.neovide')
 ----------------------------------------------------------------------

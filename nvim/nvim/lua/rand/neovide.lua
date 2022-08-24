@@ -1,19 +1,19 @@
 ----------------------------------------------------------------------
 --        Everything here will be executed only with neovide        --
 
-if vim.fn.exists("g:neovide") == 1 then
+if vim.fn.exists('g:neovide') == 1 then
 
     -- Start in fullscreen
     vim.g.neovide_fullscreen= true
 
     -- Set font
-    vim.opt.guifont = "MesloLGS Nerd Font:h13"
+    vim.opt.guifont = 'MesloLGS Nerd Font:h13'
 
     -- Determines the time it takes for the cursor to complete it's animation in seconds
     vim.g.neovide_cursor_animation_length=0.35
 
     -- Cursor mode
-    vim.g.neovide_cursor_vfx_mode = "pixiedust"
+    vim.g.neovide_cursor_vfx_mode = 'pixiedust'
 
     -- Sets the amount of time the generated particles should survive
     vim.g.neovide_cursor_vfx_particle_lifetime=5

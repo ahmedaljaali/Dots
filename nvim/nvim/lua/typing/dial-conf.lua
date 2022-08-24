@@ -1,5 +1,6 @@
-local augend = require("usr.utils").import("dial.augend")
-local config = require("usr.utils").import("dial.config")
+local utils = require('usr.utils')
+local augend = utils.include('dial.augend')
+local config = utils.include('dial.config')
 
 
 ----------------------------------------------------------------------
@@ -16,32 +17,32 @@ config.augends:register_group{
         augend.integer.alias.hex,
 
         -- date (2022/02/19, etc.)
-        augend.date.alias["%Y/%m/%d"],
+        augend.date.alias['%Y/%m/%d'],
 
         -- uppercase hex number (0x1A1A, 0xEEFE, etc.)
         augend.constant.new{
-            elements = {"and", "or"},
+            elements = {'and', 'or'},
 
-            -- if false, "sand" is incremented into "sor", "doctor" into "doctand", etc.
+            -- if false, 'sand' is incremented into 'sor', 'doctor' into 'doctand', etc.
             word = true,
 
-            -- "or" is incremented into "and".
+            -- 'or' is incremented into 'and'.
             cyclic = true,
         },
 
         augend.constant.new{
-            elements = {"&&", "||"},
+            elements = {'&&', '||'},
             word = false,
             cyclic = true,
         },
 
         -- uppercase hex number (0x1A1A, 0xEEFE, etc.)
         augend.hexcolor.new{
-            case = "lower",
+            case = 'lower',
         },
 
         augend.user.new{
-            find = require("usr.utils").import("dial.augend.common").find_pattern("%d+"),
+            find = utils.include('dial.augend.common').find_pattern('%d+'),
             add = function(text, addend, cursor)
                 local n = tonumber(text)
                 n = math.floor(n * (2 ^ addend))
@@ -61,7 +62,7 @@ config.augends:register_group{
         augend.constant.alias.bool,
 
     -- date (02/19/2022, etc.)
-        augend.date.alias["%m/%d/%Y"],
+        augend.date.alias['%m/%d/%Y'],
     }
 }
 ----------------------------------------------------------------------

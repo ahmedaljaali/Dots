@@ -1,5 +1,6 @@
-local util = require("usr.utils").import('packer.util')
-local packer = require("usr.utils").import('packer')
+local utils = require('usr.utils')
+local packerUtil = utils.include('packer.util')
+local packer = utils.include('packer')
 
 ----------------------------------------------------------------------
 --              if packer isn't installed, install it               --
@@ -24,9 +25,9 @@ packer.init
      -- Should packer install plugin dependencies?
     ensure_dependencies = true,
 
-    package_root   = util.join_paths(vim.fn.stdpath('data'), 'site', 'pack'),
+    package_root   = packerUtil.join_paths(vim.fn.stdpath('data'), 'site', 'pack'),
 
-    compile_path = os.getenv("HOME") .. '/.local/share/nvim/plugin/packer_compiled.lua',
+    compile_path = os.getenv('HOME') .. '/.local/share/nvim/plugin/packer_compiled.lua',
 
      -- The default package for plugins
     plugin_package = 'packer',
@@ -79,7 +80,7 @@ packer.init
         -- Timeout, in seconds, for git clones
         clone_timeout = 120,
 
-        -- Lua format string used for "aaa/bbb" style plugins
+        -- Lua format string used for 'aaa/bbb' style plugins
         default_url_format = 'https://github.com/%s'
     },
     display = {
@@ -129,7 +130,7 @@ packer.init
         python_cmd = 'python'
     },
 
-    -- The default print log level. One of: "trace", "debug", "info", "warn", "error", "fatal".
+    -- The default print log level. One of: 'trace', 'debug', 'info', 'warn', 'error', 'fatal'.
     log = { level = 'warn' },
     profile = {
         enable = true,
@@ -174,16 +175,16 @@ return packer.startup(function()
     use 'mtdl9/vim-log-highlighting'
 
     -- Gruvbox theme
-    use "ellisonleao/gruvbox.nvim"
+    use 'ellisonleao/gruvbox.nvim'
 
     -- Vim support for editing fish scripts
-    use "Stautob/vim-fish"
+    use 'Stautob/vim-fish'
 
     -- Neovim plugin to improve the default vim.ui interfaces
     use 'stevearc/dressing.nvim'
 
     -- A powerful Neovim plugin that lets users choose & modify RGB/HSL/HEX colors
-    use "ziontee113/color-picker.nvim"
+    use 'ziontee113/color-picker.nvim'
 
     -- Tabline
     use
@@ -193,7 +194,7 @@ return packer.startup(function()
     }
 
     -- Notification manager
-    use "rcarriga/nvim-notify"
+    use 'rcarriga/nvim-notify'
 
 ----------------------------------------------------------------------
 
@@ -207,7 +208,7 @@ return packer.startup(function()
     use
     {
         'nvim-telescope/telescope.nvim',
-        requires = {{'nvim-lua/plenary.nvim',--[['nvim-lua/popup.nvim' "packer complain about Repetition"]] }}
+        requires = {{'nvim-lua/plenary.nvim',--[['nvim-lua/popup.nvim' 'packer complain about Repetition']] }}
     }
 
     -- Terminal
@@ -245,7 +246,7 @@ return packer.startup(function()
     use 'lambdalisue/suda.vim'
 
     -- Show registers
-    use "tversteeg/registers.nvim"
+    use 'tversteeg/registers.nvim'
 
     -- Neovim motions on speed!
     use 'phaazon/hop.nvim'
@@ -269,19 +270,19 @@ return packer.startup(function()
     use 'numToStr/Comment.nvim'
 
     -- Remove trailing white spaces and empty lines
-    use "McAuleyPenney/tidy.nvim"
+    use 'McAuleyPenney/tidy.nvim'
 
     -- Reopen files at your last edit position
     use 'ethanholz/nvim-lastplace'
 
     -- From it's name
-    use "Pocco81/AutoSave.nvim"
+    use 'Pocco81/AutoSave.nvim'
 
     -- Todo
     use
     {
-        "folke/todo-comments.nvim",
-        requires = "nvim-lua/plenary.nvim",
+        'folke/todo-comments.nvim',
+        requires = 'nvim-lua/plenary.nvim',
     }
 
     -- U know it
@@ -302,13 +303,13 @@ return packer.startup(function()
     }
 
     -- Yank history
-    use  "AckslD/nvim-neoclip.lua"
+    use  'AckslD/nvim-neoclip.lua'
 
     -- Increment/decrements
     use 'monaqa/dial.nvim'
 
     -- Keep your cursor at the center of the screen
-    use "arnamak/stay-centered.nvim"
+    use 'arnamak/stay-centered.nvim'
 
 ----------------------------------------------------------------------
 --                         Language Support                         --
@@ -331,7 +332,7 @@ return packer.startup(function()
     {
         'L3MON4D3/LuaSnip',
 
-        requires = {"benfowler/telescope-luasnip.nvim", 'saadparwaiz1/cmp_luasnip'}
+        requires = {'benfowler/telescope-luasnip.nvim', 'saadparwaiz1/cmp_luasnip'}
     }
 
     -- For neovim lsp completion items
@@ -349,8 +350,8 @@ return packer.startup(function()
     -- Show diagnosis
     use
     {
-        "folke/trouble.nvim",
-        requires = "kyazdani42/nvim-web-devicons",
+        'folke/trouble.nvim',
+        requires = 'kyazdani42/nvim-web-devicons',
     }
 
     -- A tree like view for symbols
@@ -367,7 +368,7 @@ return packer.startup(function()
     }
 
     -- Signature help
-    use "ray-x/lsp_signature.nvim"
+    use 'ray-x/lsp_signature.nvim'
 
     -- Show the top of a function or a class
     use 'romgrk/nvim-treesitter-context'
@@ -382,16 +383,22 @@ return packer.startup(function()
         run = function() vim.fn[':TSUpdate'](0) end
     }
 
-    -- Language Servers
+    -- Install language servers and tools
     use
     {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig",
+        'williamboman/mason.nvim',
+        'WhoIsSethDaniel/mason-tool-installer.nvim'
+    }
+
+    -- Configure language servers
+    use
+    {
+        'williamboman/mason-lspconfig.nvim',
+        'neovim/nvim-lspconfig',
     }
 
     -- Help for builtin lua functions
-    use "milisims/nvim-luaref"
+    use 'milisims/nvim-luaref'
 
     -- Auto completion
     use
@@ -400,8 +407,8 @@ return packer.startup(function()
         requires = {{'hrsh7th/cmp-path',  'f3fora/cmp-spell',
                     'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
                     -- {'tzachar/cmp-tabnine', run='./install.sh'}, --NOTE: Eats a lot of memory!
-                    "lukas-reineke/cmp-under-comparator", "hrsh7th/cmp-emoji",
-                    "kdheepak/cmp-latex-symbols", "hrsh7th/cmp-calc",}}
+                    'lukas-reineke/cmp-under-comparator', 'hrsh7th/cmp-emoji',
+                    'kdheepak/cmp-latex-symbols', 'hrsh7th/cmp-calc',}}
     }
 
     -- Config language servers with json
@@ -433,20 +440,20 @@ return packer.startup(function()
     use 'alec-gibson/nvim-tetris'
 
     -- SQLite/LuaJIT binding for lua and neovim
-    use "kkharji/sqlite.lua"
+    use 'kkharji/sqlite.lua'
 
     -- Treesitter playground integrated into Neovim
     use
     {
-        "nvim-treesitter/playground",
-        requires = {"nvim-treesitter/nvim-treesitter"}
+        'nvim-treesitter/playground',
+        requires = {'nvim-treesitter/nvim-treesitter'}
     }
 ----------------------------------------------------------------------
 
 
   --if packer isn't installed install it
  if packer_bootstrap then
-    require("usr.utils").import('packer').sync()
+    utils.include('packer').sync()
   end
 end)
 ----------------------------------------------------------------------

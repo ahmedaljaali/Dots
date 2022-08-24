@@ -1,6 +1,8 @@
-local mason = require("usr.utils").import("mason")
-local lspconfig = require("usr.utils").import("lspconfig")
-local mason_lspconfig = require('usr.utils').import("mason-lspconfig")
+local utils = require('usr.utils')
+local mason = utils.include('mason')
+local lspconfig = utils.include('lspconfig')
+local mason_lspconfig = utils.include('mason-lspconfig')
+local mason_tool_installer = utils.include('mason-tool-installer')
 
 ----------------------------------------------------------------------
 --                        setup mason                             --
@@ -12,37 +14,37 @@ mason.setup({
         check_outdated_packages_on_open = true,
 
         -- The border to use for the UI window. Accepts same border values as |nvim_open_win()|.
-        border = "none",
+        border = 'none',
 
         icons = {
             -- The list icon to use for installed packages.
-            package_installed = "◍",
+            package_installed = '◍',
             -- The list icon to use for packages that are installing, or queued for installation.
-            package_pending = "◍",
+            package_pending = '◍',
             -- The list icon to use for packages that are not installed.
-            package_uninstalled = "◍",
+            package_uninstalled = '◍',
         },
 
 
         keymaps = {
             -- Keymap to expand a package
-            toggle_package_expand = "<CR>",
+            toggle_package_expand = '<CR>',
             -- Keymap to install the package under the current cursor position
-            install_package = "i",
+            install_package = 'i',
             -- Keymap to reinstall/update the package under the current cursor position
-            update_package = "u",
+            update_package = 'u',
             -- Keymap to check for new version for the package under the current cursor position
-            check_package_version = "c",
+            check_package_version = 'c',
             -- Keymap to update all installed packages
-            update_all_packages = "U",
+            update_all_packages = 'U',
             -- Keymap to check which installed packages are outdated
-            check_outdated_packages = "C",
+            check_outdated_packages = 'C',
             -- Keymap to uninstall a package
-            uninstall_package = "X",
+            uninstall_package = 'X',
             -- Keymap to cancel a package installation
-            cancel_installation = "<C-c>",
+            cancel_installation = '<C-c>',
             -- Keymap to apply language filter
-            apply_language_filter = "<C-f>",
+            apply_language_filter = '<C-f>',
         },
     },
 
@@ -50,7 +52,7 @@ mason.setup({
         -- These args will be added to `pip install` calls. Note that setting extra args might impact intended behavior
         -- and is not recommended.
         --
-        -- Example: { "--proxy", "https://proxyserver" }
+        -- Example: { '--proxy', 'https://proxyserver' }
         install_args = {},
     },
 
@@ -65,21 +67,34 @@ mason.setup({
     github = {
         -- The template URL to use when downloading assets from GitHub.
         -- The placeholders are the following (in order):
-        -- 1. The repository (e.g. "rust-lang/rust-analyzer")
-        -- 2. The release version (e.g. "v0.3.0")
-        -- 3. The asset name (e.g. "rust-analyzer-v0.3.0-x86_64-unknown-linux-gnu.tar.gz")
-        download_url_template = "https://github.com/%s/releases/download/%s/%s",
+        -- 1. The repository (e.g. 'rust-lang/rust-analyzer')
+        -- 2. The release version (e.g. 'v0.3.0')
+        -- 3. The asset name (e.g. 'rust-analyzer-v0.3.0-x86_64-unknown-linux-gnu.tar.gz')
+        download_url_template = 'https://github.com/%s/releases/download/%s/%s',
     },
 })
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
---                  configure lspconfig with mason                  --
+--                          Install tools                           --
 
-mason_lspconfig.setup({
-    ensure_installed = { "clangd", "lua-language-server", "jsonls", "cmake", "vimls" },
-})
+
+mason_tool_installer.setup{
+
+    ensure_installed = {
+        'clangd',
+        'cmake-language-server',
+        'cpptools',
+        'json-lsp',
+        'lua-language-server',
+        'vim-language-server',
+    },
+
+    auto_update = true,
+    run_on_start = true,
+    start_delay = 3000,  -- 3 second delay
+}
 ----------------------------------------------------------------------
 
 
@@ -88,23 +103,23 @@ mason_lspconfig.setup({
 
 mason_lspconfig.setup_handlers({
 
-    ["sumneko_lua"] = function ()
+    ['sumneko_lua'] = function ()
         lspconfig.sumneko_lua.setup{}
     end,
 
-    ["clangd"] = function ()
+    ['clangd'] = function ()
         lspconfig.clangd.setup{}
     end,
 
-    ["cmake"] = function ()
+    ['cmake'] = function ()
         lspconfig.cmake.setup{}
     end,
 
-    ["jsonls"] = function ()
+    ['jsonls'] = function ()
         lspconfig.jsonls.setup{}
     end,
 
-    ["vimls"] = function ()
+    ['vimls'] = function ()
         lspconfig.vimls.setup{}
     end,
 })

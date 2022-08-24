@@ -1,14 +1,15 @@
-local modes = require("usr.utils").import('modes')
+local utils = require('usr.utils')
+local modes = utils.include('modes')
 
 ----------------------------------------------------------------------
 --                           Modes config                           --
 
 modes.setup({
     colors = {
-        copy = "#d79921",
-        delete = "#9d0006",
-        insert = "#458588",
-        visual = "#b16286",
+        copy = '#d79921',
+        delete = '#9d0006',
+        insert = '#458588',
+        visual = '#b16286',
     },
 
     -- Cursorline highlight opacity

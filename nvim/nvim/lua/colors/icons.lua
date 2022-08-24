@@ -1,4 +1,5 @@
-local webdev = require("usr.utils").import('nvim-web-devicons')
+local utils = require('usr.utils')
+local webdev = utils.include('nvim-web-devicons')
 
 
 ----------------------------------------------------------------------
@@ -6,9 +7,9 @@ local webdev = require("usr.utils").import('nvim-web-devicons')
 
 local my_icons = {
     cc= {
-        icon = "",
-        color = "#458588",
-        name = "cc"
+        icon = '',
+        color = '#458588',
+        name = 'cc'
     }
 }
 ----------------------------------------------------------------------

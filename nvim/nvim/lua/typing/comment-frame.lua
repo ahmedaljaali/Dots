@@ -1,4 +1,5 @@
-local commentFrame = require("usr.utils").import('nvim-comment-frame')
+local utils = require('usr.utils')
+local commentFrame = utils.include('nvim-comment-frame')
 
 ----------------------------------------------------------------------
 --                       Setup comment frame                        --

@@ -5,8 +5,8 @@ local autocmd = vim.api.nvim_create_autocmd
 --            Open .vert and .frag files as .glsl                   --
 
 autocmd(
-    {"BufNewFile", "BufRead"},
-    {pattern = { "*.vert", "*.frag"}, command = ":set filetype=glsl"}
+    {'BufNewFile', 'BufRead'},
+    {pattern = { '*.vert', '*.frag'}, command = ':set filetype=glsl'}
 )
 ----------------------------------------------------------------------
 
@@ -16,8 +16,8 @@ autocmd(
 --                      plugins.lua is updated                      --
 
 autocmd(
-    {"BufWritePost"},
-    {pattern = "plugins.lua", command = "source <afile> | PackerCompile"}
+    {'BufWritePost'},
+    {pattern = 'plugins.lua', command = 'source <afile> | PackerCompile'}
 )
 ----------------------------------------------------------------------
 
@@ -26,8 +26,8 @@ autocmd(
 --            Disable spellchecking for terminal window             --
 
 autocmd(
-    {"TermOpen"},
-    {pattern = "term://*", command = "setlocal nospell"}
+    {'TermOpen'},
+    {pattern = 'term://*', command = 'setlocal nospell'}
 )
 ----------------------------------------------------------------------
 
@@ -36,14 +36,14 @@ autocmd(
 
 -- WARN: tab line wont work after this autocmd
 autocmd(
-    {"FileType"},
-    {pattern = "startify", command = "setlocal showtabline=0 | 3"}
+    {'FileType'},
+    {pattern = 'startify', command = 'setlocal showtabline=0 | 3'}
 )
 
 -- WARN: temporary fix
 autocmd(
-    {"FileType"},
-    {pattern = {"lua", "cpp"}, command = "set showtabline=2"}
+    {'FileType'},
+    {pattern = {'lua', 'cpp'}, command = 'set showtabline=2'}
 )
 ----------------------------------------------------------------------
 
@@ -52,14 +52,14 @@ autocmd(
 
 -- WARN: status line wont work after this autocmd
 autocmd(
-    {"FileType"},
-    {pattern = "startify", command = "setlocal laststatus=0"}
+    {'FileType'},
+    {pattern = 'startify', command = 'setlocal laststatus=0'}
 )
 
 -- WARN: temporary fix
 autocmd(
-    {"FileType"},
-    {pattern = {"lua", "cpp"}, command = "set laststatus=3"}
+    {'FileType'},
+    {pattern = {'lua', 'cpp'}, command = 'set laststatus=3'}
 )
 ----------------------------------------------------------------------
 
@@ -68,8 +68,8 @@ autocmd(
 --            Disable spellchecking for cmake window                --
 
 autocmd(
-    {"FileType"},
-    {pattern = "vimcmake", command = "setlocal nospell"}
+    {'FileType'},
+    {pattern = 'vimcmake', command = 'setlocal nospell'}
 )
 ----------------------------------------------------------------------
 
@@ -77,7 +77,7 @@ autocmd(
 ----------------------------------------------------------------------
 --                             Luasnip                              --
 
-vim.cmd([[command! LuaSnipEdit :lua require("luasnip.loaders.from_lua").edit_snippet_files()]]) --}}}
+vim.cmd([[command! LuaSnipEdit :lua require('luasnip.loaders.from_lua').edit_snippet_files()]]) --}}}
 vim.cmd([[autocmd BufEnter */snippets/*.lua nnoremap <silent> <buffer> <CR> /-- End Refactoring --<CR>O<Esc>O]])
 ----------------------------------------------------------------------
 
@@ -87,10 +87,10 @@ vim.cmd([[autocmd BufEnter */snippets/*.lua nnoremap <silent> <buffer> <CR> /-- 
 
 
 vim.api.nvim_create_autocmd(
-    { "BufWritePost" },
+    { 'BufWritePost' },
     {
         callback = function()
-            require("lint").try_lint()
+            require('lint').try_lint()
         end,
     }
 )

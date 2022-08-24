@@ -1,4 +1,5 @@
-local autosave = require("usr.utils").import("autosave")
+local utils = require('usr.utils')
+local autosave = utils.include('autosave')
 
 ----------------------------------------------------------------------
 --                      Cursor Hold Update time                  --
@@ -14,12 +15,12 @@ vim.opt.updatetime = 1000
 autosave.setup(
     {
         enabled = true,
-        execution_message = "Saved at " .. os.date("%H:%M:%S"),
-        events = {"InsertLeave", "WinLeave", "TabLeave"},
+        execution_message = 'Saved at ' .. os.date('%H:%M:%S'),
+        events = {'InsertLeave', 'WinLeave', 'TabLeave'},
         conditions = {
             exists = true,
             filename_is_not = {},
-            filetype_is_not = {"gitcommit"},
+            filetype_is_not = {'gitcommit'},
             modifiable = true
         },
         write_all_buffers = true,

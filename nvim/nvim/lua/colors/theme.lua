@@ -1,4 +1,5 @@
-local oneDark = require("usr.utils").import('onedark')
+local utils = require('usr.utils')
+local oneDark = utils.include('onedark')
 
 ----------------------------------------------------------------------
 --                              Syntac                              --
@@ -71,7 +72,7 @@ oneDark.setup  {
 --
 -- vim.opt.termguicolors = true
 --
-vim.opt.background = "dark" -- or "light" for light mode
+vim.opt.background = 'dark' -- or 'light' for light mode
 
 vim.cmd([[colorscheme gruvbox]])
 ----------------------------------------------------------------------

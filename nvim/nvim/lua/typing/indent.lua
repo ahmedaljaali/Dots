@@ -1,17 +1,18 @@
-local indent_blankline = require("usr.utils").import("indent_blankline")
+local utils = require('usr.utils')
+local indent_blankline = utils.include('indent_blankline')
 
 ----------------------------------------------------------------------
 --                             Exclude                              --
 
-vim.g.indent_blankline_buftype_exclude = { "terminal", "nofile" }
+vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }
 vim.g.indent_blankline_filetype_exclude = {
-	"help",
-	"startify",
-	"dashboard",
-	"packer",
-	"neogitstatus",
-	"NvimTree",
-	"Trouble",
+	'help',
+	'startify',
+	'dashboard',
+	'packer',
+	'neogitstatus',
+	'NvimTree',
+	'Trouble',
 }
 ----------------------------------------------------------------------
 
@@ -42,12 +43,12 @@ vim.cmd [[highlight IndentBlanklineIndent6 guifg=#9d0006 gui=nocombine]]
 indent_blankline.setup({
 	show_current_context = true,
     char_highlight_list = {
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
-        "IndentBlanklineIndent3",
-        "IndentBlanklineIndent4",
-        "IndentBlanklineIndent5",
-        "IndentBlanklineIndent6",
+        'IndentBlanklineIndent1',
+        'IndentBlanklineIndent2',
+        'IndentBlanklineIndent3',
+        'IndentBlanklineIndent4',
+        'IndentBlanklineIndent5',
+        'IndentBlanklineIndent6',
     },
 })
 ----------------------------------------------------------------------

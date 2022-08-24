@@ -59,9 +59,9 @@ vim.opt.hlsearch = false
 ----------------------------------------------------------------------
 --          Store backup, undo and swap files in temp dir           --
 
-vim.opt.directory = os.getenv("HOME") .. '/tmp/swap'
-vim.g['backupdiri'] = os.getenv("HOME") .. '/tmp/backup'
-vim.opt.undodir = os.getenv("HOME") .. '/tmp/undo'
+vim.opt.directory = os.getenv('HOME') .. '/tmp/swap'
+vim.g['backupdiri'] = os.getenv('HOME') .. '/tmp/backup'
+vim.opt.undodir = os.getenv('HOME') .. '/tmp/undo'
 ----------------------------------------------------------------------
 
 
@@ -120,7 +120,7 @@ vim.opt.cursorline = true
 --                         Conceal sittings                         --
 
 vim.opt.conceallevel = 2
-vim.o.concealcursor = ""
+vim.o.concealcursor = ''
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------

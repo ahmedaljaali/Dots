@@ -1,7 +1,8 @@
 ----------------------------------------------------------------------
 --                         Local variables                          --
 
-local ls = require("usr.utils").import("luasnip")
+local utils = require('usr.utils')
+local ls = utils.include('luasnip')
 local s = ls.s --> snippet
 local i = ls.i --> insert node
 local t = ls.t --> text node
@@ -11,13 +12,13 @@ local c = ls.choice_node
 local f = ls.function_node
 local sn = ls.snippet_node
 
-local fmt = require('usr.utils').import("luasnip.extras.fmt").fmt
-local rep = require('usr.utils').import("luasnip.extras").rep
+local fmt = utils.include('luasnip.extras.fmt').fmt
+local rep = utils.include('luasnip.extras').rep
 
 local snippets, autosnippets = {}, {}
 
-local group = vim.api.nvim_create_augroup("Lua Snippets", { clear = true })
-local file_pattern = "*.cpp"
+local group = vim.api.nvim_create_augroup('Lua Snippets', { clear = true })
+local file_pattern = '*.cpp'
 ----------------------------------------------------------------------
 
 
@@ -25,7 +26,7 @@ local file_pattern = "*.cpp"
 --                           Snippets                             --
 
 
-local randomNum = s({trig = "random", name= "Random", dscr = "Generate a random number between min and max (inclusive)"},
+local randomNum = s({trig = 'random', name= 'Random', dscr = 'Generate a random number between min and max (inclusive)'},
     fmt(
 [[
 #include <random>
@@ -47,7 +48,7 @@ table.insert(snippets, randomNum)
 
 
 
-local timer= s({trig = "timer", name= "Timer", dscr = "Misure the time of execution"},
+local timer= s({trig = 'timer', name= 'Timer', dscr = 'Misure the time of execution'},
     fmt(
 [[
 #include <chrono> // for std::chrono functions
@@ -138,9 +139,9 @@ public: // Public methods
 }};
 ]],
     {
-        i(1, "Name"),
-        c(2, {t("final"), t("")}),
-        i(3, ""),
+        i(1, 'Name'),
+        c(2, {t('final'), t('')}),
+        i(3, ''),
         rep(1),
         rep(1),
         rep(1),
@@ -158,7 +159,7 @@ table.insert(snippets, class)
 
 
 
-local main = s("main",
+local main = s('main',
     fmt(
 [[
 int main({})
@@ -170,8 +171,8 @@ int main({})
 }}
 ]],
     {
-        c(1, {t("void"), t("int argc, char **argv")}),
-        i(2, "")
+        c(1, {t('void'), t('int argc, char **argv')}),
+        i(2, '')
 
     }
     )

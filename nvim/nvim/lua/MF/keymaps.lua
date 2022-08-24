@@ -1,6 +1,7 @@
 ----------------------------------------------------------------------
 --                         local variables                          --
 
+local utils = require('usr.utils')
 ---------------------------------------------
 --For keymaps
 local opts = { noremap = true, silent = true }
@@ -9,7 +10,7 @@ local map = vim.keymap.set
 
 ---------------------------------------------
 -- Luasnip
-local ls = require("usr.utils").import("luasnip")
+local ls = utils.include('luasnip')
 ---------------------------------------------
 
 ----------------------------------------------------------------------
@@ -24,7 +25,7 @@ map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
 map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 map('n', '<Leader>sh', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-map('n', '<Leader>rn', "<cmd>lua vim.lsp.buf.rename()<CR>" , opts)
+map('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>' , opts)
 map('n', 'gr', '<cmd>Telescope lsp_references<CR>', opts)
 map('n', '<Leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
@@ -44,10 +45,10 @@ map('', '<A-=>', '<C-w>=', opts)
 
 
 --Remap splits navigation to just CTRL + hjkl
-map("", "<C-h>", "<C-\\><C-N><C-w>h", { silent = true })
-map("", "<C-j>", "<C-\\><C-N><C-w>j", { silent = true })
-map("", "<C-k>", "<C-\\><C-N><C-w>k", { silent = true })
-map("", "<C-l>", "<C-\\><C-N><C-w>l", { silent = true })
+map('', '<C-h>', '<C-\\><C-N><C-w>h', { silent = true })
+map('', '<C-j>', '<C-\\><C-N><C-w>j', { silent = true })
+map('', '<C-k>', '<C-\\><C-N><C-w>k', { silent = true })
+map('', '<C-l>', '<C-\\><C-N><C-w>l', { silent = true })
 ----------------------------------------------------------------------
 
 
@@ -102,7 +103,7 @@ map('n', '<Leader>ls', ':SLoad<CR>', opts)
 -- close cmake then run
 map('n', '<leader>tr', function ()
     vim.cmd[[:CMakeClose]]
-    vim.cmd[[:FloatermNew  --height=20 --autoclose=0  eval "$(find ./bin -type f -executable -print)"]]
+    vim.cmd[[:FloatermNew  --height=20 --autoclose=0  eval '$(find ./bin -type f -executable -print)']]
 end, opts)
 ----------------------------------------------------------------------
 
@@ -154,13 +155,13 @@ map('n', '<leader>tb', '<cmd>Telescope buffers<cr>', opts)
 map('n', '<leader>th', '<cmd>Telescope help_tags<cr>', opts)
 
 -- Telescope Luasnip
-map("n", "<leader>tsp", "<cmd>Telescope luasnip<cr>", opts)
+map('n', '<leader>tsp', '<cmd>Telescope luasnip<cr>', opts)
 
 -- Neoclip
-map("n", "<Leader>yh", "<cmd>Telescope neoclip<cr>", opts)
+map('n', '<Leader>yh', '<cmd>Telescope neoclip<cr>', opts)
 
 --Todo
-map("n", "<Leader>td", "<cmd>TodoTelescope<CR>", opts)
+map('n', '<Leader>td', '<cmd>TodoTelescope<CR>', opts)
 ----------------------------------------------------------------------
 
 
@@ -168,8 +169,8 @@ map("n", "<Leader>td", "<cmd>TodoTelescope<CR>", opts)
 --                             trouble                              --
 
 
-map("n", "<leader>tad", "<cmd>Trouble workspace_diagnostics<cr>", opts)
-map("n", "<leader>tcd", "<cmd>Trouble document_diagnostics<cr>", opts)
+map('n', '<leader>tad', '<cmd>Trouble workspace_diagnostics<cr>', opts)
+map('n', '<leader>tcd', '<cmd>Trouble document_diagnostics<cr>', opts)
 ----------------------------------------------------------------------
 
 
@@ -201,26 +202,26 @@ map('n', '<Leader>tt', '<cmd>NvimTreeToggle<cr>', opts)
 --                             luasnip                             --
 
 
-map({ "i", "s" }, "<Leader>sn", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
-map({ "i", "s" }, "<Leader>sp", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
-map({ "i", "s" }, "<c-s>", "<Esc>:w<cr>")
-map({ "i", "s" }, "<c-u>", '<cmd>lua require("luasnip.extras.select_choice")()<cr><C-c><C-c>')
-map({ "i", "s" }, "<a-p>", function()
+map({ 'i', 's' }, '<Leader>sn', function() ls.jump(1) end, opts)
+map({ 'i', 's' }, '<Leader>sp', function() ls.jump(-1) end, opts)
+map({ 'i', 's' }, '<c-s>', '<Esc>:w<cr>')
+map({ 'i', 's' }, '<c-u>', '<cmd>lua require(\'luasnip.extras.select_choice\')()<cr><C-c><C-c>')
+map({ 'i', 's' }, '<a-p>', function()
 	if ls.expand_or_jumpable() then
 		ls.expand()
 	end
 end, { silent = true })
-map({ "i", "s" }, "<Leader>sc", function()
+map({ 'i', 's' }, '<Leader>sc', function()
 	if ls.choice_active() then
 		ls.change_choice(1)
 	else
 		-- print current time
-		local t = os.date("*t")
-		local time = string.format("%02d:%02d:%02d", t.hour, t.min, t.sec)
+		local t = os.date('*t')
+		local time = string.format('%02d:%02d:%02d', t.hour, t.min, t.sec)
 		print(time)
 	end
 end)
-map({ "i", "s" }, "<Leader>sv", function()
+map({ 'i', 's' }, '<Leader>sv', function()
 	if ls.choice_active() then
 		ls.change_choice(-1)
 	end
@@ -233,22 +234,22 @@ map('n', '<Leader>ls', '<cmd>source' .. vim.fn.stdpath('config') .. '/lua/LS/lua
 --                             Hexmode                              --
 
 
-map('n', '<Leader>he', "<cmd>Hexmode<cr>", opts);
+map('n', '<Leader>he', '<cmd>Hexmode<cr>', opts);
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                               dial                               --
 
-map("n", "<C-a>", require("dial.map").inc_normal(), opts)
-map("n", "<C-x>", require("dial.map").dec_normal(), opts)
+map('n', '<C-a>', require('dial.map').inc_normal(), opts)
+map('n', '<C-x>', require('dial.map').dec_normal(), opts)
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                              Tetris                              --
 
-map('n', '<Leader>pt', "<cmd>Tetris<cr>", opts)
+map('n', '<Leader>pt', '<cmd>Tetris<cr>', opts)
 
 --[[
 Conftrol
@@ -264,25 +265,25 @@ Space Bar: hard drop
 ----------------------------------------------------------------------
 --                               Hop                                --
 
-map("", "fw", "<cmd>HopWord<CR>", opts)
-map("", "fp", "<cmd>HopPattern<CR>", opts)
-map("", "fc", "<cmd>HopChar2<CR>", opts)
-map("", "fl", "<cmd>HopLine<CR>", opts)
+map('', 'fw', '<cmd>HopWord<CR>', opts)
+map('', 'fp', '<cmd>HopPattern<CR>', opts)
+map('', 'fc', '<cmd>HopChar2<CR>', opts)
+map('', 'fl', '<cmd>HopLine<CR>', opts)
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                            RGB picker                            --
 
-map("n", "<Leader>rgb", "<cmd>PickColor<cr>", opts)
-map("i", "<Leader>rgb", "<cmd>PickColorInsert<cr>", opts)
+map('n', '<Leader>rgb', '<cmd>PickColor<cr>', opts)
+map('i', '<Leader>rgb', '<cmd>PickColorInsert<cr>', opts)
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                          Comment Frame                           --
 
-vim.api.nvim_set_keymap('n', '<leader>cc', ":lua require('nvim-comment-frame').add_comment()<CR>", {})
+map('n', '<leader>cc', function() require('nvim-comment-frame').add_comment() end, opts)
 
-vim.api.nvim_set_keymap('n', '<leader>C', ":lua require('nvim-comment-frame').add_multiline_comment()<CR>", {})
+map('n', '<leader>C', function() require('nvim-comment-frame').add_multiline_comment() end, opts)
 ----------------------------------------------------------------------

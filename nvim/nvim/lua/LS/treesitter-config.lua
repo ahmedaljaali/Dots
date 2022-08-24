@@ -1,4 +1,5 @@
-local configs = require("usr.utils").import('nvim-treesitter.configs')
+local utils = require('usr.utils')
+local configs = utils.include('nvim-treesitter.configs')
 
 ----------------------------------------------------------------------
 --                            Tree sitter                            --
@@ -11,17 +12,17 @@ configs.setup {
         enable = true,
 
         -- optional, list of language that will be disabled
-        disable = { "c", "ruby" },
+        disable = { 'c', 'ruby' },
 
     },
     ensure_installed = {
-        "cpp",
-        "json",
-        "cmake",
-        "markdown",
-        "lua",
-        "query",
-        "glsl"
+        'cpp',
+        'json',
+        'cmake',
+        'markdown',
+        'lua',
+        'query',
+        'glsl'
     },
     sync_install = true;
 
@@ -34,7 +35,7 @@ configs.setup {
     rainbow = {
         enable = true,
 
-        -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
+        -- disable = { 'jsx', 'cpp' }, list of languages you want to disable the plugin for
 
         -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
         extended_mode = true,
@@ -75,7 +76,7 @@ configs.setup {
     query_linter = {
         enable = true,
         use_virtual_text = true,
-        lint_events = {"BufWrite", "CursorHold"},
+        lint_events = {'BufWrite', 'CursorHold'},
     },
     indent = {
     -- default is disabled anyways

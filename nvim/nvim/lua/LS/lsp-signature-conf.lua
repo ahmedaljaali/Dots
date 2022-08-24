@@ -1,4 +1,5 @@
-local signature = require("usr.utils").import('lsp_signature')
+local utils = require('usr.utils')
+local signature = utils.include('lsp_signature')
 
 
 ----------------------------------------------------------------------
@@ -10,7 +11,7 @@ cfg = {
     debug = false,
 
     -- log dir when debug is on
-    log_path = vim.fn.stdpath("cache") .. "/lsp_signature.log",
+    log_path = vim.fn.stdpath('cache') .. '/lsp_signature.log',
     -- default is  ~/.cache/nvim/lsp_signature.log
 
     ---- show debug line number
@@ -52,11 +53,11 @@ cfg = {
     hint_enable = true,
 
     --  for parameter
-    hint_prefix = "",
-    hint_scheme = "String",
+    hint_prefix = '',
+    hint_scheme = 'String',
 
     -- how your parameter will be highlight
-    hi_parameter = "LspSignatureActiveParameter",
+    hi_parameter = 'LspSignatureActiveParameter',
 
     -- max height of signature floating_window, if content is more than max_height, you can scroll down
     max_height = 12,
@@ -67,7 +68,7 @@ cfg = {
     handler_opts = {
 
         -- double, rounded, single, shadow, none
-        border = "rounded"
+        border = 'rounded'
     },
 
 
@@ -78,7 +79,7 @@ cfg = {
     -- autoclose signature float win after x sec, disabled if nil.
     auto_close_after = nil,
 
-    -- Array of extra characters that will trigger signature completion, e.g., {"(", ","}
+    -- Array of extra characters that will trigger signature completion, e.g., {'(', ','}
     extra_trigger_chars = {},
 
     -- by default it will be on top of all floating windows, set to <= 50 send it to bottom

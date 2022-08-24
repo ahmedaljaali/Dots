@@ -1,4 +1,5 @@
-local context = require("usr.utils").import('treesitter-context')
+local utils = require('usr.utils')
+local context = utils.include('treesitter-context')
 
 
 ----------------------------------------------------------------------
@@ -41,8 +42,8 @@ context.setup{
     },
     exact_patterns = {
         -- Example for a specific filetype with Lua patterns
-        -- Treat patterns.rust as a Lua pattern (i.e "^impl_item$" will
-        -- exactly match "impl_item" only)
+        -- Treat patterns.rust as a Lua pattern (i.e '^impl_item$' will
+        -- exactly match 'impl_item' only)
         -- rust = true,
     }
 }

@@ -1,7 +1,9 @@
 ----------------------------------------------------------------------
 --                         Local variables                          --
 
-local ls = require("usr.utils").import("luasnip")
+
+local utils = require('usr.utils')
+local ls = utils.include('luasnip')
 local s = ls.s --> snippet
 local i = ls.i --> insert node
 local t = ls.t --> text node
@@ -11,13 +13,13 @@ local c = ls.choice_node
 local f = ls.function_node
 local sn = ls.snippet_node
 
-local fmt = require('usr.utils').import("luasnip.extras.fmt").fmt
-local rep = require('usr.utils').import("luasnip.extras").rep
+local fmt = utils.include('luasnip.extras.fmt').fmt
+local rep = utils.include('luasnip.extras').rep
 
 local snippets, autosnippets = {}, {}
 
-local group = vim.api.nvim_create_augroup("Lua Snippets", { clear = true })
-local file_pattern = "CMakeLists.txt"
+local group = vim.api.nvim_create_augroup('Lua Snippets', { clear = true })
+local file_pattern = 'CMakeLists.txt'
 ----------------------------------------------------------------------
 
 
@@ -57,15 +59,15 @@ target_include_directories(${{PROJECT_NAME}} PUBLIC ${{CMAKE_CURRENT_SOURCE_DIR}
 set_target_properties(${{PROJECT_NAME}} PROPERTIES
 
     # Specify directories
-    ARCHIVE_OUTPUT_DIRECTORY "${{CMAKE_CURRENT_SOURCE_DIR}}/lib"
-    LIBRARY_OUTPUT_DIRECTORY "${{CMAKE_CURRENT_SOURCE_DIR}}/lib"
-    RUNTIME_OUTPUT_DIRECTORY "${{CMAKE_CURRENT_SOURCE_DIR}}/bin"
+    ARCHIVE_OUTPUT_DIRECTORY '${{CMAKE_CURRENT_SOURCE_DIR}}/lib'
+    LIBRARY_OUTPUT_DIRECTORY '${{CMAKE_CURRENT_SOURCE_DIR}}/lib'
+    RUNTIME_OUTPUT_DIRECTORY '${{CMAKE_CURRENT_SOURCE_DIR}}/bin'
 
     # Set C++ slandered
     CXX_STANDARD {}
     CXX_STANDARD_REQUIRED {}
 
-    OUTPUT_NAME "{}"
+    OUTPUT_NAME '{}'
 )
 #--------------------------------------------------------------------#
 
@@ -82,7 +84,7 @@ set(CMAKE_C_COMPILER clang)
 
 
 SET(CMAKE_BUILD_TYPE debug)
-SET(CMAKE_CXX_FLAGS_DEBUG "-O0 -Werror -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded")
+SET(CMAKE_CXX_FLAGS_DEBUG '-O0 -Werror -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded')
 #-Werror Treat warnings as errors
 #--------------------------------------------------------------------#
 
@@ -92,15 +94,15 @@ SET(CMAKE_CXX_FLAGS_DEBUG "-O0 -Werror -Weverything -Wno-c++98-compat -Wno-c++98
 
 
 # SET(CMAKE_BUILD_TYPE release)
-SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
+SET(CMAKE_CXX_FLAGS_RELEASE '-O3')
 #--------------------------------------------------------------------#
 ]],
     {
-        i(1, "Cmake Version"),
-        i(2, "Project Name"),
-        i(3, "C++ Version"),
-        c(4, {t("ON"), t("OFF")}),
-        i(5, "Executable name")
+        i(1, 'Cmake Version'),
+        i(2, 'Project Name'),
+        i(3, 'C++ Version'),
+        c(4, {t('ON'), t('OFF')}),
+        i(5, 'Executable name')
     }
     )
 )
@@ -108,7 +110,7 @@ table.insert(snippets, default)
 
 
 
-local shaders = s("shaders",
+local shaders = s('shaders',
     fmt(
 [[
 
@@ -129,13 +131,13 @@ find_program(GLSL_VALIDATOR glslangValidator HINTS
 
 # get all .vert and .frag files in shaders directory
 file(GLOB_RECURSE GLSL_SOURCE_FILES
-"${{PROJECT_SOURCE_DIR}}/shaders/*.frag"
-"${{PROJECT_SOURCE_DIR}}/shaders/*.vert"
+'${{PROJECT_SOURCE_DIR}}/shaders/*.frag'
+'${{PROJECT_SOURCE_DIR}}/shaders/*.vert'
 )
 
 foreach(GLSL ${{GLSL_SOURCE_FILES}})
   get_filename_component(FILE_NAME ${{GLSL}} NAME)
-  set(SPIRV "${{PROJECT_SOURCE_DIR}}/shaders/${{FILE_NAME}}.spv")
+  set(SPIRV '${{PROJECT_SOURCE_DIR}}/shaders/${{FILE_NAME}}.spv')
   add_custom_command(
     OUTPUT ${{SPIRV}}
     COMMAND ${{GLSL_VALIDATOR}} -V ${{GLSL}} -o ${{SPIRV}}
@@ -159,7 +161,7 @@ add_dependencies(${{PROJECT_NAME}} Shaders)
 )
 table.insert(snippets, shaders)
 
-local updateSubmodule = s("updateSubmodule",
+local updateSubmodule = s('updateSubmodule',
     fmt(
 [[
 #--------------------------------------------------------------------#
@@ -167,16 +169,16 @@ local updateSubmodule = s("updateSubmodule",
 
 
 find_package(Git QUIET)
-if(GIT_FOUND AND EXISTS "${{CMAKE_CURRENT_SOURCE_DIR}}/.git")
+if(GIT_FOUND AND EXISTS '${{CMAKE_CURRENT_SOURCE_DIR}}/.git')
     # Update if needed
-    option(GIT_SUBMODULE "Check submodules during generation" ON)
+    option(GIT_SUBMODULE 'Check submodules during generation' ON)
     if(GIT_SUBMODULE)
-        message(STATUS "Submodule Update")
+        message(STATUS 'Submodule Update')
         execute_process(COMMAND ${{GIT_EXECUTABLE}} submodule update --init --recursive --remote
             WORKING_DIRECTORY ${{CMAKE_CURRENT_SOURCE_DIR}}
             RESULT_VARIABLE GIT_SUBMOD_RESULT)
 
-        if(NOT GIT_SUBMOD_RESULT EQUAL "0")
+        if(NOT GIT_SUBMOD_RESULT EQUAL '0')
             message(FETAL_ERROR submodule update field ${{GIT_SUBMOD_RESULT}})
         endif()
     endif()

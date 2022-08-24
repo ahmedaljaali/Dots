@@ -1,4 +1,5 @@
-local lint = require('usr.utils').import('lint')
+local utils = require('usr.utils')
+local lint = utils.include('lint')
 
 
 -- cppcheck <= 1.84 doesn't support {column} so the start_col group is ambiguous

@@ -1,10 +1,11 @@
-local hlargs = require("usr.utils").import('hlargs')
+local utils = require('usr.utils')
+local hlargs = utils.include('hlargs')
 
 ----------------------------------------------------------------------
 --                           Setup Hlags                            --
 
 hlargs.setup {
-    color =  "#83a598",
+    color =  '#83a598',
     excluded_filetypes = {},
     paint_arg_declarations = true,
     paint_arg_usages = true,

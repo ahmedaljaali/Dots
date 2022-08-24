@@ -1,4 +1,5 @@
-local spellchecking = require("usr.utils").import('spellsitter')
+local utils = require('usr.utils')
+local spellchecking = utils.include('spellsitter')
 
 ----------------------------------------------------------------------
 --                           Spellsitter                            --

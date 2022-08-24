@@ -1,4 +1,5 @@
-local fidget = require("usr.utils").import("fidget")
+local utils = require('usr.utils')
+local fidget = utils.include('fidget')
 
 
 ----------------------------------------------------------------------
@@ -8,16 +9,16 @@ fidget.setup
 {
     text = {
         -- animation shown when tasks are ongoing
-        spinner = "pipe",
+        spinner = 'pipe',
 
         -- character shown when all tasks are complete
-        done = "✔",
+        done = '✔',
 
         -- message shown when task starts
-        commenced = "Started",
+        commenced = 'Started',
 
         -- message shown when task completes
-        completed = "Completed",
+        completed = 'Completed',
     },
     align = {
         -- align fidgets along bottom edge of buffer
@@ -38,8 +39,8 @@ fidget.setup
         task_decay = 1000,
     },
         window = {
-        -- where to anchor, either "win" or "editor"
-        relative = "win",
+        -- where to anchor, either 'win' or 'editor'
+        relative = 'win',
 
         -- &winblend for the window
         blend = 100,
@@ -61,16 +62,16 @@ fidget.setup
         -- function to format fidget title
         fidget =
         function(fidget_name, spinner)
-            return string.format("%s %s", spinner, fidget_name)
+            return string.format('%s %s', spinner, fidget_name)
         end,
 
         -- function to format each task line
         task =
         function(task_name, message, percentage)
             return string.format(
-            "%s%s [%s]",
+            '%s%s [%s]',
             message,
-            percentage and string.format(" (%s%%)", percentage) or "",
+            percentage and string.format(' (%s%%)', percentage) or '',
             task_name
             )
         end,

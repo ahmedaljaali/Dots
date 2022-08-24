@@ -1,4 +1,5 @@
-local tabline = require("usr.utils").import('tabline_framework')
+local utils = require('usr.utils')
+local tabline = utils.include('tabline_framework')
 
 ----------------------------------------------------------------------
 --                              Colors                              --
@@ -53,8 +54,8 @@ local render = function(f)
     -- local errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
     -- local warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
 
-    -- f.add { '  ' .. errors, fg = "#e86671" }
-    -- f.add { '  ' .. warnings, fg = "#e5c07b"}
+    -- f.add { '  ' .. errors, fg = '#e86671' }
+    -- f.add { '  ' .. warnings, fg = '#e5c07b'}
     -- f.add ' '
 end
 ----------------------------------------------------------------------

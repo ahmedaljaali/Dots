@@ -2,10 +2,11 @@
 --                         Local variables                          --
 
 
-local npairs = require("usr.utils").import('nvim-autopairs')
-local cmp_autopairs = require("usr.utils").import('nvim-autopairs.completion.cmp')
-local cmp = require("usr.utils").import('cmp')
-local ts_conds = require("usr.utils").import('nvim-autopairs.ts-conds')
+local utils = require('usr.utils')
+local npairs = utils.include('nvim-autopairs')
+local cmp_autopairs = utils.include('nvim-autopairs.completion.cmp')
+local cmp = utils.include('cmp')
+local ts_conds = utils.include('nvim-autopairs.ts-conds')
 ----------------------------------------------------------------------
 
 
@@ -13,10 +14,10 @@ local ts_conds = require("usr.utils").import('nvim-autopairs.ts-conds')
 --                          Default values                          --
 
 
-local disable_filetype = { "TelescopePrompt" }
+local disable_filetype = { 'TelescopePrompt' }
 local disable_in_macro = false  -- disable when recording or executing a macro
 local disable_in_visualblock = false -- disable when insert after visual block mode
-local ignored_next_char = string.gsub([[ [%w%%%'%[%"%.] ]],"%s+", "")
+local ignored_next_char = string.gsub([[ [%w%%%'%[%'%.] ]],'%s+', '')
 local enable_moveright = true
 local enable_afterquote = true  -- add bracket pairs after quote
 local enable_check_bracket_line = true  --- check bracket in same line
@@ -38,17 +39,17 @@ npairs.setup({
      -- Don't add pairs if it already has a close pair
     enable_check_bracket_line = true,
     fast_wrap = {
-        map = "<Leader>fw",
-        chars = { "{", "[", "(", '"', "'" },
-        pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
+        map = '<Leader>fw',
+        chars = { '{', '[', '(', '"', '"' },
+        pattern = string.gsub([[ [%'%'%)%>%]%)%}%,] ]], '%s+', ''),
 
      -- Offset from pattern match
         offset = 0,
-        end_key = "$",
-        keys = "qwertyuiopzxcvbnmasdfghjkl",
+        end_key = '$',
+        keys = 'qwertyuiopzxcvbnmasdfghjkl',
         check_comma = true,
-        highlight = "PmenuSel",
-        highlight_grey = "LineNr",
+        highlight = 'PmenuSel',
+        highlight_grey = 'LineNr',
     },
 })
 ----------------------------------------------------------------------

@@ -1,12 +1,13 @@
-local nlspsettings = require("usr.utils").import("nlspsettings")
-local lspconfig = require("usr.utils").import("lspconfig")
+local utils = require('usr.utils')
+local nlspsettings = utils.include('nlspsettings')
+local lspconfig = utils.include('lspconfig')
 
 ----------------------------------------------------------------------
 --                            Setup nlsp                            --
 
 nlspsettings.setup({
     config_home = vim.fn.stdpath('config') .. '/lua/SS',
-    local_settings_dir = ".nlsp-settings",
+    local_settings_dir = '.nlsp-settings',
     local_settings_root_markers = { '.git' },
     append_default_schemas = true,
     loader = 'json'
@@ -21,7 +22,7 @@ end
 local global_capabilities = vim.lsp.protocol.make_client_capabilities()
 global_capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
+lspconfig.util.default_config = vim.tbl_extend('force', lspconfig.util.default_config, {
     capabilities = global_capabilities,
 })
 ----------------------------------------------------------------------

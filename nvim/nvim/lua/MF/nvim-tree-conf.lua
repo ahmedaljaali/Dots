@@ -1,4 +1,5 @@
-local tree = require("usr.utils").import('nvim-tree')
+local utils = require('usr.utils')
+local tree = utils.include('nvim-tree')
 
 ----------------------------------------------------------------------
 --                            Setup tree                            --
@@ -15,18 +16,18 @@ tree.setup {
     open_on_setup = false,
     open_on_setup_file = false,
     open_on_tab = true,
-    sort_by = "name",
+    sort_by = 'name',
 
     update_cwd = false,
 
     view = {
         width = 30,
         height = 30,
-        side = "left",
+        side = 'left',
         preserve_window_proportions = false,
         number = false,
         relativenumber = false,
-        signcolumn = "yes",
+        signcolumn = 'yes',
         mappings = {
             custom_only = false,
             list = {
@@ -52,10 +53,10 @@ tree.setup {
         enable = true,
         show_on_dirs = true,
         icons = {
-            hint = " ",
-            info = " ",
-            warning = "",
-            error = " ",
+            hint = ' ',
+            info = ' ',
+            warning = '',
+            error = ' ',
         },
     },
     filters = {
@@ -78,16 +79,16 @@ tree.setup {
             resize_window = false,
             window_picker = {
                 enable = true,
-                chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+                chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890',
                 exclude = {
-                    filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },
-                    buftype = { "nofile", "terminal", "help" },
+                    filetype = { 'notify', 'packer', 'qf', 'diff', 'fugitive', 'fugitiveblame' },
+                    buftype = { 'nofile', 'terminal', 'help' },
                 },
             },
         },
     },
     trash = {
-        cmd = "trash",
+        cmd = 'trash',
         require_confirm = true,
     },
     log = {

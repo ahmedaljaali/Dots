@@ -1,12 +1,14 @@
+local utils = require('usr.utils')
+
 -----------------------------
 --make directory
-require("usr.utils").import('mkdir')
+utils.include('mkdir')
 -----------------------------
 
 
 -----------------------------
 --stabilize
-require("usr.utils").import("stabilize").setup()
+utils.include('stabilize').setup()
 -----------------------------
 
 
@@ -17,14 +19,14 @@ require("usr.utils").import("stabilize").setup()
 vim.g.registers_show_empty_registers = 0
 
 --Choose the border
-vim.g.registers_window_border = "rounded"
+vim.g.registers_window_border = 'rounded'
 -----------------------------
 
 
 ----------------------------------------------------------------------
 --                               Tidy                               --
 
-require("usr.utils").import("tidy").setup()
+utils.include('tidy').setup()
 ----------------------------------------------------------------------
 
 
@@ -32,25 +34,25 @@ require("usr.utils").import("tidy").setup()
 --                          Stay centered                           --
 --
 -- Exclude
-vim.api.nvim_set_var('stay-centered#skip_filetypes', {"vimcmake", "floaterm"})
+vim.api.nvim_set_var('stay-centered#skip_filetypes', {'vimcmake', 'floaterm'})
 
-require("usr.utils").import("stay-centered")
+utils.include('stay-centered')
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                           Color picker                           --
 
-require("usr.utils").import("color-picker").setup({ -- for changing icons & mappings
-	-- ["icons"] = { "ﱢ", "" },
-	-- ["icons"] = { "ﮊ", "" },
-	-- ["icons"] = { "", "ﰕ" },
-	-- ["icons"] = { "", "" },
-	-- ["icons"] = { "", "" },
-	["icons"] = { "ﱢ", "" },
-	["keymap"] = { -- mapping example:
-		["U"] = "<Plug>Slider5Decrease",
-		["O"] = "<Plug>Slider5Increase",
+utils.include('color-picker').setup({ -- for changing icons & mappings
+	-- ['icons'] = { 'ﱢ', '' },
+	-- ['icons'] = { 'ﮊ', '' },
+	-- ['icons'] = { '', 'ﰕ' },
+	-- ['icons'] = { '', '' },
+	-- ['icons'] = { '', '' },
+	['icons'] = { 'ﱢ', '' },
+	['keymap'] = { -- mapping example:
+		['U'] = '<Plug>Slider5Decrease',
+		['O'] = '<Plug>Slider5Increase',
 	},
 })
 ----------------------------------------------------------------------
@@ -59,5 +61,5 @@ require("usr.utils").import("color-picker").setup({ -- for changing icons & mapp
 ----------------------------------------------------------------------
 --                      Use hop default config                      --
 
-require("usr.utils").import('hop').setup()
+utils.include('hop').setup()
 ----------------------------------------------------------------------

@@ -17,13 +17,13 @@ vim.diagnostic.config({
 
 --[[ local function goto_definition(split_cmd)
     local util = vim.lsp.util
-    local log = require("usr.utils").import("vim.lsp.log")
+    local log = require('usr.utils').import('vim.lsp.log')
     local api = vim.api
 
     -- note, this handler style is for neovim 0.5.1/0.6, if on 0.5, call with function(_, method, result)
     local handler = function(_, result, ctx)
         if result == nil or vim.tbl_isempty(result) then
-            local _ = log.info() and log.info(ctx.method, "No location found")
+            local _ = log.info() and log.info(ctx.method, 'No location found')
             return nil
         end
 
@@ -36,8 +36,8 @@ vim.diagnostic.config({
 
             if #result > 1 then
                 util.set_qflist(util.locations_to_items(result))
-                api.nvim_command("copen")
-                api.nvim_command("wincmd p")
+                api.nvim_command('copen')
+                api.nvim_command('wincmd p')
             end
         else
             util.jump_to_location(result)
@@ -47,7 +47,7 @@ vim.diagnostic.config({
     return handler
 end
 
-vim.lsp.handlers["textDocument/definition"] = goto_definition('vs') ]]
+vim.lsp.handlers['textDocument/definition'] = goto_definition('vs') ]]
 ----------------------------------------------------------------------
 
 
@@ -55,9 +55,9 @@ vim.lsp.handlers["textDocument/definition"] = goto_definition('vs') ]]
 --                     Change diagnostic icons                      --
 
 
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
     for type, icon in pairs(signs) do
-        local hl = "DiagnosticSign" .. type
+        local hl = 'DiagnosticSign' .. type
         vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 ----------------------------------------------------------------------
