@@ -1,88 +1,124 @@
 #!/bin/bash
 
-#Update
-sudo pacman -Syu
+#--------------------------------------------------------------------#
+#                           System Update                            #
 
-#Install paru
+sudo pacman -Syu
+#--------------------------------------------------------------------#
+
+#--------------------------------------------------------------------#
+#                          Make Directories                          #
+
 mkdir ~/Downloads
+
+mkdir -p ~/video/anime
+
+mkdir ~/.config
+
+mkdir ~/screenshots
+#--------------------------------------------------------------------#
+
+#--------------------------------------------------------------------#
+#                            Install Paru                            #
+
 cd ~/Downloads
 sudo pacman -S git rust
 git clone https://aur.archlinux.org/paru.git
 cd ~/Downloads/paru
 makepkg -i
 cd ~/Dots
+#--------------------------------------------------------------------#
 
-# Make ~/video/anime dir
-mkdir -p ~/video/anime
+#--------------------------------------------------------------------#
+#                          Install Packages                          #
 
-#Install the packages in the list
+# Install the packages in the list
 paru --needed --ask 4 -Sy - < ~/Dots/setup/pkglist.txt || error "Failed to install required packages"
+#--------------------------------------------------------------------#
 
-#Python packages
+#--------------------------------------------------------------------#
+#                          Python Packages                           #
 
-#Ranger
+# For Ranger
 pip install python-bidi
 
-#anime
+# Anime
 pip install animdl
+#--------------------------------------------------------------------#
 
+#--------------------------------------------------------------------#
+#                          Setup Bluetooth                           #
+
+sudo modprobe btusb
+sudo systemctl start bluetooth.service
+suto systemctl enable bluetooth.service
+#--------------------------------------------------------------------#
+
+#--------------------------------------------------------------------#
+#                             Setup Fish                             #
 
 # Add the fish shell /usr/bin/fish to /etc/shells with
 echo /usr/bin/fish | sudo tee -a /etc/shells
 
-#Change your default shell to fish with:
+# Change the default shell to fish with:
 chsh -s /usr/bin/fish
+#--------------------------------------------------------------------#
 
-#Make polybar scripts executable
-cd ~/Dots/polybar
-make
+#--------------------------------------------------------------------#
+#                      Copy configuration files                      #
 
-#Copy config files
-mkdir ~/.config
 cd ~/Dots
 make
+#--------------------------------------------------------------------#
 
-# Create screenshots dir for scrot
-mkdir ~/screenshots
+#--------------------------------------------------------------------#
+#                      Power management with tlp                      #
 
-## For tlp
-systemctl enable tlp.service
-systemctl mask systemd-rfkill.service
-systemctl mask systemd-rfkill.socket
-systemctl enable NetworkManager-dispatcher.service
+sudo systemctl enable tlp.service
+sudo systemctl mask systemd-rfkill.service
+sudo systemctl mask systemd-rfkill.socket
+sudo systemctl enable NetworkManager-dispatcher.service
+#--------------------------------------------------------------------#
 
-#MAke them usable without sudo, Note that you have to run it in every update
+#--------------------------------------------------------------------#
+#                   Make them usable without sudo                    #
+
 sudo chmod +s /usr/bin/light
-sudo chmod +s /usr/bin/powertop
-sudo chmod +s /usr/bin/intel_gpu_frequency
+#--------------------------------------------------------------------#
 
-##Setup git
+#--------------------------------------------------------------------#
+#                             Setup git                              #
 
 echo "[user]
 	email = ahmedmohammed2429@gmail.com
 	name  = IZenithy
 " >> ~/.gitconfig
-#Genirate kys
+
+# Generate keys
 ssh-keygen -o
-
-cd ~/Dots/programs/dwm
-
-sudo make install
 
 # To make git work
 echo "UserKnownHostsFile ~/.ssh/known_hosts" >> ~/.ssh/config
 echo ;
-echo ;
-echo ;
-echo ;
 echo "Dont Forget to add the public key to your github account"
 echo ;
 cat ~/.ssh/id_rsa.pub
-echo ;
-echo ;
-echo "And add this to /etc/geoclue/geoclue.conf"
+#--------------------------------------------------------------------#
+
+#--------------------------------------------------------------------#
+#                             Setup dwm                              #
+
+cd ~/Dots/programs/dwm
+sudo make install
+#--------------------------------------------------------------------#
+
+#--------------------------------------------------------------------#
+#                           Setup Redshift                           #
+
+echo "Add this to /etc/geoclue/geoclue.conf"
 echo ;
 echo "[redshift]
 allowed=true
 system=false
 users="
+#--------------------------------------------------------------------#

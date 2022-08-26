@@ -223,6 +223,9 @@ alias manga="manga-cli"
 # Find your font name
 alias font="fc-match -s "
 
+# Find your font name
+alias blue="bluetuith"
+
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
 
