@@ -22,7 +22,8 @@ configs.setup {
         'markdown',
         'lua',
         'query',
-        'glsl'
+        'glsl',
+        'bash'
     },
     sync_install = true;
 
