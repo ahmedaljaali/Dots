@@ -58,15 +58,15 @@ target_include_directories(${{PROJECT_NAME}} PUBLIC ${{CMAKE_CURRENT_SOURCE_DIR}
 
 set_target_properties(${{PROJECT_NAME}} PROPERTIES
     # Specify directories
-    ARCHIVE_OUTPUT_DIRECTORY '${{CMAKE_CURRENT_SOURCE_DIR}}/lib'
-    LIBRARY_OUTPUT_DIRECTORY '${{CMAKE_CURRENT_SOURCE_DIR}}/lib'
-    RUNTIME_OUTPUT_DIRECTORY '${{CMAKE_CURRENT_SOURCE_DIR}}/bin'
+    ARCHIVE_OUTPUT_DIRECTORY "${{CMAKE_CURRENT_SOURCE_DIR}}/lib"
+    LIBRARY_OUTPUT_DIRECTORY "${{CMAKE_CURRENT_SOURCE_DIR}}/lib"
+    RUNTIME_OUTPUT_DIRECTORY "${{CMAKE_CURRENT_SOURCE_DIR}}/bin"
 
     # Set C++ slandered
     CXX_STANDARD {}
     CXX_STANDARD_REQUIRED {}
 
-    OUTPUT_NAME '{}'
+    OUTPUT_NAME "{}"
 )
 #--------------------------------------------------------------------#
 
@@ -83,7 +83,7 @@ set(CMAKE_C_COMPILER clang)
 
 
 SET(CMAKE_BUILD_TYPE debug)
-SET(CMAKE_CXX_FLAGS_DEBUG '-O0 -Werror -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded')
+SET(CMAKE_CXX_FLAGS_DEBUG "-g3 -O0 -Werror -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded")
 #-Werror Treat warnings as errors
 #--------------------------------------------------------------------#
 
@@ -93,7 +93,7 @@ SET(CMAKE_CXX_FLAGS_DEBUG '-O0 -Werror -Weverything -Wno-c++98-compat -Wno-c++98
 
 
 # SET(CMAKE_BUILD_TYPE release)
-SET(CMAKE_CXX_FLAGS_RELEASE '-O3')
+SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
 #--------------------------------------------------------------------#
 ]],
     {
@@ -168,16 +168,16 @@ local updateSubmodule = s('updateSubmodule',
 
 
 find_package(Git QUIET)
-if(GIT_FOUND AND EXISTS '${{CMAKE_CURRENT_SOURCE_DIR}}/.git')
+if(GIT_FOUND AND EXISTS "${{CMAKE_CURRENT_SOURCE_DIR}}/.git")
     # Update if needed
-    option(GIT_SUBMODULE 'Check submodules during generation' ON)
+    option(GIT_SUBMODULE "Check submodules during generation" ON)
     if(GIT_SUBMODULE)
-        message(STATUS 'Submodule Update')
+        message(STATUS "Submodule Update")
         execute_process(COMMAND ${{GIT_EXECUTABLE}} submodule update --init --recursive --remote
             WORKING_DIRECTORY ${{CMAKE_CURRENT_SOURCE_DIR}}
             RESULT_VARIABLE GIT_SUBMOD_RESULT)
 
-        if(NOT GIT_SUBMOD_RESULT EQUAL '0')
+        if(NOT GIT_SUBMOD_RESULT EQUAL "0")
             message(FETAL_ERROR submodule update field ${{GIT_SUBMOD_RESULT}})
         endif()
     endif()

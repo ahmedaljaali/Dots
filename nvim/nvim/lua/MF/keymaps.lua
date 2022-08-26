@@ -13,6 +13,7 @@ local map = vim.keymap.set
 local ls = utils.include('luasnip')
 ---------------------------------------------
 
+local dap = utils.include('dap')
 ----------------------------------------------------------------------
 
 
@@ -45,23 +46,31 @@ map('', '<A-=>', '<C-w>=', opts)
 
 
 --Remap splits navigation to just CTRL + hjkl
-map('', '<C-h>', '<C-\\><C-N><C-w>h', { silent = true })
-map('', '<C-j>', '<C-\\><C-N><C-w>j', { silent = true })
-map('', '<C-k>', '<C-\\><C-N><C-w>k', { silent = true })
-map('', '<C-l>', '<C-\\><C-N><C-w>l', { silent = true })
+map('', '<C-h>', '<C-\\><C-N><C-w>h', opts)
+map('', '<C-j>', '<C-\\><C-N><C-w>j', opts)
+map('', '<C-k>', '<C-\\><C-N><C-w>k', opts)
+map('', '<C-l>', '<C-\\><C-N><C-w>l', opts)
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
---                              debug                               --
+--                              Debug                               --
 
 
-map('n', '<Leader>db', function() require'dap'.toggle_breakpoint() end , opts)
-map('n', '<Leader>dc', function() require'dap'.continue() end, opts)
-map('n', '<Leader>do', function() require'dap'.step_over() end, opts)
-map('n', '<Leader>di', function() require'dap'.step_into() end, opts)
-map('n', '<Leader>dr', function() require'dap'.repl.open() end, opts)
+map('n', '<Leader>dc', dap.continue, opts)
+map('n', '<Leader>do', dap.step_over, opts)
+map('n', '<Leader>di', dap.step_into, opts)
+map('n', '<Leader>dt', dap.step_out, opts)
 
+map('n', '<Leader>db', dap.toggle_breakpoint, opts)
+map('n', '<leader>dB', function()
+dap.toggle_breakpoint(vim.fn.input('Breakpoint Condition: '), nil, nil, true)
+end)
+
+map('n', '<leader>dl', function()
+dap.toggle_breakpoint(nil, nil, vim.fn.input('Log point message: '), true)
+end)
+map('n', '<leader>drc', dap.run_to_cursor)
 ----------------------------------------------------------------------
 
 
@@ -283,7 +292,7 @@ map('i', '<Leader>rgb', '<cmd>PickColorInsert<cr>', opts)
 ----------------------------------------------------------------------
 --                          Comment Frame                           --
 
-map('n', '<leader>cc', function() require('nvim-comment-frame').add_comment() end, opts)
+map('n', '<leader>cc', require('nvim-comment-frame').add_comment, opts)
 
-map('n', '<leader>C', function() require('nvim-comment-frame').add_multiline_comment() end, opts)
+map('n', '<leader>C', require('nvim-comment-frame').add_multiline_comment, opts)
 ----------------------------------------------------------------------
