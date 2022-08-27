@@ -112,3 +112,4 @@ cppcheck
 bluez
 bluez-utils
 blueman
+rofi-emoji

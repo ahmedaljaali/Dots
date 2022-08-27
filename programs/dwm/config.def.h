@@ -72,6 +72,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"rofi -show drun -show-icons", NULL };
 static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
+static const char *rofiEmojiCmd[] = { "rofi", "-modi", "emoji", "-show", "emoji", "-kb-custom-1", "Ctrl+C", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *neovide[]  = { "neovide", NULL };
 static const char *webBrowser[]  = { "google-chrome-stable", NULL };
@@ -107,6 +108,7 @@ void multiPrevious(const Arg * arg) { system("playerctl previous");}
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd} },
+	{ MODKEY,                       XK_e,      spawn,          {.v =rofiEmojiCmd} },
 	{ MODKEY|ShiftMask,     XK_z,      spawn,          {.v = zathura} },
     {0,         XF86XK_MonBrightnessUp, brightnessUp,            {0}},
     {0,         XF86XK_MonBrightnessDown, brightnessDown,        {0}},

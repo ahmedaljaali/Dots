@@ -2,7 +2,7 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  font: "MesloLGS Nerd Font 10";
+  font: "MesloLGS Nerd Font 13.5";
   modi: "window,run,drun";
 }
 
@@ -12,8 +12,8 @@ configuration {
   bg: #3c3836;
   bg-alt: #665c54;
 
-  fg: #f2e5bc;
   fg-alt: #f2e5bc;
+  fg: #5ca375;
 
   background-color: @bg;
 
@@ -24,7 +24,7 @@ configuration {
 }
 
 window {
-  width: 30%;
+  width: 80%;
 }
 
 element {
@@ -43,7 +43,7 @@ element-text {
 }
 
 element-icon {
-  size: 30;
+  size: 50;
 }
 
 entry {
