@@ -20,3 +20,5 @@ redshift-gtk &
 
 # Switch between Arabic and English
 setxkbmap -option grp:alt_shift_toggle us,ar &
+
+blueman-applet &

@@ -111,4 +111,4 @@ qt5-tools
 cppcheck
 bluez
 bluez-utils
-bluetuith
+blueman
