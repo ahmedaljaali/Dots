@@ -109,8 +109,5 @@ llvm
 blender
 qt5-tools
 cppcheck
-bluez
-bluez-utils
-blueman
 rofi-emoji
 topgrade

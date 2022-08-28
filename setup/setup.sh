@@ -47,14 +47,6 @@ pip install animdl
 #--------------------------------------------------------------------#
 
 #--------------------------------------------------------------------#
-#                          Setup Bluetooth                           #
-
-sudo modprobe btusb
-sudo systemctl start bluetooth.service
-suto systemctl enable bluetooth.service
-#--------------------------------------------------------------------#
-
-#--------------------------------------------------------------------#
 #                             Setup Fish                             #
 
 # Add the fish shell /usr/bin/fish to /etc/shells with
