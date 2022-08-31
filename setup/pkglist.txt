@@ -111,3 +111,4 @@ qt5-tools
 cppcheck
 rofi-emoji
 topgrade
+mold
