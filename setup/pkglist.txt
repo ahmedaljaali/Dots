@@ -112,3 +112,4 @@ cppcheck
 rofi-emoji
 topgrade
 mold
+xxd
