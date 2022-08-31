@@ -87,7 +87,7 @@ target_link_options(${{PROJECT_NAME}} PUBLIC -fuse-ld=mold)
 
 
 SET(CMAKE_BUILD_TYPE debug)
-SET(CMAKE_CXX_FLAGS_DEBUG "-g3 -O0 -Werror -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded")
+SET(CMAKE_CXX_FLAGS_DEBUG "-gfull -ggdb3 -O0 -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded")
 #-Werror Treat warnings as errors
 #--------------------------------------------------------------------#
 
