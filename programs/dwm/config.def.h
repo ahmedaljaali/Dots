@@ -73,8 +73,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = {"rofi -show drun -show-icons", NULL };
 static const char *roficmd[] = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *rofiEmojiCmd[] = { "rofi", "-modi", "emoji", "-show", "emoji", "-kb-custom-1", "Ctrl+C", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
-static const char *neovide[]  = { "neovide", NULL };
+static const char *termcmd[]  = { "neovide", NULL };
 static const char *webBrowser[]  = { "google-chrome-stable", NULL };
 static const char *spotify[]  = { "spotify", NULL };
 static const char *discord[]  = { "discord", NULL };
@@ -123,7 +122,6 @@ static Key keys[] = {
     {0,       XF86XK_AudioNext ,       multiNext,                 {0}},
     {0,       XF86XK_AudioPrev ,       multiPrevious,                 {0}},
 	{ MODKEY,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,             XK_n, spawn,          {.v = neovide} },
 	{ MODKEY,             XK_b, spawn,          {.v = webBrowser} },
 	{ MODKEY,             XK_s, spawn,          {.v = spotify} },
 	{ MODKEY,             XK_d, spawn,          {.v = discord} },
