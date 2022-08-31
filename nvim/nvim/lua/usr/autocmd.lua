@@ -31,35 +31,38 @@ autocmd(
 )
 ----------------------------------------------------------------------
 
-----------------------------------------------------------------------
---   Disable tab line and go to the top  when startify is opened    --
-
--- WARN: tab line wont work after this autocmd
-autocmd(
-    {'FileType'},
-    {pattern = 'startify', command = 'setlocal showtabline=0 | 3'}
-)
-
--- WARN: temporary fix
-autocmd(
-    {'FileType'},
-    {pattern = {'lua', 'cpp'}, command = 'set showtabline=2'}
-)
-----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
---           Disable status line when alacritty is opened           --
+--          Disable tab line and go to the top of the file          --
+--                     when Startify is opened                      --
 
--- WARN: status line wont work after this autocmd
+-- WARN: Tab line wont work after this autocmd
 autocmd(
-    {'FileType'},
-    {pattern = 'startify', command = 'setlocal laststatus=0'}
+    {'User'},
+    {pattern = 'StartifyReady', command = 'setlocal showtabline=0 | 3'}
 )
 
--- WARN: temporary fix
+-- WARN: Temporary fix
 autocmd(
-    {'FileType'},
-    {pattern = {'lua', 'cpp'}, command = 'set laststatus=3'}
+    {'User', 'SessionLoadPost'},
+    {pattern = 'StartifyBufferOpened', command = 'set showtabline=2'}
+)
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--           Disable status line when Startify is opened           --
+
+-- WARN: Status line wont work after this autocmd
+autocmd(
+    {'User'},
+    {pattern = 'StartifyReady' , command ='setlocal laststatus=0'}
+)
+
+-- WARN: Temporary fix
+autocmd(
+    {'User', 'SessionLoadPost'},
+    {pattern = 'StartifyBufferOpened', command = 'set laststatus=3'}
 )
 ----------------------------------------------------------------------
 
