@@ -448,6 +448,9 @@ return packer.startup(function()
         'nvim-treesitter/playground',
         requires = {'nvim-treesitter/nvim-treesitter'}
     }
+
+    -- Viewing URLs
+    use "axieax/urlview.nvim"
 ----------------------------------------------------------------------
 
 
