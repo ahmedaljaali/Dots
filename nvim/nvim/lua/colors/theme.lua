@@ -2,14 +2,6 @@ local utils = require('usr.utils')
 local oneDark = utils.include('onedark')
 
 ----------------------------------------------------------------------
---                              Syntac                              --
-
-
-vim.g['syntax'] = true
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
 --                        configure onedark                         --
 
 
@@ -70,9 +62,7 @@ oneDark.setup  {
 
 -- require('onedark').load() --enable one dark
 --
--- vim.opt.termguicolors = true
---
-vim.opt.background = 'dark' -- or 'light' for light mode
+vim.o.background = 'dark' -- or 'light' for light mode
 
 vim.cmd([[colorscheme gruvbox]])
 ----------------------------------------------------------------------

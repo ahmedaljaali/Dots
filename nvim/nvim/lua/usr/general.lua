@@ -1,50 +1,50 @@
+local set = vim.o
+
 ----------------------------------------------------------------------
 --                   auto + smart indent for code                   --
 
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.g['t_Co'] = 256
+set.autoindent = true
+set.smartindent = true
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                        => Mouse Scrolling                        --
 
-vim.opt.mouse = 'a'
-vim.opt.mouse = 'nicr'
+set.mouse = 'a'
+set.mouse = 'nicr'
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                            Line warp                             --
 
-vim.opt.wrap = true
+set.wrap = true
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                        Position in code                         --
 
-vim.opt.number = false
-vim.opt.ruler = true
+set.number = false
+set.ruler = true
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                           Tab related                            --
 
-vim.opt.expandtab = true             --Use spaces instead of tabs.
-vim.opt.smarttab = true              --Be smart using tabs ;)
-vim.opt.shiftwidth = 4               --One tab == four spaces
-vim.opt.tabstop = 4
+set.expandtab = true             --Use spaces instead of tabs.
+set.smarttab = true              --Be smart using tabs ;)
+set.shiftwidth = 4               --One tab == four spaces
+set.tabstop = 4
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                         No warning sound                         --
 
-vim.opt.errorbells = false
-vim.opt.vb.t_vb = false
+set.errorbells = false
 ----------------------------------------------------------------------
 
 
@@ -52,52 +52,45 @@ vim.opt.vb.t_vb = false
 --            Don't highlight search results by default             --
 
 
-vim.opt.hlsearch = false
+set.hlsearch = false
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --          Store backup, undo and swap files in temp dir           --
 
-vim.opt.directory = os.getenv('HOME') .. '/tmp/swap'
-vim.g['backupdiri'] = os.getenv('HOME') .. '/tmp/backup'
-vim.opt.undodir = os.getenv('HOME') .. '/tmp/undo'
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
---                      Set modifiable to true                      --
-
-vim.g.modifiable = true
+set.directory = os.getenv('HOME') .. '/tmp/swap'
+set.backupdir = os.getenv('HOME') .. '/tmp/backup'
+set.undodir = os.getenv('HOME') .. '/tmp/undo'
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                             Spelling                             --
 
-vim.opt.spell = true
-vim.opt.spelllang = { 'en_us' }
+set.spell = true
+set.spelllang =  'en_us'
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                        Global Status Line                        --
 
-vim.opt.laststatus = 3
+set.laststatus = 3
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                          Show Tab Line                           --
 
-vim.opt.showtabline = 2
+set.showtabline = 2
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                           Number Width                           --
 
--- vim.opt.numberwidth = 1
+-- set.numberwidth = 1
 ----------------------------------------------------------------------
 
 
@@ -105,7 +98,7 @@ vim.opt.showtabline = 2
 --          We don't need to see things like -- INSERT --           --
 --                             anymore                              --
 
-vim.opt.showmode = false
+set.showmode = false
 ----------------------------------------------------------------------
 
 
@@ -113,18 +106,38 @@ vim.opt.showmode = false
 --            Highlight the text line of the cursor with            --
 --                            Cursorline                            --
 
-vim.opt.cursorline = true
+set.cursorline = true
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
 --                         Conceal sittings                         --
 
-vim.opt.conceallevel = 2
-vim.o.concealcursor = ''
+set.conceallevel = 2
+set.concealcursor = ''
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
 --                    Hide cmdline if not needed                    --
 
-vim.o.cmdheight = 0
+set.cmdheight = 0
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                      Cursor Hold Update time                  --
+
+set.updatetime = 1000
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                    Enables 24-bit RGB colors                     --
+
+set.termguicolors = true
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                        Set graphical font                        --
+
+set.guifont = 'MesloLGS Nerd Font:h13'
 ----------------------------------------------------------------------

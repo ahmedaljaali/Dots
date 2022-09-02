@@ -6,8 +6,6 @@ if vim.fn.exists('g:neovide') == 1 then
     -- Start in fullscreen
     vim.g.neovide_fullscreen= true
 
-    -- Set font
-    vim.opt.guifont = 'MesloLGS Nerd Font:h13'
 
     -- Determines the time it takes for the cursor to complete it's animation in seconds
     vim.g.neovide_cursor_animation_length=0.35

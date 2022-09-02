@@ -27,7 +27,6 @@ vim.g.indent_blankline_use_treesitter = false
 vim.g.indent_blankline_show_current_context = true
 
 
-vim.opt.termguicolors = true
 vim.cmd [[highlight IndentBlanklineIndent1 guifg=#98971a gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent2 guifg=#689d6a gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent3 guifg=#b16286 gui=nocombine]]
