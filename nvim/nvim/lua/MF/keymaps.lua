@@ -2,8 +2,9 @@
 --                         local variables                          --
 
 local utils = require('usr.utils')
+
 ---------------------------------------------
---For keymaps
+-- For keymaps
 local opts = { noremap = true, silent = true }
 local map = vim.keymap.set
 ---------------------------------------------
@@ -13,43 +14,58 @@ local map = vim.keymap.set
 local ls = utils.include('luasnip')
 ---------------------------------------------
 
+---------------------------------------------
+-- Dap
 local dap = utils.include('dap')
+---------------------------------------------
+
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
---                            lsp config                            --
+--                            lsp-config                            --
 
 
-map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-map('n', '<Leader>sh', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-map('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>' , opts)
-map('n', 'gr', '<cmd>Telescope lsp_references<CR>', opts)
-map('n', '<Leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-map('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-map('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-map('n', '<Leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+map('n', 'gD', '<CMD>lua vim.lsp.buf.declaration()<CR>', opts)
+map('n', 'gd', '<CMD>lua vim.lsp.buf.definition()<CR>', opts)
+map('n', 'K', '<CMD>lua vim.lsp.buf.hover()<CR>', opts)
+map('n', 'gi', '<CMD>lua vim.lsp.buf.implementation()<CR>', opts)
+map('n', '<Leader>sh', '<CMD>lua vim.lsp.buf.signature_help()<CR>', opts)
+map('n', '<Leader>rn', '<CMD>lua vim.lsp.buf.rename()<CR>' , opts)
+map('n', 'gr', '<CMD>Telescope lsp_references<CR>', opts)
+map('n', '<Leader>e', '<CMD>lua vim.diagnostic.open_float()<CR>', opts)
+map('n', '[d', '<CMD>lua vim.diagnostic.goto_prev()<CR>', opts)
+map('n', ']d', '<CMD>lua vim.diagnostic.goto_next()<CR>', opts)
+map('n', '<Leader>f', '<CMD>lua vim.lsp.buf.formatting()<CR>', opts)
+map('n', '<Leader>sh', '<CMD>ClangdSwitchSourceHeader<CR>', opts)
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                         Resizing splits                          --
 
-map('', '<A-l>', '<cmd>vertical resize -3<CR>', opts)
-map('', '<A-h>', '<cmd>vertical resize +3<CR>', opts)
-map('', '<A-k>', '<cmd>resize -3<CR>', opts)
-map('', '<A-j>', '<cmd>resize +3<CR>', opts)
-map('', '<A-=>', '<C-w>=', opts)
+map('n', '<A-l>', '<CMD>vertical resize -3<CR>', opts)
+map('n', '<A-h>', '<CMD>vertical resize +3<CR>', opts)
+map('n', '<A-k>', '<CMD>resize -3<CR>', opts)
+map('n', '<A-j>', '<CMD>resize +3<CR>', opts)
+map('n', '<A-=>', '<C-w>=', opts)
 
+map('t', '<A-l>', '<CMD>vertical resize -3<CR>', opts)
+map('t', '<A-h>', '<CMD>vertical resize +3<CR>', opts)
+map('t', '<A-k>', '<CMD>resize -3<CR>', opts)
+map('t', '<A-j>', '<CMD>resize +3<CR>', opts)
+map('t', '<A-=>', '<C-w>=', opts)
 
 --Remap splits navigation to just CTRL + hjkl
-map('', '<C-h>', '<C-\\><C-N><C-w>h', opts)
-map('', '<C-j>', '<C-\\><C-N><C-w>j', opts)
-map('', '<C-k>', '<C-\\><C-N><C-w>k', opts)
-map('', '<C-l>', '<C-\\><C-N><C-w>l', opts)
+map('n', '<C-h>', '<C-\\><C-N><C-w>h', opts)
+map('n', '<C-j>', '<C-\\><C-N><C-w>j', opts)
+map('n', '<C-k>', '<C-\\><C-N><C-w>k', opts)
+map('n', '<C-l>', '<C-\\><C-N><C-w>l', opts)
+
+map('t', '<C-h>', '<C-\\><C-N><C-w>h', opts)
+map('t', '<C-j>', '<C-\\><C-N><C-w>j', opts)
+map('t', '<C-k>', '<C-\\><C-N><C-w>k', opts)
+map('t', '<C-l>', '<C-\\><C-N><C-w>l', opts)
 ----------------------------------------------------------------------
 
 
@@ -80,12 +96,11 @@ map('n', '<leader>drc', dap.run_to_cursor)
 
 map('n', '<Leader>m', ':tabnew<CR>', opts)
 
-map('n', ']t', '<cmd>tabnext<CR>',  { silent = true })
-map('n', '[t', '<cmd>tabprev<CR>',  { silent = true })
+map('n', ']t', '<CMD>tabnext<CR>',  { silent = true })
+map('n', '[t', '<CMD>tabprev<CR>',  { silent = true })
 
 
-map('n', '<Leader>ct', '<cmd>close<CR>', opts)
-
+map('n', '<Leader>ct', '<CMD>close<CR>', opts)
 ----------------------------------------------------------------------
 
 
@@ -109,7 +124,7 @@ map('n', '<Leader>ls', ':SLoad<CR>', opts)
 ----------------------------------------------------------------------
 --                         Run C++ programs                         --
 
--- close cmake then run
+-- Close cmake then run
 map('n', '<leader>tr', function ()
     vim.cmd[[:CMakeClose]]
     vim.cmd[[:FloatermNew  --height=20 --autoclose=0  eval "$(find ./bin -type f -executable -print)"]]
@@ -124,8 +139,8 @@ end, opts)
 --                              Cmake                               --
 
 
-map('n', '<leader>cg', ':CMakeGenerate<cr>', opts)
-map('n', '<leader>cb', ':CMakeBuild<cr>', opts)
+map('n', '<leader>cg', ':CMakeGenerate<CR>', opts)
+map('n', '<leader>cb', ':CMakeBuild<CR>', opts)
 map('n', '<Leader>cm', ':CMakeClose<CR>', opts)
 ----------------------------------------------------------------------
 
@@ -134,7 +149,7 @@ map('n', '<Leader>cm', ':CMakeClose<CR>', opts)
 --                              Ranger                              --
 
 
-map('n', '<c-t>', ':FloatermNew --height=28 --width=124 --wintype=float --name=ranger --position=center --autoclose=2 ranger <cr>', opts)
+map('n', '<c-t>', ':FloatermNew --height=28 --width=124 --wintype=float --name=ranger --position=center --autoclose=2 ranger <CR>', opts)
 ----------------------------------------------------------------------
 
 
@@ -158,19 +173,19 @@ map('n', '<Leader>cd', ':CodeActionMenu<Cr>', opts)
 --                            Telescope                             --
 
 
-map('n', '<leader>tf', '<cmd>Telescope find_files<cr>', opts)
-map('n', '<leader>tg', '<cmd>Telescope live_grep<cr>', opts)
-map('n', '<leader>tb', '<cmd>Telescope buffers<cr>', opts)
-map('n', '<leader>th', '<cmd>Telescope help_tags<cr>', opts)
+map('n', '<leader>tf', '<CMD>Telescope find_files<CR>', opts)
+map('n', '<leader>tg', '<CMD>Telescope live_grep<CR>', opts)
+map('n', '<leader>tb', '<CMD>Telescope buffers<CR>', opts)
+map('n', '<leader>th', '<CMD>Telescope help_tags<CR>', opts)
 
 -- Telescope Luasnip
-map('n', '<leader>tsp', '<cmd>Telescope luasnip<cr>', opts)
+map('n', '<leader>tsp', '<CMD>Telescope luasnip<CR>', opts)
 
 -- Neoclip
-map('n', '<Leader>yh', '<cmd>Telescope neoclip<cr>', opts)
+map('n', '<Leader>yh', '<CMD>Telescope neoclip<CR>', opts)
 
 --Todo
-map('n', '<Leader>td', '<cmd>TodoTelescope<CR>', opts)
+map('n', '<Leader>td', '<CMD>TodoTelescope<CR>', opts)
 ----------------------------------------------------------------------
 
 
@@ -178,8 +193,8 @@ map('n', '<Leader>td', '<cmd>TodoTelescope<CR>', opts)
 --                             trouble                              --
 
 
-map('n', '<leader>tad', '<cmd>Trouble workspace_diagnostics<cr>', opts)
-map('n', '<leader>tcd', '<cmd>Trouble document_diagnostics<cr>', opts)
+map('n', '<leader>tad', '<CMD>Trouble workspace_diagnostics<CR>', opts)
+map('n', '<leader>tcd', '<CMD>Trouble document_diagnostics<CR>', opts)
 ----------------------------------------------------------------------
 
 
@@ -195,7 +210,7 @@ map('n', '<Leader>su', ':SymbolsOutlineOpen<CR>', opts)
 --                            Undo tree                             --
 
 
-map('n', '<Leader>ut', '<cmd>UndotreeToggle<cr>', opts)
+map('n', '<Leader>ut', '<CMD>UndotreeToggle<CR>', opts)
 ----------------------------------------------------------------------
 
 
@@ -203,7 +218,7 @@ map('n', '<Leader>ut', '<cmd>UndotreeToggle<cr>', opts)
 --                            nvimtree                             --
 
 
-map('n', '<Leader>tt', '<cmd>NvimTreeToggle<cr>', opts)
+map('n', '<Leader>tt', '<CMD>NvimTreeToggle<CR>', opts)
 ----------------------------------------------------------------------
 
 
@@ -213,8 +228,8 @@ map('n', '<Leader>tt', '<cmd>NvimTreeToggle<cr>', opts)
 
 map({ 'i', 's' }, '<Leader>sn', function() ls.jump(1) end, opts)
 map({ 'i', 's' }, '<Leader>sp', function() ls.jump(-1) end, opts)
-map({ 'i', 's' }, '<c-s>', '<Esc>:w<cr>')
-map({ 'i', 's' }, '<c-u>', '<cmd>lua require(\'luasnip.extras.select_choice\')()<cr><C-c><C-c>')
+map({ 'i', 's' }, '<c-s>', '<Esc>:w<CR>')
+map({ 'i', 's' }, '<c-u>', '<CMD>lua require(\'luasnip.extras.select_choice\')()<CR><C-c><C-c>')
 map({ 'i', 's' }, '<a-p>', function()
 	if ls.expand_or_jumpable() then
 		ls.expand()
@@ -235,7 +250,7 @@ map({ 'i', 's' }, '<Leader>sv', function()
 		ls.change_choice(-1)
 	end
 end)
-map('n', '<Leader>ls', '<cmd>source' .. vim.fn.stdpath('config') .. '/lua/LS/luasnip-conf.lua<CR>')
+map('n', '<Leader>ls', '<CMD>source' .. vim.fn.stdpath('config') .. '/lua/LS/luasnip-conf.lua<CR>')
 ----------------------------------------------------------------------
 
 
@@ -243,7 +258,7 @@ map('n', '<Leader>ls', '<cmd>source' .. vim.fn.stdpath('config') .. '/lua/LS/lua
 --                             Hexmode                              --
 
 
-map('n', '<Leader>he', '<cmd>Hexmode<cr>', opts);
+map('n', '<Leader>he', '<CMD>Hexmode<CR>', opts);
 ----------------------------------------------------------------------
 
 
@@ -258,7 +273,7 @@ map('n', '<C-x>', require('dial.map').dec_normal(), opts)
 ----------------------------------------------------------------------
 --                              Tetris                              --
 
-map('n', '<Leader>pt', '<cmd>Tetris<cr>', opts)
+map('n', '<Leader>pt', '<CMD>Tetris<CR>', opts)
 
 --[[
 Conftrol
@@ -274,18 +289,18 @@ Space Bar: hard drop
 ----------------------------------------------------------------------
 --                               Hop                                --
 
-map('', 'fw', '<cmd>HopWord<CR>', opts)
-map('', 'fp', '<cmd>HopPattern<CR>', opts)
-map('', 'fc', '<cmd>HopChar2<CR>', opts)
-map('', 'fl', '<cmd>HopLine<CR>', opts)
+map('', 'fw', '<CMD>HopWord<CR>', opts)
+map('', 'fp', '<CMD>HopPattern<CR>', opts)
+map('', 'fc', '<CMD>HopChar2<CR>', opts)
+map('', 'fl', '<CMD>HopLine<CR>', opts)
 ----------------------------------------------------------------------
 
 
 ----------------------------------------------------------------------
 --                            RGB picker                            --
 
-map('n', '<Leader>rgb', '<cmd>PickColor<cr>', opts)
-map('i', '<Leader>rgb', '<cmd>PickColorInsert<cr>', opts)
+map('n', '<Leader>rgb', '<CMD>PickColor<CR>', opts)
+map('i', '<Leader>rgb', '<CMD>PickColorInsert<CR>', opts)
 ----------------------------------------------------------------------
 
 
