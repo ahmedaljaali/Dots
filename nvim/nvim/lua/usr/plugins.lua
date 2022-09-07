@@ -25,7 +25,7 @@ packer.init
      -- Should packer install plugin dependencies?
     ensure_dependencies = true,
 
-    package_root   = packerUtil.join_paths(vim.fn.stdpath('data'), 'site', 'pack'),
+    package_root = packerUtil.join_paths(vim.fn.stdpath('data'), 'site', 'pack'),
 
     compile_path = os.getenv('HOME') .. '/.local/share/nvim/plugin/packer_compiled.lua',
 
@@ -165,7 +165,9 @@ return packer.startup(function()
     use
     {
         'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+        requires = {
+            {'kyazdani42/nvim-web-devicons', opt = true}
+        }
     }
 
     -- Icons
@@ -190,7 +192,9 @@ return packer.startup(function()
     use
     {
         'rafcamlet/tabline-framework.nvim',
-        requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
+        requires = {
+            'kyazdani42/nvim-web-devicons', -- If you want devicons
+        }
     }
 
     -- Notification manager
@@ -208,7 +212,10 @@ return packer.startup(function()
     use
     {
         'nvim-telescope/telescope.nvim',
-        requires = {{'nvim-lua/plenary.nvim',--[['nvim-lua/popup.nvim' 'packer complain about Repetition']] }}
+        requires = {
+            'nvim-lua/plenary.nvim',
+            --[['nvim-lua/popup.nvim' 'packer complain about Repetition']]
+        }
     }
 
     -- Terminal
@@ -233,9 +240,9 @@ return packer.startup(function()
     -- Show project structure
     use
     {
-    'kyazdani42/nvim-tree.lua',
+        'kyazdani42/nvim-tree.lua',
         requires = {
-            'kyazdani42/nvim-web-devicons', -- optional, for file icon
+            'kyazdani42/nvim-web-devicons'
         }
     }
 
@@ -282,14 +289,18 @@ return packer.startup(function()
     use
     {
         'folke/todo-comments.nvim',
-        requires = 'nvim-lua/plenary.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim'
+        },
     }
 
     -- U know it
     use
     {
         'lewis6991/spellsitter.nvim',
-        requires = {'nvim-treesitter/nvim-treesitter'},
+        requires = {
+            'nvim-treesitter/nvim-treesitter'
+        },
     }
 
     --From it's name :)
@@ -299,11 +310,13 @@ return packer.startup(function()
     use
     {
         's1n7ax/nvim-comment-frame',
-        requires  = {'nvim-treesitter'}
+        requires  = {
+            'nvim-treesitter'
+        }
     }
 
     -- Yank history
-    use  'AckslD/nvim-neoclip.lua'
+    use 'AckslD/nvim-neoclip.lua'
 
     -- Increment/decrements
     use 'monaqa/dial.nvim'
@@ -318,21 +331,22 @@ return packer.startup(function()
     use
     {
         'nvim-lua/popup.nvim',
-        requires = {'nvim-lua/plenary.nvim'},
+        requires = {
+            'nvim-lua/plenary.nvim'
+        },
     }
 
     -- Cmake support
-    use
-    {
-        'cdelledonne/vim-cmake',
-    }
+    use 'cdelledonne/vim-cmake'
 
     -- Snippet support
     use
     {
         'L3MON4D3/LuaSnip',
 
-        requires = {'benfowler/telescope-luasnip.nvim', 'saadparwaiz1/cmp_luasnip'}
+        requires = {
+            'benfowler/telescope-luasnip.nvim', 'saadparwaiz1/cmp_luasnip'
+        }
     }
 
     -- For neovim lsp completion items
@@ -351,7 +365,9 @@ return packer.startup(function()
     use
     {
         'folke/trouble.nvim',
-        requires = 'kyazdani42/nvim-web-devicons',
+        requires = {
+            'kyazdani42/nvim-web-devicons'
+        },
     }
 
     -- A tree like view for symbols
@@ -364,7 +380,9 @@ return packer.startup(function()
     use
     {
         'm-demare/hlargs.nvim',
-        requires = { 'nvim-treesitter/nvim-treesitter' }
+        requires = {
+            'nvim-treesitter/nvim-treesitter'
+        }
     }
 
     -- Signature help
@@ -404,11 +422,13 @@ return packer.startup(function()
     use
     {
         'hrsh7th/nvim-cmp',
-        requires = {{'hrsh7th/cmp-path',  'f3fora/cmp-spell',
-                    'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
-                    -- {'tzachar/cmp-tabnine', run='./install.sh'}, --NOTE: Eats a lot of memory!
-                    'lukas-reineke/cmp-under-comparator', 'hrsh7th/cmp-emoji',
-                    'kdheepak/cmp-latex-symbols', 'hrsh7th/cmp-calc',}}
+        requires = {
+            'hrsh7th/cmp-path',  'f3fora/cmp-spell',
+            'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
+            -- {'tzachar/cmp-tabnine', run='./install.sh'}, --NOTE: Eats a lot of memory!
+            'lukas-reineke/cmp-under-comparator', 'hrsh7th/cmp-emoji',
+            'kdheepak/cmp-latex-symbols', 'hrsh7th/cmp-calc',
+        }
     }
 
     -- Config language servers with json
@@ -418,7 +438,9 @@ return packer.startup(function()
     use
     {
         'mfussenegger/nvim-dap',
-        requires = {'theHamsta/nvim-dap-virtual-text', 'rcarriga/nvim-dap-ui'}
+        requires = {
+            'theHamsta/nvim-dap-virtual-text', 'rcarriga/nvim-dap-ui'
+        }
     }
 
     -- Fill the gaps for languages where there is no language server exists
@@ -446,7 +468,9 @@ return packer.startup(function()
     use
     {
         'nvim-treesitter/playground',
-        requires = {'nvim-treesitter/nvim-treesitter'}
+        requires = {
+            'nvim-treesitter/nvim-treesitter'
+        }
     }
 
     -- Viewing URLs

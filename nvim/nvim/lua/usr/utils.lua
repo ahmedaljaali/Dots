@@ -57,7 +57,7 @@ function M.include(modname)
     if not status_ok then
         log('Can\'t load ' .. modname.. '!!!', ERROR, modname)
 
-        return function ()  end
+        return function () return 0 end
     else
         return mod
     end
