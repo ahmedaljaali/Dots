@@ -113,3 +113,4 @@ rofi-emoji
 topgrade
 mold
 xxd
+luarocks
