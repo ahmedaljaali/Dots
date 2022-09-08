@@ -31,12 +31,12 @@ map('n', 'gd', '<CMD>lua vim.lsp.buf.definition()<CR>', opts)
 map('n', 'K', '<CMD>lua vim.lsp.buf.hover()<CR>', opts)
 map('n', 'gi', '<CMD>lua vim.lsp.buf.implementation()<CR>', opts)
 map('n', '<Leader>sh', '<CMD>lua vim.lsp.buf.signature_help()<CR>', opts)
-map('n', '<Leader>rn', '<CMD>lua vim.lsp.buf.rename()<CR>' , opts)
+map('n', '<Leader>rn', '<CMD>lua vim.lsp.buf.rename()<CR>', opts)
 map('n', 'gr', '<CMD>Telescope lsp_references<CR>', opts)
 map('n', '<Leader>e', '<CMD>lua vim.diagnostic.open_float()<CR>', opts)
 map('n', '[d', '<CMD>lua vim.diagnostic.goto_prev()<CR>', opts)
 map('n', ']d', '<CMD>lua vim.diagnostic.goto_next()<CR>', opts)
-map('n', '<Leader>f', '<CMD>lua vim.lsp.buf.formatting()<CR>', opts)
+map('n', '<Leader>f', '<CMD>lua vim.lsp.buf.format{async = true}<CR>', opts)
 map('n', '<Leader>sh', '<CMD>ClangdSwitchSourceHeader<CR>', opts)
 ----------------------------------------------------------------------
 
@@ -77,11 +77,11 @@ map('n', '<Leader>dt', dap.step_out, opts)
 
 map('n', '<Leader>db', dap.toggle_breakpoint, opts)
 map('n', '<leader>dB', function()
-dap.toggle_breakpoint(vim.fn.input('Breakpoint Condition: '), nil, nil, true)
+    dap.toggle_breakpoint(vim.fn.input('Breakpoint Condition: '), nil, nil, true)
 end)
 
 map('n', '<leader>dl', function()
-dap.toggle_breakpoint(nil, nil, vim.fn.input('Log point message: '), true)
+    dap.toggle_breakpoint(nil, nil, vim.fn.input('Log point message: '), true)
 end)
 map('n', '<leader>drc', dap.run_to_cursor)
 ----------------------------------------------------------------------
@@ -93,8 +93,8 @@ map('n', '<leader>drc', dap.run_to_cursor)
 
 map('n', '<Leader>m', ':tabnew<CR>', opts)
 
-map('n', ']t', '<CMD>tabnext<CR>',  { silent = true })
-map('n', '[t', '<CMD>tabprev<CR>',  { silent = true })
+map('n', ']t', '<CMD>tabnext<CR>', { silent = true })
+map('n', '[t', '<CMD>tabprev<CR>', { silent = true })
 
 
 map('n', '<Leader>ct', '<CMD>close<CR>', opts)
@@ -122,9 +122,9 @@ map('n', '<Leader>ls', ':SLoad<CR>', opts)
 --                         Run C++ programs                         --
 
 -- Close cmake then run
-map('n', '<leader>tr', function ()
-    vim.cmd[[:CMakeClose]]
-    vim.cmd[[:FloatermNew  --height=20 --autoclose=0  eval "$(find ./bin -type f -executable -print)"]]
+map('n', '<leader>tr', function()
+    vim.cmd [[:CMakeClose]]
+    vim.cmd [[:FloatermNew  --height=20 --autoclose=0  eval "$(find ./bin -type f -executable -print)"]]
 end, opts)
 ----------------------------------------------------------------------
 
@@ -146,7 +146,9 @@ map('n', '<Leader>cm', ':CMakeClose<CR>', opts)
 --                              Ranger                              --
 
 
-map('n', '<c-t>', ':FloatermNew --height=28 --width=124 --wintype=float --name=ranger --position=center --autoclose=2 ranger <CR>', opts)
+map('n', '<c-t>',
+    ':FloatermNew --height=28 --width=124 --wintype=float --name=ranger --position=center --autoclose=2 ranger <CR>',
+    opts)
 ----------------------------------------------------------------------
 
 
@@ -228,24 +230,24 @@ map({ 'i', 's' }, '<Leader>sp', function() ls.jump(-1) end, opts)
 map({ 'i', 's' }, '<c-s>', '<Esc>:w<CR>')
 map({ 'i', 's' }, '<c-u>', '<CMD>lua require(\'luasnip.extras.select_choice\')()<CR><C-c><C-c>')
 map({ 'i', 's' }, '<a-p>', function()
-	if ls.expand_or_jumpable() then
-		ls.expand()
-	end
+    if ls.expand_or_jumpable() then
+        ls.expand()
+    end
 end, { silent = true })
 map({ 'i', 's' }, '<Leader>sc', function()
-	if ls.choice_active() then
-		ls.change_choice(1)
-	else
-		-- print current time
-		local t = os.date('*t')
-		local time = string.format('%02d:%02d:%02d', t.hour, t.min, t.sec)
-		print(time)
-	end
+    if ls.choice_active() then
+        ls.change_choice(1)
+    else
+        -- print current time
+        local t = os.date('*t')
+        local time = string.format('%02d:%02d:%02d', t.hour, t.min, t.sec)
+        print(time)
+    end
 end)
 map({ 'i', 's' }, '<Leader>sv', function()
-	if ls.choice_active() then
-		ls.change_choice(-1)
-	end
+    if ls.choice_active() then
+        ls.change_choice(-1)
+    end
 end)
 map('n', '<Leader>ls', '<CMD>source' .. vim.fn.stdpath('config') .. '/lua/LS/luasnip-conf.lua<CR>')
 ----------------------------------------------------------------------
