@@ -20,12 +20,12 @@ require('usr.utils').include('impatient')
 --                           Moving Fast                            --
 
 
-require('MF.start-screan')
-require('MF.telescope-conf')
-require('MF.fileStorm')
+require('MF.startScreanConf')
+require('MF.telescopeConf')
+require('MF.fileStormConf')
 require('MF.keymaps')
-require('MF.status-line')
-require('MF.nvim-tree-conf')
+require('MF.statusLineConf')
+require('MF.nvimTreeConf')
 ----------------------------------------------------------------------
 
 
@@ -33,12 +33,12 @@ require('MF.nvim-tree-conf')
 --                              Colors                              --
 
 
-require('colors.theme')
-require('colors.icons')
-require('colors.modes-conf')
-require('colors.hlargs-conf')
-require('colors.dressing-conf')
-require('colors.tabline')
+require('colors.themeConf')
+require('colors.iconsConf')
+require('colors.modesConf')
+require('colors.hlargsConf')
+require('colors.dressingConf')
+require('colors.tablineConf')
 ----------------------------------------------------------------------
 
 
@@ -46,16 +46,16 @@ require('colors.tabline')
 --                              Typing                              --
 
 
-require('typing.indent')
-require('typing.spelling')
-require('typing.autopairs')
-require('typing.comment-out')
-require('typing.lastplace')
-require('typing.auto-save')
-require('typing.todo-conf')
-require('typing.comment-frame')
-require('typing.neoclip-conf')
-require('typing.dial-conf')
+require('typing.indentConf')
+require('typing.spellingConf')
+require('typing.autopairsConf')
+require('typing.commentOutConf')
+require('typing.lastplaceConf')
+require('typing.autoSaveConf')
+require('typing.todoConf')
+require('typing.commentFrameConf')
+require('typing.neoclipConf')
+require('typing.dialConf')
 ----------------------------------------------------------------------
 
 
@@ -63,26 +63,23 @@ require('typing.dial-conf')
 --                         Language Support                         --
 
 
--- LSP
-require('LS.mason-conf')
-require('LS.lua-dev-conf')
-require('LS.nlsp-settings')
+require('LS.masonConf')
+require('LS.luaDevConf')
 require('LS.lsp-config')
-
-require('LS.cmake-config')
-require('LS.treesitter-config')
-require('LS.cmp-config')
-require('LS.lspkind-conf')
-require('LS.code-actions')
-require('LS.trouble-conf')
-require('LS.symbols-outline-conf')
-require('LS.tabnine-conf')
-require('LS.fidget-conf')
-require('LS.lsp-signature-conf')
-require('LS.treesitter-context-conf')
-require('LS.luasnip-conf')
-require('LS.dap-conf')
-require('LS.lint-conf')
+require('LS.cmakeConf')
+require('LS.treesitterConf')
+require('LS.cmpConf')
+require('LS.lspkindConf')
+require('LS.codeActionsConf')
+require('LS.troubleConf')
+require('LS.symbolsOutlineConf')
+require('LS.tabnineConf')
+require('LS.fidgetConf')
+require('LS.lspSignatureConf')
+require('LS.treesitterContextConf')
+require('LS.luasnipConf')
+require('LS.dapConf')
+require('LS.lintConf')
 ----------------------------------------------------------------------
 
 
@@ -90,6 +87,6 @@ require('LS.lint-conf')
 --                           Random stuff                           --
 
 -- Short config
-require('rand.short')
-require('rand.neovide')
+require('rand.shortConf')
+require('rand.neovideConf')
 ----------------------------------------------------------------------

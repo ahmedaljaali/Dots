@@ -4,12 +4,32 @@ local lspconfig = utils.include('lspconfig')
 ----------------------------------------------------------------------
 --                          Servers setup                           --
 
+lspconfig.sumneko_lua.setup{
+    settings = {
+        Lua = {
+            completion = {
+                callSnippet = "Replace"
+            }
+        }
+    }
+}
 
-lspconfig.sumneko_lua.setup{}
-lspconfig.clangd.setup{}
-lspconfig.cmake.setup{}
-lspconfig.jsonls.setup{}
-lspconfig.vimls.setup{}
+lspconfig.clangd.setup{
+    cmd = {
+        "clangd",
+        "--background-index",
+        "--clang-tidy",
+        "--completion-style=detailed",
+        "--header-insertion=never"
+    };
+}
+
+lspconfig.cmake.setup{
+    init_options =
+    {
+        buildDirectory = "Build"
+    }
+}
 ----------------------------------------------------------------------
 
 

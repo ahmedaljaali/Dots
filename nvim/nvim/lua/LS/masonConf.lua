@@ -85,9 +85,7 @@ mason_tool_installer.setup{
         'clangd',
         'cmake-language-server',
         'cpptools',
-        'json-lsp',
         'lua-language-server',
-        'vim-language-server',
     },
 
     auto_update = true,

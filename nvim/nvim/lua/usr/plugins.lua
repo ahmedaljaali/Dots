@@ -427,9 +427,6 @@ return packer.startup(function()
         }
     }
 
-    -- Config language servers with json
-    use 'tamago324/nlsp-settings.nvim'
-
     -- Debugging
     use
     {

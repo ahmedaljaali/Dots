@@ -1,8 +1,0 @@
-{
-    "clangd.checkUpdates": true,
-    "clangd.arguments": ["--background-index", "--clang-tidy", "--completion-style=detailed",
-        "--header-insertion=never"],
-    "clangd.restartAfterCrash": true,
-    "clangd.serverCompletionRanking": true,
-    "clangd.detectExtensionConflicts": true
-}
