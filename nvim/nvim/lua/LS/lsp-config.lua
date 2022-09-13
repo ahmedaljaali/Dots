@@ -21,12 +21,11 @@ lspconfig.clangd.setup{
         "--clang-tidy",
         "--completion-style=detailed",
         "--header-insertion=never"
-    };
+    }
 }
 
 lspconfig.cmake.setup{
-    init_options =
-    {
+    init_options = {
         buildDirectory = "Build"
     }
 }
