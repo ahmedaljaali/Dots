@@ -1,7 +1,6 @@
 local utils = require('usr.utils')
 local mason = utils.include('mason')
 local lspconfig = utils.include('lspconfig')
-local mason_lspconfig = utils.include('mason-lspconfig')
 local mason_tool_installer = utils.include('mason-tool-installer')
 
 ----------------------------------------------------------------------
@@ -95,32 +94,4 @@ mason_tool_installer.setup{
     run_on_start = true,
     start_delay = 3000,  -- 3 second delay
 }
-----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
---                          Servers setup                           --
-
-mason_lspconfig.setup_handlers({
-
-    ['sumneko_lua'] = function()
-        lspconfig.sumneko_lua.setup{}
-    end,
-
-    ['clangd'] = function()
-        lspconfig.clangd.setup{}
-    end,
-
-    ['cmake'] = function()
-        lspconfig.cmake.setup{}
-    end,
-
-    ['jsonls'] = function()
-        lspconfig.jsonls.setup{}
-    end,
-
-    ['vimls'] = function()
-        lspconfig.vimls.setup{}
-    end,
-})
 ----------------------------------------------------------------------

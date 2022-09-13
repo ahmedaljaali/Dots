@@ -32,7 +32,7 @@ utils.include('tidy').setup()
 
 ----------------------------------------------------------------------
 --                          Stay centered                           --
---
+
 -- Exclude
 vim.api.nvim_set_var('stay-centered#skip_filetypes', {'vimcmake', 'floaterm'})
 

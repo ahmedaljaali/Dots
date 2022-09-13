@@ -409,11 +409,7 @@ return packer.startup(function()
     }
 
     -- Configure language servers
-    use
-    {
-        'williamboman/mason-lspconfig.nvim',
-        'neovim/nvim-lspconfig',
-    }
+    use 'neovim/nvim-lspconfig'
 
     -- Help for builtin lua functions
     use 'milisims/nvim-luaref'
@@ -445,6 +441,9 @@ return packer.startup(function()
 
     -- Fill the gaps for languages where there is no language server exists
     use 'mfussenegger/nvim-lint'
+
+    -- Nvim auto completion
+    use "folke/lua-dev.nvim"
 ----------------------------------------------------------------------
 
 

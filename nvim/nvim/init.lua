@@ -63,13 +63,16 @@ require('typing.dial-conf')
 --                         Language Support                         --
 
 
+-- LSP
+require('LS.mason-conf')
+require('LS.lua-dev-conf')
+require('LS.nlsp-settings')
+require('LS.lsp-config')
+
 require('LS.cmake-config')
 require('LS.treesitter-config')
-require('LS.nlsp-settings')
-require('LS.mason-conf')
 require('LS.cmp-config')
 require('LS.lspkind-conf')
-require('LS.lsp-config')
 require('LS.code-actions')
 require('LS.trouble-conf')
 require('LS.symbols-outline-conf')

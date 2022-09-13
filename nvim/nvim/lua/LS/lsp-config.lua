@@ -1,13 +1,15 @@
+local utils = require('usr.utils')
+local lspconfig = utils.include('lspconfig')
+
 ----------------------------------------------------------------------
---             Change prefix/charactter precediing the              --
---                     diagnostics virtual text                     --
+--                          Servers setup                           --
 
 
-vim.diagnostic.config({
-    virtual_text = {
-        prefix = '▎', -- Could be '●', '▎', 'x'
-    }
-})
+lspconfig.sumneko_lua.setup{}
+lspconfig.clangd.setup{}
+lspconfig.cmake.setup{}
+lspconfig.jsonls.setup{}
+lspconfig.vimls.setup{}
 ----------------------------------------------------------------------
 
 
@@ -68,7 +70,9 @@ end
 
 
 vim.diagnostic.config({
-    virtual_text = true,
+    virtual_text = {
+        prefix = '▎', -- Could be '●', '▎', 'x'
+    },
     signs = false,
     underline = true,
     update_in_insert = false,

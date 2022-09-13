@@ -1,3 +1,4 @@
 {
-    "Lua.diagnostics.globals": ["vim", "use"]
+    "Lua.diagnostics.globals": ["vim", "use"],
+    "Lua.completion.callSnippet": "Replace"
 }
