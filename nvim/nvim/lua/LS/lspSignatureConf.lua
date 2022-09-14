@@ -5,7 +5,7 @@ local signature = utils.include('lsp_signature')
 ----------------------------------------------------------------------
 --                              Setup                               --
 
-cfg = {
+local cfg = {
 
     -- set to true to enable debug logging
     debug = false,
@@ -113,5 +113,5 @@ signature.setup(cfg)
 -- note: on_attach deprecated
 
 ---- no need to specify bufnr if you don't use toggle_key
-signature.on_attach(cfg, bufnr)
+signature.on_attach(cfg)
 ----------------------------------------------------------------------

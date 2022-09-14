@@ -48,16 +48,12 @@ end
 
 function M.include(modname)
 
-    if checkIfLoaded(modname) then
-        return
-    end
-
     local status_ok, mod= pcall(require, modname)
 
-    if not status_ok then
+    if not status_ok and not checkIfLoaded(modname) then
         log('Can\'t load ' .. modname.. '!!!', ERROR, modname)
 
-        return function () return 0 end
+        return function() return {"LoL"} end
     else
         return mod
     end

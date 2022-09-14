@@ -9,7 +9,11 @@ lspconfig.sumneko_lua.setup{
         Lua = {
             completion = {
                 callSnippet = "Replace"
-            }
+            },
+
+            diagnostics = {
+                globals = {'use'},
+            },
         }
     }
 }

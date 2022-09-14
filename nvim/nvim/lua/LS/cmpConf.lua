@@ -27,9 +27,8 @@ cmp.setup({
     snippet =
     {
         expand = function(args)
-        local luasnip = utils.include('luasnip')
         if not luasnip then
-        return
+            return
         end
         luasnip.lsp_expand(args.body)
         end,
