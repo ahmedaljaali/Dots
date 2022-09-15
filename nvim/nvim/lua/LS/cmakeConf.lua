@@ -31,7 +31,7 @@ vim.g.cmake_console_size = 15
 ----------------------------------------------------------------------
 --                         Generate options                         --
 
-vim.g.cmake_generate_options = {}
+vim.g.cmake_generate_options = {'-D CMAKE_C_COMPILER=clang','-DCMAKE_CXX_COMPILER=clang++'}
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
