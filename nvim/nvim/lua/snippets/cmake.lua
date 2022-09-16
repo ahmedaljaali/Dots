@@ -71,7 +71,9 @@ set_target_properties(${{PROJECT_NAME}} PROPERTIES
 #                              Use mold                              #
 
 
-target_link_options(${{PROJECT_NAME}} PUBLIC -fuse-ld=mold)
+if(NOT WIN32)
+    target_link_options(${{PROJECT_NAME}} PUBLIC -fuse-ld=mold)
+endif()
 #--------------------------------------------------------------------#
 
 #--------------------------------------------------------------------#
