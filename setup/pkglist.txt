@@ -114,3 +114,4 @@ topgrade
 mold
 xxd
 luarocks
+unrar
