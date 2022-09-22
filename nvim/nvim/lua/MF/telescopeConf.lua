@@ -104,7 +104,7 @@ telescope.setup {
             preview_cutoff = 120,
         },
         file_sorter = require('telescope.sorters').get_fuzzy_file,
-        file_ignore_patterns = {'node_modules', 'Build', 'Debug', 'external', 'models'},
+        file_ignore_patterns = {'node_modules', 'Build', 'Debug', 'extern', 'models'},
         generic_sorter = require('telescope.sorters').get_generic_fuzzy_sorter,
         path_display = { 'truncate' },
         winblend = 0,
