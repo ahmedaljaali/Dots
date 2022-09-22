@@ -18,5 +18,7 @@ nm-applet &
 
 redshift-gtk &
 
+/usr/lib/geoclue-2.0/demos/agent &
+
 # Switch between Arabic and English
 setxkbmap -option grp:alt_shift_toggle us,ar &
