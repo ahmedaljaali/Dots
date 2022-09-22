@@ -109,8 +109,10 @@ sudo make install
 
 echo "Add this to /etc/geoclue/geoclue.conf"
 echo ;
-echo "[redshift]
+echo "
+[redshift]
 allowed=true
 system=false
-users="
+users=
+"
 #--------------------------------------------------------------------#
