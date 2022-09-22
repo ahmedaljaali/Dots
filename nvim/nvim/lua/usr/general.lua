@@ -118,7 +118,7 @@ set.concealcursor = ''
 ----------------------------------------------------------------------
 --                    Hide cmdline if not needed                    --
 
-set.cmdheight = 0
+-- set.cmdheight = 0 NOTE: Enable it when neovim 8 is Released
 ----------------------------------------------------------------------
 
 

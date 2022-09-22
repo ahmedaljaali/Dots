@@ -1,6 +1,5 @@
-local utils = require('usr.utils')
-local packerUtil = utils.include('packer.util')
-local packer = utils.include('packer')
+local packerUtil = require('packer.util')
+local packer = require('packer')
 
 ----------------------------------------------------------------------
 --              if packer isn't installed, install it               --
@@ -283,7 +282,7 @@ return packer.startup(function()
     use 'ethanholz/nvim-lastplace'
 
     -- From it's name
-    use 'Pocco81/AutoSave.nvim'
+    use '907th/vim-auto-save.git'
 
     -- Todo
     use
@@ -476,7 +475,7 @@ return packer.startup(function()
 
   --if packer isn't installed install it
  if packer_bootstrap then
-    utils.include('packer').sync()
+    require('packer').sync()
   end
 end)
 ----------------------------------------------------------------------
