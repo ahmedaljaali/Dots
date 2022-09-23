@@ -7,5 +7,5 @@ vim.g.auto_save = 1
 ----------------------------------------------------------------------
 --                              Events                              --
 
-vim.g.auto_save_events = {'WinLeave', 'TabLeave'}
+vim.g.auto_save_events = {'TextChanged', 'WinLeave', 'TabLeave'}
 ----------------------------------------------------------------------

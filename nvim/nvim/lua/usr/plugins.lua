@@ -282,7 +282,7 @@ return packer.startup(function()
     use 'ethanholz/nvim-lastplace'
 
     -- From it's name
-    use '907th/vim-auto-save.git'
+    use '907th/vim-auto-save'
 
     -- Todo
     use

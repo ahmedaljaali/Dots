@@ -1,4 +1,5 @@
 local set = vim.o
+local setGlobal = vim.g
 
 ----------------------------------------------------------------------
 --                   auto + smart indent for code                   --
@@ -139,4 +140,11 @@ set.termguicolors = true
 --                        Set graphical font                        --
 
 set.guifont = 'MesloLGS Nerd Font:h13'
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                              netrw                               --
+
+setGlobal.loaded = 1
+setGlobal.loaded_netrwPlugin = 1
 ----------------------------------------------------------------------
