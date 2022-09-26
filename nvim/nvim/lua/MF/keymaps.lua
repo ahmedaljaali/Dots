@@ -161,7 +161,7 @@ vim.g.maximizer_default_mapping_key = '<Leader>sm'
 
 
 ----------------------------------------------------------------------
---                           Cod actions                            --
+--                           Code actions                            --
 
 
 map('n', '<Leader>cd', ':CodeActionMenu<Cr>', opts)
@@ -309,4 +309,15 @@ map('i', '<Leader>rgb', '<CMD>PickColorInsert<CR>', opts)
 map('n', '<leader>cc', require('nvim-comment-frame').add_comment, opts)
 
 map('n', '<leader>C', require('nvim-comment-frame').add_multiline_comment, opts)
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                             floaterm                             --
+
+vim.g.floaterm_keymap_new = '<Leader>fy'
+vim.g.floaterm_keymap_toggle = '<Leader>ft'
+vim.g.floaterm_keymap_next = '<Leader>fn'
+vim.g.floaterm_keymap_prev = '<Leader>fp'
+vim.g.floaterm_keymap_kill = '<Leader>fc'
 ----------------------------------------------------------------------
