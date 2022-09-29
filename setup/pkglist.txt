@@ -160,3 +160,4 @@ youtube-dl
 zathura
 zoxide
 zram-generator
+neovim-git
