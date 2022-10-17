@@ -3,7 +3,7 @@
 
 
 -- IMPORTANT: make sure to setup lua-dev BEFORE lspconfig
-require('usr.utils').include("lua-dev").setup({
+require('usr.utils').include('neodev').setup({
     library = {
         enabled = true, -- when not enabled, lua-dev will not change any settings to the LSP server
         -- these settings will be used for your Neovim config directory

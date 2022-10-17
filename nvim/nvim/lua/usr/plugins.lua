@@ -439,7 +439,7 @@ return packer.startup(function()
     use 'mfussenegger/nvim-lint'
 
     -- Nvim auto completion
-    use "folke/lua-dev.nvim"
+    use 'folke/neodev.nvim'
 ----------------------------------------------------------------------
 
 
@@ -469,7 +469,7 @@ return packer.startup(function()
     }
 
     -- Viewing URLs
-    use "axieax/urlview.nvim"
+    use 'axieax/urlview.nvim'
 ----------------------------------------------------------------------
 
 
