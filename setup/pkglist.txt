@@ -60,6 +60,7 @@ make
 mold
 mpv
 neofetch
+neovim
 network-manager-applet
 networkmanager
 nitrogen
@@ -160,4 +161,3 @@ youtube-dl
 zathura
 zoxide
 zram-generator
-neovim
