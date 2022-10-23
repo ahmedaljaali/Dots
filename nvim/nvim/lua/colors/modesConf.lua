@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local modes = utils.include('modes')
+local include = require('usr.utils').include
+local modes = include('modes')
 
 ----------------------------------------------------------------------
 --                           Modes config                           --

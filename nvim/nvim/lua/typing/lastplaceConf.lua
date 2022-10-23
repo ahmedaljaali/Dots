@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local lastplace = utils.include('nvim-lastplace')
+local include = require('usr.utils').include
+local lastplace = include('nvim-lastplace')
 
 
 ----------------------------------------------------------------------

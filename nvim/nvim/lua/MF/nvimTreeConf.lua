@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local tree = utils.include('nvim-tree')
+local include = require('usr.utils').include
+local tree = include('nvim-tree')
 
 ----------------------------------------------------------------------
 --                            Setup tree                            --

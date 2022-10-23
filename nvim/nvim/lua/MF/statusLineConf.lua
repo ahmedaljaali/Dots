@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local line = utils.include('lualine')
+local include = require('usr.utils').include
+local line = include('lualine')
 
 
 ----------------------------------------------------------------------

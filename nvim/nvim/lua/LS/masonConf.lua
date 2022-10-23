@@ -1,7 +1,7 @@
-local utils = require('usr.utils')
-local mason = utils.include('mason')
-local lspconfig = utils.include('lspconfig')
-local mason_tool_installer = utils.include('mason-tool-installer')
+local include = require('usr.utils').include
+local mason = include('mason')
+local lspconfig = include('lspconfig')
+local mason_tool_installer = include('mason-tool-installer')
 
 ----------------------------------------------------------------------
 --                        setup mason                             --

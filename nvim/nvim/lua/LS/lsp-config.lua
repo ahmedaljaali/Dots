@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local lspconfig = utils.include('lspconfig')
+local include = require('usr.utils').include
+local lspconfig = include('lspconfig')
 
 ----------------------------------------------------------------------
 --                          Servers setup                           --

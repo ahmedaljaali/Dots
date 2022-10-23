@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local context = utils.include('treesitter-context')
+local include = require('usr.utils').include
+local context = include('treesitter-context')
 
 
 ----------------------------------------------------------------------

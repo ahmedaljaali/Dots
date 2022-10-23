@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local tabline = utils.include('tabline_framework')
+local include = require('usr.utils').include
+local tabline = include('tabline_framework')
 
 ----------------------------------------------------------------------
 --                              Colors                              --

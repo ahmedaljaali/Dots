@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local outline = utils.include(('symbols-outline'))
+local include = require('usr.utils').include
+local outline = include(('symbols-outline'))
 
 ----------------------------------------------------------------------
 --                              Setup                               --

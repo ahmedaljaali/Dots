@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local webdev = utils.include('nvim-web-devicons')
+local include = require('usr.utils').include
+local webdev = include('nvim-web-devicons')
 
 
 ----------------------------------------------------------------------

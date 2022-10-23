@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local lspKined = utils.include('lspkind')
+local include = require('usr.utils').include
+local lspKined = include('lspkind')
 
 
 lspKined.init({

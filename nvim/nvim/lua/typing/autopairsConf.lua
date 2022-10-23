@@ -2,11 +2,11 @@
 --                         Local variables                          --
 
 
-local utils = require('usr.utils')
-local npairs = utils.include('nvim-autopairs')
-local cmp_autopairs = utils.include('nvim-autopairs.completion.cmp')
-local cmp = utils.include('cmp')
-local ts_conds = utils.include('nvim-autopairs.ts-conds')
+local include = require('usr.utils').include
+local npairs = include('nvim-autopairs')
+local cmp_autopairs = include('nvim-autopairs.completion.cmp')
+local cmp = include('cmp')
+local ts_conds = include('nvim-autopairs.ts-conds')
 ----------------------------------------------------------------------
 
 

@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local signature = utils.include('lsp_signature')
+local include = require('usr.utils').include
+local signature = include('lsp_signature')
 
 
 ----------------------------------------------------------------------

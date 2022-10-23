@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local indent_blankline = utils.include('indent_blankline')
+local include = require('usr.utils').include
+local indent_blankline = include('indent_blankline')
 
 ----------------------------------------------------------------------
 --                             Exclude                              --

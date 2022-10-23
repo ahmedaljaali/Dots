@@ -1,7 +1,7 @@
-local utils = require('usr.utils')
-local cmp = utils.include('cmp')
-local lspkind = utils.include('lspkind')
-local luasnip = utils.include('luasnip')
+local include = require('usr.utils').include
+local cmp = include('cmp')
+local lspkind = include('lspkind')
+local luasnip = include('luasnip')
 
 ----------------------------------------------------------------------
 --                            Setup cmp                             --
@@ -64,7 +64,7 @@ cmp.setup({
         comparators = {
             cmp.config.compare.offset, cmp.config.compare.exact,
             cmp.config.compare.score,
-            utils.include('cmp-under-comparator').under,
+            include('cmp-under-comparator').under,
             cmp.config.compare.kind,
             cmp.config.compare.sort_text,
             cmp.config.compare.length,

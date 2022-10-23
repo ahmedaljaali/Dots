@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local lint = utils.include('lint')
+local include= require('usr.utils').include
+local lint = include('lint')
 
 
 ----------------------------------------------------------------------

@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local oneDark = utils.include('onedark')
+local include = require('usr.utils').include
+local oneDark = include('onedark')
 
 ----------------------------------------------------------------------
 --                        configure onedark                         --

@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local dressing = utils.include('dressing')
+local include = require('usr.utils').include
+local dressing = include('dressing')
 
 ----------------------------------------------------------------------
 --                          Setup Dressing                          --

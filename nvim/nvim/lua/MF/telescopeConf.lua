@@ -1,6 +1,6 @@
-local utils = require('usr.utils')
-local telescope = utils.include('telescope')
-local actions = utils.include('telescope.actions')
+local include =require('usr.utils').include
+local telescope = include('telescope')
+local actions = include('telescope.actions')
 
 ----------------------------------------------------------------------
 --                         Setup telescope                          --
@@ -142,11 +142,11 @@ telescope.setup {
 ----------------------------------------------------------------------
 --                      telescope-luasnip                       --
 
-require('telescope').load_extension('luasnip')
+telescope.load_extension('luasnip')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
 --                             neoclip                              --
 
-require('telescope').load_extension('neoclip')
+telescope.load_extension('neoclip')
 ----------------------------------------------------------------------

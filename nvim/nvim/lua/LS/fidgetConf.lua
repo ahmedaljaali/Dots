@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local fidget = utils.include('fidget')
+local include = require('usr.utils').include
+local fidget = include('fidget')
 
 
 ----------------------------------------------------------------------

@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local configs = utils.include('nvim-treesitter.configs')
+local include = require('usr.utils').include
+local configs = include('nvim-treesitter.configs')
 
 ----------------------------------------------------------------------
 --                            Tree sitter                            --

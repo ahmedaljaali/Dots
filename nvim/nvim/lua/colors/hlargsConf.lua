@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local hlargs = utils.include('hlargs')
+local include = require('usr.utils').include
+local hlargs = include('hlargs')
 
 ----------------------------------------------------------------------
 --                           Setup Hlags                            --

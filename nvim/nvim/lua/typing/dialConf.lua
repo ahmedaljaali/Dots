@@ -1,6 +1,6 @@
-local utils = require('usr.utils')
-local augend = utils.include('dial.augend')
-local config = utils.include('dial.config')
+local include = require('usr.utils').include
+local augend = include('dial.augend')
+local config = include('dial.config')
 
 
 ----------------------------------------------------------------------
@@ -42,7 +42,7 @@ config.augends:register_group{
         },
 
         augend.user.new{
-            find = utils.include('dial.augend.common').find_pattern('%d+'),
+            find = include('dial.augend.common').find_pattern('%d+'),
             add = function(text, addend, cursor)
                 local n = tonumber(text)
                 n = math.floor(n * (2 ^ addend))

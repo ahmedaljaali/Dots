@@ -1,8 +1,8 @@
-local utils = require('usr.utils')
-local ls = utils.include('luasnip')
+local include = require('usr.utils').include
+local ls = include('luasnip')
 
-require('luasnip.loaders.from_lua').load({ paths = vim.fn.stdpath('config') .. '/lua/snippets/'})
-require('luasnip').config.setup({ store_selection_keys = '<A-p>' })
+include('luasnip.loaders.from_lua').load({ paths = vim.fn.stdpath('config') .. '/lua/snippets/'})
+ls.config.setup({ store_selection_keys = '<A-p>' })
 
 
 local types = require('luasnip.util.types')

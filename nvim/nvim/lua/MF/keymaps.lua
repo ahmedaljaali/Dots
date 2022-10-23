@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------
 --                         local variables                          --
 
-local utils = require('usr.utils')
+local include = require('usr.utils').include
 
 ---------------------------------------------
 -- For keymaps
@@ -11,12 +11,12 @@ local map = vim.keymap.set
 
 ---------------------------------------------
 -- Luasnip
-local ls = utils.include('luasnip')
+local ls = include('luasnip')
 ---------------------------------------------
 
 ---------------------------------------------
 -- Dap
-local dap = utils.include('dap')
+local dap = include('dap')
 ---------------------------------------------
 
 ----------------------------------------------------------------------

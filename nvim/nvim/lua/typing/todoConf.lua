@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local todo = utils.include('todo-comments')
+local include = require('usr.utils').include
+local todo = include('todo-comments')
 
 
 

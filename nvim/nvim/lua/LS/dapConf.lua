@@ -1,7 +1,7 @@
-local utils = require('usr.utils')
-local dap = utils.include('dap')
-local dapui = utils.include('dapui')
-local dap_virtual = utils.include('nvim-dap-virtual-text')
+local include = require('usr.utils').include
+local dap = include('dap')
+local dapui = include('dapui')
+local dap_virtual = include('nvim-dap-virtual-text')
 
 ----------------------------------------------------------------------
 --                            C++ setup                             --

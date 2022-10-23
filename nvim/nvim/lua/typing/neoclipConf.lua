@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local neoclip = utils.include('neoclip')
+local include = require('usr.utils').include
+local neoclip = include('neoclip')
 
 
 ----------------------------------------------------------------------

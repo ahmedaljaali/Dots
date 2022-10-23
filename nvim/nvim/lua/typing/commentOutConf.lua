@@ -1,5 +1,5 @@
-local utils = require('usr.utils')
-local comment = utils.include('Comment')
+local include = require('usr.utils').include
+local comment = include('Comment')
 
 ----------------------------------------------------------------------
 --                          Setup comment                           --
