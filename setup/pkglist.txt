@@ -117,3 +117,5 @@ unrar
 zram-generator
 cmake-language-server
 lua-language-server
+ethtool
+smartmontools
