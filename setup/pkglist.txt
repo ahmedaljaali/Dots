@@ -115,3 +115,5 @@ xxd
 luarocks
 unrar
 zram-generator
+cmake-language-server
+lua-language-server

@@ -82,10 +82,7 @@ mason.setup({
 mason_tool_installer.setup{
 
     ensure_installed = {
-        'clangd',
-        'cmake-language-server',
         'cpptools',
-        'lua-language-server',
     },
 
     auto_update = true,
