@@ -109,7 +109,6 @@ blender
 qt5-tools
 cppcheck
 rofi-emoji
-topgrade
 mold
 xxd
 luarocks
