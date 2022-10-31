@@ -36,33 +36,20 @@ autocmd(
 --          Disable tab line and go to the top of the file          --
 --                     when Startify is opened                      --
 
--- WARN: Tab line wont work after this autocmd
-autocmd(
-    {'User'},
-    {pattern = 'StartifyReady', command = 'setlocal showtabline=0 | 3'}
-)
-
--- WARN: Temporary fix
-autocmd(
-    {'User', 'SessionLoadPost'},
-    {pattern = 'StartifyBufferOpened', command = 'set showtabline=2'}
-)
 ----------------------------------------------------------------------
-
-
-----------------------------------------------------------------------
---           Disable status line when Startify is opened           --
+--           Disable status&tab line and got to the top of          --
+--                 the file when Startify is opened                 --
 
 -- WARN: Status line wont work after this autocmd
 autocmd(
     {'User'},
-    {pattern = 'StartifyReady' , command ='setlocal laststatus=0'}
+    {pattern = 'StartifyReady', command ='setlocal laststatus=0 | setlocal showtabline=0 | 3'}
 )
 
 -- WARN: Temporary fix
 autocmd(
-    {'User', 'SessionLoadPost'},
-    {pattern = 'StartifyBufferOpened', command = 'set laststatus=3'}
+    {'User'},
+    {pattern = 'StartifyBufferOpened', command = 'set laststatus=3 | set showtabline=2 | set cmdheight=0'}
 )
 ----------------------------------------------------------------------
 
