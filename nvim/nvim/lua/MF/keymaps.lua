@@ -201,7 +201,7 @@ map('n', '<leader>tcd', '<CMD>Trouble document_diagnostics<CR>', opts)
 --                         symbols outline                          --
 
 
-map('n', '<Leader>su', ':SymbolsOutlineOpen<CR>', opts)
+map('n', '<Leader>so', ':SymbolsOutlineOpen<CR>', opts)
 ----------------------------------------------------------------------
 
 
