@@ -25,7 +25,7 @@ cd ~/Downloads
 sudo pacman -S git rust
 git clone https://aur.archlinux.org/paru.git
 cd ~/Downloads/paru
-makepkg -i
+makepkg -si
 cd ~/Dots
 #--------------------------------------------------------------------#
 

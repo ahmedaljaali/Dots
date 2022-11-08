@@ -60,7 +60,6 @@ obs-studio
 network-manager-applet
 unzip
 i3lock-color
-imagemagick
 dunst
 feh
 betterlockscreen
@@ -79,7 +78,6 @@ lxappearance
 la-capitaine-icon-theme
 cursor-theme-macos-big-sur
 pcmanfm-gtk3
-xdman
 usbimager
 intel-gpu-tools
 ttf-weather-icons
@@ -89,7 +87,7 @@ xorg-server-xephyr
 nodejs
 downgrade
 mpv
-manga-cli-git
+mangodl
 rofi
 gtk-engine-murrine
 gtk-engines

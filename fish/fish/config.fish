@@ -219,7 +219,7 @@ alias downanime="animdl download --quality best -d ~/video/anime/"
 alias anime="animdl stream --quality best"
 
 # Manga
-alias manga="manga-cli"
+alias manga="mangodl"
 
 # Find your font name
 alias font="fc-match -s "
