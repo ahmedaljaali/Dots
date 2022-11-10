@@ -20,7 +20,7 @@ if vim.fn.exists('g:neovide') == 1 then
     vim.g.neovide_cursor_vfx_particle_density=28.0
 
     -- Frame per second
-    vim.g.neovide_refresh_rate=60
+    vim.g.neovide_refresh_rate=20
 
     -- Shows a frame time graph in the upper left corner
     vim.g.neovide_profiler = false
