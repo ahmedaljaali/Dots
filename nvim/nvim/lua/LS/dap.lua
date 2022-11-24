@@ -2,6 +2,7 @@ local include = require('usr.utils').include
 local dap = include('dap')
 local dapui = include('dapui')
 local dap_virtual = include('nvim-dap-virtual-text')
+local osExecute = require('usr.utils').osExecute
 
 ----------------------------------------------------------------------
 --                            C++ setup                             --
@@ -27,7 +28,7 @@ dap.configurations.cpp = {
         type = 'cppdbg',
         request = 'launch',
         program = function ()
-            return utils.osExecute('fd --search-path \'' .. vim.fn.getcwd() .. '/bin/\'  --type executable')
+            return osExecute('fd --search-path \'' .. vim.fn.getcwd() .. '/bin/\'  --type executable')
         end,
 
         cwd = '${workspaceFolder}',
@@ -42,7 +43,7 @@ dap.configurations.cpp = {
         miDebuggerPath = '/usr/bin/gdb',
         cwd = '${workspaceFolder}',
         program = function ()
-            return utils.osExecute('fd --search-path \'' .. vim.fn.getcwd() .. '/bin/\'  --type executable')
+            return osExecute('fd --search-path \'' .. vim.fn.getcwd() .. '/bin/\'  --type executable')
         end,
     },
 }
