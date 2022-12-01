@@ -88,10 +88,10 @@ autocmd(
 
 
 ----------------------------------------------------------------------
---            Open .vert and .frag files as .glsl                   --
+--                 Format file after leaving the tab                --
 
 autocmd(
-    {'InsertLeave', 'TabLeave'},
+    {'TabLeave'},
     {
         callback = function()
             if vim.o.filetype == 'cpp' then
