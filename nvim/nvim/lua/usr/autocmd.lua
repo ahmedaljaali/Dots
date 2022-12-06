@@ -91,7 +91,7 @@ autocmd(
 --                 Format file after leaving the tab                --
 
 autocmd(
-    {'BufLeave'},
+    {'TabLeave'},
     {
         callback = function()
             if vim.o.filetype == 'cpp' then
