@@ -37,7 +37,7 @@ vim.g.cmake_generate_options = {'-D CMAKE_C_COMPILER=clang','-DCMAKE_CXX_COMPILE
 ----------------------------------------------------------------------
 --                          Build options                           --
 
-vim.g.cmake_build_options = {}
+vim.g.cmake_build_options = {'-j4'}
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
