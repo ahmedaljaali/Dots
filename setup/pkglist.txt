@@ -116,3 +116,7 @@ cmake-language-server
 lua-language-server
 ethtool
 smartmontools
+gnome-keyring
+libsecret
+libgnome-keyring
+seahorse
