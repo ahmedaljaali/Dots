@@ -24,7 +24,6 @@ nvim-packer-git
 ttf-apple-emoji
 exa
 openrgb
-libreoffice-fresh
 gimp
 alsa-utils
 tlp

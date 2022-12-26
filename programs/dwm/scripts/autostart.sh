@@ -10,7 +10,7 @@ picom --experimental-backends &
 betterlockscreen -u ~/wallpapers/castle.jpg --dim 40 --blur 1 &
 
 #lock screen
-xidlehook  --not-when-audio --timer 60 'light -S 20' 'light -S 75' --timer 60  "notify-send -u critical -t 30000 'LOCKING THE SCREEN IN 30 SECONDS'"  "light -S 75&&notify-send -u critical -t 10000 'Cancelled'" --timer 30 "betterlockscreen -l dimblur" "light -S 75"  --timer 300 'systemctl suspend' 'light -S 75' &
+xidlehook --detect-sleep --not-when-audio --timer 60 'light -S 20' 'light -S 75' --timer 60  "notify-send -u critical -t 30000 'LOCKING THE SCREEN IN 30 SECONDS'"  "light -S 75&&notify-send -u critical -t 10000 'Cancelled'" --timer 30 "betterlockscreen -l dimblur" "light -S 75"  --timer 300 'systemctl suspend' 'light -S 75' &
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
