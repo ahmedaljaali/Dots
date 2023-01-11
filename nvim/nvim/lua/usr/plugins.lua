@@ -397,6 +397,7 @@ return packer.startup(function()
     use
     {
         'nvim-treesitter/nvim-treesitter',
+        commit = '3e316204f8ec8450bbaace69d0bf8fe332633fec';
         run = function() vim.fn[':TSUpdate'](0) end
     }
 

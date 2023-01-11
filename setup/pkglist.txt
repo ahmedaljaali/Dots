@@ -49,7 +49,6 @@ bat
 ueberzug
 speedtest-cli
 fd
-i3-gaps
 btop
 playerctl
 scrot
