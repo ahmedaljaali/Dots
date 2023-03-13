@@ -23,7 +23,6 @@ alacritty
 nvim-packer-git
 ttf-apple-emoji
 exa
-openrgb
 gimp
 alsa-utils
 tlp
@@ -64,13 +63,13 @@ betterlockscreen
 libnotify
 picom-jonaburg-git
 locate
-nerd-fonts-meslo
+ttf-meslo-nerd
 xautolock
 geoclue2
 redshift
 gdb
 google-chrome
-xidlehook-git
+xidlehook
 gruvbox-dark-gtk
 lxappearance
 la-capitaine-icon-theme
