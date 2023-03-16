@@ -16,6 +16,8 @@ libxft
 libxinerama
 libxrandr
 libxss
+pkgconf
+libxpm
 fish
 starship
 stow
@@ -117,3 +119,4 @@ gnome-keyring
 libsecret
 libgnome-keyring
 seahorse
+trayer

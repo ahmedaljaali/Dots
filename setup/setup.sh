@@ -37,6 +37,12 @@ paru --needed --ask 4 -Sy - < ~/Dots/setup/pkglist.txt || error "Failed to insta
 #--------------------------------------------------------------------#
 
 #--------------------------------------------------------------------#
+#                          Install Haskell                           #
+
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+#--------------------------------------------------------------------#
+
+#--------------------------------------------------------------------#
 #                          Python Packages                           #
 
 # For Ranger
@@ -98,10 +104,15 @@ cat ~/.ssh/id_rsa.pub
 #--------------------------------------------------------------------#
 
 #--------------------------------------------------------------------#
-#                             Setup dwm                              #
+#                           Setup xmonad&xmobar    		     	     #
 
-cd ~/Dots/programs/dwm
-sudo make install
+cd ~/.config/xmonad
+git clone https://github.com/xmonad/xmonad
+git clone https://github.com/xmonad/xmonad-contrib
+stack init
+stack install
+
+cabal install xmobar -fall_extensions -fwith_threaded -fwith_xpm
 #--------------------------------------------------------------------#
 
 #--------------------------------------------------------------------#
