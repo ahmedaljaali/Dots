@@ -229,3 +229,5 @@ starship init fish | source
 
 ### SETTING UP zoxide ###
 zoxide init fish | source
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/ahmed/.ghcup/bin # ghcup-env

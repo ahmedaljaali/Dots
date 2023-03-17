@@ -24,50 +24,50 @@ main = xmonad
      $ myConfig
 
 myConfig = def
-  { 
+  {
     modMask    = mod4Mask,      -- Rebind Mod to the Super key
     layoutHook = myLayout,      -- Use custom layouts
     manageHook = myManageHook,  -- Match on certain windows
     terminal = "alacritty"
   }
   `additionalKeysP`
-  [ 
+  [
     -- Spawn
     ("M-Return", spawn "alacritty"),
     ("M-p", spawn "rofi -show drun -show-icons"),
     ("M-e", spawn "rofi -modi emoji -show emoji -kb-custom-1 Ctrl+C"),
-    ("M-b", spawn "google-chrome-stable"),
+    ("M-f", spawn "google-chrome-stable"),
     ("M-s", spawn "spotify"),
     ("M-d", spawn "discord"),
     ("M-Shift_L-z", spawn "zathura"),
-    
+
     -- Screenshot
-    ("Control_L-M-l", unGrab *> spawn "scrot  ~/screenshots/$(date +\"%F_%T\").jpg && dunstify -t 1000  "\"Screenshot saved to: ~/screenshots\""),
-    ("Control_L-Shift_L-M-l", unGrab *> spawn "scrot -s ~/screenshots/$(date +\"%F_%T\").jpg && dunstify -t 1000  "\"Screenshot saved to: ~/screenshots\""),
+    ("Control_L-M-l", unGrab *> spawn "scrot  ~/screenshots/$(date +\"%F_%T\").jpg && dunstify -t 1000 \"Screenshot saved to: ~/screenshots\""),
+    ("Control_L-Shift_L-M-l", unGrab *> spawn "scrot -s ~/screenshots/$(date +\"%F_%T\").jpg && dunstify -t 1000  \"Screenshot saved to: ~/screenshots\""),
 
     -- Lock screen
     ("Control_L-M-l", spawn "betterlockscreen -l dimblur"),
-    
+
     -- Brightness
     ("XF86MonBrightnessUp", spawn "light -A 5"),
     ("XF86MonBrightnessDown", spawn "light -U 5"),
-    
+
     -- Audio
     ("XF86AudioLowerVolume", spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%"),
     ("XF86AudioRaiseVolume", spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%"),
     ("XF86AudioMute", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle && pactl set-source-mute @DEFAULT_SOURCE@ toggle"),
-    
+
     -- Multimedia
     ("XF86AudioPlay", spawn "playerctl play-pause"),
     ("XF86AudioPause", spawn "playerctl play-pause"),
     ("XF86AudioNext", spawn "playerctl next"),
-    ("XF86AudioPrev", spawn "playerctl previous"),
-    
+    ("XF86AudioPrev", spawn "playerctl previous")
+
   ]
 
 myManageHook :: ManageHook
 myManageHook = composeAll
-    [ 
+    [
       className =? "Gimp" --> doFloat,
       isDialog            --> doFloat
     ]
@@ -82,7 +82,7 @@ myLayout = tiled ||| Mirror tiled ||| Full ||| threeCol
 
 myXmobarPP :: PP
 myXmobarPP = def
-    { 
+    {
       ppSep             = magenta " • ",
       ppTitleSanitize   = xmobarStrip,
       ppCurrent         = wrap " " "" . xmobarBorder "Top" "#8be9fd" 2,
