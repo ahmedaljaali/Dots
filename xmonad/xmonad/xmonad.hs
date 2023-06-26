@@ -49,20 +49,19 @@ myConfig = def
     ("Control_L-M-l", spawn "betterlockscreen -l dimblur"),
 
     -- Brightness
-    ("XF86MonBrightnessUp", spawn "light -A 5"),
-    ("XF86MonBrightnessDown", spawn "light -U 5"),
+    ("<XF86MonBrightnessUp>", spawn "light -A 5"),
+    ("<XF86MonBrightnessDown>", spawn "light -U 5"),
 
     -- Audio
-    ("XF86AudioLowerVolume", spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%"),
-    ("XF86AudioRaiseVolume", spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%"),
-    ("XF86AudioMute", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle && pactl set-source-mute @DEFAULT_SOURCE@ toggle"),
+    ("<XF86AudioLowerVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%"),
+    ("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%"),
+    ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle && pactl set-source-mute @DEFAULT_SOURCE@ toggle"),
 
     -- Multimedia
-    ("XF86AudioPlay", spawn "playerctl play-pause"),
-    ("XF86AudioPause", spawn "playerctl play-pause"),
-    ("XF86AudioNext", spawn "playerctl next"),
-    ("XF86AudioPrev", spawn "playerctl previous")
-
+    ("<XF86AudioPlay>", spawn "playerctl play-pause"),
+    ("<XF86AudioPause>", spawn "playerctl play-pause"),
+    ("<XF86AudioNext>", spawn "playerctl next"),
+    ("<XF86AudioPrev>", spawn "playerctl previous")
   ]
 
 myManageHook :: ManageHook

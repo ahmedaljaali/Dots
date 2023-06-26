@@ -119,4 +119,5 @@ gnome-keyring
 libsecret
 libgnome-keyring
 seahorse
-trayer
+trayernpm
+nodejs
