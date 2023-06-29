@@ -121,3 +121,5 @@ libgnome-keyring
 seahorse
 trayernpm
 nodejs
+visual-studio-code-bin
+i3-wm

@@ -18,6 +18,7 @@ link:
 	stow fontconfig -t ~/.config/
 	stow xmonad -t ~/.config/
 	stow xmobar -t ~/.config/
+	stow i3 -t ~/.config/
 
 unlink:
 	unlink ~/.config/nvim
@@ -39,3 +40,4 @@ unlink:
 	unlink ~/.config/fontconfig
 	unlink ~/.config/xmonad
 	unlink ~/.config/xmobar
+	unlink ~/.config/i3
