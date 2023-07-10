@@ -37,12 +37,6 @@ paru --needed --ask 4 -Sy - < ~/Dots/setup/pkglist.txt || error "Failed to insta
 #--------------------------------------------------------------------#
 
 #--------------------------------------------------------------------#
-#                          Install Haskell                           #
-
-curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-#--------------------------------------------------------------------#
-
-#--------------------------------------------------------------------#
 #                            npm Packages                            #
 
 sudo npm i -g live-server
@@ -108,19 +102,6 @@ echo ;
 echo "Dont Forget to add the public key to your github account"
 echo ;
 cat ~/.ssh/id_rsa.pub
-#--------------------------------------------------------------------#
-
-#--------------------------------------------------------------------#
-#                           Setup xmonad&xmobar    		     	     #
-
-cd ~/.config/xmonad
-git clone https://github.com/xmonad/xmonad
-git clone https://github.com/xmonad/xmonad-contrib
-stack init
-stack install
-
-cabal update
-cabal install xmobar -fall_extensions -fwith_threaded -fwith_xpm
 #--------------------------------------------------------------------#
 
 #--------------------------------------------------------------------#

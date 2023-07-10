@@ -13,7 +13,6 @@ configs.setup {
 
         -- optional, list of language that will be disabled
         disable = { 'c', 'ruby' },
-
     },
     ensure_installed = {
         'cpp',
@@ -21,7 +20,6 @@ configs.setup {
         'cmake',
         'markdown',
         'lua',
-        'query',
         'glsl',
         'bash'
     },
@@ -32,56 +30,14 @@ configs.setup {
         enable = true,
     },
 
-    -- Rainbow configs
     rainbow = {
         enable = true,
-
-        -- disable = { 'jsx', 'cpp' }, list of languages you want to disable the plugin for
-
-        -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-        extended_mode = true,
-
-        -- Do not enable for files with more than n lines, int
-        max_file_lines = nil,
-
-        -- table of hex strings
-        -- colors = {},
-
-        -- table of colour name strings
-        -- termcolors = {}
-    },
-    -- Setup treesitter playground
-    playground = {
-        enable = true,
-        disable = {},
-
-        -- Debounced time for highlighting nodes in the playground from source code
-        updatetime = 25,
-
-        -- Whether the query persists across vim sessions
-        persist_queries = false,
-        keybindings = {
-            toggle_query_editor = 'o',
-            toggle_hl_groups = 'i',
-            toggle_injected_languages = 't',
-            toggle_anonymous_nodes = 'a',
-            toggle_language_display = 'I',
-            focus_language = 'f',
-            unfocus_language = 'F',
-            update = 'R',
-            goto_node = '<cr>',
-            show_help = '?',
-        },
-    },
-    -- The playground lint query
-    query_linter = {
-        enable = true,
-        use_virtual_text = true,
-        lint_events = {'BufWrite', 'CursorHold'},
-    },
-    indent = {
-    -- default is disabled anyways
-    enable = false,
+        -- list of languages you want to disable the plugin for
+        disable = { 'jsx', 'cpp' },
+        -- Which query to use for finding delimiters
+        query = 'rainbow-parens',
+        -- Highlight the entire buffer all at once
+        strategy = require('ts-rainbow').strategy.global,
     }
 }
 ----------------------------------------------------------------------

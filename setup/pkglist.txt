@@ -119,7 +119,8 @@ gnome-keyring
 libsecret
 libgnome-keyring
 seahorse
-trayernpm
 nodejs
 visual-studio-code-bin
 i3-wm
+polybar
+ttf-weather-icons

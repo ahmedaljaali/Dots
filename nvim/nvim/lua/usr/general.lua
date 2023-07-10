@@ -61,7 +61,7 @@ set.undodir = os.getenv('HOME') .. '/tmp/undo'
 --                             Spelling                             --
 
 set.spell = true
-set.spelllang =  'en_us'
+set.spelllang = 'en_us'
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------

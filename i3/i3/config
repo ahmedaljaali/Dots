@@ -7,7 +7,6 @@ include ~/.config/i3/settings/mode.conf
 # is used in the bar {} block below.
 font pango:MesloLGS Nerd Font 13
 
-
 set $refresh_i3status killall -SIGUSR1 i3status
 
 

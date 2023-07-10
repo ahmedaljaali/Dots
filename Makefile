@@ -16,9 +16,8 @@ link:
 	stow neofetch -t ~/.config/
 	stow zathura -t ~/.config/
 	stow fontconfig -t ~/.config/
-	stow xmonad -t ~/.config/
-	stow xmobar -t ~/.config/
 	stow i3 -t ~/.config/
+	stow polybar -t ~/.config
 
 unlink:
 	unlink ~/.config/nvim
@@ -38,6 +37,5 @@ unlink:
 	unlink ~/.config/neofetch
 	unlink ~/.config/zathura
 	unlink ~/.config/fontconfig
-	unlink ~/.config/xmonad
-	unlink ~/.config/xmobar
 	unlink ~/.config/i3
+	unlink ~/.config/polybar

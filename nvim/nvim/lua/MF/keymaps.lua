@@ -321,3 +321,11 @@ vim.g.floaterm_keymap_next = '<Leader>fn'
 vim.g.floaterm_keymap_prev = '<Leader>fp'
 vim.g.floaterm_keymap_kill = '<Leader>fc'
 ----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                           live server                            --
+
+map('n', '<leader>wls', function()
+    vim.cmd [[:FloatermNew  --silent --height=5 --autoclose=0  live-server]]
+end, opts)
+----------------------------------------------------------------------

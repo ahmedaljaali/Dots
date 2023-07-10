@@ -157,8 +157,7 @@ return packer.startup(function()
     --A Vim plugin to colorize all text in the form #rrggbb or #rgb.
     use 'lilydjwg/colorizer'
 
-    -- Rainbow parentheses for neovim using tree-sitter.
-    use 'p00f/nvim-ts-rainbow'
+    use 'HiPhish/nvim-ts-rainbow2'
 
     -- Status line
     use
@@ -296,10 +295,6 @@ return packer.startup(function()
     -- U know it
     use
     {
-        'lewis6991/spellsitter.nvim',
-        requires = {
-            'nvim-treesitter/nvim-treesitter'
-        },
     }
 
     --From it's name :)
@@ -373,7 +368,11 @@ return packer.startup(function()
     use 'simrat39/symbols-outline.nvim'
 
     -- UI for nvim-lsp progress
-    use 'j-hui/fidget.nvim'
+    use
+    {
+        'j-hui/fidget.nvim',
+        tag = 'legacy'
+    }
 
     -- Highlight arguments' definitions and usages, using Treesitter
     use
@@ -459,15 +458,6 @@ return packer.startup(function()
 
     -- SQLite/LuaJIT binding for lua and neovim
     use 'kkharji/sqlite.lua'
-
-    -- Treesitter playground integrated into Neovim
-    use
-    {
-        'nvim-treesitter/playground',
-        requires = {
-            'nvim-treesitter/nvim-treesitter'
-        }
-    }
 
     -- Viewing URLs
     use 'axieax/urlview.nvim'

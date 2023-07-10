@@ -47,7 +47,6 @@ require('colors.tabline')
 
 
 require('typing.indent')
-require('typing.spelling')
 require('typing.autopairs')
 require('typing.commentOut')
 require('typing.lastplace')

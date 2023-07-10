@@ -80,7 +80,7 @@ endif()
 #                               Debug                                #
 
 
-SET(CMAKE_BUILD_TYPE debug)
+SET(CMAKE_BUILD_TYPE Debug)
 SET(CMAKE_CXX_FLAGS_DEBUG "-gfull -ggdb3 -O0 -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded")
 #-Werror Treat warnings as errors
 #--------------------------------------------------------------------#
@@ -89,7 +89,7 @@ SET(CMAKE_CXX_FLAGS_DEBUG "-gfull -ggdb3 -O0 -Weverything -Wno-c++98-compat -Wno
 #                              Release                               #
 
 
-# SET(CMAKE_BUILD_TYPE release)
+# SET(CMAKE_BUILD_TYPE Release)
 SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
 #--------------------------------------------------------------------#
 ]],
