@@ -81,6 +81,7 @@ end
 
 tree.setup({
     sort_by = "case_sensitive",
+    on_attach = on_attach,
     view = {
         adaptive_size = true,
         mappings = {
