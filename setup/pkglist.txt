@@ -23,7 +23,6 @@ starship
 stow
 alacritty
 nvim-packer-git
-ttf-apple-emoji
 exa
 gimp
 alsa-utils
@@ -124,3 +123,4 @@ visual-studio-code-bin
 i3-wm
 polybar
 ttf-weather-icons
+noto-fonts-emoji-apple
