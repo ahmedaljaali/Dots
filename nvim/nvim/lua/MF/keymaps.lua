@@ -325,6 +325,7 @@ vim.g.floaterm_keymap_kill = '<Leader>fc'
 ----------------------------------------------------------------------
 --                           live server                            --
 
+-- For web dev only!!!
 map('n', '<leader>wls', function()
     vim.cmd [[:FloatermNew  --silent --height=5 --autoclose=0  live-server]]
 end, opts)
