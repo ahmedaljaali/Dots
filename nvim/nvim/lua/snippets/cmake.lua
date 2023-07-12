@@ -81,10 +81,11 @@ endif()
 SET(CMAKE_BUILD_TYPE Debug)
 
 # For memory
-# SET(CMAKE_CXX_FLAGS_DEBUG "-gfull -ggdb3 -pedantic-errors -O0 -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded -Wno-documentation -Wno-documentation-unknown-command -fsanitize=memory -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize-memory-track-origins=2")
+# SET(CMAKE_CXX_FLAGS_DEBUG "-gfull -ggdb3 -Wno-newline-eof -pedantic-errors -O0 -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded -Wno-documentation -Wno-documentation-unknown-command -fsanitize=memory -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize-memory-track-origins=2")
 
 # For address
-SET(CMAKE_CXX_FLAGS_DEBUG "-gfull -ggdb3 -pedantic-errors -O0 -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded -Wno-documentation -Wno-documentation-unknown-command -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls")
+SET(CMAKE_CXX_FLAGS_DEBUG "-gfull -ggdb3 -Wno-newline-eof -pedantic-errors -O0 -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded -Wno-documentation -Wno-documentation-unknown-command -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls")
+
 #-Werror Treat warnings as errors
 #--------------------------------------------------------------------#
 
