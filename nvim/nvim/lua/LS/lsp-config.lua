@@ -25,7 +25,9 @@ lspconfig.clangd.setup{
         "--background-index",
         "--clang-tidy",
         "--completion-style=detailed",
-        "--header-insertion=never"
+        "--header-insertion=never",
+        "-j=4",
+        "--pch-storage=memory"
     }
 }
 

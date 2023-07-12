@@ -292,11 +292,6 @@ return packer.startup(function()
         },
     }
 
-    -- U know it
-    use
-    {
-    }
-
     --From it's name :)
     use 'mbbill/undotree'
 
