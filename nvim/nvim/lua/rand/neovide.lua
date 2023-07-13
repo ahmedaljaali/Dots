@@ -13,10 +13,10 @@ if vim.g.neovide then
     vim.g.neovide_cursor_vfx_mode = 'pixiedust'
 
     -- Sets the amount of time the generated particles should survive
-    vim.g.neovide_cursor_vfx_particle_lifetime = 3
+    vim.g.neovide_cursor_vfx_particle_lifetime = 5
 
     -- Sets the number of generated particles
-    vim.g.neovide_cursor_vfx_particle_density = 50
+    vim.g.neovide_cursor_vfx_particle_density = 60
 
     -- Frame per second
     vim.g.neovide_refresh_rate = 60
@@ -25,7 +25,7 @@ if vim.g.neovide then
     vim.g.neovide_profiler = false
 
     -- Determines how much the trail of the cursor lags behind the front edge
-    vim.g.neovide_cursor_trail_length = 5.0
+    vim.g.neovide_cursor_trail_length = 5
 
     -- Padding
     vim.g.neovide_padding_top = 0
