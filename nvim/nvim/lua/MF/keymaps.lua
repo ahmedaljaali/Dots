@@ -330,3 +330,14 @@ map('n', '<leader>wls', function()
     vim.cmd [[:FloatermNew  --silent --height=5 --autoclose=0  live-server]]
 end, opts)
 ----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+--                              Update                              --
+
+map('n', '<leader>up', function()
+    vim.cmd[[:PackerSync]]
+    vim.cmd [[:MasonUpdate]]
+    vim.cmd [[TSUpdate]]
+end, opts)
+----------------------------------------------------------------------
