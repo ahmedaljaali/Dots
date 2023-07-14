@@ -4,7 +4,7 @@
 if vim.g.neovide then
 
     -- Start in fullscreen
-    vim.g.neovide_fullscreen = true
+    vim.g.neovide_fullscreen = false
 
     -- Determines the time it takes for the cursor to complete it's animation in seconds
     vim.g.neovide_cursor_animation_length = 0.35
