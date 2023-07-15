@@ -341,3 +341,11 @@ map('n', '<leader>up', function()
     vim.cmd [[TSUpdate]]
 end, opts)
 ----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--         Set the current working dir to the buffer parent         --
+--                              folder                              --
+
+-- map('n', '<Leader>cbd', function() vim.api.nvim_set_current_dir(tostring(vim.api.nvim_buf_get_name(0):match("(.+)%..+$")))end, opts)
+map('n', '<Leader>cbd', function() vim.api.nvim_set_current_dir(vim.fn.expand('%:p:h'))end, opts)
+----------------------------------------------------------------------
