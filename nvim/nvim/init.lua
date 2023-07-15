@@ -1,91 +1,35 @@
- --Put it in the top of the file, Don't change it!!!
-require('usr.plugins')
-
- --general configurations
-require('usr.general')
-
- --Auto commands
-require('usr.autocmd')
-
-
 ----------------------------------------------------------------------
---                        Make neovim faster                        --
+--                            Essentials                            --
 
-
-require('usr.utils').include('impatient')
+require('usr.init')
 ----------------------------------------------------------------------
-
 
 ----------------------------------------------------------------------
 --                           Moving Fast                            --
 
-
-require('MF.startScrean')
-require('MF.telescope')
-require('MF.fileStorm')
-require('MF.keymaps')
-require('MF.statusLine')
-require('MF.nvimTree')
+require('MF.init')
 ----------------------------------------------------------------------
-
 
 ----------------------------------------------------------------------
 --                              Colors                              --
 
-
-require('colors.theme')
-require('colors.icons')
-require('colors.modes')
-require('colors.hlargs')
-require('colors.dressing')
-require('colors.tabline')
+require('colors.init')
 ----------------------------------------------------------------------
-
 
 ----------------------------------------------------------------------
 --                              Typing                              --
 
-
-require('typing.indent')
-require('typing.autopairs')
-require('typing.commentOut')
-require('typing.lastplace')
-require('typing.autoSave')
-require('typing.todo')
-require('typing.commentFrame')
-require('typing.neoclip')
-require('typing.dial')
+require('typing.init')
 ----------------------------------------------------------------------
-
 
 ----------------------------------------------------------------------
 --                         Language Support                         --
 
-
-require('LS.mason')
-require('LS.luaDev')
-require('LS.lsp-config')
-require('LS.cmake')
-require('LS.treesitter')
-require('LS.cmp')
-require('LS.lspkind')
-require('LS.codeActions')
-require('LS.trouble')
-require('LS.symbolsOutline')
-require('LS.tabnine')
-require('LS.fidget')
-require('LS.lspSignature')
-require('LS.treesitterContext')
-require('LS.luasnip')
-require('LS.dap')
-require('LS.lint')
+require('LS.init')
 ----------------------------------------------------------------------
-
 
 ----------------------------------------------------------------------
 --                           Random stuff                           --
 
--- Short config
-require('rand.short')
-require('rand.neovide')
+require('rand.init')
 ----------------------------------------------------------------------
