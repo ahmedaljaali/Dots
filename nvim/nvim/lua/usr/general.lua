@@ -133,3 +133,9 @@ set.guifont = 'MesloLGS Nerd Font:h13:#e-antialias:#h-full'
 setGlobal.loaded = 1
 setGlobal.loaded_netrwPlugin = 1
 ----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                         Make nvim faster                         --
+
+vim.loader.enable()
+----------------------------------------------------------------------

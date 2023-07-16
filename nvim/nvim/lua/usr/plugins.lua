@@ -256,8 +256,6 @@ return packer.startup(function()
     -- Neovim motions on speed!
     use 'phaazon/hop.nvim'
 
-    -- Make neovim faster!!
-    use 'lewis6991/impatient.nvim'
 ----------------------------------------------------------------------
 
 
