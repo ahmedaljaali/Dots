@@ -1,2 +1,3 @@
-; Hide comment start
+;; extends
+
 (("comment_start"    @comment) (#set! conceal ""))

@@ -457,7 +457,7 @@ return packer.startup(function()
 ----------------------------------------------------------------------
 
 
-  --if packer isn't installed install it
+-- If packer isn't installed install it
  if packer_bootstrap then
     require('packer').sync()
   end
