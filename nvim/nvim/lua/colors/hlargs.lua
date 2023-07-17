@@ -6,12 +6,25 @@ local hlargs = include('hlargs')
 
 hlargs.setup {
     color =  '#83a598',
+
     excluded_filetypes = {},
+
     paint_arg_declarations = true,
+
     paint_arg_usages = true,
+
+    paint_catch_blocks = {
+        declarations = true,
+        usages = true
+    },
+
+    extras = {
+        named_parameters = true,
+    },
+
     performance = {
         parse_delay = 1,
-        max_iterations = 400
+        max_iterations = 500
     }
 }
 ----------------------------------------------------------------------

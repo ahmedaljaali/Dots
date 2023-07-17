@@ -349,3 +349,11 @@ end, opts)
 -- map('n', '<Leader>cbd', function() vim.api.nvim_set_current_dir(tostring(vim.api.nvim_buf_get_name(0):match("(.+)%..+$")))end, opts)
 map('n', '<Leader>cbd', function() vim.api.nvim_set_current_dir(vim.fn.expand('%:p:h'))end, opts)
 ----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+--                            View URLs                             --
+
+map("n", "\\U", function()
+    vim.cmd[[PackerCompile]]
+    vim.cmd[[UrlView packer]] end ,opts)
+----------------------------------------------------------------------

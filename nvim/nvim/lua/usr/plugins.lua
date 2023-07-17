@@ -212,16 +212,11 @@ return packer.startup(function()
         'nvim-telescope/telescope.nvim',
         requires = {
             'nvim-lua/plenary.nvim',
-            --[['nvim-lua/popup.nvim' 'packer complain about Repetition']]
         }
     }
 
     -- Terminal
     use 'voldikss/vim-floaterm'
-
-
-    -- Fix CursorHold Performance.
-    use 'antoinemadec/FixCursorHold.nvim'
 
     -- Maximize splits
     use 'szw/vim-maximizer'
@@ -243,9 +238,6 @@ return packer.startup(function()
             'kyazdani42/nvim-web-devicons'
         }
     }
-
-    -- Neovim plugin to stabilize window open/close events.
-    use 'luukvbaal/stabilize.nvim'
 
     -- Use sudo to write file
     use 'lambdalisue/suda.vim'
@@ -337,16 +329,10 @@ return packer.startup(function()
     }
 
     -- For neovim lsp completion items
-    use
-    {
-        'onsails/lspkind-nvim',
-    }
+    use 'onsails/lspkind-nvim'
 
     -- Code actions
-    use
-    {
-        'weilbith/nvim-code-action-menu',
-    }
+    use 'weilbith/nvim-code-action-menu'
 
     -- Show diagnosis
     use
@@ -389,7 +375,6 @@ return packer.startup(function()
     use
     {
         'nvim-treesitter/nvim-treesitter',
-        commit = '3e316204f8ec8450bbaace69d0bf8fe332633fec';
         run = function() vim.fn[':TSUpdate'](0) end
     }
 

@@ -20,5 +20,7 @@ neodev.setup({
     -- for plugin directories (root_dirs having a /lua directory), config.library.plugins will be disabled
     -- for any other directory, config.library.enabled will be set to false
     override = function(root_dir, options) end,
+    pathStrict = true,
+    lspconfig = true
 })
 ----------------------------------------------------------------------

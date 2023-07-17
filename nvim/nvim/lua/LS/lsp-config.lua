@@ -11,12 +11,11 @@ lspconfig.lua_ls.setup {
                 -- Get the language server to recognize the `vim` global
                 globals = {'vim', 'use'},
             },
-            workspace = {
-                -- Make the server aware of Neovim runtime files
-                library = vim.api.nvim_get_runtime_file("", true),
+            completion = {
+                callSnippet = "Replace",
             },
         },
-    },
+    }
 }
 
 lspconfig.clangd.setup{
@@ -35,21 +34,6 @@ lspconfig.cmake.setup{
     init_options = {
         buildDirectory = "Build"
     }
-}
-
-lspconfig.tsserver.setup{}
-
---Enable (broadcasting) snippet capability for completion
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-
-lspconfig.cssls.setup {
-  capabilities = capabilities,
-}
-
-lspconfig.html.setup {
-  capabilities = capabilities,
 }
 ----------------------------------------------------------------------
 
